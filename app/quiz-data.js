@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-16 23:10:56
+   產生時間：2026-08-16 23:36:11
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T23:10:55",
+    "generatedAt":  "2026-08-16T23:36:11",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -1104,6 +1104,63 @@ window.QUIZ_DATA =
                                                         "id":  "L4-025",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
+                                                                     "name":  "Chaewon",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/tripleS_Chaewon.jpg",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/tripleS_Chaewon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Chaewon",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/tripleS_Chaewon.jpg",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/tripleS_Chaewon.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-026",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Jiwoo",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/tripleS_Jiwoo.jpg",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/tripleS_Jiwoo.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Jiwoo",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/tripleS_Jiwoo.jpg",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/tripleS_Jiwoo.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-027",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Lynn",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/tripleS_Lynn.jpg",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/tripleS_Lynn.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Lynn",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/tripleS_Lynn.jpg",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/tripleS_Lynn.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-028",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
                                                                      "name":  "Nien",
                                                                      "q":  "第四關_看五官猜偶像/題目/眼睛/tripleS_Nien.png",
                                                                      "a":  "第四關_看五官猜偶像/答案/眼睛/tripleS_Nien.jpg"
@@ -1120,7 +1177,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-026",
+                                                        "id":  "L4-029",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "CHAEYOUNG",
@@ -1139,7 +1196,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-027",
+                                                        "id":  "L4-030",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "DAHYUN",
@@ -1158,7 +1215,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-028",
+                                                        "id":  "L4-031",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JEONGYEON",
@@ -1177,7 +1234,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-029",
+                                                        "id":  "L4-032",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JIHYO",
@@ -1196,7 +1253,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-030",
+                                                        "id":  "L4-033",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MINA",
@@ -1215,7 +1272,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-031",
+                                                        "id":  "L4-034",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MOMO",
@@ -1234,7 +1291,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-032",
+                                                        "id":  "L4-035",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "NAYEON",
@@ -1253,7 +1310,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-033",
+                                                        "id":  "L4-036",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "SANA",
@@ -1272,7 +1329,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-034",
+                                                        "id":  "L4-037",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "TZUYU",
