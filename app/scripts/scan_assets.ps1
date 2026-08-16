@@ -69,6 +69,7 @@ $dirL2  = Find-Dir @("第二關*", "level2*", "*前奏*")         $root
 $dirL3  = Find-Dir @("第三關*", "level3*", "*舞蹈*")         $root
 $dirL4  = Find-Dir @("第四關*", "level4*", "*五官*")         $root
 $dirBgm = Find-Dir @("介面音樂*", "bgm*", "*背景音樂*")       $root
+$dirCover = Find-Dir @("封面*", "cover*", "*主視覺*")          $root
 
 $QPAT = @("題目", "题目", "question*", "Q")
 $APAT = @("答案", "answer*", "A")
@@ -236,6 +237,38 @@ if ($dirL4) {
   }
 }
 
+# ---------- 封面素材 ----------
+# 檔名含「背景 / background」→ 全螢幕動態背景（圖片或影片）
+# 檔名含「主視覺 / hero / cover」→ 中央主視覺卡片
+# 其餘圖片 → 會飄動的照片牆
+$coverBg = $null
+$coverBgIsVideo = $false
+$coverHero = $null
+$coverPhotos = New-Object System.Collections.ArrayList
+
+foreach ($f in (Get-Media $dirCover ($IMG + $VID))) {
+  $base = [System.IO.Path]::GetFileNameWithoutExtension($f.Name)
+  $isVid = $VID -contains $f.Extension.ToLower()
+  if (($base -like "*背景*" -or $base -like "background*" -or $base -like "bg") -and -not $coverBg) {
+    $coverBg = Get-Rel $f.FullName
+    $coverBgIsVideo = $isVid
+  } elseif (($base -like "*主視覺*" -or $base -like "hero*" -or $base -like "cover*") -and -not $coverHero -and -not $isVid) {
+    $coverHero = Get-Rel $f.FullName
+  } elseif (-not $isVid) {
+    [void]$coverPhotos.Add((Get-Rel $f.FullName))
+  } elseif (-not $coverBg) {
+    $coverBg = Get-Rel $f.FullName
+    $coverBgIsVideo = $true
+  }
+}
+
+# 封面資料夾沒放照片時，自動借用第一關的偶像照當照片牆
+$coverFallback = $false
+if ($coverPhotos.Count -eq 0 -and -not $coverHero) {
+  $coverFallback = $true
+  foreach ($q in ($l1 | Select-Object -First 12)) { [void]$coverPhotos.Add($q.image) }
+}
+
 # ---------- 背景音樂 ----------
 $bgm = New-Object System.Collections.ArrayList
 foreach ($f in (Get-Media $dirBgm $AUD)) { [void]$bgm.Add((Get-Rel $f.FullName)) }
@@ -245,6 +278,13 @@ $payload = [ordered]@{
   generatedAt = (Get-Date).ToString("s")
   root        = $root
   bgm         = @($bgm)
+  cover       = [ordered]@{
+    background      = $coverBg
+    backgroundIsVideo = $coverBgIsVideo
+    hero            = $coverHero
+    photos          = @($coverPhotos)
+    usingFallback   = $coverFallback
+  }
   levels      = [ordered]@{
     level1 = [ordered]@{ id = "level1"; title = "偶像快看快答";   questions = @($l1) }
     level2 = [ordered]@{ id = "level2"; title = "聽前奏猜歌";     questions = @($l2) }
@@ -277,6 +317,13 @@ Write-Host ("  第二關 聽前奏猜歌   : {0} 題" -f $l2.Count)
 Write-Host ("  第三關 看舞蹈猜歌   : {0} 題" -f $l3.Count)
 Write-Host ("  第四關 看五官猜偶像 : {0} 題" -f $l4.Count)
 Write-Host ("  背景音樂            : {0} 首" -f $bgm.Count)
+if ($coverFallback) {
+  Write-Host ("  封面照片牆          : {0} 張（借用第一關照片，建議在「封面」資料夾放專屬圖）" -f $coverPhotos.Count)
+} else {
+  Write-Host ("  封面照片牆          : {0} 張" -f $coverPhotos.Count)
+}
+if ($coverBg)   { Write-Host ("  封面動態背景        : " + $coverBg) }
+if ($coverHero) { Write-Host ("  封面主視覺          : " + $coverHero) }
 Write-Host ""
 if ($warn.Count -gt 0) {
   Write-Host "提醒：" -ForegroundColor Yellow

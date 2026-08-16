@@ -1,15 +1,33 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-16 13:41:17
+   產生時間：2026-08-16 15:28:33
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T13:41:17",
+    "generatedAt":  "2026-08-16T15:28:33",
     "root":  "D:\\kpop",
     "bgm":  [
                 "介面音樂/IVE_HEYA.mp3"
             ],
+    "cover":  {
+                  "background":  null,
+                  "backgroundIsVideo":  false,
+                  "hero":  null,
+                  "photos":  [
+                                 "封面/AESPA.avif",
+                                 "封面/babymonster.webp",
+                                 "封面/H2H.jpg",
+                                 "封面/ITZY.webp",
+                                 "封面/IVE.avif",
+                                 "封面/lesserafim.webp",
+                                 "封面/newjeans.jpg",
+                                 "封面/NMIXX.jpg",
+                                 "封面/qwer.jpg",
+                                 "封面/triples.jpg"
+                             ],
+                  "usingFallback":  false
+              },
     "levels":  {
                    "level1":  {
                                   "id":  "level1",
@@ -17,21 +35,129 @@ window.QUIZ_DATA =
                                   "questions":  [
                                                     {
                                                         "id":  "L1-001",
+                                                        "group":  "AESPA",
+                                                        "name":  "Karina",
+                                                        "image":  "第一關_偶像快看快答/AESPA_Karina.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-002",
+                                                        "group":  "AESPA",
+                                                        "name":  "Ningning",
+                                                        "image":  "第一關_偶像快看快答/AESPA_Ningning.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-003",
+                                                        "group":  "AESPA",
+                                                        "name":  "Winter",
+                                                        "image":  "第一關_偶像快看快答/AESPA_Winter.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-004",
+                                                        "group":  "BABYMONSTER",
+                                                        "name":  "ASA",
+                                                        "image":  "第一關_偶像快看快答/BABYMONSTER_ASA.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-005",
+                                                        "group":  "BLACKPINK",
+                                                        "name":  "JENNIE",
+                                                        "image":  "第一關_偶像快看快答/BLACKPINK_JENNIE.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-006",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "name":  "TAEYEON",
+                                                        "image":  "第一關_偶像快看快答/Girls\u0027 Generation_TAEYEON.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-007",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "IAN",
+                                                        "image":  "第一關_偶像快看快答/Hearts2Hearts_IAN.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-008",
+                                                        "group":  "ILLIT",
+                                                        "name":  "Wonhee",
+                                                        "image":  "第一關_偶像快看快答/ILLIT_Wonhee.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-009",
+                                                        "group":  "ITZY",
+                                                        "name":  "YUNA",
+                                                        "image":  "第一關_偶像快看快答/ITZY_YUNA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-010",
+                                                        "group":  "IVE",
+                                                        "name":  "Gaeul",
+                                                        "image":  "第一關_偶像快看快答/IVE_Gaeul.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-011",
+                                                        "group":  "IVE",
+                                                        "name":  "Liz",
+                                                        "image":  "第一關_偶像快看快答/IVE_Liz.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-012",
                                                         "group":  "IVE",
                                                         "name":  "WonYoung",
                                                         "image":  "第一關_偶像快看快答/IVE_WonYoung.png"
                                                     },
                                                     {
-                                                        "id":  "L1-002",
+                                                        "id":  "L1-013",
+                                                        "group":  "LE SSERAFIM",
+                                                        "name":  "ChaeWon",
+                                                        "image":  "第一關_偶像快看快答/LE SSERAFIM_ChaeWon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-014",
+                                                        "group":  "LE SSERAFIM",
+                                                        "name":  "Sakura",
+                                                        "image":  "第一關_偶像快看快答/LE SSERAFIM_Sakura.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-015",
+                                                        "group":  "NewJeans",
+                                                        "name":  "Haerin",
+                                                        "image":  "第一關_偶像快看快答/NewJeans_Haerin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-016",
                                                         "group":  "NMIXX",
                                                         "name":  "Bae",
                                                         "image":  "第一關_偶像快看快答/NMIXX_Bae.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-003",
+                                                        "id":  "L1-017",
+                                                        "group":  "NMIXX",
+                                                        "name":  "Sullyoon",
+                                                        "image":  "第一關_偶像快看快答/NMIXX_Sullyoon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-018",
                                                         "group":  "tripleS",
                                                         "name":  "Kotone",
                                                         "image":  "第一關_偶像快看快答/tripleS_Kotone.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-019",
+                                                        "group":  "tripleS",
+                                                        "name":  "YooYeon",
+                                                        "image":  "第一關_偶像快看快答/tripleS_YooYeon.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-020",
+                                                        "group":  "TWICE",
+                                                        "name":  "Nayeon",
+                                                        "image":  "第一關_偶像快看快答/TWICE_Nayeon.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-021",
+                                                        "group":  "WJSN",
+                                                        "name":  "Yeo reum",
+                                                        "image":  "第一關_偶像快看快答/WJSN_Yeo reum.jpg"
                                                     }
                                                 ]
                               },
@@ -41,6 +167,54 @@ window.QUIZ_DATA =
                                   "questions":  [
                                                     {
                                                         "id":  "L2-001",
+                                                        "group":  "AESPA",
+                                                        "title":  "Spicy",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/AESPA_Spicy.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/AESPA_Spicy.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-002",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "WE GO UP",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/BABYMONSTER_WE GO UP.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/BABYMONSTER_WE GO UP.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-003",
+                                                        "group":  "Formis9",
+                                                        "title":  "DM",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/Formis9_DM.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/Formis9_DM.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-004",
+                                                        "group":  "GFRIEND",
+                                                        "title":  "MAGO",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/GFRIEND_MAGO.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/GFRIEND_MAGO.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-005",
+                                                        "group":  "Hearts2hearts",
+                                                        "title":  "FOUCUS",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/Hearts2hearts_FOUCUS.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/Hearts2hearts_FOUCUS.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-006",
+                                                        "group":  "I-DLE",
+                                                        "title":  "Fate",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/I-DLE_Fate.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/I-DLE_Fate.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-007",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish(My Love)",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ILLIT_Cherish(My Love).mp3",
@@ -48,7 +222,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-002",
+                                                        "id":  "L2-008",
                                                         "group":  "ITZY",
                                                         "title":  "CAKE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ITZY_CAKE.mp3",
@@ -56,11 +230,107 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-003",
+                                                        "id":  "L2-009",
+                                                        "group":  "IVE",
+                                                        "title":  "After LIKE",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/IVE_After LIKE.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/IVE_After LIKE.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-010",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/IVE_ATTITUDE.mp3",
                                                         "answer":  "第二關_聽前奏猜歌/答案/IVE_ATTITUDE.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-011",
+                                                        "group":  "IZONE",
+                                                        "title":  "Panorama",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/IZONE_Panorama.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/IZONE_Panorama.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-012",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "DIFFERENT",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/LE SSERAFIM_DIFFERENT.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/LE SSERAFIM_DIFFERENT.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-013",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "Perfect Night",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/LE SSERAFIM_Perfect Night.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/LE SSERAFIM_Perfect Night.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-014",
+                                                        "group":  "NewJeans",
+                                                        "title":  "ETA",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/NewJeans_ETA.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/NewJeans_ETA.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-015",
+                                                        "group":  "NewJeans",
+                                                        "title":  "Super Shy",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/NewJeans_Super Shy.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/NewJeans_Super Shy.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-016",
+                                                        "group":  "NMIXX",
+                                                        "title":  "DICE",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/NMIXX_DICE.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/NMIXX_DICE.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-017",
+                                                        "group":  "OH MY GIRL",
+                                                        "title":  "Dun Dun Dance",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/OH MY GIRL_Dun Dun Dance.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/OH MY GIRL_Dun Dun Dance.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-018",
+                                                        "group":  "QWER",
+                                                        "title":  "T.B.H",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/QWER_T.B.H.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/QWER_T.B.H.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-019",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Cosmic",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/Red Velvet_Cosmic.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/Red Velvet_Cosmic.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-020",
+                                                        "group":  "TripleS",
+                                                        "title":  "Girls Never Die",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/TripleS_Girls Never Die.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/TripleS_Girls Never Die.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-021",
+                                                        "group":  "TWICE",
+                                                        "title":  "Heart Shaker",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/TWICE_Heart Shaker.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/TWICE_Heart Shaker.mp4",
                                                         "introSeconds":  12
                                                     }
                                                 ]

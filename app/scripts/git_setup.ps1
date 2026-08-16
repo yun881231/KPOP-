@@ -113,10 +113,12 @@ $gitignore = @'
 第三關_看舞蹈猜歌/
 第四關_看五官猜偶像/
 介面音樂/
+封面/
 level1_*/
 level2_*/
 level3_*/
 level4_*/
+cover/
 
 # --- 自動下載的工具（ffmpeg / python / git）---
 tools/
