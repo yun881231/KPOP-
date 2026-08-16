@@ -5,7 +5,10 @@
 [CmdletBinding()]
 param(
   [string]$Root,
-  [string]$Message
+  [string]$Message,
+  [ValidateSet("auto", "force", "rebase")]
+  [string]$Mode = "auto",   # auto=自動判斷 / force=用本機覆蓋遠端 / rebase=把遠端接進來
+  [switch]$Yes              # 不要問，直接執行
 )
 
 $ErrorActionPreference = "Stop"
@@ -47,6 +50,8 @@ if (-not (Test-Path -LiteralPath (Join-Path $Root ".git"))) {
 
 function Git { & $git -C $Root @args }
 function GitQuiet { try { return (& $git -C $Root @args 2>$null) } catch { return $null } }
+
+. (Join-Path $scriptDir "git_common.ps1")
 
 # --- 有什麼變更 ---
 Git add -A | Out-Null
@@ -90,16 +95,40 @@ if (-not $remote) {
   return
 }
 
-Write-Host ""
-Write-Host "推送到 GitHub…" -ForegroundColor Cyan
-Git push origin HEAD
-if ($LASTEXITCODE -eq 0) {
+if ($Mode -eq "force") {
   Write-Host ""
-  Write-Host "  ✔ 完成，已備份到 GitHub" -ForegroundColor Green
-  Write-Host ("  " + ($remote -replace '\.git$', '') + "/commits") -ForegroundColor Cyan
-} else {
+  Write-Host "用本機版本覆蓋 GitHub…" -ForegroundColor Cyan
+  Git fetch origin 2>&1 | Out-Null
+  Git push --force-with-lease origin "HEAD:refs/heads/main"
+  if ($LASTEXITCODE -eq 0) {
+    Git branch --set-upstream-to=origin/main 2>$null | Out-Null
+    Write-Host ""
+    Write-Host "  ✔ 完成，GitHub 上已經是你本機這份了" -ForegroundColor Green
+    Write-Host ("  " + ($remote -replace '\.git$', '') + "/commits") -ForegroundColor Cyan
+  } else {
+    Write-Host "  覆蓋失敗，請把畫面截圖給我看。" -ForegroundColor Red
+  }
+}
+elseif ($Mode -eq "rebase") {
   Write-Host ""
-  Write-Host "  推送失敗，但這一版已經存在本機不會不見。" -ForegroundColor Yellow
-  Write-Host "  網路恢復或重新登入後再跑一次這支即可。" -ForegroundColor Yellow
+  Write-Host "把 GitHub 上的版本接進來再推…" -ForegroundColor Cyan
+  Git pull --rebase origin main
+  if ($LASTEXITCODE -eq 0) { Git push origin "HEAD:refs/heads/main" }
+  if ($LASTEXITCODE -eq 0) {
+    Write-Host ""
+    Write-Host "  ✔ 完成" -ForegroundColor Green
+  } else {
+    Git rebase --abort 2>&1 | Out-Null
+    Write-Host "  合併失敗，已還原。改用： Git存檔.bat -Mode force" -ForegroundColor Yellow
+  }
+}
+else {
+  $ok = Invoke-SmartPush -GitExe $git -RepoRoot $Root -Branch "main" -AutoYes:$Yes
+  if ($ok) {
+    Write-Host ("  " + ($remote -replace '\.git$', '') + "/commits") -ForegroundColor Cyan
+  } else {
+    Write-Host ""
+    Write-Host "  這一版已經存在本機不會不見。" -ForegroundColor Yellow
+  }
 }
 Write-Host ""

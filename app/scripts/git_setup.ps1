@@ -277,12 +277,13 @@ if ($existing) {
   Write-Host ("  ✔ 已設定 GitHub 位置： " + $RemoteUrl) -ForegroundColor Green
 }
 
-Write-Host ""
-Write-Host "正在推送到 GitHub…" -ForegroundColor Cyan
-Write-Host "（第一次會跳出瀏覽器要你登入 GitHub 授權，登入完就會自動繼續）" -ForegroundColor DarkGray
+. (Join-Path $scriptDir "git_common.ps1")
+
+Write-Host "（第一次推送會跳出瀏覽器要你登入 GitHub 授權，登入完就會自動繼續）" -ForegroundColor DarkGray
 Git branch -M main | Out-Null
-Git push -u origin main
-if ($LASTEXITCODE -eq 0) {
+$ok = Invoke-SmartPush -GitExe $git -RepoRoot $Root -Branch "main"
+
+if ($ok) {
   Write-Host ""
   Write-Host "==========================================================" -ForegroundColor Green
   Write-Host "  完成！程式已經備份到 GitHub" -ForegroundColor Green
@@ -293,9 +294,7 @@ if ($LASTEXITCODE -eq 0) {
   Write-Host "  想回到舊版本：到 GitHub 網頁點 Commits，任何一版都能看與下載。"
 } else {
   Write-Host ""
-  Write-Host "推送失敗。常見原因：" -ForegroundColor Yellow
-  Write-Host "  · 沒有完成瀏覽器登入 → 再執行一次這支就會重新跳出登入" -ForegroundColor Yellow
-  Write-Host "  · repo 網址打錯 → 執行： tools\git\cmd\git.exe -C `"$Root`" remote set-url origin 新網址" -ForegroundColor Yellow
-  Write-Host "  · repo 不是空的（有先建 README）→ 到 GitHub 刪掉重開一個空的" -ForegroundColor Yellow
+  Write-Host "本機版控已經建立好了，內容不會不見。" -ForegroundColor Yellow
+  Write-Host "照上面的提示處理完，再跑一次「Git存檔.bat」即可。" -ForegroundColor Yellow
 }
 Write-Host ""
