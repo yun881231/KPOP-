@@ -1,12 +1,13 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-16 15:28:33
+   產生時間：2026-08-16 19:29:23
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T15:28:33",
+    "generatedAt":  "2026-08-16T19:29:23",
     "root":  "D:\\kpop",
+    "assetBase":  "..",
     "bgm":  [
                 "介面音樂/IVE_HEYA.mp3"
             ],
@@ -17,7 +18,9 @@ window.QUIZ_DATA =
                   "photos":  [
                                  "封面/AESPA.avif",
                                  "封面/babymonster.webp",
+                                 "封面/Fromis9.jpg",
                                  "封面/H2H.jpg",
+                                 "封面/I-DLE.avif",
                                  "封面/ITZY.webp",
                                  "封面/IVE.avif",
                                  "封面/lesserafim.webp",
@@ -350,13 +353,21 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L3-002",
                                                         "group":  "AESPA",
+                                                        "title":  "LEMONADE",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/AESPA_LEMONADE.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/AESPA_LEMONADE.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-003",
+                                                        "group":  "AESPA",
                                                         "title":  "Whiplash",
                                                         "question":  "第三關_看舞蹈猜歌/題目/AESPA_Whiplash.mp4",
                                                         "answer":  "第三關_看舞蹈猜歌/答案/AESPA_Whiplash.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-003",
+                                                        "id":  "L3-004",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "HOT SAUCE",
                                                         "question":  "第三關_看舞蹈猜歌/題目/BABYMONSTER_HOT SAUCE.mp4",
@@ -364,7 +375,31 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-004",
+                                                        "id":  "L3-005",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "Lemon Tang",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_Lemon Tang.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Hearts2Hearts_Lemon Tang.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-006",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "RUDE!",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_RUDE!.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Hearts2Hearts_RUDE!.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-007",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "Style",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_Style.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Hearts2Hearts_Style.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-008",
                                                         "group":  "I-DLE",
                                                         "title":  "Tomboy",
                                                         "question":  "第三關_看舞蹈猜歌/題目/I-DLE_Tomboy.mp4",
@@ -372,7 +407,15 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-005",
+                                                        "id":  "L3-009",
+                                                        "group":  "ILLIT",
+                                                        "title":  "jellyous",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/ILLIT_jellyous.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/ILLIT_jellyous.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-010",
                                                         "group":  "ILLIT",
                                                         "title":  "Magnetic",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ILLIT_Magnetic.mp4",
@@ -380,7 +423,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-006",
+                                                        "id":  "L3-011",
                                                         "group":  "ITZY",
                                                         "title":  "ImaginaryFriend",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_ImaginaryFriend.mp4",
@@ -388,7 +431,31 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-007",
+                                                        "id":  "L3-012",
+                                                        "group":  "ITZY",
+                                                        "title":  "THAT’S A NO NO",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/ITZY_THAT’S A NO NO.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/ITZY_THAT’S A NO NO.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-013",
+                                                        "group":  "IVE",
+                                                        "title":  "ATTIUDE",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/IVE_ATTIUDE.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/IVE_ATTIUDE.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-014",
+                                                        "group":  "IVE",
+                                                        "title":  "BANG BANG",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/IVE_BANG BANG.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/IVE_BANG BANG.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-015",
                                                         "group":  "IVE",
                                                         "title":  "I AM",
                                                         "question":  "第三關_看舞蹈猜歌/題目/IVE_I AM.mp4",
@@ -396,7 +463,15 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-008",
+                                                        "id":  "L3-016",
+                                                        "group":  "IVE",
+                                                        "title":  "LOVE DIVE",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/IVE_LOVE DIVE.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/IVE_LOVE DIVE.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-017",
                                                         "group":  "KiiiKiii",
                                                         "title":  "404 (New Era)",
                                                         "question":  "第三關_看舞蹈猜歌/題目/KiiiKiii_404 (New Era).mp4",
@@ -404,7 +479,23 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-009",
+                                                        "id":  "L3-018",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "BOOMPALA",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/LE SSERAFIM_BOOMPALA.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/LE SSERAFIM_BOOMPALA.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-019",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "CELEBRATION",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/LE SSERAFIM_CELEBRATION.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/LE SSERAFIM_CELEBRATION.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-020",
                                                         "group":  "LESSERAFIM",
                                                         "title":  "SPAGHETTI",
                                                         "question":  "第三關_看舞蹈猜歌/題目/LESSERAFIM_SPAGHETTI.mp4",
@@ -412,7 +503,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-010",
+                                                        "id":  "L3-021",
                                                         "group":  "NewJeans",
                                                         "title":  "Ditto",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NewJeans_Ditto.mp4",
@@ -420,11 +511,27 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-011",
+                                                        "id":  "L3-022",
                                                         "group":  "NMIXX",
                                                         "title":  "Blue Valentine",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NMIXX_Blue Valentine.mp4",
                                                         "answer":  "第三關_看舞蹈猜歌/答案/NMIXX_Blue Valentine.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-023",
+                                                        "group":  "NMIXX",
+                                                        "title":  "Heavy Serenade",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/NMIXX_Heavy Serenade.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/NMIXX_Heavy Serenade.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-024",
+                                                        "group":  "RESCENE",
+                                                        "title":  "LOVE ATTACK",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/RESCENE_LOVE ATTACK.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/RESCENE_LOVE ATTACK.mp4",
                                                         "autoMask":  false
                                                     }
                                                 ]
@@ -435,6 +542,120 @@ window.QUIZ_DATA =
                                   "questions":  [
                                                     {
                                                         "id":  "L4-001",
+                                                        "eyes":  {
+                                                                     "group":  "AESPA",
+                                                                     "name":  "KARINA",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/AESPA_KARINA.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/AESPA_KARINA.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "AESPA",
+                                                                      "name":  "Winter",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/AESPA_Winter.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/AESPA_Winter.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "AESPA",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/AESPA.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-002",
+                                                        "eyes":  {
+                                                                     "group":  "BABYMONSTER",
+                                                                     "name":  "Rami",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/BABYMONSTER_Rami.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/BABYMONSTER_Rami.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BABYMONSTER",
+                                                                      "name":  "Pharita",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/BABYMONSTER_Pharita.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/BABYMONSTER_Pharita.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "BABYMONSTER",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/BABYMONSTER.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-003",
+                                                        "eyes":  {
+                                                                     "group":  "BLACKPINK",
+                                                                     "name":  "Jisoo",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/BLACKPINK_Jisoo.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/BLACKPINK_Jisoo.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BLACKPINK",
+                                                                      "name":  "Lisa",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/BLACKPINK_Lisa.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/BLACKPINK_Lisa.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "BLACKPINK",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/BLACKPINK.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-004",
+                                                        "eyes":  {
+                                                                     "group":  "Hearts2Hearts",
+                                                                     "name":  "IAN",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/Hearts2Hearts_IAN.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/Hearts2Hearts_IAN.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "Hearts2Hearts",
+                                                                      "name":  "JIWOO",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/Hearts2Hearts_JIWOO.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/Hearts2Hearts_JIWOO.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "Hearts2Hearts",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/Hearts2Hearts.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-005",
+                                                        "eyes":  {
+                                                                     "group":  "i-dle",
+                                                                     "name":  "Soyeon",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/i-dle_Soyeon.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/i-dle_Soyeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "i-dle",
+                                                                      "name":  "Yuqi",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/i-dle_Yuqi.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/i-dle_Yuqi.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "i-dle",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/i-dle.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-006",
+                                                        "eyes":  {
+                                                                     "group":  "ILLIT",
+                                                                     "name":  "Wonhee",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/ILLIT_Wonhee.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/ILLIT_Wonhee.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "ILLIT",
+                                                                      "name":  "Minju",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/ILLIT_Minju.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/ILLIT_Minju.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "ILLIT",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/ILLIT.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-007",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Gaeul",
@@ -450,6 +671,139 @@ window.QUIZ_DATA =
                                                         "lightstick":  {
                                                                            "group":  "IVE",
                                                                            "image":  "第四關_看五官猜偶像/題目/手燈/IVE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-008",
+                                                        "eyes":  {
+                                                                     "group":  "LE SSERAFIM",
+                                                                     "name":  "Chaewon",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/LE SSERAFIM_Chaewon.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/LE SSERAFIM_Chaewon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "LE SSERAFIM",
+                                                                      "name":  "Sakura",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/LE SSERAFIM_Sakura.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/LE SSERAFIM_Sakura.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "LE SSERAFIM",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/LE SSERAFIM.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-009",
+                                                        "eyes":  {
+                                                                     "group":  "NewJeans",
+                                                                     "name":  "Minji",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/NewJeans_Minji.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/NewJeans_Minji.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "NewJeans",
+                                                                      "name":  "Hyein",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/NewJeans_Hyein.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/NewJeans_Hyein.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "NewJeans",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/NewJeans.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-010",
+                                                        "eyes":  {
+                                                                     "group":  "NMIXX",
+                                                                     "name":  "Jiwoo",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/NMIXX_Jiwoo.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/NMIXX_Jiwoo.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "NMIXX",
+                                                                      "name":  "Lily",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/NMIXX_Lily.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/NMIXX_Lily.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "NMIXX",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/NMIXX.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-011",
+                                                        "eyes":  {
+                                                                     "group":  "QWER",
+                                                                     "name":  "Chodan",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/QWER_Chodan.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/QWER_Chodan.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "QWER",
+                                                                      "name":  "Hina",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/QWER_Hina.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/QWER_Hina.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "QWER",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/QWER.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-012",
+                                                        "eyes":  {
+                                                                     "group":  "Red Velvet",
+                                                                     "name":  "Irene",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/Red Velvet_Irene.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/Red Velvet_Irene.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "Red Velvet",
+                                                                      "name":  "Wendy",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/Red Velvet_Wendy.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/Red Velvet_Wendy.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "Red Velvet",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/Red Velvet.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-013",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Nien",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/tripleS_Nien.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/tripleS_Nien.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Xinyu",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/tripleS_Xinyu.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/tripleS_Xinyu.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-014",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "SANA",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/TWICE_SANA.png",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/TWICE_SANA.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "DAHYUN",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/TWICE_DAHYUN.png",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/TWICE_DAHYUN.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "第四關_看五官猜偶像/題目/手燈/TWICE.png"
                                                                        }
                                                     }
                                                 ]

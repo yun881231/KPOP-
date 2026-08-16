@@ -277,6 +277,7 @@ foreach ($f in (Get-Media $dirBgm $AUD)) { [void]$bgm.Add((Get-Rel $f.FullName))
 $payload = [ordered]@{
   generatedAt = (Get-Date).ToString("s")
   root        = $root
+  assetBase   = ".."          # 本機直接開檔用；網頁版打包時會改成 "assets"
   bgm         = @($bgm)
   cover       = [ordered]@{
     background      = $coverBg
