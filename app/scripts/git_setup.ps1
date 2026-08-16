@@ -98,9 +98,12 @@ Write-Host ("  Git： " + $git) -ForegroundColor DarkGray
 Write-Host ("  " + (& $git --version)) -ForegroundColor DarkGray
 Write-Host ""
 
-# 用 $args 收全部參數，才不會把 -A / -m 這種旗標當成 PowerShell 參數
-function Git { & $git -C $Root @args }
-function GitQuiet { try { return (& $git -C $Root @args 2>$null) } catch { return $null } }
+. (Join-Path $scriptDir "git_common.ps1")
+
+# 一律透過 Invoke-Git，避免 PowerShell 5.1 把 git 的 stderr 變成錯誤
+# 不能有 param 區塊，否則 -A / -M 這種旗標會被 PowerShell 當成參數名
+function Git     { (Invoke-Git $git $Root $args) | Out-Null }
+function GitText { $r = Invoke-Git $git $Root $args; if ($r.Code -ne 0) { return "" }; return $r.Text.Trim() }
 
 # ---------------------------------------------------------------------
 # 2. .gitignore / .gitattributes / README.md
@@ -108,30 +111,38 @@ function GitQuiet { try { return (& $git -C $Root @args 2>$null) } catch { retur
 $gitignore = @'
 # ============================================================
 #  KPOP之王巔峰賽 — 版控範圍設定
-#  只版控「程式」，影音素材檔案太大不進 Git（GitHub 單檔上限 100MB）
-#  素材請另外備份（外接硬碟 / 雲端硬碟）
+#
+#  只版控「程式」與「網頁版 docs」，原始影音素材太大不進 Git
+#  （GitHub 單檔上限 100MB）。素材請另外備份到外接硬碟或雲端。
+#
+#  ⚠ 所有素材規則都用「/」開頭鎖定根目錄。
+#    少了斜線的話，像 cover/ 這種規則會連 docs/assets/cover/
+#    一起忽略掉，網頁版的封面圖就永遠上不了 GitHub Pages。
 # ============================================================
 
-# --- 素材資料夾（全部排除）---
-第一關_偶像快看快答/
-第二關_聽前奏猜歌/
-第三關_看舞蹈猜歌/
-第四關_看五官猜偶像/
-介面音樂/
-封面/
-level1_*/
-level2_*/
-level3_*/
-level4_*/
-cover/
+# --- 原始素材資料夾（只排除根目錄那幾個）---
+/第一關_偶像快看快答/
+/第二關_聽前奏猜歌/
+/第三關_看舞蹈猜歌/
+/第四關_看五官猜偶像/
+/介面音樂/
+/封面/
+/level1_*/
+/level2_*/
+/level3_*/
+/level4_*/
+/cover/
 
 # --- 自動下載的工具（ffmpeg / python / git）---
-tools/
+/tools/
 
 # --- 大型簡報與 Office 暫存檔 ---
 *.pptx
 *.ppt
 ~$*
+
+# --- 網頁版務必進版控，GitHub Pages 靠它 ---
+!/docs/
 
 # --- 系統與編輯器雜物 ---
 Thumbs.db
@@ -207,25 +218,25 @@ Write-Host ""
 # 3. git init + 身分設定
 # ---------------------------------------------------------------------
 if (-not (Test-Path -LiteralPath (Join-Path $Root ".git"))) {
-  Git init | Out-Null
-  Git symbolic-ref HEAD refs/heads/main | Out-Null
+  Git init
+  Git symbolic-ref HEAD refs/heads/main
   Write-Host "  ✔ 已建立 Git 倉庫" -ForegroundColor Green
 } else {
   Write-Host "  · Git 倉庫已存在" -ForegroundColor DarkGray
 }
 
-Git config core.quotepath false | Out-Null   # 讓中文檔名正常顯示
-Git config core.autocrlf false | Out-Null
+Git config core.quotepath false   # 讓中文檔名正常顯示
+Git config core.autocrlf false
 
-$curName = GitQuiet config user.name
+$curName = GitText config user.name
 if (-not $curName) {
   if (-not $UserName) { $UserName = Read-Host "你的名字（會顯示在 commit 紀錄上，例如 YUN）" }
-  if ($UserName) { Git config user.name $UserName | Out-Null }
+  if ($UserName) { Git config user.name $UserName }
 }
-$curMail = GitQuiet config user.email
+$curMail = GitText config user.email
 if (-not $curMail) {
   if (-not $UserEmail) { $UserEmail = Read-Host "你的 GitHub Email" }
-  if ($UserEmail) { Git config user.email $UserEmail | Out-Null }
+  if ($UserEmail) { Git config user.email $UserEmail }
 }
 
 # ---------------------------------------------------------------------
@@ -233,22 +244,22 @@ if (-not $curMail) {
 # ---------------------------------------------------------------------
 Write-Host ""
 Write-Host "正在把程式加入版控…" -ForegroundColor Cyan
-Git add -A | Out-Null
-$staged = @(Git diff --cached --name-only)
+Git add -A
+$staged = @((GitText diff --cached --name-only) -split "`n" | Where-Object { $_ })
 if ($staged.Count -eq 0) {
   Write-Host "  · 沒有新的變更需要 commit" -ForegroundColor DarkGray
 } else {
   Write-Host ("  納入版控的檔案共 " + $staged.Count + " 個：") -ForegroundColor DarkGray
   $staged | Select-Object -First 30 | ForEach-Object { Write-Host ("    " + $_) -ForegroundColor DarkGray }
   if ($staged.Count -gt 30) { Write-Host ("    …其餘 " + ($staged.Count - 30) + " 個") -ForegroundColor DarkGray }
-  Git commit -m "初版：KPOP之王巔峰賽 四關測驗 App" | Out-Null
+  Git commit -m "初版：KPOP之王巔峰賽 四關測驗 App"
   Write-Host "  ✔ 已建立第一個版本" -ForegroundColor Green
 }
 
 # ---------------------------------------------------------------------
 # 5. 連到 GitHub
 # ---------------------------------------------------------------------
-$existing = GitQuiet remote get-url origin
+$existing = GitText remote get-url origin
 if ($existing) {
   Write-Host ""
   Write-Host ("  · 已設定的 GitHub 位置： " + $existing) -ForegroundColor DarkGray
@@ -278,14 +289,12 @@ if ($existing) {
   }
   $RemoteUrl = $RemoteUrl.Trim()
   if ($RemoteUrl -notmatch '\.git$' -and $RemoteUrl -match '^https://github\.com/') { $RemoteUrl += ".git" }
-  Git remote add origin $RemoteUrl | Out-Null
+  Git remote add origin $RemoteUrl
   Write-Host ("  ✔ 已設定 GitHub 位置： " + $RemoteUrl) -ForegroundColor Green
 }
 
-. (Join-Path $scriptDir "git_common.ps1")
-
 Write-Host "（第一次推送會跳出瀏覽器要你登入 GitHub 授權，登入完就會自動繼續）" -ForegroundColor DarkGray
-Git branch -M main | Out-Null
+Git branch -M main
 $ok = Invoke-SmartPush -GitExe $git -RepoRoot $Root -Branch "main"
 
 if ($ok) {

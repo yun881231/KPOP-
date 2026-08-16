@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-16 23:43:01 */
+   產生時間：2026-08-17 00:01:57 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T23:40:36",
+    "generatedAt":  "2026-08-16T23:59:32",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -1120,6 +1120,63 @@ window.QUIZ_DATA =
                                                         "id":  "L4-026",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
+                                                                     "name":  "Chaeyeon",
+                                                                     "q":  "level4/q/eye/tripleS_Chaeyeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Chaeyeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Chaeyeon",
+                                                                      "q":  "level4/q/mouth/tripleS_Chaeyeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Chaeyeon.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-027",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Hayeon",
+                                                                     "q":  "level4/q/eye/tripleS_Hayeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Hayeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Hayeon",
+                                                                      "q":  "level4/q/mouth/tripleS_Hayeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Hayeon.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-028",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Hyerin",
+                                                                     "q":  "level4/q/eye/tripleS_Hyerin.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Hyerin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Hyerin",
+                                                                      "q":  "level4/q/mouth/tripleS_Hyerin.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Hyerin.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-029",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
                                                                      "name":  "Jiwoo",
                                                                      "q":  "level4/q/eye/tripleS_Jiwoo.jpg",
                                                                      "a":  "level4/a/eye/tripleS_Jiwoo.jpg"
@@ -1136,7 +1193,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-027",
+                                                        "id":  "L4-030",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
                                                                      "name":  "Lynn",
@@ -1155,12 +1212,31 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-028",
+                                                        "id":  "L4-031",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
                                                                      "name":  "Nien",
                                                                      "q":  "level4/q/eye/tripleS_Nien.png",
                                                                      "a":  "level4/a/eye/tripleS_Nien.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Soomin",
+                                                                      "q":  "level4/q/mouth/tripleS_Soomin.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Soomin.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-032",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Soomin",
+                                                                     "q":  "level4/q/eye/tripleS_Soomin.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Soomin.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
@@ -1174,7 +1250,45 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-029",
+                                                        "id":  "L4-033",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Yooyeon",
+                                                                     "q":  "level4/q/eye/tripleS_Yooyeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Yooyeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Yooyeon",
+                                                                      "q":  "level4/q/mouth/tripleS_Yooyeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Yooyeon.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-034",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Yubin",
+                                                                     "q":  "level4/q/eye/tripleS_Yubin.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Yubin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Yubin",
+                                                                      "q":  "level4/q/mouth/tripleS_Yubin.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Yubin.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-035",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "CHAEYOUNG",
@@ -1193,7 +1307,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-030",
+                                                        "id":  "L4-036",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "DAHYUN",
@@ -1212,7 +1326,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-031",
+                                                        "id":  "L4-037",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JEONGYEON",
@@ -1231,7 +1345,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-032",
+                                                        "id":  "L4-038",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JIHYO",
@@ -1250,7 +1364,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-033",
+                                                        "id":  "L4-039",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MINA",
@@ -1269,7 +1383,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-034",
+                                                        "id":  "L4-040",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MOMO",
@@ -1288,7 +1402,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-035",
+                                                        "id":  "L4-041",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "NAYEON",
@@ -1307,7 +1421,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-036",
+                                                        "id":  "L4-042",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "SANA",
@@ -1326,7 +1440,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-037",
+                                                        "id":  "L4-043",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "TZUYU",

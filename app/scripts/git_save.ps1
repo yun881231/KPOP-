@@ -53,14 +53,16 @@ if (-not (Test-Path -LiteralPath (Join-Path $Root ".git"))) {
   return
 }
 
-function Git { & $git -C $Root @args }
-function GitQuiet { try { return (& $git -C $Root @args 2>$null) } catch { return $null } }
-
 . (Join-Path $scriptDir "git_common.ps1")
 
+# 一律透過 Invoke-Git，避免 PowerShell 5.1 把 git 的 stderr 變成錯誤
+# 不能有 param 區塊，否則 -A / -m 這種旗標會被 PowerShell 當成參數名
+function G  { Invoke-Git $git $Root $args }
+function GS { Invoke-Git $git $Root $args -Show }
+
 # --- 有什麼變更 ---
-Git add -A | Out-Null
-$changes = @(Git diff --cached --name-status)
+G add -A | Out-Null
+$changes = @((G diff --cached --name-status).Text -split "`n" | Where-Object { $_ })
 if ($changes.Count -eq 0) {
   Write-Host ""
   Write-Host "  沒有任何變更，不需要存檔。" -ForegroundColor DarkGray
@@ -86,12 +88,14 @@ if (-not $Message) {
 }
 if (-not $Message) { $Message = "更新 " + (Get-Date -Format "yyyy-MM-dd HH:mm") }
 
-Git commit -m $Message | Out-Null
-$hash = (Git rev-parse --short HEAD)
+G commit -m $Message | Out-Null
+$hash = (G rev-parse --short HEAD).Text.Trim()
 Write-Host ("  ✔ 已存成版本 " + $hash + "：" + $Message) -ForegroundColor Green
 
 # --- 推上去 ---
-$remote = GitQuiet remote get-url origin
+$rr = G remote get-url origin
+$remote = ""
+if ($rr.Code -eq 0) { $remote = $rr.Text.Trim() }
 if (-not $remote) {
   Write-Host ""
   Write-Host "  還沒連到 GitHub，這一版先存在本機。" -ForegroundColor Yellow
@@ -103,10 +107,10 @@ if (-not $remote) {
 if ($Mode -eq "force") {
   Write-Host ""
   Write-Host "用本機版本覆蓋 GitHub…" -ForegroundColor Cyan
-  Git fetch origin 2>&1 | Out-Null
-  Git push --force-with-lease origin "HEAD:refs/heads/main"
-  if ($LASTEXITCODE -eq 0) {
-    Git branch --set-upstream-to=origin/main 2>$null | Out-Null
+  G fetch origin | Out-Null
+  $p = GS push --force-with-lease origin "HEAD:refs/heads/main"
+  if ($p.Code -eq 0) {
+    Set-Upstream $git $Root "main"
     Write-Host ""
     Write-Host "  ✔ 完成，GitHub 上已經是你本機這份了" -ForegroundColor Green
     Write-Host ("  " + ($remote -replace '\.git$', '') + "/commits") -ForegroundColor Cyan
@@ -117,13 +121,15 @@ if ($Mode -eq "force") {
 elseif ($Mode -eq "rebase") {
   Write-Host ""
   Write-Host "把 GitHub 上的版本接進來再推…" -ForegroundColor Cyan
-  Git pull --rebase origin main
-  if ($LASTEXITCODE -eq 0) { Git push origin "HEAD:refs/heads/main" }
-  if ($LASTEXITCODE -eq 0) {
+  $rb = GS pull --rebase origin main
+  $ok2 = $false
+  if ($rb.Code -eq 0) { $ok2 = ((GS push origin "HEAD:refs/heads/main").Code -eq 0) }
+  if ($ok2) {
     Write-Host ""
     Write-Host "  ✔ 完成" -ForegroundColor Green
+    Set-Upstream $git $Root "main"
   } else {
-    Git rebase --abort 2>&1 | Out-Null
+    G rebase --abort | Out-Null
     Write-Host "  合併失敗，已還原。改用： Git存檔.bat -Mode force" -ForegroundColor Yellow
   }
 }

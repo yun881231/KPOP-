@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-16 23:43:01
+2026-08-17 00:02:05
 assetBase = assets
 
 本地檔案（
-312
+336
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/AESPA.jpg
@@ -181,9 +181,15 @@ assetBase = assets
   assets/level4/a/eye/QWER_Chodan.png
   assets/level4/a/eye/Red_Velvet_Irene.jpg
   assets/level4/a/eye/tripleS_Chaewon.jpg
+  assets/level4/a/eye/tripleS_Chaeyeon.jpg
+  assets/level4/a/eye/tripleS_Hayeon.jpg
+  assets/level4/a/eye/tripleS_Hyerin.jpg
   assets/level4/a/eye/tripleS_Jiwoo.jpg
   assets/level4/a/eye/tripleS_Lynn.jpg
   assets/level4/a/eye/tripleS_Nien.jpg
+  assets/level4/a/eye/tripleS_Soomin.jpg
+  assets/level4/a/eye/tripleS_Yooyeon.jpg
+  assets/level4/a/eye/tripleS_Yubin.jpg
   assets/level4/a/eye/TWICE_CHAEYOUNG.jpg
   assets/level4/a/eye/TWICE_DAHYUN.jpg
   assets/level4/a/eye/TWICE_JEONGYEON.jpg
@@ -217,9 +223,15 @@ assetBase = assets
   assets/level4/a/mouth/QWER_Hina.jpg
   assets/level4/a/mouth/Red_Velvet_Wendy.png
   assets/level4/a/mouth/tripleS_Chaewon.jpg
+  assets/level4/a/mouth/tripleS_Chaeyeon.jpg
+  assets/level4/a/mouth/tripleS_Hayeon.jpg
+  assets/level4/a/mouth/tripleS_Hyerin.jpg
   assets/level4/a/mouth/tripleS_Jiwoo.jpg
   assets/level4/a/mouth/tripleS_Lynn.jpg
+  assets/level4/a/mouth/tripleS_Soomin.jpg
   assets/level4/a/mouth/tripleS_Xinyu.png
+  assets/level4/a/mouth/tripleS_Yooyeon.jpg
+  assets/level4/a/mouth/tripleS_Yubin.jpg
   assets/level4/a/mouth/TWICE_CHAEYOUNG.jpg
   assets/level4/a/mouth/TWICE_DAHYUN.png
   assets/level4/a/mouth/TWICE_JEONGYEON.jpg
@@ -254,9 +266,15 @@ assetBase = assets
   assets/level4/q/eye/QWER_Chodan.png
   assets/level4/q/eye/Red_Velvet_Irene.png
   assets/level4/q/eye/tripleS_Chaewon.jpg
+  assets/level4/q/eye/tripleS_Chaeyeon.jpg
+  assets/level4/q/eye/tripleS_Hayeon.jpg
+  assets/level4/q/eye/tripleS_Hyerin.jpg
   assets/level4/q/eye/tripleS_Jiwoo.jpg
   assets/level4/q/eye/tripleS_Lynn.jpg
   assets/level4/q/eye/tripleS_Nien.png
+  assets/level4/q/eye/tripleS_Soomin.jpg
+  assets/level4/q/eye/tripleS_Yooyeon.jpg
+  assets/level4/q/eye/tripleS_Yubin.jpg
   assets/level4/q/eye/TWICE_CHAEYOUNG.jpg
   assets/level4/q/eye/TWICE_DAHYUN.jpg
   assets/level4/q/eye/TWICE_JEONGYEON.jpg
@@ -306,9 +324,15 @@ assetBase = assets
   assets/level4/q/mouth/QWER_Hina.png
   assets/level4/q/mouth/Red_Velvet_Wendy.png
   assets/level4/q/mouth/tripleS_Chaewon.jpg
+  assets/level4/q/mouth/tripleS_Chaeyeon.jpg
+  assets/level4/q/mouth/tripleS_Hayeon.jpg
+  assets/level4/q/mouth/tripleS_Hyerin.jpg
   assets/level4/q/mouth/tripleS_Jiwoo.jpg
   assets/level4/q/mouth/tripleS_Lynn.jpg
+  assets/level4/q/mouth/tripleS_Soomin.jpg
   assets/level4/q/mouth/tripleS_Xinyu.png
+  assets/level4/q/mouth/tripleS_Yooyeon.jpg
+  assets/level4/q/mouth/tripleS_Yubin.jpg
   assets/level4/q/mouth/TWICE_CHAEYOUNG.jpg
   assets/level4/q/mouth/TWICE_DAHYUN.png
   assets/level4/q/mouth/TWICE_JEONGYEON.jpg

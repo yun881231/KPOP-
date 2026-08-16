@@ -389,6 +389,34 @@ foreach ($r in ($refs | Select-Object -Unique)) {
   else { [void]$missing.Add($r) }
 }
 
+# --- 健檢 2：docs 底下的檔案會不會被 .gitignore 擋掉（GitHub Pages 最常見的坑）---
+function Find-GitExe {
+  $c = @((Join-Path $Root "tools\git\cmd\git.exe"))
+  $g = Get-Command git -ErrorAction SilentlyContinue
+  if ($g -and $g.Source) { $c += $g.Source }
+  $c += "C:\Program Files\Git\cmd\git.exe"
+  foreach ($p in $c) { if ($p -and (Test-Path -LiteralPath $p)) { return $p } }
+  return $null
+}
+function Test-GitIgnored([string]$Exe, [string]$RepoRoot, [string]$RelPath) {
+  $old = $ErrorActionPreference
+  $ErrorActionPreference = "SilentlyContinue"
+  & $Exe -C $RepoRoot check-ignore -q -- $RelPath 2>&1 | Out-Null
+  $code = $LASTEXITCODE
+  $ErrorActionPreference = $old
+  return ($code -eq 0)
+}
+
+$gitIgnored = New-Object System.Collections.ArrayList
+$gitExe = Find-GitExe
+if ($gitExe -and (Test-Path -LiteralPath (Join-Path $Root ".git"))) {
+  $probe = @(($Out + "/index.html"), ($Out + "/quiz-data.js"), ($Out + "/styles.css"))
+  foreach ($k in $used.Keys) { $probe += ($Out + "/assets/" + $k) }
+  foreach ($p in $probe) {
+    if (Test-GitIgnored $gitExe $Root $p) { [void]$gitIgnored.Add($p) }
+  }
+}
+
 $listLines = @("KPOP之王巔峰賽 — 網頁版資產清單",
                "產生時間：" + (Get-Date -Format "yyyy-MM-dd HH:mm:ss"),
                "assetBase = assets",
@@ -429,9 +457,17 @@ if ($stats.converted -gt 0) { Write-Host ("  轉成相容格式： {0} 張（.av
 if ($stats.external -gt 0)  { Write-Host ("  外連圖片： {0} 個（不打包）" -f $stats.external) -ForegroundColor Cyan }
 Write-Host ""
 Write-Host "----------------------------------------------------------"
-if ($badPath.Count -eq 0 -and $missing.Count -eq 0) {
+if ($badPath.Count -eq 0 -and $missing.Count -eq 0 -and $gitIgnored.Count -eq 0) {
   Write-Host ("  健檢通過：{0} 個檔案路徑全部正確，沒有任何本機絕對路徑。" -f $okCount) -ForegroundColor Green
+  if ($gitExe) { Write-Host ("  {0}\ 底下的檔案都不會被 .gitignore 擋掉，可以安全推上 GitHub Pages。" -f $Out) -ForegroundColor Green }
 } else {
+  if ($gitIgnored.Count -gt 0) {
+    Write-Host ("  !! 有 {0} 個檔案被 .gitignore 擋住，推上 GitHub 後網頁會看不到它們：" -f $gitIgnored.Count) -ForegroundColor Red
+    foreach ($p in ($gitIgnored | Select-Object -First 10)) { Write-Host ("     " + $p) -ForegroundColor Red }
+    if ($gitIgnored.Count -gt 10) { Write-Host ("     …其餘 " + ($gitIgnored.Count - 10) + " 個") -ForegroundColor Red }
+    Write-Host "     → 檢查 D:\kpop\.gitignore，素材規則前面都要加「/」鎖定根目錄，" -ForegroundColor Yellow
+    Write-Host "       例如寫成 /cover/ 而不是 cover/，否則會連 docs 底下的同名資料夾一起排除。" -ForegroundColor Yellow
+  }
   if ($badPath.Count -gt 0) {
     Write-Host "  !! 發現本機絕對路徑（別人的電腦讀不到）：" -ForegroundColor Red
     foreach ($r in $badPath) { Write-Host ("     " + $r) -ForegroundColor Red }
