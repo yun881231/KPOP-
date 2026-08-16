@@ -262,6 +262,21 @@ foreach ($f in (Get-Media $dirCover ($IMG + $VID))) {
   }
 }
 
+# 外連圖片（圖床）：在「封面」資料夾放一個 外連圖片.txt，一行一個網址
+if ($dirCover) {
+  foreach ($cand in @("外連圖片.txt", "圖床.txt", "links.txt")) {
+    $lf = Join-Path $dirCover.FullName $cand
+    if (Test-Path -LiteralPath $lf) {
+      foreach ($line in (Get-Content -LiteralPath $lf -Encoding UTF8)) {
+        $u = $line.Trim()
+        if (-not $u -or $u.StartsWith("#")) { continue }
+        if ($u -match '^(https?:)?//') { [void]$coverPhotos.Add($u) }
+      }
+      break
+    }
+  }
+}
+
 # 封面資料夾沒放照片時，自動借用第一關的偶像照當照片牆
 $coverFallback = $false
 if ($coverPhotos.Count -eq 0 -and -not $coverHero) {
@@ -323,6 +338,8 @@ if ($coverFallback) {
 } else {
   Write-Host ("  封面照片牆          : {0} 張" -f $coverPhotos.Count)
 }
+$extLinks = @($coverPhotos | Where-Object { $_ -match '^(https?:)?//' }).Count
+if ($extLinks -gt 0) { Write-Host ("  其中外連圖床        : {0} 張" -f $extLinks) }
 if ($coverBg)   { Write-Host ("  封面動態背景        : " + $coverBg) }
 if ($coverHero) { Write-Host ("  封面主視覺          : " + $coverHero) }
 Write-Host ""

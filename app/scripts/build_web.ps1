@@ -107,10 +107,33 @@ function Convert-Seg([string]$seg, [bool]$isFile) {
 
 $map  = @{}   # 來源相對路徑 → 網頁版相對路徑
 $used = @{}
-$stats = [ordered]@{ video = 0; audio = 0; image = 0; skipped = 0; srcBytes = 0; outBytes = 0 }
+$stats = [ordered]@{ video = 0; audio = 0; image = 0; converted = 0; external = 0; skipped = 0; srcBytes = 0; outBytes = 0 }
+$ffprobe = $null
+if ($ffmpeg) {
+  $cand = Join-Path (Split-Path -Parent $ffmpeg) "ffprobe.exe"
+  if (Test-Path -LiteralPath $cand) { $ffprobe = $cand }
+  else { $g = Get-Command ffprobe -ErrorAction SilentlyContinue; if ($g) { $ffprobe = $g.Source } }
+}
+
+# .avif / .webp 在舊一點的手機瀏覽器（iOS 15 以前）開不了，統一轉成 jpg/png
+$LEGACY_IMG = @(".avif", ".webp")
+
+function Test-HasAlpha([string]$file) {
+  if (-not $ffprobe) { return $true }   # 問不到就當作有透明，轉 png 比較安全
+  try {
+    $fmt = & $ffprobe -v error -select_streams v:0 -show_entries stream=pix_fmt -of csv=p=0 $file 2>$null
+    return ("$fmt" -match "a|rgba|argb|ya|pal8")
+  } catch { return $true }
+}
 
 function Add-Asset([string]$rel, [switch]$Silent) {
   if (-not $rel) { return $null }
+
+  # 外連圖床（http/https///）→ 原樣保留，不需要打包
+  if ($rel -match '^(https?:)?//' -or $rel -match '^data:') {
+    $stats.external++
+    return $rel
+  }
   if ($map.ContainsKey($rel)) { return $map[$rel] }
 
   $src = Join-Path $Root ($rel -replace '/', '\')
@@ -125,28 +148,68 @@ function Add-Asset([string]$rel, [switch]$Silent) {
   for ($i = 0; $i -lt $segs.Length; $i++) {
     $parts += (Convert-Seg $segs[$i] ($i -eq $segs.Length - 1))
   }
-  $ext = [System.IO.Path]::GetExtension($parts[-1]).ToLower()
+  $ext   = [System.IO.Path]::GetExtension($parts[-1]).ToLower()
+  $baseN = [System.IO.Path]::GetFileNameWithoutExtension($parts[-1])
   $isVid = @(".mp4",".webm",".mov",".mkv",".m4v",".ogv") -contains $ext
   $isAud = @(".mp3",".m4a",".wav",".ogg",".oga",".aac",".flac",".opus") -contains $ext
-  if ($isVid -and $compress) { $parts[-1] = [System.IO.Path]::GetFileNameWithoutExtension($parts[-1]) + ".mp4" }
+  $isImg = @(".png",".jpg",".jpeg",".webp",".gif",".bmp",".avif") -contains $ext
+  $srcLen = (Get-Item -LiteralPath $src).Length
 
+  # ---- 先決定最終副檔名（可能會轉檔）----
+  $tmpOut = $null
+  $finalExt = $ext
+  if ($isVid -and $compress) {
+    $finalExt = ".mp4"
+  }
+  elseif ($isImg -and $ffmpeg) {
+    $needConv = ($LEGACY_IMG -contains $ext)
+    $needResize = ($srcLen -gt 300KB)
+    if ($needConv -or $needResize) {
+      $targetExt = $ext
+      if ($needConv) { if (Test-HasAlpha $src) { $targetExt = ".png" } else { $targetExt = ".jpg" } }
+      if ($targetExt -eq ".gif") { $targetExt = ".gif" }
+      $tmpOut = Join-Path ([System.IO.Path]::GetTempPath()) ("kpopimg_" + [System.Guid]::NewGuid().ToString("N") + $targetExt)
+      $ia = @("-y","-hide_banner","-loglevel","error","-i",$src,
+              "-vf",("scale='min({0},iw)':-2:flags=lanczos" -f $ImageMaxWidth))
+      if ($targetExt -eq ".jpg") { $ia += @("-q:v","3") }
+      $ia += $tmpOut
+      & $ffmpeg @ia 2>&1 | Out-Null
+      if ($LASTEXITCODE -eq 0 -and (Test-Path -LiteralPath $tmpOut)) {
+        $finalExt = $targetExt
+        if ($needConv) {
+          $stats.converted++
+          if (-not $Silent) { Write-Host ("   ◆ 轉檔相容格式 " + $segs[-1] + " → " + $baseN + $targetExt) -ForegroundColor DarkCyan }
+        }
+      } else {
+        Remove-Item -LiteralPath $tmpOut -Force -ErrorAction SilentlyContinue
+        $tmpOut = $null
+        if ($needConv -and -not $Silent) {
+          Write-Host ("   ! 轉檔失敗，沿用原格式（舊手機可能看不到）： " + $segs[-1]) -ForegroundColor Yellow
+        }
+      }
+    }
+  }
+  $parts[-1] = $baseN + $finalExt
+
+  # ---- 產生不重複的輸出路徑 ----
   $web = ($parts -join '/')
   $n = 1
   while ($used.ContainsKey($web)) {
     $n++
-    $b = [System.IO.Path]::GetFileNameWithoutExtension($parts[-1])
-    $e = [System.IO.Path]::GetExtension($parts[-1])
-    $tmp = $parts.Clone(); $tmp[-1] = "$b-$n$e"
+    $tmp = $parts.Clone(); $tmp[-1] = "$baseN-$n$finalExt"
     $web = ($tmp -join '/')
   }
   $used[$web] = $true
 
   $dst = Join-Path $assetsDir ($web -replace '/', '\')
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $dst) | Out-Null
-  $srcLen = (Get-Item -LiteralPath $src).Length
   $stats.srcBytes += $srcLen
 
-  if ($isVid -and $compress) {
+  if ($tmpOut) {
+    Move-Item -LiteralPath $tmpOut -Destination $dst -Force
+    $stats.image++
+  }
+  elseif ($isVid -and $compress) {
     if (-not $Silent) { Write-Host ("   ▶ 壓縮影片 " + $segs[-1] + "  (" + [math]::Round($srcLen/1MB,1) + " MB)") -ForegroundColor Cyan }
     $a = @("-y","-hide_banner","-loglevel","error","-i",$src,
            "-vf",("scale='min({0},iw)':-2" -f $VideoMaxWidth),
@@ -154,13 +217,14 @@ function Add-Asset([string]$rel, [switch]$Silent) {
            "-pix_fmt","yuv420p","-movflags","+faststart")
     if ($Silent) { $a += "-an" } else { $a += @("-c:a","aac","-b:a",$AudioBitrate) }
     $a += $dst
-    $o = & $ffmpeg @a 2>&1
+    & $ffmpeg @a 2>&1 | Out-Null
     if ($LASTEXITCODE -ne 0) {
       Write-Host ("   ! 壓縮失敗改用原檔： " + $segs[-1]) -ForegroundColor Yellow
       Copy-Item -LiteralPath $src -Destination $dst -Force
     }
     $stats.video++
-  } else {
+  }
+  else {
     Copy-Item -LiteralPath $src -Destination $dst -Force
     if ($isVid) { $stats.video++ } elseif ($isAud) { $stats.audio++ } else { $stats.image++ }
   }
@@ -289,6 +353,57 @@ $deployTxt = @"
 [System.IO.File]::WriteAllText((Join-Path $outDir "部署說明.txt"), ($deployTxt -replace "`r?`n", "`r`n"), $utf8NoBom)
 
 # ---------------------------------------------------------------------
+# 健檢：把題庫裡每一個路徑都實際比對一次，確認檔案真的在 docs 裡面
+# ---------------------------------------------------------------------
+Write-Host ""
+Write-Host "健檢中（確認每個路徑都真的有檔案）…" -ForegroundColor Cyan
+
+$refs = New-Object System.Collections.ArrayList
+function Note([string]$v) { if ($v) { [void]$refs.Add($v) } }
+foreach ($x in $data.bgm) { Note $x }
+if ($data.cover) {
+  Note $data.cover.background; Note $data.cover.hero
+  foreach ($x in $data.cover.photos) { Note $x }
+}
+foreach ($q in $data.levels.level1.questions) { Note $q.image }
+foreach ($q in $data.levels.level2.questions) { Note $q.clip; Note $q.answer }
+foreach ($q in $data.levels.level3.questions) { Note $q.question; Note $q.answer }
+foreach ($q in $data.levels.level4.questions) {
+  foreach ($part in @("eyes","mouth")) { if ($q.$part) { Note $q.$part.q; Note $q.$part.a } }
+  if ($q.lightstick) { Note $q.lightstick.image }
+}
+
+$badPath = New-Object System.Collections.ArrayList
+$missing = New-Object System.Collections.ArrayList
+$extern  = New-Object System.Collections.ArrayList
+$okCount = 0
+foreach ($r in ($refs | Select-Object -Unique)) {
+  if ($r -match '^(https?:)?//' -or $r -match '^data:') { [void]$extern.Add($r); continue }
+  if ($r -match '^[A-Za-z]:[\\/]' -or $r -match '^file:') { [void]$badPath.Add($r); continue }
+  if (Test-Path -LiteralPath (Join-Path $assetsDir ($r -replace '/', '\'))) { $okCount++ }
+  else { [void]$missing.Add($r) }
+}
+
+$listLines = @("KPOP之王巔峰賽 — 網頁版資產清單",
+               "產生時間：" + (Get-Date -Format "yyyy-MM-dd HH:mm:ss"),
+               "assetBase = assets",
+               "",
+               "本地檔案（" + $okCount + " 個，全部已確認存在）：")
+foreach ($r in ($refs | Select-Object -Unique | Sort-Object)) {
+  if ($r -notmatch '^(https?:)?//' -and $r -notmatch '^data:') { $listLines += ("  assets/" + $r) }
+}
+if ($extern.Count -gt 0) {
+  $listLines += @("", "外連圖片（不打包，由對方瀏覽器直接抓）：")
+  foreach ($r in $extern) { $listLines += ("  " + $r) }
+}
+if ($missing.Count -gt 0) {
+  $listLines += @("", "!! 缺少的檔案：")
+  foreach ($r in $missing) { $listLines += ("  assets/" + $r) }
+}
+[System.IO.File]::WriteAllText((Join-Path $outDir "資產清單.txt"),
+  (($listLines -join "`r`n") + "`r`n"), (New-Object System.Text.UTF8Encoding($false)))
+
+# ---------------------------------------------------------------------
 # 報表
 # ---------------------------------------------------------------------
 $total = (Get-ChildItem -LiteralPath $outDir -Recurse -File | Measure-Object -Property Length -Sum).Sum
@@ -305,6 +420,25 @@ if ($compress -and $stats.srcBytes -gt 0) {
     [math]::Round((1 - $stats.outBytes / $stats.srcBytes) * 100)) -ForegroundColor Cyan
 }
 Write-Host ("  網頁版總大小： {0} MB" -f [math]::Round($total/1MB,1)) -ForegroundColor Cyan
+if ($stats.converted -gt 0) { Write-Host ("  轉成相容格式： {0} 張（.avif/.webp → .jpg/.png，舊手機才看得到）" -f $stats.converted) -ForegroundColor Cyan }
+if ($stats.external -gt 0)  { Write-Host ("  外連圖片： {0} 個（不打包）" -f $stats.external) -ForegroundColor Cyan }
+Write-Host ""
+Write-Host "----------------------------------------------------------"
+if ($badPath.Count -eq 0 -and $missing.Count -eq 0) {
+  Write-Host ("  健檢通過：{0} 個檔案路徑全部正確，沒有任何本機絕對路徑。" -f $okCount) -ForegroundColor Green
+} else {
+  if ($badPath.Count -gt 0) {
+    Write-Host "  !! 發現本機絕對路徑（別人的電腦讀不到）：" -ForegroundColor Red
+    foreach ($r in $badPath) { Write-Host ("     " + $r) -ForegroundColor Red }
+  }
+  if ($missing.Count -gt 0) {
+    Write-Host ("  !! 有 {0} 個檔案在 docs 裡找不到，朋友會看到「找不到圖片」：" -f $missing.Count) -ForegroundColor Red
+    foreach ($r in ($missing | Select-Object -First 12)) { Write-Host ("     assets/" + $r) -ForegroundColor Red }
+    Write-Host "     → 通常是原始素材被刪或改名，補回去後再跑一次即可。" -ForegroundColor Yellow
+  }
+}
+Write-Host ("  完整清單： " + (Join-Path $outDir "資產清單.txt")) -ForegroundColor DarkGray
+Write-Host "----------------------------------------------------------"
 Write-Host ""
 Write-Host "  下一步：把 docs 資料夾拖到 https://app.netlify.com/drop" -ForegroundColor Yellow
 Write-Host "  就會拿到一個可以傳給朋友的公開網址。" -ForegroundColor Yellow

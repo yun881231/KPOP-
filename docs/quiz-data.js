@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-16 19:30:56 */
+   產生時間：2026-08-16 20:00:10 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T19:29:23",
+    "generatedAt":  "2026-08-16T19:58:30",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -13,14 +13,14 @@ window.QUIZ_DATA =
                   "backgroundIsVideo":  false,
                   "hero":  null,
                   "photos":  [
-                                 "cover/AESPA.avif",
-                                 "cover/babymonster.webp",
+                                 "cover/AESPA.jpg",
+                                 "cover/babymonster.jpg",
                                  "cover/Fromis9.jpg",
                                  "cover/H2H.jpg",
-                                 "cover/I-DLE.avif",
-                                 "cover/ITZY.webp",
-                                 "cover/IVE.avif",
-                                 "cover/lesserafim.webp",
+                                 "cover/I-DLE.jpg",
+                                 "cover/ITZY.jpg",
+                                 "cover/IVE.jpg",
+                                 "cover/lesserafim.jpg",
                                  "cover/newjeans.jpg",
                                  "cover/NMIXX.jpg",
                                  "cover/qwer.jpg",

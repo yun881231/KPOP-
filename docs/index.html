@@ -163,12 +163,53 @@ const { useState, useEffect, useRef, useMemo, useCallback } = React;
    ====================================================================== */
 const DATA = (typeof window !== "undefined" && window.QUIZ_DATA) ? window.QUIZ_DATA : null;
 
-// 本機直接開檔時素材在上一層（"．."）；打包成網頁版時改成 "assets"
+// 本機直接開檔時素材在上一層（".."）；打包成網頁版時改成 "assets"
 const ASSET_BASE = (DATA && DATA.assetBase ? String(DATA.assetBase) : "..").replace(/\/+$/, "");
+const _warned = {};
+
+/* 把題庫裡的路徑轉成瀏覽器可以讀的網址。三種情況都支援：
+   1. http(s):// 或 // 開頭 → 圖床／外連圖片，原樣使用
+   2. data: 開頭            → 內嵌圖片，原樣使用
+   3. 其餘                  → 一律當成專案內的相對路徑，接在 ASSET_BASE 後面
+   另外會擋掉誤填的本機絕對路徑（D:\kpop\... 或 file:///D:/...），
+   自動改回相對路徑並在 console 提醒，避免分享出去後別人看不到圖。 */
 function assetUrl(p) {
   if (!p) return "";
-  const clean = String(p).replace(/\\/g, "/").replace(/^\/+/, "");
-  return ASSET_BASE + "/" + clean.split("/").map(encodeURIComponent).join("/");
+  let s = String(p).trim();
+  if (/^(https?:)?\/\//i.test(s) || /^data:/i.test(s)) return s;
+  s = s.replace(/\\/g, "/");
+  const abs = s.match(/^(?:file:\/\/\/)?[A-Za-z]:\/(.*)$/i);
+  if (abs) {
+    const segs = abs[1].split("/");
+    const i = segs.findIndex(g => /^(封面|cover|assets|第[一二三四]關|level[1-4]|介面音樂|bgm)/.test(g));
+    const fixed = (i >= 0 ? segs.slice(i) : segs.slice(-2)).join("/");
+    if (!_warned[p]) {
+      _warned[p] = 1;
+      console.warn("[KPOP] 題庫裡有本機絕對路徑，別人的電腦讀不到，已自動改成相對路徑：\n  " + p + "\n→ " + fixed);
+    }
+    s = fixed;
+  }
+  s = s.replace(/^\/+/, "");
+  return ASSET_BASE + "/" + s.split("/").map(encodeURIComponent).join("/");
+}
+
+/* 圖片載不到時顯示可見的佔位圖並在 console 印出實際網址，
+   這樣分享給朋友出問題時，一眼就知道是哪一個檔案缺了 */
+const MISSING_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240">' +
+  '<rect width="100%" height="100%" rx="20" fill="#1c1030"/>' +
+  '<rect x="6" y="6" width="308" height="228" rx="16" fill="none" stroke="#5b4a7a" stroke-dasharray="8 6"/>' +
+  '<g fill="#8d86a8" font-family="sans-serif" text-anchor="middle">' +
+  '<text x="160" y="120" font-size="46">?</text>' +
+  '<text x="160" y="160" font-size="15">找不到圖片</text></g></svg>');
+
+function onImgError(e) {
+  const el = e.currentTarget;
+  if (el.dataset.failed) return;
+  el.dataset.failed = "1";
+  console.warn("[KPOP] 圖片載入失敗：", el.getAttribute("src"),
+               "\n檢查 docs/assets 底下是否真的有這個檔案，以及大小寫是否完全一致。");
+  el.src = MISSING_IMG;
 }
 function shuffle(a) {
   const r = a.slice();
@@ -469,7 +510,7 @@ function PhotoWall({ photos }) {
                  animationDuration: (7.5 + (i % 5) * 1.1).toFixed(1) + "s",
                  animationDelay: "-" + (i * 0.9).toFixed(1) + "s",
                }}>
-            <img className="pw-main" src={assetUrl(src)} alt="" loading="lazy" />
+            <img className="pw-main" src={assetUrl(src)} alt="" loading="lazy" onError={onImgError} />
           </div>
         </div>
       ))}
@@ -501,7 +542,7 @@ function CoverScreen({ cover, totals, bgm, onStart }) {
       <div className="cover-stack z-10">
         {hero && (
           <a className="hero-wrap fade-up-1 pointer-events-auto" style={{ cursor: "pointer" }}>
-            <img className="hero-img" src={assetUrl(hero)} alt="" />
+            <img className="hero-img" src={assetUrl(hero)} alt="" onError={onImgError} />
           </a>
         )}
 
@@ -849,7 +890,7 @@ function Level1Stage({ q, revealed, flashSec }) {
     <div className="flex flex-col items-center gap-5">
       <div className="relative w-full max-w-lg h-[44vh] sm:h-[52vh] rounded-3xl overflow-hidden bg-black/60 border border-white/10 grid place-items-center">
         {(revealed || visible)
-          ? <img src={assetUrl(q.image)} alt="" className="w-full h-full object-contain pop" />
+          ? <img src={assetUrl(q.image)} alt="" className="w-full h-full object-contain pop" onError={onImgError} />
           : (<div className="text-center px-6">
               {countdown > 0
                 ? <div className="text-8xl font-black text-pink-400 pop">{countdown}</div>
@@ -981,7 +1022,7 @@ function FeatureBox({ label, emoji, src, tint }) {
     <div className="flex-1 min-w-[180px]">
       <div className={cx("text-xs font-bold mb-2 flex items-center gap-1", tint)}><span>{emoji}</span>{label}</div>
       <div className="rounded-2xl overflow-hidden bg-black/50 border border-white/10 h-[34vh] grid place-items-center">
-        {src ? <img src={assetUrl(src)} alt="" className="w-full h-full object-contain" /> : <span className="text-slate-600 text-sm">（無素材）</span>}
+        {src ? <img src={assetUrl(src)} alt="" className="w-full h-full object-contain" onError={onImgError} /> : <span className="text-slate-600 text-sm">（無素材）</span>}
       </div>
     </div>
   );
@@ -1004,7 +1045,7 @@ function Level4Stage({ q, revealed }) {
     <div className="flex-1 min-w-[220px] pop">
       <div className={cx("text-xs font-bold mb-2 flex items-center gap-1", tint)}><span>{emoji}</span>{label}的答案</div>
       <div className="rounded-2xl overflow-hidden bg-black/50 border border-white/10 h-[44vh] grid place-items-center">
-        {part && (part.a || part.q) ? <img src={assetUrl(part.a || part.q)} alt="" className="w-full h-full object-contain" /> : <span className="text-slate-600">（無解答原圖）</span>}
+        {part && (part.a || part.q) ? <img src={assetUrl(part.a || part.q)} alt="" className="w-full h-full object-contain" onError={onImgError} /> : <span className="text-slate-600">（無解答原圖）</span>}
       </div>
       <div className="text-center mt-3">
         <div className={cx("text-sm font-semibold", tint)}>{part ? part.group : ""}</div>
