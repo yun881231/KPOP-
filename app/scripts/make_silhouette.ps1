@@ -29,7 +29,12 @@ param(
   [switch]$NoRescan
 )
 
-$ErrorActionPreference = "Stop"
+# ── Windows PowerShell 5.1 的地雷 ──────────────────────────────────
+# $ErrorActionPreference = "Stop" 之下，原生程式（git / ffmpeg / python）
+# 只要往 stderr 寫東西就會被當成終止錯誤，整支腳本直接掛掉（NativeCommandError）。
+# git 連「Rebasing (1/1)」這種進度訊息都是走 stderr，所以這裡一律用 Continue，
+# 改成每一步自己檢查 $LASTEXITCODE；真正需要中斷的 cmdlet 才單獨加 -ErrorAction Stop。
+$ErrorActionPreference = "Continue"
 try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch {}
 $ProgressPreference = "SilentlyContinue"
 try { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 } catch {}
@@ -70,10 +75,10 @@ function Install-Ffmpeg {
   $url = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip"
   New-Item -ItemType Directory -Force -Path $toolsDir | Out-Null
   Write-Host "  下載 ffmpeg（約 80 MB）…" -ForegroundColor Cyan
-  Invoke-WebRequest -Uri $url -OutFile $zip -UseBasicParsing
+  Invoke-WebRequest -ErrorAction Stop -Uri $url -OutFile $zip -UseBasicParsing
   $tmp = Join-Path $toolsDir "_unzip_ff"
   if (Test-Path -LiteralPath $tmp) { Remove-Item -LiteralPath $tmp -Recurse -Force }
-  Expand-Archive -LiteralPath $zip -DestinationPath $tmp -Force
+  Expand-Archive -ErrorAction Stop -LiteralPath $zip -DestinationPath $tmp -Force
   $inner = Get-ChildItem -LiteralPath $tmp -Directory | Select-Object -First 1
   $dest = Join-Path $toolsDir "ffmpeg"
   if (Test-Path -LiteralPath $dest) { Remove-Item -LiteralPath $dest -Recurse -Force }
@@ -109,9 +114,9 @@ function Install-Python {
   New-Item -ItemType Directory -Force -Path $toolsDir | Out-Null
 
   Write-Host "  下載免安裝版 Python（約 11 MB）…" -ForegroundColor Cyan
-  Invoke-WebRequest -Uri $url -OutFile $zip -UseBasicParsing
+  Invoke-WebRequest -ErrorAction Stop -Uri $url -OutFile $zip -UseBasicParsing
   if (Test-Path -LiteralPath $pyDir) { Remove-Item -LiteralPath $pyDir -Recurse -Force }
-  Expand-Archive -LiteralPath $zip -DestinationPath $pyDir -Force
+  Expand-Archive -ErrorAction Stop -LiteralPath $zip -DestinationPath $pyDir -Force
   Remove-Item -LiteralPath $zip -Force -ErrorAction SilentlyContinue
 
   # 免安裝版預設不吃 site-packages，要把 import site 那行打開
@@ -125,7 +130,7 @@ function Install-Python {
   $py = Join-Path $pyDir "python.exe"
   Write-Host "  安裝 pip…" -ForegroundColor Cyan
   $getpip = Join-Path $pyDir "get-pip.py"
-  Invoke-WebRequest -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile $getpip -UseBasicParsing
+  Invoke-WebRequest -ErrorAction Stop -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile $getpip -UseBasicParsing
   & $py $getpip --no-warn-script-location | Out-Null
   Remove-Item -LiteralPath $getpip -Force -ErrorAction SilentlyContinue
   Write-Host "  Python 安裝完成" -ForegroundColor Green
@@ -150,7 +155,7 @@ function Ensure-Model {
   if (Test-Path -LiteralPath $model) { return $model }
   New-Item -ItemType Directory -Force -Path $modelDir | Out-Null
   Write-Host "  下載人物去背模型（約 15 MB）…" -ForegroundColor Cyan
-  Invoke-WebRequest -UseBasicParsing -OutFile $model `
+  Invoke-WebRequest -ErrorAction Stop -UseBasicParsing -OutFile $model `
     -Uri "https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp32.onnx"
   return $model
 }

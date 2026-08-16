@@ -3,8 +3,23 @@
 #  由 git_setup.ps1 與 git_save.ps1 共同載入
 # =====================================================================
 
+# ── Windows PowerShell 5.1 的地雷 ──────────────────────────────────
+# $ErrorActionPreference = "Stop" 之下，原生程式（git / ffmpeg / python）
+# 只要往 stderr 寫東西就會被當成終止錯誤，整支腳本直接掛掉（NativeCommandError）。
+# git 連「Rebasing (1/1)」這種進度訊息都是走 stderr，所以這裡一律用 Continue，
+# 改成每一步自己檢查 $LASTEXITCODE；真正需要中斷的 cmdlet 才單獨加 -ErrorAction Stop。
+$ErrorActionPreference = "Continue"
+
 # 推送到 GitHub，並自動處理「遠端有你本機沒有的東西」造成的拒絕。
 # 回傳 $true = 推送成功
+# 綁定 upstream 純粹是方便，遠端追蹤分支還沒建立時不該讓整支腳本掛掉
+function Set-Upstream {
+  param([string]$GitExe, [string]$RepoRoot, [string]$Branch)
+  & $GitExe -C $RepoRoot rev-parse --verify --quiet ("refs/remotes/origin/" + $Branch) 2>&1 | Out-Null
+  if ($LASTEXITCODE -ne 0) { return }
+  & $GitExe -C $RepoRoot branch --set-upstream-to=("origin/" + $Branch) 2>&1 | Out-Null
+}
+
 function Invoke-SmartPush {
   [CmdletBinding()]
   param(
@@ -23,7 +38,7 @@ function Invoke-SmartPush {
   Write-Host "推送到 GitHub…" -ForegroundColor Cyan
   _Git push origin ("HEAD:refs/heads/" + $Branch)
   if ($LASTEXITCODE -eq 0) {
-    _Git branch --set-upstream-to=("origin/" + $Branch) 2>$null | Out-Null
+    Set-Upstream $GitExe $RepoRoot $Branch
     return $true
   }
 
@@ -90,7 +105,7 @@ function Invoke-SmartPush {
     Write-Host "覆蓋中…" -ForegroundColor Cyan
     _Git push --force-with-lease origin ("HEAD:refs/heads/" + $Branch)
     if ($LASTEXITCODE -eq 0) {
-      _Git branch --set-upstream-to=("origin/" + $Branch) 2>$null | Out-Null
+      Set-Upstream $GitExe $RepoRoot $Branch
       Write-Host ""
       Write-Host "  完成，GitHub 上已經是你本機這份了。" -ForegroundColor Green
       return $true
@@ -111,7 +126,7 @@ function Invoke-SmartPush {
     Write-Host "合併成功，重新推送…" -ForegroundColor Cyan
     _Git push origin ("HEAD:refs/heads/" + $Branch)
     if ($LASTEXITCODE -eq 0) {
-      _Git branch --set-upstream-to=("origin/" + $Branch) 2>$null | Out-Null
+      Set-Upstream $GitExe $RepoRoot $Branch
       Write-Host ""
       Write-Host "  完成。" -ForegroundColor Green
       return $true

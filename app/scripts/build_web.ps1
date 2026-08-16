@@ -23,7 +23,12 @@ param(
   [switch]$Clean                   # 先清空輸出資料夾
 )
 
-$ErrorActionPreference = "Stop"
+# ── Windows PowerShell 5.1 的地雷 ──────────────────────────────────
+# $ErrorActionPreference = "Stop" 之下，原生程式（git / ffmpeg / python）
+# 只要往 stderr 寫東西就會被當成終止錯誤，整支腳本直接掛掉（NativeCommandError）。
+# git 連「Rebasing (1/1)」這種進度訊息都是走 stderr，所以這裡一律用 Continue，
+# 改成每一步自己檢查 $LASTEXITCODE；真正需要中斷的 cmdlet 才單獨加 -ErrorAction Stop。
+$ErrorActionPreference = "Continue"
 try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch {}
 $ProgressPreference = "SilentlyContinue"
 if (Get-Variable -Name PSNativeCommandUseErrorActionPreference -Scope Global -ErrorAction SilentlyContinue) {
