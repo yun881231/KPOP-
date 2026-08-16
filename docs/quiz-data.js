@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-16 22:27:46 */
+   產生時間：2026-08-16 22:42:34 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T22:25:22",
+    "generatedAt":  "2026-08-16T22:40:08",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -815,6 +815,25 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-010",
                                                         "eyes":  {
+                                                                     "group":  "IVE",
+                                                                     "name":  "Wonyoung",
+                                                                     "q":  "level4/q/eye/IVE_Wonyoung.jpg",
+                                                                     "a":  "level4/a/eye/IVE_Wonyoung.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "IVE",
+                                                                      "name":  "Wonyoung",
+                                                                      "q":  "level4/q/mouth/IVE_Wonyoung.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Wonyoung.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "IVE",
+                                                                           "image":  "level4/q/light/IVE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-011",
+                                                        "eyes":  {
                                                                      "group":  "LE SSERAFIM",
                                                                      "name":  "Chaewon",
                                                                      "q":  "level4/q/eye/LE_SSERAFIM_Chaewon.png",
@@ -832,7 +851,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-011",
+                                                        "id":  "L4-012",
                                                         "eyes":  {
                                                                      "group":  "NewJeans",
                                                                      "name":  "Minji",
@@ -851,7 +870,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-012",
+                                                        "id":  "L4-013",
                                                         "eyes":  {
                                                                      "group":  "NMIXX",
                                                                      "name":  "Jiwoo",
@@ -870,7 +889,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-013",
+                                                        "id":  "L4-014",
                                                         "eyes":  {
                                                                      "group":  "QWER",
                                                                      "name":  "Chodan",
@@ -889,7 +908,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-014",
+                                                        "id":  "L4-015",
                                                         "eyes":  {
                                                                      "group":  "Red Velvet",
                                                                      "name":  "Irene",
@@ -908,7 +927,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-015",
+                                                        "id":  "L4-016",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
                                                                      "name":  "Nien",
@@ -927,7 +946,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-016",
+                                                        "id":  "L4-017",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "CHAEYOUNG",
@@ -946,7 +965,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-017",
+                                                        "id":  "L4-018",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "DAHYUN",
@@ -965,7 +984,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-018",
+                                                        "id":  "L4-019",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JEONGYEON",
@@ -984,7 +1003,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-019",
+                                                        "id":  "L4-020",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JIHYO",
@@ -1003,7 +1022,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-020",
+                                                        "id":  "L4-021",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MINA",
@@ -1022,7 +1041,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-021",
+                                                        "id":  "L4-022",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MOMO",
@@ -1041,7 +1060,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-022",
+                                                        "id":  "L4-023",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "NAYEON",
@@ -1060,7 +1079,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-023",
+                                                        "id":  "L4-024",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "SANA",
@@ -1079,7 +1098,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-024",
+                                                        "id":  "L4-025",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "TZUYU",

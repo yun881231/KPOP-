@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-16 22:27:47
+2026-08-16 22:42:34
 assetBase = assets
 
 本地檔案（
-261
+265
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/AESPA.jpg
@@ -165,6 +165,7 @@ assetBase = assets
   assets/level4/a/eye/ITZY_Ryujin.jpg
   assets/level4/a/eye/ITZY_YUNA.jpg
   assets/level4/a/eye/IVE_Gaeul.png
+  assets/level4/a/eye/IVE_Wonyoung.jpg
   assets/level4/a/eye/LE_SSERAFIM_Chaewon.jpg
   assets/level4/a/eye/NewJeans_Minji.png
   assets/level4/a/eye/NMIXX_Jiwoo.png
@@ -189,6 +190,7 @@ assetBase = assets
   assets/level4/a/mouth/ITZY_Chaeryeong.jpg
   assets/level4/a/mouth/ITZY_Lia.jpg
   assets/level4/a/mouth/IVE_Liz.png
+  assets/level4/a/mouth/IVE_Wonyoung.jpg
   assets/level4/a/mouth/LE_SSERAFIM_Sakura.png
   assets/level4/a/mouth/NewJeans_Hyein.jpg
   assets/level4/a/mouth/NMIXX_Lily.png
@@ -213,6 +215,7 @@ assetBase = assets
   assets/level4/q/eye/ITZY_Ryujin.jpg
   assets/level4/q/eye/ITZY_YUNA.jpg
   assets/level4/q/eye/IVE_Gaeul.png
+  assets/level4/q/eye/IVE_Wonyoung.jpg
   assets/level4/q/eye/LE_SSERAFIM_Chaewon.png
   assets/level4/q/eye/NewJeans_Minji.png
   assets/level4/q/eye/NMIXX_Jiwoo.png
@@ -252,6 +255,7 @@ assetBase = assets
   assets/level4/q/mouth/ITZY_Chaeryeong.jpg
   assets/level4/q/mouth/ITZY_Lia.jpg
   assets/level4/q/mouth/IVE_Liz.png
+  assets/level4/q/mouth/IVE_Wonyoung.jpg
   assets/level4/q/mouth/LE_SSERAFIM_Sakura.png
   assets/level4/q/mouth/NewJeans_Hyein.png
   assets/level4/q/mouth/NMIXX_Lily.png
