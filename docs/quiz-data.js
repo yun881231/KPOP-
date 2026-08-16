@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-16 20:00:10 */
+   產生時間：2026-08-16 22:27:46 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T19:58:30",
+    "generatedAt":  "2026-08-16T22:25:22",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -341,30 +341,54 @@ window.QUIZ_DATA =
                                   "questions":  [
                                                     {
                                                         "id":  "L3-001",
-                                                        "group":  "AESPA",
-                                                        "title":  "DRAMA",
-                                                        "question":  "level3/q/AESPA_DRAMA.mp4",
-                                                        "answer":  "level3/a/AESPA_DRAMA.mp4",
+                                                        "group":  "aespa",
+                                                        "title":  "Dirty Work",
+                                                        "question":  "level3/q/aespa_Dirty_Work.mp4",
+                                                        "answer":  "level3/a/aespa_Dirty_Work.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
                                                         "id":  "L3-002",
-                                                        "group":  "AESPA",
-                                                        "title":  "LEMONADE",
-                                                        "question":  "level3/q/AESPA_LEMONADE.mp4",
-                                                        "answer":  "level3/a/AESPA_LEMONADE.mp4",
+                                                        "group":  "aespa",
+                                                        "title":  "DRAMA",
+                                                        "question":  "level3/q/aespa_DRAMA.mp4",
+                                                        "answer":  "level3/a/aespa_DRAMA.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
                                                         "id":  "L3-003",
-                                                        "group":  "AESPA",
-                                                        "title":  "Whiplash",
-                                                        "question":  "level3/q/AESPA_Whiplash.mp4",
-                                                        "answer":  "level3/a/AESPA_Whiplash.mp4",
+                                                        "group":  "aespa",
+                                                        "title":  "LEMONADE",
+                                                        "question":  "level3/q/aespa_LEMONADE.mp4",
+                                                        "answer":  "level3/a/aespa_LEMONADE.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
                                                         "id":  "L3-004",
+                                                        "group":  "aespa",
+                                                        "title":  "Whiplash",
+                                                        "question":  "level3/q/aespa_Whiplash.mp4",
+                                                        "answer":  "level3/a/aespa_Whiplash.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-005",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "CHOOM",
+                                                        "question":  "level3/q/BABYMONSTER_CHOOM.mp4",
+                                                        "answer":  "level3/a/BABYMONSTER_CHOOM.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-006",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "DRIP",
+                                                        "question":  "level3/q/BABYMONSTER_DRIP.mp4",
+                                                        "answer":  "level3/a/BABYMONSTER_DRIP.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-007",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "HOT SAUCE",
                                                         "question":  "level3/q/BABYMONSTER_HOT_SAUCE.mp4",
@@ -372,7 +396,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-005",
+                                                        "id":  "L3-008",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "Lemon Tang",
                                                         "question":  "level3/q/Hearts2Hearts_Lemon_Tang.mp4",
@@ -380,7 +404,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-006",
+                                                        "id":  "L3-009",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "RUDE!",
                                                         "question":  "level3/q/Hearts2Hearts_RUDE.mp4",
@@ -388,7 +412,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-007",
+                                                        "id":  "L3-010",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "Style",
                                                         "question":  "level3/q/Hearts2Hearts_Style.mp4",
@@ -396,15 +420,39 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-008",
-                                                        "group":  "I-DLE",
-                                                        "title":  "Tomboy",
-                                                        "question":  "level3/q/I-DLE_Tomboy.mp4",
-                                                        "answer":  "level3/a/I-DLE_Tomboy.mp4",
+                                                        "id":  "L3-011",
+                                                        "group":  "i-dle",
+                                                        "title":  "Gimme Dat Love",
+                                                        "question":  "level3/q/i-dle_Gimme_Dat_Love.mp4",
+                                                        "answer":  "level3/a/i-dle_Gimme_Dat_Love.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-009",
+                                                        "id":  "L3-012",
+                                                        "group":  "i-dle",
+                                                        "title":  "Mono",
+                                                        "question":  "level3/q/i-dle_Mono.mp4",
+                                                        "answer":  "level3/a/i-dle_Mono.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-013",
+                                                        "group":  "i-dle",
+                                                        "title":  "Tomboy",
+                                                        "question":  "level3/q/i-dle_Tomboy.mp4",
+                                                        "answer":  "level3/a/i-dle_Tomboy.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-014",
+                                                        "group":  "ILLIT",
+                                                        "title":  "It’s Me",
+                                                        "question":  "level3/q/ILLIT_It_s_Me.mp4",
+                                                        "answer":  "level3/a/ILLIT_It_s_Me.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-015",
                                                         "group":  "ILLIT",
                                                         "title":  "jellyous",
                                                         "question":  "level3/q/ILLIT_jellyous.mp4",
@@ -412,7 +460,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-010",
+                                                        "id":  "L3-016",
                                                         "group":  "ILLIT",
                                                         "title":  "Magnetic",
                                                         "question":  "level3/q/ILLIT_Magnetic.mp4",
@@ -420,15 +468,15 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-011",
+                                                        "id":  "L3-017",
                                                         "group":  "ITZY",
-                                                        "title":  "ImaginaryFriend",
-                                                        "question":  "level3/q/ITZY_ImaginaryFriend.mp4",
-                                                        "answer":  "level3/a/ITZY_ImaginaryFriend.mp4",
+                                                        "title":  "Imaginary Friend",
+                                                        "question":  "level3/q/ITZY_Imaginary_Friend.mp4",
+                                                        "answer":  "level3/a/ITZY_Imaginary_Friend.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-012",
+                                                        "id":  "L3-018",
                                                         "group":  "ITZY",
                                                         "title":  "THAT’S A NO NO",
                                                         "question":  "level3/q/ITZY_THAT_S_A_NO_NO.mp4",
@@ -436,7 +484,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-013",
+                                                        "id":  "L3-019",
                                                         "group":  "IVE",
                                                         "title":  "ATTIUDE",
                                                         "question":  "level3/q/IVE_ATTIUDE.mp4",
@@ -444,7 +492,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-014",
+                                                        "id":  "L3-020",
                                                         "group":  "IVE",
                                                         "title":  "BANG BANG",
                                                         "question":  "level3/q/IVE_BANG_BANG.mp4",
@@ -452,7 +500,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-015",
+                                                        "id":  "L3-021",
                                                         "group":  "IVE",
                                                         "title":  "I AM",
                                                         "question":  "level3/q/IVE_I_AM.mp4",
@@ -460,7 +508,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-016",
+                                                        "id":  "L3-022",
                                                         "group":  "IVE",
                                                         "title":  "LOVE DIVE",
                                                         "question":  "level3/q/IVE_LOVE_DIVE.mp4",
@@ -468,7 +516,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-017",
+                                                        "id":  "L3-023",
                                                         "group":  "KiiiKiii",
                                                         "title":  "404 (New Era)",
                                                         "question":  "level3/q/KiiiKiii_404_New_Era.mp4",
@@ -476,7 +524,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-018",
+                                                        "id":  "L3-024",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "BOOMPALA",
                                                         "question":  "level3/q/LE_SSERAFIM_BOOMPALA.mp4",
@@ -484,7 +532,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-019",
+                                                        "id":  "L3-025",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "CELEBRATION",
                                                         "question":  "level3/q/LE_SSERAFIM_CELEBRATION.mp4",
@@ -492,15 +540,23 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-020",
-                                                        "group":  "LESSERAFIM",
+                                                        "id":  "L3-026",
+                                                        "group":  "LE SSERAFIM",
                                                         "title":  "SPAGHETTI",
-                                                        "question":  "level3/q/LESSERAFIM_SPAGHETTI.mp4",
-                                                        "answer":  "level3/a/LESSERAFIM_SPAGHETTI.mp4",
+                                                        "question":  "level3/q/LE_SSERAFIM_SPAGHETTI.mp4",
+                                                        "answer":  "level3/a/LE_SSERAFIM_SPAGHETTI.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-021",
+                                                        "id":  "L3-027",
+                                                        "group":  "NewJeans",
+                                                        "title":  "Attention",
+                                                        "question":  "level3/q/NewJeans_Attention.mp4",
+                                                        "answer":  "level3/a/NewJeans_Attention.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-028",
                                                         "group":  "NewJeans",
                                                         "title":  "Ditto",
                                                         "question":  "level3/q/NewJeans_Ditto.mp4",
@@ -508,7 +564,23 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-022",
+                                                        "id":  "L3-029",
+                                                        "group":  "NewJeans",
+                                                        "title":  "ETA",
+                                                        "question":  "level3/q/NewJeans_ETA.mp4",
+                                                        "answer":  "level3/a/NewJeans_ETA.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-030",
+                                                        "group":  "NewJeans",
+                                                        "title":  "How Sweet",
+                                                        "question":  "level3/q/NewJeans_How_Sweet.mp4",
+                                                        "answer":  "level3/a/NewJeans_How_Sweet.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-031",
                                                         "group":  "NMIXX",
                                                         "title":  "Blue Valentine",
                                                         "question":  "level3/q/NMIXX_Blue_Valentine.mp4",
@@ -516,7 +588,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-023",
+                                                        "id":  "L3-032",
                                                         "group":  "NMIXX",
                                                         "title":  "Heavy Serenade",
                                                         "question":  "level3/q/NMIXX_Heavy_Serenade.mp4",
@@ -524,11 +596,43 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-024",
+                                                        "id":  "L3-033",
+                                                        "group":  "NMIXX",
+                                                        "title":  "KNOW ABOUT ME",
+                                                        "question":  "level3/q/NMIXX_KNOW_ABOUT_ME.mp4",
+                                                        "answer":  "level3/a/NMIXX_KNOW_ABOUT_ME.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-034",
                                                         "group":  "RESCENE",
                                                         "title":  "LOVE ATTACK",
                                                         "question":  "level3/q/RESCENE_LOVE_ATTACK.mp4",
                                                         "answer":  "level3/a/RESCENE_LOVE_ATTACK.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-035",
+                                                        "group":  "tripleS",
+                                                        "title":  "Fly Up",
+                                                        "question":  "level3/q/tripleS_Fly_Up.mp4",
+                                                        "answer":  "level3/a/tripleS_Fly_Up.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-036",
+                                                        "group":  "tripleS",
+                                                        "title":  "LOVElution",
+                                                        "question":  "level3/q/tripleS_LOVElution.mp4",
+                                                        "answer":  "level3/a/tripleS_LOVElution.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-037",
+                                                        "group":  "tripleS",
+                                                        "title":  "Rising",
+                                                        "question":  "level3/q/tripleS_Rising.mp4",
+                                                        "answer":  "level3/a/tripleS_Rising.mp4",
                                                         "autoMask":  false
                                                     }
                                                 ]
@@ -654,6 +758,44 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-007",
                                                         "eyes":  {
+                                                                     "group":  "ITZY",
+                                                                     "name":  "Ryujin",
+                                                                     "q":  "level4/q/eye/ITZY_Ryujin.jpg",
+                                                                     "a":  "level4/a/eye/ITZY_Ryujin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "ITZY",
+                                                                      "name":  "Chaeryeong",
+                                                                      "q":  "level4/q/mouth/ITZY_Chaeryeong.jpg",
+                                                                      "a":  "level4/a/mouth/ITZY_Chaeryeong.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "ITZY",
+                                                                           "image":  "level4/q/light/ITZY.jpg"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-008",
+                                                        "eyes":  {
+                                                                     "group":  "ITZY",
+                                                                     "name":  "YUNA",
+                                                                     "q":  "level4/q/eye/ITZY_YUNA.jpg",
+                                                                     "a":  "level4/a/eye/ITZY_YUNA.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "ITZY",
+                                                                      "name":  "Lia",
+                                                                      "q":  "level4/q/mouth/ITZY_Lia.jpg",
+                                                                      "a":  "level4/a/mouth/ITZY_Lia.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "ITZY",
+                                                                           "image":  "level4/q/light/ITZY.jpg"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-009",
+                                                        "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Gaeul",
                                                                      "q":  "level4/q/eye/IVE_Gaeul.png",
@@ -671,7 +813,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-008",
+                                                        "id":  "L4-010",
                                                         "eyes":  {
                                                                      "group":  "LE SSERAFIM",
                                                                      "name":  "Chaewon",
@@ -690,7 +832,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-009",
+                                                        "id":  "L4-011",
                                                         "eyes":  {
                                                                      "group":  "NewJeans",
                                                                      "name":  "Minji",
@@ -709,7 +851,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-010",
+                                                        "id":  "L4-012",
                                                         "eyes":  {
                                                                      "group":  "NMIXX",
                                                                      "name":  "Jiwoo",
@@ -728,7 +870,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-011",
+                                                        "id":  "L4-013",
                                                         "eyes":  {
                                                                      "group":  "QWER",
                                                                      "name":  "Chodan",
@@ -747,7 +889,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-012",
+                                                        "id":  "L4-014",
                                                         "eyes":  {
                                                                      "group":  "Red Velvet",
                                                                      "name":  "Irene",
@@ -766,7 +908,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-013",
+                                                        "id":  "L4-015",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
                                                                      "name":  "Nien",
@@ -785,7 +927,140 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-014",
+                                                        "id":  "L4-016",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "CHAEYOUNG",
+                                                                     "q":  "level4/q/eye/TWICE_CHAEYOUNG.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_CHAEYOUNG.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "CHAEYOUNG",
+                                                                      "q":  "level4/q/mouth/TWICE_CHAEYOUNG.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_CHAEYOUNG.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-017",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "DAHYUN",
+                                                                     "q":  "level4/q/eye/TWICE_DAHYUN.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_DAHYUN.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "DAHYUN",
+                                                                      "q":  "level4/q/mouth/TWICE_DAHYUN.png",
+                                                                      "a":  "level4/a/mouth/TWICE_DAHYUN.png"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-018",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "JEONGYEON",
+                                                                     "q":  "level4/q/eye/TWICE_JEONGYEON.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_JEONGYEON.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "JEONGYEON",
+                                                                      "q":  "level4/q/mouth/TWICE_JEONGYEON.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_JEONGYEON.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-019",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "JIHYO",
+                                                                     "q":  "level4/q/eye/TWICE_JIHYO.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_JIHYO.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "JIHYO",
+                                                                      "q":  "level4/q/mouth/TWICE_JIHYO.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_JIHYO.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-020",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "MINA",
+                                                                     "q":  "level4/q/eye/TWICE_MINA.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_MINA.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "MINA",
+                                                                      "q":  "level4/q/mouth/TWICE_MINA.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_MINA.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-021",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "MOMO",
+                                                                     "q":  "level4/q/eye/TWICE_MOMO.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_MOMO.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "MOMO",
+                                                                      "q":  "level4/q/mouth/TWICE_MOMO.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_MOMO.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-022",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "NAYEON",
+                                                                     "q":  "level4/q/eye/TWICE_NAYEON.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_NAYEON.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "NAYEON",
+                                                                      "q":  "level4/q/mouth/TWICE_NAYEON.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_NAYEON.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-023",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "SANA",
@@ -794,9 +1069,28 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "DAHYUN",
-                                                                      "q":  "level4/q/mouth/TWICE_DAHYUN.png",
-                                                                      "a":  "level4/a/mouth/TWICE_DAHYUN.png"
+                                                                      "name":  "SANA",
+                                                                      "q":  "level4/q/mouth/TWICE_SANA.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_SANA.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "TWICE",
+                                                                           "image":  "level4/q/light/TWICE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-024",
+                                                        "eyes":  {
+                                                                     "group":  "TWICE",
+                                                                     "name":  "TZUYU",
+                                                                     "q":  "level4/q/eye/TWICE_TZUYU.jpg",
+                                                                     "a":  "level4/a/eye/TWICE_TZUYU.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "TWICE",
+                                                                      "name":  "TZUYU",
+                                                                      "q":  "level4/q/mouth/TWICE_TZUYU.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_TZUYU.jpg"
                                                                   },
                                                         "lightstick":  {
                                                                            "group":  "TWICE",
