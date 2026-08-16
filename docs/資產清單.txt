@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-16 22:42:34
+2026-08-16 23:43:01
 assetBase = assets
 
 本地檔案（
-265
+312
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/AESPA.jpg
@@ -157,7 +157,12 @@ assetBase = assets
   assets/level3/q/tripleS_LOVElution.mp4
   assets/level3/q/tripleS_Rising.mp4
   assets/level4/a/eye/AESPA_KARINA.png
+  assets/level4/a/eye/BABYMONSTER_Ahyeon.jpg
+  assets/level4/a/eye/BABYMONSTER_ASA.jpg
+  assets/level4/a/eye/BABYMONSTER_Pharita.jpg
   assets/level4/a/eye/BABYMONSTER_Rami.png
+  assets/level4/a/eye/BABYMONSTER_Rora.jpg
+  assets/level4/a/eye/BABYMONSTER_Ruka.jpg
   assets/level4/a/eye/BLACKPINK_Jisoo.png
   assets/level4/a/eye/Hearts2Hearts_IAN.png
   assets/level4/a/eye/i-dle_Soyeon.jpg
@@ -165,12 +170,19 @@ assetBase = assets
   assets/level4/a/eye/ITZY_Ryujin.jpg
   assets/level4/a/eye/ITZY_YUNA.jpg
   assets/level4/a/eye/IVE_Gaeul.png
+  assets/level4/a/eye/IVE_Leeseo.jpg
+  assets/level4/a/eye/IVE_Liz.jpg
+  assets/level4/a/eye/IVE_Rei.jpg
   assets/level4/a/eye/IVE_Wonyoung.jpg
+  assets/level4/a/eye/IVE_Yujin.jpg
   assets/level4/a/eye/LE_SSERAFIM_Chaewon.jpg
   assets/level4/a/eye/NewJeans_Minji.png
   assets/level4/a/eye/NMIXX_Jiwoo.png
   assets/level4/a/eye/QWER_Chodan.png
   assets/level4/a/eye/Red_Velvet_Irene.jpg
+  assets/level4/a/eye/tripleS_Chaewon.jpg
+  assets/level4/a/eye/tripleS_Jiwoo.jpg
+  assets/level4/a/eye/tripleS_Lynn.jpg
   assets/level4/a/eye/tripleS_Nien.jpg
   assets/level4/a/eye/TWICE_CHAEYOUNG.jpg
   assets/level4/a/eye/TWICE_DAHYUN.jpg
@@ -182,20 +194,31 @@ assetBase = assets
   assets/level4/a/eye/TWICE_SANA.png
   assets/level4/a/eye/TWICE_TZUYU.jpg
   assets/level4/a/mouth/AESPA_Winter.png
+  assets/level4/a/mouth/BABYMONSTER_Ahyeon.jpg
+  assets/level4/a/mouth/BABYMONSTER_ASA.jpg
   assets/level4/a/mouth/BABYMONSTER_Pharita.png
+  assets/level4/a/mouth/BABYMONSTER_Rami.jpg
+  assets/level4/a/mouth/BABYMONSTER_Rora.jpg
+  assets/level4/a/mouth/BABYMONSTER_Ruka.jpg
   assets/level4/a/mouth/BLACKPINK_Lisa.jpg
   assets/level4/a/mouth/Hearts2Hearts_JIWOO.png
   assets/level4/a/mouth/i-dle_Yuqi.jpg
   assets/level4/a/mouth/ILLIT_Minju.png
   assets/level4/a/mouth/ITZY_Chaeryeong.jpg
   assets/level4/a/mouth/ITZY_Lia.jpg
+  assets/level4/a/mouth/IVE_Gaeul.jpg
+  assets/level4/a/mouth/IVE_Leeseo.jpg
   assets/level4/a/mouth/IVE_Liz.png
   assets/level4/a/mouth/IVE_Wonyoung.jpg
+  assets/level4/a/mouth/IVE_Yujin.jpg
   assets/level4/a/mouth/LE_SSERAFIM_Sakura.png
   assets/level4/a/mouth/NewJeans_Hyein.jpg
   assets/level4/a/mouth/NMIXX_Lily.png
   assets/level4/a/mouth/QWER_Hina.jpg
   assets/level4/a/mouth/Red_Velvet_Wendy.png
+  assets/level4/a/mouth/tripleS_Chaewon.jpg
+  assets/level4/a/mouth/tripleS_Jiwoo.jpg
+  assets/level4/a/mouth/tripleS_Lynn.jpg
   assets/level4/a/mouth/tripleS_Xinyu.png
   assets/level4/a/mouth/TWICE_CHAEYOUNG.jpg
   assets/level4/a/mouth/TWICE_DAHYUN.png
@@ -207,7 +230,12 @@ assetBase = assets
   assets/level4/a/mouth/TWICE_SANA.jpg
   assets/level4/a/mouth/TWICE_TZUYU.jpg
   assets/level4/q/eye/AESPA_KARINA.png
+  assets/level4/q/eye/BABYMONSTER_Ahyeon.jpg
+  assets/level4/q/eye/BABYMONSTER_ASA.jpg
+  assets/level4/q/eye/BABYMONSTER_Pharita.jpg
   assets/level4/q/eye/BABYMONSTER_Rami.png
+  assets/level4/q/eye/BABYMONSTER_Rora.jpg
+  assets/level4/q/eye/BABYMONSTER_Ruka.jpg
   assets/level4/q/eye/BLACKPINK_Jisoo.png
   assets/level4/q/eye/Hearts2Hearts_IAN.png
   assets/level4/q/eye/i-dle_Soyeon.png
@@ -215,12 +243,19 @@ assetBase = assets
   assets/level4/q/eye/ITZY_Ryujin.jpg
   assets/level4/q/eye/ITZY_YUNA.jpg
   assets/level4/q/eye/IVE_Gaeul.png
+  assets/level4/q/eye/IVE_Leeseo.jpg
+  assets/level4/q/eye/IVE_Liz.jpg
+  assets/level4/q/eye/IVE_Rei.jpg
   assets/level4/q/eye/IVE_Wonyoung.jpg
+  assets/level4/q/eye/IVE_Yujin.jpg
   assets/level4/q/eye/LE_SSERAFIM_Chaewon.png
   assets/level4/q/eye/NewJeans_Minji.png
   assets/level4/q/eye/NMIXX_Jiwoo.png
   assets/level4/q/eye/QWER_Chodan.png
   assets/level4/q/eye/Red_Velvet_Irene.png
+  assets/level4/q/eye/tripleS_Chaewon.jpg
+  assets/level4/q/eye/tripleS_Jiwoo.jpg
+  assets/level4/q/eye/tripleS_Lynn.jpg
   assets/level4/q/eye/tripleS_Nien.png
   assets/level4/q/eye/TWICE_CHAEYOUNG.jpg
   assets/level4/q/eye/TWICE_DAHYUN.jpg
@@ -247,20 +282,32 @@ assetBase = assets
   assets/level4/q/light/tripleS.png
   assets/level4/q/light/TWICE.png
   assets/level4/q/mouth/AESPA_Winter.png
+  assets/level4/q/mouth/BABYMONSTER_Ahyeon.jpg
+  assets/level4/q/mouth/BABYMONSTER_ASA.jpg
   assets/level4/q/mouth/BABYMONSTER_Pharita.png
+  assets/level4/q/mouth/BABYMONSTER_Rami.jpg
+  assets/level4/q/mouth/BABYMONSTER_Rora.jpg
+  assets/level4/q/mouth/BABYMONSTER_Ruka.jpg
   assets/level4/q/mouth/BLACKPINK_Lisa.png
   assets/level4/q/mouth/Hearts2Hearts_JIWOO.png
   assets/level4/q/mouth/i-dle_Yuqi.png
   assets/level4/q/mouth/ILLIT_Minju.png
   assets/level4/q/mouth/ITZY_Chaeryeong.jpg
   assets/level4/q/mouth/ITZY_Lia.jpg
+  assets/level4/q/mouth/IVE_Gaeul.jpg
+  assets/level4/q/mouth/IVE_Leeseo.jpg
   assets/level4/q/mouth/IVE_Liz.png
+  assets/level4/q/mouth/IVE_Rei.jpg
   assets/level4/q/mouth/IVE_Wonyoung.jpg
+  assets/level4/q/mouth/IVE_Yujin.jpg
   assets/level4/q/mouth/LE_SSERAFIM_Sakura.png
   assets/level4/q/mouth/NewJeans_Hyein.png
   assets/level4/q/mouth/NMIXX_Lily.png
   assets/level4/q/mouth/QWER_Hina.png
   assets/level4/q/mouth/Red_Velvet_Wendy.png
+  assets/level4/q/mouth/tripleS_Chaewon.jpg
+  assets/level4/q/mouth/tripleS_Jiwoo.jpg
+  assets/level4/q/mouth/tripleS_Lynn.jpg
   assets/level4/q/mouth/tripleS_Xinyu.png
   assets/level4/q/mouth/TWICE_CHAEYOUNG.jpg
   assets/level4/q/mouth/TWICE_DAHYUN.png

@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-16 22:42:34 */
+   產生時間：2026-08-16 23:43:01 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T22:40:08",
+    "generatedAt":  "2026-08-16T23:40:36",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -664,9 +664,47 @@ window.QUIZ_DATA =
                                                         "id":  "L4-002",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
-                                                                     "name":  "Rami",
-                                                                     "q":  "level4/q/eye/BABYMONSTER_Rami.png",
-                                                                     "a":  "level4/a/eye/BABYMONSTER_Rami.png"
+                                                                     "name":  "Ahyeon",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_Ahyeon.jpg",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_Ahyeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BABYMONSTER",
+                                                                      "name":  "Ahyeon",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Ahyeon.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Ahyeon.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "BABYMONSTER",
+                                                                           "image":  "level4/q/light/BABYMONSTER.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-003",
+                                                        "eyes":  {
+                                                                     "group":  "BABYMONSTER",
+                                                                     "name":  "ASA",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_ASA.jpg",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_ASA.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BABYMONSTER",
+                                                                      "name":  "ASA",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_ASA.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_ASA.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "BABYMONSTER",
+                                                                           "image":  "level4/q/light/BABYMONSTER.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-004",
+                                                        "eyes":  {
+                                                                     "group":  "BABYMONSTER",
+                                                                     "name":  "Pharita",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_Pharita.jpg",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_Pharita.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
@@ -680,7 +718,64 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-003",
+                                                        "id":  "L4-005",
+                                                        "eyes":  {
+                                                                     "group":  "BABYMONSTER",
+                                                                     "name":  "Rami",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_Rami.png",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_Rami.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BABYMONSTER",
+                                                                      "name":  "Rami",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Rami.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Rami.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "BABYMONSTER",
+                                                                           "image":  "level4/q/light/BABYMONSTER.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-006",
+                                                        "eyes":  {
+                                                                     "group":  "BABYMONSTER",
+                                                                     "name":  "Rora",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_Rora.jpg",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_Rora.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BABYMONSTER",
+                                                                      "name":  "Rora",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Rora.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Rora.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "BABYMONSTER",
+                                                                           "image":  "level4/q/light/BABYMONSTER.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-007",
+                                                        "eyes":  {
+                                                                     "group":  "BABYMONSTER",
+                                                                     "name":  "Ruka",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_Ruka.jpg",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_Ruka.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BABYMONSTER",
+                                                                      "name":  "Ruka",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Ruka.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Ruka.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "BABYMONSTER",
+                                                                           "image":  "level4/q/light/BABYMONSTER.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-008",
                                                         "eyes":  {
                                                                      "group":  "BLACKPINK",
                                                                      "name":  "Jisoo",
@@ -699,7 +794,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-004",
+                                                        "id":  "L4-009",
                                                         "eyes":  {
                                                                      "group":  "Hearts2Hearts",
                                                                      "name":  "IAN",
@@ -718,7 +813,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-005",
+                                                        "id":  "L4-010",
                                                         "eyes":  {
                                                                      "group":  "i-dle",
                                                                      "name":  "Soyeon",
@@ -737,7 +832,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-006",
+                                                        "id":  "L4-011",
                                                         "eyes":  {
                                                                      "group":  "ILLIT",
                                                                      "name":  "Wonhee",
@@ -756,7 +851,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-007",
+                                                        "id":  "L4-012",
                                                         "eyes":  {
                                                                      "group":  "ITZY",
                                                                      "name":  "Ryujin",
@@ -775,7 +870,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-008",
+                                                        "id":  "L4-013",
                                                         "eyes":  {
                                                                      "group":  "ITZY",
                                                                      "name":  "YUNA",
@@ -794,12 +889,50 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-009",
+                                                        "id":  "L4-014",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Gaeul",
                                                                      "q":  "level4/q/eye/IVE_Gaeul.png",
                                                                      "a":  "level4/a/eye/IVE_Gaeul.png"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "IVE",
+                                                                      "name":  "Gaeul",
+                                                                      "q":  "level4/q/mouth/IVE_Gaeul.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Gaeul.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "IVE",
+                                                                           "image":  "level4/q/light/IVE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-015",
+                                                        "eyes":  {
+                                                                     "group":  "IVE",
+                                                                     "name":  "Leeseo",
+                                                                     "q":  "level4/q/eye/IVE_Leeseo.jpg",
+                                                                     "a":  "level4/a/eye/IVE_Leeseo.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "IVE",
+                                                                      "name":  "Leeseo",
+                                                                      "q":  "level4/q/mouth/IVE_Leeseo.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Leeseo.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "IVE",
+                                                                           "image":  "level4/q/light/IVE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-016",
+                                                        "eyes":  {
+                                                                     "group":  "IVE",
+                                                                     "name":  "Liz",
+                                                                     "q":  "level4/q/eye/IVE_Liz.jpg",
+                                                                     "a":  "level4/a/eye/IVE_Liz.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "IVE",
@@ -813,7 +946,26 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-010",
+                                                        "id":  "L4-017",
+                                                        "eyes":  {
+                                                                     "group":  "IVE",
+                                                                     "name":  "Rei",
+                                                                     "q":  "level4/q/eye/IVE_Rei.jpg",
+                                                                     "a":  "level4/a/eye/IVE_Rei.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "IVE",
+                                                                      "name":  "Rei",
+                                                                      "q":  "level4/q/mouth/IVE_Rei.jpg",
+                                                                      "a":  null
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "IVE",
+                                                                           "image":  "level4/q/light/IVE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-018",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Wonyoung",
@@ -832,7 +984,26 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-011",
+                                                        "id":  "L4-019",
+                                                        "eyes":  {
+                                                                     "group":  "IVE",
+                                                                     "name":  "Yujin",
+                                                                     "q":  "level4/q/eye/IVE_Yujin.jpg",
+                                                                     "a":  "level4/a/eye/IVE_Yujin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "IVE",
+                                                                      "name":  "Yujin",
+                                                                      "q":  "level4/q/mouth/IVE_Yujin.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Yujin.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "IVE",
+                                                                           "image":  "level4/q/light/IVE.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-020",
                                                         "eyes":  {
                                                                      "group":  "LE SSERAFIM",
                                                                      "name":  "Chaewon",
@@ -851,7 +1022,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-012",
+                                                        "id":  "L4-021",
                                                         "eyes":  {
                                                                      "group":  "NewJeans",
                                                                      "name":  "Minji",
@@ -870,7 +1041,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-013",
+                                                        "id":  "L4-022",
                                                         "eyes":  {
                                                                      "group":  "NMIXX",
                                                                      "name":  "Jiwoo",
@@ -889,7 +1060,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-014",
+                                                        "id":  "L4-023",
                                                         "eyes":  {
                                                                      "group":  "QWER",
                                                                      "name":  "Chodan",
@@ -908,7 +1079,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-015",
+                                                        "id":  "L4-024",
                                                         "eyes":  {
                                                                      "group":  "Red Velvet",
                                                                      "name":  "Irene",
@@ -927,7 +1098,64 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-016",
+                                                        "id":  "L4-025",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Chaewon",
+                                                                     "q":  "level4/q/eye/tripleS_Chaewon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Chaewon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Chaewon",
+                                                                      "q":  "level4/q/mouth/tripleS_Chaewon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Chaewon.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-026",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Jiwoo",
+                                                                     "q":  "level4/q/eye/tripleS_Jiwoo.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Jiwoo.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Jiwoo",
+                                                                      "q":  "level4/q/mouth/tripleS_Jiwoo.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Jiwoo.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-027",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "Lynn",
+                                                                     "q":  "level4/q/eye/tripleS_Lynn.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_Lynn.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "Lynn",
+                                                                      "q":  "level4/q/mouth/tripleS_Lynn.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_Lynn.jpg"
+                                                                  },
+                                                        "lightstick":  {
+                                                                           "group":  "tripleS",
+                                                                           "image":  "level4/q/light/tripleS.png"
+                                                                       }
+                                                    },
+                                                    {
+                                                        "id":  "L4-028",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
                                                                      "name":  "Nien",
@@ -946,7 +1174,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-017",
+                                                        "id":  "L4-029",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "CHAEYOUNG",
@@ -965,7 +1193,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-018",
+                                                        "id":  "L4-030",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "DAHYUN",
@@ -984,7 +1212,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-019",
+                                                        "id":  "L4-031",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JEONGYEON",
@@ -1003,7 +1231,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-020",
+                                                        "id":  "L4-032",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JIHYO",
@@ -1022,7 +1250,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-021",
+                                                        "id":  "L4-033",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MINA",
@@ -1041,7 +1269,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-022",
+                                                        "id":  "L4-034",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MOMO",
@@ -1060,7 +1288,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-023",
+                                                        "id":  "L4-035",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "NAYEON",
@@ -1079,7 +1307,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-024",
+                                                        "id":  "L4-036",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "SANA",
@@ -1098,7 +1326,7 @@ window.QUIZ_DATA =
                                                                        }
                                                     },
                                                     {
-                                                        "id":  "L4-025",
+                                                        "id":  "L4-037",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "TZUYU",
