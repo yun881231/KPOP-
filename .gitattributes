@@ -1,0 +1,7 @@
+# 全部檔案都不做換行轉換，確保 .bat / .ps1 原樣往返
+* -text
+*.onnx binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.mp3 binary

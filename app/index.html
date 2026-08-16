@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KPOP之王巔峰賽</title>
+<link rel="stylesheet" href="./styles.css" />
+<style>
+  html, body { height: 100%; }
+  body {
+    font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: #0a0616;
+  }
+  .neon-bg::before{
+    content:""; position:fixed; inset:0; z-index:-1;
+    background:
+      radial-gradient(60rem 40rem at 12% -10%, rgba(236,72,153,.30), transparent 60%),
+      radial-gradient(50rem 36rem at 92% 0%, rgba(99,102,241,.32), transparent 60%),
+      radial-gradient(46rem 34rem at 50% 110%, rgba(34,211,238,.20), transparent 60%),
+      #0a0616;
+  }
+  .pixelated { image-rendering: pixelated; image-rendering: -moz-crisp-edges; }
+  .no-native-controls::-webkit-media-controls { display:none !important; }
+  input[type=range]{ accent-color:#ec4899; }
+  .fade-in{ animation: fadeIn .35s ease both; }
+  @keyframes fadeIn { from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }
+  .pop{ animation: pop .3s cubic-bezier(.2,1.4,.4,1) both; }
+  @keyframes pop { from{opacity:0; transform:scale(.9)} to{opacity:1; transform:scale(1)} }
+  .flash-ring{ box-shadow:0 0 0 3px rgba(236,72,153,.55), 0 0 60px rgba(236,72,153,.35); }
+</style>
+</head>
+<body class="neon-bg text-slate-100">
+<div id="root"></div>
+
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./vendor/babel.min.js"></script>
+<script src="./quiz-data.js"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef, useMemo, useCallback } = React;
+
+/* ========================================================================
+   0. 工具函式
+   ====================================================================== */
+const DATA = (typeof window !== "undefined" && window.QUIZ_DATA) ? window.QUIZ_DATA : null;
+
+// 把「相對於 D:\kpop 的路徑」轉成瀏覽器可讀的網址。
+// index.html 位於 D:\kpop\app\，所以往上一層再接檔案路徑。
+function assetUrl(p) {
+  if (!p) return "";
+  const clean = String(p).replace(/\\/g, "/").replace(/^\/+/, "");
+  return "../" + clean.split("/").map(encodeURIComponent).join("/");
+}
+function shuffle(a) {
+  const r = a.slice();
+  for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; }
+  return r;
+}
+function pickN(arr, n) {
+  if (!n || n >= arr.length) return shuffle(arr);
+  return shuffle(arr).slice(0, n);
+}
+function cx(...a){ return a.filter(Boolean).join(" "); }
+
+/* ========================================================================
+   1. 音效引擎（Web Audio 合成，不需要額外素材）
+   ====================================================================== */
+const SFX = (() => {
+  let ctx = null, enabled = true;
+  const ac = () => {
+    if (!ctx) { const C = window.AudioContext || window.webkitAudioContext; if (C) ctx = new C(); }
+    if (ctx && ctx.state === "suspended") ctx.resume();
+    return ctx;
+  };
+  function tone(freq, start, dur, type, vol) {
+    const c = ac(); if (!c || !enabled) return;
+    const o = c.createOscillator(), g = c.createGain();
+    o.type = type || "sine"; o.frequency.setValueAtTime(freq, c.currentTime + start);
+    g.gain.setValueAtTime(0.0001, c.currentTime + start);
+    g.gain.exponentialRampToValueAtTime(vol || 0.22, c.currentTime + start + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + start + dur);
+    o.connect(g); g.connect(c.destination);
+    o.start(c.currentTime + start); o.stop(c.currentTime + start + dur + 0.05);
+  }
+  return {
+    setEnabled(v) { enabled = v; },
+    unlock() { ac(); },
+    correct() { tone(784, 0, .18, "triangle", .25); tone(1046, .12, .28, "triangle", .25); tone(1318, .24, .40, "triangle", .2); },
+    wrong()   { tone(220, 0, .22, "sawtooth", .18); tone(160, .16, .34, "sawtooth", .16); },
+    reveal()  { tone(523, 0, .12, "sine", .18); tone(659, .08, .14, "sine", .18); tone(880, .16, .3, "sine", .18); },
+    tick()    { tone(1200, 0, .05, "square", .06); },
+    timeup()  { tone(440, 0, .18, "square", .2); tone(330, .18, .18, "square", .2); tone(220, .36, .5, "square", .2); },
+    click()   { tone(900, 0, .04, "sine", .08); },
+    finish()  { [523,659,784,1046].forEach((f,i)=>tone(f, i*.11, .5, "triangle", .22)); }
+  };
+})();
+
+/* ========================================================================
+   2. 背景音樂管理（loop + ducking 防衝突）
+   ====================================================================== */
+function useBgm(tracks) {
+  const audioRef = useRef(null);
+  const baseVolRef = useRef(0.42);
+  const fadeRef = useRef(null);
+  const duckCountRef = useRef(0);
+  const [muted, setMuted] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    if (!tracks || !tracks.length) return;
+    const a = new Audio(assetUrl(tracks[0]));
+    a.loop = true; a.volume = 0; a.preload = "auto";
+    audioRef.current = a;
+    return () => { try { a.pause(); } catch (e) {} audioRef.current = null; };
+  }, [tracks && tracks[0]]);
+
+  const fadeTo = useCallback((target, ms) => {
+    const a = audioRef.current; if (!a) return;
+    if (fadeRef.current) clearInterval(fadeRef.current);
+    const steps = Math.max(1, Math.round(ms / 40));
+    const from = a.volume; let i = 0;
+    fadeRef.current = setInterval(() => {
+      i++;
+      const v = from + (target - from) * (i / steps);
+      try { a.volume = Math.min(1, Math.max(0, v)); } catch (e) {}
+      if (i >= steps) { clearInterval(fadeRef.current); fadeRef.current = null; }
+    }, 40);
+  }, []);
+
+  // 首次使用者互動時解鎖播放（瀏覽器自動播放限制）
+  useEffect(() => {
+    const unlock = () => {
+      SFX.unlock();
+      const a = audioRef.current;
+      if (a && a.paused && !muted) {
+        a.play().then(() => { setReady(true); fadeTo(duckCountRef.current > 0 ? 0.06 : baseVolRef.current, 700); }).catch(() => {});
+      }
+    };
+    window.addEventListener("pointerdown", unlock);
+    window.addEventListener("keydown", unlock);
+    return () => { window.removeEventListener("pointerdown", unlock); window.removeEventListener("keydown", unlock); };
+  }, [muted, fadeTo]);
+
+  const duck = useCallback(() => {
+    duckCountRef.current += 1;
+    if (duckCountRef.current === 1) fadeTo(0.05, 450);
+  }, [fadeTo]);
+
+  const unduck = useCallback(() => {
+    duckCountRef.current = Math.max(0, duckCountRef.current - 1);
+    if (duckCountRef.current === 0 && !muted) fadeTo(baseVolRef.current, 700);
+  }, [fadeTo, muted]);
+
+  const resetDuck = useCallback(() => {
+    duckCountRef.current = 0;
+    if (!muted) fadeTo(baseVolRef.current, 500);
+  }, [fadeTo, muted]);
+
+  const toggleMute = useCallback(() => {
+    setMuted(m => {
+      const next = !m;
+      const a = audioRef.current;
+      if (a) {
+        if (next) { fadeTo(0, 300); setTimeout(() => { try { a.pause(); } catch (e) {} }, 340); }
+        else { a.play().then(() => { setReady(true); fadeTo(duckCountRef.current > 0 ? 0.05 : baseVolRef.current, 500); }).catch(() => {}); }
+      }
+      return next;
+    });
+  }, [fadeTo]);
+
+  const setBaseVolume = useCallback((v) => {
+    baseVolRef.current = v;
+    if (!muted && duckCountRef.current === 0) fadeTo(v, 200);
+  }, [fadeTo, muted]);
+
+  return { muted, ready, toggleMute, duck, unduck, resetDuck, setBaseVolume, baseVolume: baseVolRef.current };
+}
+
+/* ========================================================================
+   3. 共用 UI 元件
+   ====================================================================== */
+function Btn({ children, onClick, tone = "primary", size = "md", disabled, className }) {
+  const tones = {
+    primary: "bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:from-pink-400 hover:to-fuchsia-500 text-white shadow-lg shadow-pink-500/25",
+    ghost: "bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15",
+    good: "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white shadow-lg shadow-emerald-500/20",
+    bad: "bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white shadow-lg shadow-rose-500/20",
+    cyan: "bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-400 hover:to-sky-400 text-white shadow-lg shadow-cyan-500/20",
+  };
+  const sizes = { sm: "px-3 py-1.5 text-sm rounded-lg", md: "px-5 py-2.5 text-base rounded-xl", lg: "px-8 py-4 text-lg rounded-2xl font-bold" };
+  return (
+    <button
+      onClick={(e) => { SFX.click(); onClick && onClick(e); }}
+      disabled={disabled}
+      className={cx("transition-all active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed font-semibold", tones[tone], sizes[size], className)}
+    >{children}</button>
+  );
+}
+
+function Card({ children, className }) {
+  return <div className={cx("rounded-3xl bg-white/[.06] backdrop-blur border border-white/10 shadow-2xl shadow-black/40", className)}>{children}</div>;
+}
+
+function Pill({ children, className }) {
+  return <span className={cx("inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold", className)}>{children}</span>;
+}
+
+/* ========================================================================
+   4. 第三關：即時遮蔽影片（前端自動生成黑影 / 馬賽克）
+   ====================================================================== */
+const MASK_MODES = [
+  { id: "silhouette", label: "全黑剪影", desc: "極限對比壓黑，人物變剪影" },
+  { id: "shadow", label: "模糊黑影", desc: "模糊＋壓黑，只剩輪廓律動" },
+  { id: "mosaic", label: "馬賽克", desc: "Canvas 即時像素化" },
+  { id: "dark", label: "暗房模式", desc: "只看得到動作亮點" },
+  { id: "none", label: "不遮蔽", desc: "題目影片已事先處理過" },
+];
+
+function maskFilter(mode, level) {
+  const b = 0.85 - level * 0.7; // level 0~1 → brightness 0.85~0.15
+  switch (mode) {
+    case "silhouette": return `grayscale(1) contrast(${Math.round(400 + level * 900)}%) brightness(${b.toFixed(2)})`;
+    case "shadow": return `blur(${(2 + level * 6).toFixed(1)}px) grayscale(1) contrast(${Math.round(300 + level * 500)}%) brightness(${b.toFixed(2)})`;
+    case "dark": return `brightness(${(0.4 - level * 0.32).toFixed(2)}) contrast(${Math.round(200 + level * 300)}%) saturate(.2)`;
+    case "mosaic": return `saturate(.35) brightness(${(1.0 - level * 0.45).toFixed(2)}) contrast(140%)`;
+    default: return "none";
+  }
+}
+
+function MaskedVideo({ src, mode, level, playKey }) {
+  const videoRef = useRef(null);
+  const canvasRef = useRef(null);
+  const rafRef = useRef(null);
+  const isMosaic = mode === "mosaic";
+
+  useEffect(() => {
+    const v = videoRef.current; if (!v) return;
+    v.currentTime = 0;
+    const p = v.play(); if (p && p.catch) p.catch(() => {});
+    return () => { try { v.pause(); } catch (e) {} };
+  }, [playKey, src]);
+
+  useEffect(() => {
+    if (!isMosaic) { if (rafRef.current) cancelAnimationFrame(rafRef.current); return; }
+    const v = videoRef.current, c = canvasRef.current;
+    if (!v || !c) return;
+    const ctx = c.getContext("2d");
+    const draw = () => {
+      if (v.videoWidth) {
+        // 遮蔽強度越高，馬賽克格子越大（解析度越低）
+        const w = Math.max(16, Math.round(120 - level * 88));
+        const h = Math.max(1, Math.round(w * v.videoHeight / v.videoWidth));
+        if (c.width !== w) { c.width = w; c.height = h; }
+        ctx.drawImage(v, 0, 0, w, h);
+      }
+      rafRef.current = requestAnimationFrame(draw);
+    };
+    rafRef.current = requestAnimationFrame(draw);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, [isMosaic, src, playKey, level]);
+
+  return (
+    <div className="relative w-full overflow-hidden rounded-2xl bg-black">
+      <video
+        ref={videoRef}
+        src={assetUrl(src)}
+        muted
+        loop
+        playsInline
+        className={cx("w-full max-h-[60vh] object-contain", isMosaic && "invisible absolute inset-0 pointer-events-none")}
+        style={{ filter: isMosaic ? "none" : maskFilter(mode, level) }}
+      />
+      {isMosaic && (
+        <canvas ref={canvasRef} className="pixelated w-full max-h-[60vh] object-contain"
+                style={{ filter: maskFilter("mosaic", level) }} />
+      )}
+    </div>
+  );
+}
+
+/* ========================================================================
+   5. 首頁：設定面板
+   ====================================================================== */
+const LEVEL_META = [
+  { id: "level1", n: 1, title: "偶像快看快答", emoji: "⚡", hint: "照片只閃 1 秒", accent: "from-pink-500 to-rose-500" },
+  { id: "level2", n: 2, title: "聽前奏猜歌", emoji: "🎧", hint: "聽前奏搶答", accent: "from-fuchsia-500 to-purple-500" },
+  { id: "level3", n: 3, title: "看舞蹈猜歌", emoji: "🕺", hint: "黑影舞蹈猜曲", accent: "from-indigo-500 to-blue-500" },
+  { id: "level4", n: 4, title: "看五官猜偶像", emoji: "👀", hint: "眼睛＋嘴巴＋手燈", accent: "from-cyan-500 to-teal-500" },
+];
+
+function HomeScreen({ config, setConfig, onStart, pools, dataError }) {
+  const anySelected = LEVEL_META.some(l => config.levels[l.id].on && pools[l.id].length > 0);
+
+  const setLv = (id, patch) => setConfig(c => ({ ...c, levels: { ...c.levels, [id]: { ...c.levels[id], ...patch } } }));
+
+  return (
+    <div className="min-h-screen px-4 py-10 sm:px-8">
+      <div className="mx-auto max-w-5xl">
+        <header className="text-center mb-10 fade-in">
+          <Pill className="bg-pink-500/20 text-pink-200 border border-pink-400/30 mb-4">K-POP QUIZ CHAMPIONSHIP</Pill>
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight bg-gradient-to-r from-pink-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent drop-shadow">
+            KPOP之王巔峰賽
+          </h1>
+          <p className="mt-3 text-slate-300">四大關卡 · 自訂抽題 · 多隊競速</p>
+        </header>
+
+        {dataError && (
+          <Card className="p-5 mb-6 border-amber-400/40 bg-amber-500/10">
+            <p className="text-amber-200 text-sm leading-relaxed">{dataError}</p>
+          </Card>
+        )}
+
+        {/* 關卡設定 */}
+        <div className="grid gap-4 sm:grid-cols-2">
+          {LEVEL_META.map(meta => {
+            const lv = config.levels[meta.id];
+            const total = pools[meta.id].length;
+            const disabled = total === 0;
+            return (
+              <Card key={meta.id} className={cx("p-5 transition-all", lv.on && !disabled ? "flash-ring" : "opacity-80", disabled && "opacity-40")}>
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input type="checkbox" className="mt-1.5 h-5 w-5 rounded accent-pink-500" disabled={disabled}
+                         checked={lv.on && !disabled} onChange={e => setLv(meta.id, { on: e.target.checked })} />
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl">{meta.emoji}</span>
+                      <div>
+                        <div className={cx("font-bold text-lg bg-gradient-to-r bg-clip-text text-transparent", meta.accent)}>
+                          第{["一","二","三","四"][meta.n-1]}關 · {meta.title}
+                        </div>
+                        <div className="text-xs text-slate-400">{meta.hint} · 題庫共 {total} 題</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+                <div className="mt-4 flex items-center gap-2 flex-wrap">
+                  <span className="text-sm text-slate-400">抽題數</span>
+                  {[5, 10, 15].map(n => (
+                    <button key={n} disabled={disabled}
+                      onClick={() => { SFX.click(); setLv(meta.id, { count: n }); }}
+                      className={cx("px-3 py-1 rounded-lg text-sm border transition",
+                        lv.count === n ? "bg-pink-500 border-pink-400 text-white" : "bg-white/5 border-white/10 hover:bg-white/10 text-slate-300")}>
+                      {n}
+                    </button>
+                  ))}
+                  <button disabled={disabled}
+                    onClick={() => { SFX.click(); setLv(meta.id, { count: 0 }); }}
+                    className={cx("px-3 py-1 rounded-lg text-sm border transition",
+                      lv.count === 0 ? "bg-pink-500 border-pink-400 text-white" : "bg-white/5 border-white/10 hover:bg-white/10 text-slate-300")}>
+                    全部
+                  </button>
+                  <input type="number" min="1" max={Math.max(1, total)} disabled={disabled}
+                    value={lv.count === 0 ? "" : lv.count} placeholder="自訂"
+                    onChange={e => setLv(meta.id, { count: Math.max(0, parseInt(e.target.value || "0", 10)) })}
+                    className="w-20 px-2 py-1 rounded-lg bg-black/30 border border-white/15 text-sm text-slate-100 placeholder:text-slate-500" />
+                  <span className="text-xs text-slate-500">
+                    實際出 {Math.min(lv.count === 0 ? total : lv.count, total)} 題
+                  </span>
+                </div>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* 隊伍 */}
+        <Card className="p-5 mt-6">
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <h2 className="font-bold text-lg">🏆 隊伍設定</h2>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-slate-400">隊伍數</span>
+              {[1,2,3,4,5,6].map(n => (
+                <button key={n} onClick={() => {
+                  SFX.click();
+                  setConfig(c => {
+                    const names = c.teams.slice(0, n);
+                    while (names.length < n) names.push("隊伍 " + (names.length + 1));
+                    return { ...c, teams: names };
+                  });
+                }} className={cx("w-9 h-9 rounded-lg text-sm border transition",
+                    config.teams.length === n ? "bg-fuchsia-500 border-fuchsia-400 text-white" : "bg-white/5 border-white/10 hover:bg-white/10 text-slate-300")}>{n}</button>
+              ))}
+            </div>
+          </div>
+          <div className="mt-4 grid gap-2 sm:grid-cols-3">
+            {config.teams.map((t, i) => (
+              <input key={i} value={t} onChange={e => setConfig(c => { const teams = c.teams.slice(); teams[i] = e.target.value; return { ...c, teams }; })}
+                className="px-3 py-2 rounded-xl bg-black/30 border border-white/15 text-sm" />
+            ))}
+          </div>
+        </Card>
+
+        {/* 進階 */}
+        <Card className="p-5 mt-6">
+          <h2 className="font-bold text-lg mb-4">⚙️ 進階設定</h2>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <div className="text-sm text-slate-300 mb-1">每題倒數秒數（0 = 不計時）</div>
+              <div className="flex items-center gap-3">
+                <input type="range" min="0" max="60" step="5" value={config.timer}
+                  onChange={e => setConfig(c => ({ ...c, timer: parseInt(e.target.value, 10) }))} className="flex-1" />
+                <span className="w-14 text-right font-mono text-pink-300">{config.timer === 0 ? "關閉" : config.timer + "s"}</span>
+              </div>
+            </div>
+            <div>
+              <div className="text-sm text-slate-300 mb-1">第一關照片閃現時間</div>
+              <div className="flex items-center gap-3">
+                <input type="range" min="0.3" max="3" step="0.1" value={config.flashSec}
+                  onChange={e => setConfig(c => ({ ...c, flashSec: parseFloat(e.target.value) }))} className="flex-1" />
+                <span className="w-14 text-right font-mono text-pink-300">{config.flashSec.toFixed(1)}s</span>
+              </div>
+            </div>
+            <div>
+              <div className="text-sm text-slate-300 mb-1">第三關遮蔽方式（無現成題目影片時自動套用）</div>
+              <select value={config.maskMode} onChange={e => setConfig(c => ({ ...c, maskMode: e.target.value }))}
+                className="w-full px-3 py-2 rounded-xl bg-black/40 border border-white/15 text-sm">
+                {MASK_MODES.filter(m => m.id !== "none").map(m => <option key={m.id} value={m.id}>{m.label} — {m.desc}</option>)}
+              </select>
+            </div>
+            <div>
+              <div className="text-sm text-slate-300 mb-1">遮蔽強度</div>
+              <div className="flex items-center gap-3">
+                <input type="range" min="0.2" max="1" step="0.05" value={config.maskLevel}
+                  onChange={e => setConfig(c => ({ ...c, maskLevel: parseFloat(e.target.value) }))} className="flex-1" />
+                <span className="w-14 text-right font-mono text-pink-300">{Math.round(config.maskLevel * 100)}%</span>
+              </div>
+            </div>
+            <div>
+              <div className="text-sm text-slate-300 mb-1">背景音樂音量</div>
+              <div className="flex items-center gap-3">
+                <input type="range" min="0" max="1" step="0.05" value={config.bgmVol}
+                  onChange={e => setConfig(c => ({ ...c, bgmVol: parseFloat(e.target.value) }))} className="flex-1" />
+                <span className="w-14 text-right font-mono text-pink-300">{Math.round(config.bgmVol * 100)}%</span>
+              </div>
+            </div>
+            <div className="flex items-end gap-4">
+              <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
+                <input type="checkbox" className="h-4 w-4 accent-pink-500" checked={config.sfx}
+                  onChange={e => { setConfig(c => ({ ...c, sfx: e.target.checked })); SFX.setEnabled(e.target.checked); }} />
+                答對／答錯音效
+              </label>
+              <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
+                <input type="checkbox" className="h-4 w-4 accent-pink-500" checked={config.mixLevels}
+                  onChange={e => setConfig(c => ({ ...c, mixLevels: e.target.checked }))} />
+                打亂關卡順序
+              </label>
+            </div>
+          </div>
+        </Card>
+
+        <div className="mt-8 flex justify-center">
+          <Btn size="lg" disabled={!anySelected} onClick={onStart}>開始挑戰 🚀</Btn>
+        </div>
+        <p className="text-center text-xs text-slate-500 mt-6">
+          題庫由 <code className="text-slate-400">quiz-data.js</code> 自動載入 · 新增素材後請執行「更新題庫.bat」
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/* ========================================================================
+   6. 各關卡題目畫面
+   ====================================================================== */
+function Level1Stage({ q, revealed, flashSec }) {
+  const [visible, setVisible] = useState(false);
+  const [countdown, setCountdown] = useState(0);
+  const timerRef = useRef(null);
+
+  useEffect(() => { setVisible(false); setCountdown(0); return () => clearTimeout(timerRef.current); }, [q.id]);
+
+  const flash = () => {
+    setCountdown(3);
+    let n = 3;
+    const iv = setInterval(() => {
+      n -= 1; setCountdown(n); SFX.tick();
+      if (n <= 0) {
+        clearInterval(iv);
+        setVisible(true);
+        timerRef.current = setTimeout(() => setVisible(false), flashSec * 1000);
+      }
+    }, 700);
+  };
+
+  return (
+    <div className="flex flex-col items-center gap-5">
+      <div className="relative w-full max-w-lg h-[44vh] sm:h-[52vh] rounded-3xl overflow-hidden bg-black/60 border border-white/10 grid place-items-center">
+        {(revealed || visible) ? (
+          <img src={assetUrl(q.image)} alt="" className="w-full h-full object-contain pop" />
+        ) : (
+          <div className="text-center px-6">
+            {countdown > 0 ? (
+              <div className="text-8xl font-black text-pink-400 pop">{countdown}</div>
+            ) : (
+              <>
+                <div className="text-7xl mb-3">🫥</div>
+                <div className="text-slate-400 text-sm">照片只會出現 {flashSec.toFixed(1)} 秒</div>
+              </>
+            )}
+          </div>
+        )}
+      </div>
+      {!revealed && (
+        <Btn tone="cyan" onClick={flash} disabled={countdown > 0 || visible}>
+          {visible ? "看！" : countdown > 0 ? "準備…" : "閃現照片 ⚡"}
+        </Btn>
+      )}
+      {revealed && (
+        <div className="text-center pop">
+          <div className="text-sm text-cyan-300 font-semibold">{q.group}</div>
+          <div className="text-4xl font-black text-white mt-1">{q.name}</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Level2Stage({ q, revealed, duck, unduck }) {
+  const audioRef = useRef(null);
+  const videoRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+  const duckedRef = useRef(false);
+
+  const doDuck = () => { if (!duckedRef.current) { duckedRef.current = true; duck(); } };
+  const doUnduck = () => { if (duckedRef.current) { duckedRef.current = false; unduck(); } };
+
+  useEffect(() => () => doUnduck(), []);
+  useEffect(() => { doUnduck(); setPlaying(false); }, [q.id]);
+
+  // 題目音源：優先用剪好的前奏檔；沒有的話用答案影片的前段（自動抽前奏）
+  const clipSrc = q.clip || q.answer;
+  const clipLimit = q.clip ? null : (q.introSeconds || 12);
+
+  const play = () => {
+    const a = audioRef.current; if (!a) return;
+    doDuck();
+    a.currentTime = 0;
+    a.play().then(() => setPlaying(true)).catch(() => {});
+  };
+  const stop = () => { const a = audioRef.current; if (a) { a.pause(); } setPlaying(false); doUnduck(); };
+
+  useEffect(() => {
+    const a = audioRef.current; if (!a || !clipLimit) return;
+    const onT = () => { if (a.currentTime >= clipLimit) { a.pause(); setPlaying(false); doUnduck(); } };
+    a.addEventListener("timeupdate", onT);
+    return () => a.removeEventListener("timeupdate", onT);
+  }, [clipLimit, q.id]);
+
+  useEffect(() => {
+    if (revealed) { stop(); doDuck(); }
+  }, [revealed]);
+
+  return (
+    <div className="flex flex-col items-center gap-6 w-full">
+      {/* 音檔一律掛著不隨畫面卸載，避免公布答案時前奏還在背景播 */}
+      <audio ref={audioRef} src={assetUrl(clipSrc)} onEnded={() => { setPlaying(false); doUnduck(); }} preload="auto" className="hidden" />
+      {!revealed ? (
+        <>
+          <div className={cx("w-40 h-40 rounded-full grid place-items-center border-4 transition-all",
+            playing ? "border-fuchsia-400 bg-fuchsia-500/20 scale-110 shadow-2xl shadow-fuchsia-500/40" : "border-white/15 bg-white/5")}>
+            <span className="text-6xl">{playing ? "🔊" : "🎧"}</span>
+          </div>
+          <div className="flex gap-3 flex-wrap justify-center">
+            <Btn tone="cyan" onClick={play}>{playing ? "🔁 重新播放" : "▶ 播放前奏"}</Btn>
+            <Btn tone="ghost" onClick={play}>再聽一次 🔂</Btn>
+            {playing && <Btn tone="ghost" onClick={stop}>⏸ 停止</Btn>}
+          </div>
+          {clipLimit && <p className="text-xs text-slate-500">（無獨立前奏檔，自動播放答案影片前 {clipLimit} 秒的音訊）</p>}
+        </>
+      ) : (
+        <div className="w-full flex flex-col items-center gap-4 pop">
+          <video ref={videoRef} src={assetUrl(q.answer || q.clip)} controls autoPlay
+                 className="w-full max-h-[58vh] rounded-2xl bg-black"
+                 onPlay={doDuck} onPause={doUnduck} onEnded={doUnduck} />
+          <div className="text-center">
+            <div className="text-sm text-fuchsia-300 font-semibold">{q.group}</div>
+            <div className="text-3xl sm:text-4xl font-black text-white mt-1">{q.title}</div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Level3Stage({ q, revealed, maskMode, maskLevel, duck, unduck }) {
+  const [replayKey, setReplayKey] = useState(0);
+  const duckedRef = useRef(false);
+  const doDuck = () => { if (!duckedRef.current) { duckedRef.current = true; duck(); } };
+  const doUnduck = () => { if (duckedRef.current) { duckedRef.current = false; unduck(); } };
+  useEffect(() => () => doUnduck(), []);
+  useEffect(() => { doUnduck(); setReplayKey(k => k + 1); }, [q.id]);
+
+  // 若已有事先做好的題目影片就直接播（不再套濾鏡）；否則拿答案 MV 即時遮蔽
+  const hasPrebuilt = !!q.question;
+  const src = hasPrebuilt ? q.question : q.answer;
+  const mode = hasPrebuilt ? "none" : maskMode;
+
+  return (
+    <div className="w-full flex flex-col items-center gap-5">
+      {!revealed ? (
+        <>
+          <MaskedVideo src={src} mode={mode} level={maskLevel} playKey={replayKey} />
+          <div className="flex gap-3 flex-wrap justify-center items-center">
+            <Btn tone="cyan" onClick={() => setReplayKey(k => k + 1)}>🔁 重播舞蹈</Btn>
+            <Pill className="bg-indigo-500/20 text-indigo-200 border border-indigo-400/30">
+              {hasPrebuilt ? "已使用預先處理的剪影影片" : "前端即時遮蔽：" + (MASK_MODES.find(m => m.id === mode) || {}).label}
+            </Pill>
+            <Pill className="bg-white/10 text-slate-300">🔇 靜音播放</Pill>
+          </div>
+        </>
+      ) : (
+        <div className="w-full flex flex-col items-center gap-4 pop">
+          <video src={assetUrl(q.answer || q.question)} controls autoPlay
+                 className="w-full max-h-[58vh] rounded-2xl bg-black"
+                 onPlay={doDuck} onPause={doUnduck} onEnded={doUnduck} />
+          <div className="text-center">
+            <div className="text-sm text-indigo-300 font-semibold">{q.group}</div>
+            <div className="text-3xl sm:text-4xl font-black text-white mt-1">{q.title}</div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function FeatureBox({ label, emoji, src, tint }) {
+  return (
+    <div className="flex-1 min-w-[180px]">
+      <div className={cx("text-xs font-bold mb-2 flex items-center gap-1", tint)}>
+        <span>{emoji}</span>{label}
+      </div>
+      <div className="rounded-2xl overflow-hidden bg-black/50 border border-white/10 h-[34vh] grid place-items-center">
+        {src ? <img src={assetUrl(src)} alt="" className="w-full h-full object-contain" /> : <span className="text-slate-600 text-sm">（無素材）</span>}
+      </div>
+    </div>
+  );
+}
+
+function Level4Stage({ q, revealed }) {
+  if (!revealed) {
+    return (
+      <div className="w-full">
+        <div className="flex gap-4 flex-wrap">
+          <FeatureBox label="眼睛" emoji="👁️" src={q.eyes && q.eyes.q} tint="text-cyan-300" />
+          <FeatureBox label="嘴巴" emoji="👄" src={q.mouth && q.mouth.q} tint="text-pink-300" />
+          <FeatureBox label="手燈提示（團體）" emoji="🔦" src={q.lightstick && q.lightstick.image} tint="text-amber-300" />
+        </div>
+        <p className="text-center text-slate-400 text-sm mt-4">眼睛與嘴巴來自<b className="text-slate-200">不同偶像</b>，手燈是所屬團體提示</p>
+      </div>
+    );
+  }
+  const cardOf = (part, label, emoji, tint) => (
+    <div className="flex-1 min-w-[220px] pop">
+      <div className={cx("text-xs font-bold mb-2 flex items-center gap-1", tint)}><span>{emoji}</span>{label}的答案</div>
+      <div className="rounded-2xl overflow-hidden bg-black/50 border border-white/10 h-[44vh] grid place-items-center">
+        {part && (part.a || part.q) ? <img src={assetUrl(part.a || part.q)} alt="" className="w-full h-full object-contain" /> : <span className="text-slate-600">（無解答原圖）</span>}
+      </div>
+      <div className="text-center mt-3">
+        <div className={cx("text-sm font-semibold", tint)}>{part ? part.group : ""}</div>
+        <div className="text-2xl font-black text-white">{part ? part.name : ""}</div>
+      </div>
+    </div>
+  );
+  return (
+    <div className="w-full flex gap-5 flex-wrap justify-center">
+      {cardOf(q.eyes, "眼睛", "👁️", "text-cyan-300")}
+      {cardOf(q.mouth, "嘴巴", "👄", "text-pink-300")}
+    </div>
+  );
+}
+
+/* ========================================================================
+   7. 測驗主畫面
+   ====================================================================== */
+function QuizScreen({ deck, config, scores, setScores, onHome, onFinish, bgm }) {
+  const [idx, setIdx] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const [left, setLeft] = useState(config.timer);
+  const [running, setRunning] = useState(config.timer > 0);
+  const q = deck[idx];
+
+  useEffect(() => {
+    setRevealed(false); setLeft(config.timer); setRunning(config.timer > 0);
+    bgm.resetDuck();
+  }, [idx]);
+
+  useEffect(() => {
+    if (!running || config.timer === 0 || revealed) return;
+    if (left <= 0) { setRunning(false); SFX.timeup(); return; }
+    const t = setTimeout(() => { setLeft(l => l - 1); if (left <= 4) SFX.tick(); }, 1000);
+    return () => clearTimeout(t);
+  }, [left, running, revealed, config.timer]);
+
+  const reveal = () => { setRevealed(true); setRunning(false); SFX.reveal(); };
+  const next = () => { if (idx + 1 >= deck.length) { SFX.finish(); onFinish(); } else setIdx(i => i + 1); };
+  const prev = () => setIdx(i => Math.max(0, i - 1));
+
+  const addScore = (ti, delta) => {
+    setScores(s => { const n = s.slice(); n[ti] = (n[ti] || 0) + delta; return n; });
+    if (delta > 0) SFX.correct(); else SFX.wrong();
+  };
+
+  const meta = LEVEL_META.find(m => m.id === q.__level);
+  const timePct = config.timer ? Math.max(0, left) / config.timer * 100 : 0;
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      {/* 頂部列 */}
+      <div className="sticky top-0 z-20 backdrop-blur bg-black/40 border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-3 flex items-center gap-3 flex-wrap">
+          <button onClick={() => { SFX.click(); onHome(); }} className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-sm">← 首頁</button>
+          <Pill className={cx("bg-gradient-to-r text-white", meta ? meta.accent : "from-slate-600 to-slate-700")}>
+            {meta ? meta.emoji + " 第" + ["一","二","三","四"][meta.n-1] + "關 " + meta.title : "題目"}
+          </Pill>
+          <div className="text-sm text-slate-300 font-mono">{idx + 1} / {deck.length}</div>
+          <div className="flex-1 min-w-[80px] h-1.5 rounded-full bg-white/10 overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-pink-500 to-cyan-400 transition-all" style={{ width: ((idx + 1) / deck.length * 100) + "%" }} />
+          </div>
+          {config.timer > 0 && (
+            <div className="flex items-center gap-2">
+              <div className="relative w-12 h-12 grid place-items-center">
+                <svg className="absolute inset-0 -rotate-90" viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="rgba(255,255,255,.12)" strokeWidth="3" />
+                  <circle cx="18" cy="18" r="16" fill="none" stroke={left <= 5 ? "#f43f5e" : "#22d3ee"} strokeWidth="3"
+                          strokeDasharray={2 * Math.PI * 16} strokeDashoffset={2 * Math.PI * 16 * (1 - timePct / 100)}
+                          strokeLinecap="round" style={{ transition: "stroke-dashoffset .9s linear" }} />
+                </svg>
+                <span className={cx("text-sm font-black", left <= 5 ? "text-rose-400" : "text-cyan-300")}>{Math.max(0, left)}</span>
+              </div>
+              <button onClick={() => { SFX.click(); setRunning(r => !r); }} className="px-2 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-xs">
+                {running ? "⏸" : "▶"}
+              </button>
+            </div>
+          )}
+          <button onClick={bgm.toggleMute}
+            title="背景音樂開關"
+            className={cx("px-3 py-1.5 rounded-lg text-sm border transition",
+              bgm.muted ? "bg-white/5 border-white/10 text-slate-400" : "bg-pink-500/20 border-pink-400/40 text-pink-200")}>
+            {bgm.muted ? "🔇 BGM" : "🎵 BGM"}
+          </button>
+        </div>
+      </div>
+
+      {/* 題目 */}
+      <div className="flex-1 mx-auto w-full max-w-5xl px-4 py-8">
+        <div className="fade-in" key={q.id}>
+          {q.__level === "level1" && <Level1Stage q={q} revealed={revealed} flashSec={config.flashSec} />}
+          {q.__level === "level2" && <Level2Stage q={q} revealed={revealed} duck={bgm.duck} unduck={bgm.unduck} />}
+          {q.__level === "level3" && <Level3Stage q={q} revealed={revealed} maskMode={config.maskMode} maskLevel={config.maskLevel} duck={bgm.duck} unduck={bgm.unduck} />}
+          {q.__level === "level4" && <Level4Stage q={q} revealed={revealed} />}
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-3 justify-center">
+          <Btn tone="ghost" size="sm" onClick={prev} disabled={idx === 0}>← 上一題</Btn>
+          {!revealed
+            ? <Btn size="lg" onClick={reveal}>公布答案 🎉</Btn>
+            : <Btn size="lg" tone="cyan" onClick={next}>{idx + 1 >= deck.length ? "看結果 🏁" : "下一題 →"}</Btn>}
+          <Btn tone="ghost" size="sm" onClick={next}>跳過 →</Btn>
+        </div>
+      </div>
+
+      {/* 計分板 */}
+      <div className="sticky bottom-0 backdrop-blur bg-black/50 border-t border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-3 flex gap-3 overflow-x-auto">
+          {config.teams.map((t, i) => (
+            <div key={i} className="flex items-center gap-2 shrink-0 rounded-2xl bg-white/5 border border-white/10 px-3 py-2">
+              <div className="min-w-[70px]">
+                <div className="text-xs text-slate-400 truncate max-w-[110px]">{t}</div>
+                <div className="text-xl font-black text-white leading-none">{scores[i] || 0}</div>
+              </div>
+              <button onClick={() => addScore(i, 1)} className="w-9 h-9 rounded-xl bg-emerald-500/80 hover:bg-emerald-400 font-bold">＋</button>
+              <button onClick={() => addScore(i, -1)} className="w-9 h-9 rounded-xl bg-rose-600/70 hover:bg-rose-500 font-bold">－</button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ========================================================================
+   8. 結算畫面
+   ====================================================================== */
+function ResultScreen({ config, scores, onHome, onAgain }) {
+  const rank = config.teams.map((t, i) => ({ name: t, score: scores[i] || 0 })).sort((a, b) => b.score - a.score);
+  const medals = ["🥇", "🥈", "🥉"];
+  return (
+    <div className="min-h-screen grid place-items-center px-4 py-12">
+      <Card className="p-8 w-full max-w-2xl text-center fade-in">
+        <div className="text-6xl mb-2">👑</div>
+        <h1 className="text-4xl font-black bg-gradient-to-r from-pink-300 to-cyan-300 bg-clip-text text-transparent">賽果揭曉</h1>
+        <p className="text-slate-400 mt-2">恭喜本屆 KPOP 之王！</p>
+        <div className="mt-8 space-y-3">
+          {rank.map((r, i) => (
+            <div key={i} className={cx("flex items-center gap-4 rounded-2xl px-5 py-4 border",
+              i === 0 ? "bg-gradient-to-r from-amber-500/25 to-yellow-500/10 border-amber-400/40" : "bg-white/5 border-white/10")}>
+              <span className="text-2xl w-8">{medals[i] || (i + 1)}</span>
+              <span className="flex-1 text-left font-bold text-lg">{r.name}</span>
+              <span className="text-3xl font-black text-white">{r.score}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex gap-3 justify-center">
+          <Btn onClick={onAgain}>再玩一次 🔁</Btn>
+          <Btn tone="ghost" onClick={onHome}>回設定頁</Btn>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+/* ========================================================================
+   9. 根元件
+   ====================================================================== */
+function App() {
+  const [screen, setScreen] = useState("home");
+  const [deck, setDeck] = useState([]);
+  const [scores, setScores] = useState([0, 0]);
+  const [config, setConfig] = useState({
+    levels: {
+      level1: { on: true, count: 5 },
+      level2: { on: true, count: 5 },
+      level3: { on: true, count: 5 },
+      level4: { on: true, count: 5 },
+    },
+    teams: ["隊伍 1", "隊伍 2"],
+    timer: 15,
+    flashSec: 1.0,
+    maskMode: "silhouette",
+    maskLevel: 0.7,
+    bgmVol: 0.42,
+    sfx: true,
+    mixLevels: false,
+  });
+
+  const pools = useMemo(() => {
+    const out = { level1: [], level2: [], level3: [], level4: [] };
+    if (!DATA || !DATA.levels) return out;
+    Object.keys(out).forEach(k => {
+      const lv = DATA.levels[k];
+      out[k] = (lv && lv.questions ? lv.questions : []).map(q => ({ ...q, __level: k }));
+    });
+    return out;
+  }, []);
+
+  const dataError = useMemo(() => {
+    if (!DATA) return "找不到題庫檔 quiz-data.js。請先執行資料夾中的「更新題庫.bat」重新掃描素材。";
+    const total = Object.keys(pools).reduce((s, k) => s + pools[k].length, 0);
+    if (total === 0) return "題庫是空的。請確認 D:\\kpop 各關資料夾內有素材，並執行「更新題庫.bat」。";
+    return null;
+  }, [pools]);
+
+  const bgm = useBgm(DATA && DATA.bgm ? DATA.bgm : []);
+  useEffect(() => { bgm.setBaseVolume(config.bgmVol); }, [config.bgmVol]);
+  useEffect(() => { SFX.setEnabled(config.sfx); }, [config.sfx]);
+
+  const start = () => {
+    let d = [];
+    ["level1", "level2", "level3", "level4"].forEach(k => {
+      const lv = config.levels[k];
+      if (!lv.on) return;
+      d = d.concat(pickN(pools[k], lv.count));
+    });
+    if (config.mixLevels) d = shuffle(d);
+    if (!d.length) return;
+    setDeck(d);
+    setScores(config.teams.map(() => 0));
+    setScreen("quiz");
+  };
+
+  if (screen === "home") return (
+    <>
+      <BgmFloatButton bgm={bgm} />
+      <HomeScreen config={config} setConfig={setConfig} onStart={start} pools={pools} dataError={dataError} />
+    </>
+  );
+  if (screen === "quiz") return (
+    <QuizScreen deck={deck} config={config} scores={scores} setScores={setScores}
+      bgm={bgm} onHome={() => { bgm.resetDuck(); setScreen("home"); }} onFinish={() => { bgm.resetDuck(); setScreen("result"); }} />
+  );
+  return (
+    <>
+      <BgmFloatButton bgm={bgm} />
+      <ResultScreen config={config} scores={scores} onHome={() => setScreen("home")} onAgain={start} />
+    </>
+  );
+}
+
+function BgmFloatButton({ bgm }) {
+  return (
+    <button onClick={bgm.toggleMute}
+      title="背景音樂開關"
+      className={cx("fixed top-4 right-4 z-50 px-4 py-2.5 rounded-2xl text-sm font-semibold border backdrop-blur transition shadow-lg",
+        bgm.muted ? "bg-black/50 border-white/15 text-slate-400" : "bg-pink-500/25 border-pink-400/40 text-pink-100 shadow-pink-500/20")}>
+      {bgm.muted ? "🔇 BGM 關" : "🎵 BGM 開"}
+    </button>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
