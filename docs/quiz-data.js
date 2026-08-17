@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-17 22:19:11 */
+   產生時間：2026-08-17 23:19:29 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-17T22:16:35",
+    "generatedAt":  "2026-08-17T23:17:01",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -35,21 +35,21 @@ window.QUIZ_DATA =
                                   "questions":  [
                                                     {
                                                         "id":  "L1-001",
-                                                        "group":  "AESPA",
+                                                        "group":  "aespa",
                                                         "name":  "Karina",
-                                                        "image":  "level1/AESPA_Karina.png"
+                                                        "image":  "level1/aespa_Karina.png"
                                                     },
                                                     {
                                                         "id":  "L1-002",
-                                                        "group":  "AESPA",
+                                                        "group":  "aespa",
                                                         "name":  "Ningning",
-                                                        "image":  "level1/AESPA_Ningning.jpg"
+                                                        "image":  "level1/aespa_Ningning.jpg"
                                                     },
                                                     {
                                                         "id":  "L1-003",
-                                                        "group":  "AESPA",
+                                                        "group":  "aespa",
                                                         "name":  "Winter",
-                                                        "image":  "level1/AESPA_Winter.jpg"
+                                                        "image":  "level1/aespa_Winter.jpg"
                                                     },
                                                     {
                                                         "id":  "L1-004",

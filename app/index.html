@@ -228,7 +228,7 @@ const _warned = {};
 function assetUrl(p) {
   if (!p) return "";
   let s = String(p).trim();
-  if (/^(https?:)?\/\//i.test(s) || /^data:/i.test(s)) return s;
+  if (/^(https?:)?\/\//i.test(s) || /^data:/i.test(s) || /^blob:/i.test(s)) return s;
   s = s.replace(/\\/g, "/");
   const abs = s.match(/^(?:file:\/\/\/)?[A-Za-z]:\/(.*)$/i);
   if (abs) {
@@ -315,7 +315,7 @@ const SFX = (() => {
 /* ========================================================================
    2. 背景音樂：loop / ducking / 進入挑戰自動停止
    ====================================================================== */
-function useBgm(tracks) {
+function useBgm(src) {
   const audioRef = useRef(null);
   const baseVolRef = useRef(0.42);
   const fadeRef = useRef(null);
@@ -325,12 +325,12 @@ function useBgm(tracks) {
   const [unlocked, setUnlocked] = useState(false);
 
   useEffect(() => {
-    if (!tracks || !tracks.length) return;
-    const a = new Audio(assetUrl(tracks[0]));
+    if (!src) { audioRef.current = null; return; }
+    const a = new Audio(assetUrl(src));
     a.loop = true; a.volume = 0; a.preload = "auto";
     audioRef.current = a;
     return () => { try { a.pause(); } catch (e) {} audioRef.current = null; };
-  }, [tracks && tracks[0]]);
+  }, [src]);
 
   const fadeTo = useCallback((target, ms, thenPause) => {
     const a = audioRef.current; if (!a) return;
@@ -365,7 +365,7 @@ function useBgm(tracks) {
     } else {
       fadeTo(0, 380, true);
     }
-  }, [shouldPlay, fadeTo]);
+  }, [shouldPlay, fadeTo, src]);        // 換曲之後要重新淡入
 
   const duck = useCallback(() => {
     duckRef.current += 1;
@@ -394,7 +394,7 @@ function useBgm(tracks) {
   return {
     on: !muted && !suspended,
     playing: shouldPlay,
-    hasTrack: !!(tracks && tracks.length),
+    hasTrack: !!src,
     toggle,
     suspend: () => setSuspended(true),
     wake: () => setSuspended(false),
@@ -444,6 +444,42 @@ function BgmButton({ bgm, className }) {
     </button>
   );
 }
+function GearButton({ onClick, className }) {
+  return (
+    <button onClick={() => { SFX.click(); onClick(); }} title="設定" aria-label="設定"
+      className={cx("w-11 h-11 grid place-items-center rounded-2xl text-lg border backdrop-blur transition shadow-lg",
+        "bg-white/10 border-white/20 text-slate-200 hover:bg-white/20 hover:rotate-45 duration-300", className)}>
+      ⚙️
+    </button>
+  );
+}
+
+/* 彈窗：點背景或按 Esc 關閉 */
+function Modal({ title, subtitle, onClose, children }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+  return (
+    <div className="fixed inset-0 z-[80] flex items-center justify-center p-4" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm fade-in" />
+      <div onClick={e => e.stopPropagation()}
+        className="relative w-full max-w-md rounded-3xl bg-[#150c28]/95 border border-white/15 shadow-2xl shadow-black/60 p-6 pop max-h-[86vh] overflow-y-auto scroll-thin">
+        <div className="flex items-start gap-3 mb-5">
+          <div className="flex-1">
+            <h2 className="text-xl font-black bg-gradient-to-r from-pink-300 to-cyan-300 bg-clip-text text-transparent">{title}</h2>
+            {subtitle && <p className="text-[11px] text-slate-400 mt-0.5">{subtitle}</p>}
+          </div>
+          <button onClick={onClose} aria-label="關閉"
+            className="w-8 h-8 grid place-items-center rounded-xl bg-white/10 hover:bg-white/20 text-slate-300">✕</button>
+        </div>
+        {children}
+      </div>
+    </div>
+  );
+}
+
 /* 設定用的滑桿與開關 */
 function Slider({ label, value, min, max, step, onChange, format }) {
   return (
@@ -464,6 +500,93 @@ function Toggle({ label, checked, onChange }) {
              onChange={e => onChange(e.target.checked)} />
       {label}
     </label>
+  );
+}
+
+/* ========================================================================
+   3.5 全域設定彈窗（封面 / 主選單共用）
+       這裡放的是「跟哪一種模式無關」的東西：BGM 音量、背景卡片數量、換 BGM
+   ====================================================================== */
+// 從路徑取出好讀的曲名（data:/blob: 這種沒有檔名的就顯示「自訂音樂」）
+function trackLabel(p) {
+  const v = String(p || "");
+  if (!v) return "";
+  if (/^(data:|blob:)/i.test(v)) return "自訂音樂";
+  return v.split(/[\\/]/).pop().replace(/\.[^.]+$/, "");
+}
+
+function GlobalSettingsModal({ g, setG, tracks, maxPhotos, onClose }) {
+  const fileRef = useRef(null);
+
+  const pickFile = (e) => {
+    const f = e.target.files && e.target.files[0];
+    if (!f) return;
+    const url = URL.createObjectURL(f);        // 只存在這一次開啟期間，不會動到你的檔案
+    setG(s => ({ ...s, bgmTrack: url, trackName: f.name, custom: true }));
+  };
+  const baseName = trackLabel;
+
+  return (
+    <Modal title="⚙️ 設定" subtitle="這裡的設定不分單人／多人，整個 App 共用" onClose={onClose}>
+      <div className="space-y-6">
+
+        <Slider label="🎵 背景音樂音量（封面／主選單）" min="0" max="1" step="0.05" value={g.bgmVol}
+                onChange={v => setG(s => ({ ...s, bgmVol: v }))}
+                format={v => v === 0 ? "靜音" : Math.round(v * 100) + "%"} />
+
+        <div>
+          <Slider label="🖼️ 背景圖片數量（封面漂浮卡片）" min="0" max={String(maxPhotos)} step="1" value={g.photoCount}
+                  onChange={v => setG(s => ({ ...s, photoCount: v }))}
+                  format={v => v === 0 ? "不顯示" : v + " 張"} />
+          <div className="flex items-center gap-2 mt-2 flex-wrap">
+            {[0, 4, 8, 12, maxPhotos].filter((v, i, a) => a.indexOf(v) === i).map(n => (
+              <button key={n} onClick={() => { SFX.click(); setG(s => ({ ...s, photoCount: n })); }}
+                className={cx("px-3 py-1 rounded-lg text-xs border transition",
+                  g.photoCount === n ? "bg-pink-500 border-pink-400 text-white"
+                                     : "bg-white/5 border-white/10 hover:bg-white/10 text-slate-300")}>
+                {n === 0 ? "不顯示" : n === maxPhotos ? "最多" : n}
+              </button>
+            ))}
+          </div>
+          <p className="text-[11px] text-slate-500 mt-1.5">
+            照片來源是 <code className="text-slate-400">封面</code> 資料夾；張數超過照片數時會循環使用。
+          </p>
+        </div>
+
+        <div>
+          <div className="text-sm text-slate-300 mb-1.5">🎧 更換背景音樂</div>
+          {tracks.length > 0 ? (
+            <select value={g.custom ? "__custom" : g.bgmTrack}
+              onChange={e => {
+                const v = e.target.value;
+                if (v === "__custom") { fileRef.current && fileRef.current.click(); return; }
+                setG(s => ({ ...s, bgmTrack: v, trackName: baseName(v), custom: false }));
+              }}
+              className="w-full px-3 py-2 rounded-xl bg-black/40 border border-white/15 text-sm">
+              {tracks.map(t => <option key={t} value={t}>{baseName(t)}</option>)}
+              {g.custom && <option value="__custom">{g.trackName}（自選檔案）</option>}
+            </select>
+          ) : (
+            <p className="text-[11px] text-amber-300/90 bg-amber-500/10 border border-amber-400/30 rounded-xl px-3 py-2">
+              題庫裡還沒有背景音樂。把 mp3 放進 <code>D:\kpop\介面音樂\</code> 再執行「更新題庫.bat」就會出現在這裡。
+            </p>
+          )}
+          <button onClick={() => { SFX.click(); fileRef.current && fileRef.current.click(); }}
+            className="mt-2 w-full px-3 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-sm font-semibold">
+            📂 從電腦選一首音樂…
+          </button>
+          <input ref={fileRef} type="file" accept="audio/*" className="hidden" onChange={pickFile} />
+          <p className="text-[11px] text-slate-500 mt-1.5">
+            目前播放：<b className="text-slate-300">{g.trackName || "（無）"}</b>
+            {g.custom && "　※ 自選檔案只在這次開啟有效，關掉瀏覽器就會回到題庫裡的音樂"}
+          </p>
+        </div>
+
+      </div>
+      <div className="mt-7 flex justify-end">
+        <Btn onClick={onClose}>完成</Btn>
+      </div>
+    </Modal>
   );
 }
 
@@ -544,22 +667,30 @@ function AnimatedBackdrop({ cover }) {
 /* ========================================================================
    5. 封面照片牆
    ====================================================================== */
+/* 照片牆版位。每一組是左右對稱的一對，所以不管取前幾張，畫面都是平衡的。
+   t 是距離畫面頂端的百分比 —— 卡片還會上下浮動 16px，
+   所以最上面那一排刻意留了 4% 以上的空隙，不會被螢幕上緣切到。 */
 const SLOTS = [
-  { l: 1.5, t: 4,  w: 17, d: 1.0, r: -5, sm: true },
-  { l: 21,  t: 0,  w: 12, d: 0.7, r: 4 },
-  { l: 66,  t: 1,  w: 12, d: 0.7, r: -4 },
-  { l: 81,  t: 5,  w: 17, d: 1.0, r: 5, sm: true },
-  { l: -1,  t: 35, w: 16, d: 1.4, r: 3, sm: true },
-  { l: 84,  t: 37, w: 16, d: 1.4, r: -3, sm: true },
-  { l: 0.5, t: 67, w: 19, d: 1.1, r: -3, sm: true },
-  { l: 80,  t: 69, w: 19, d: 1.1, r: 4, sm: true },
-  { l: 19,  t: 75, w: 11, d: 0.6, r: 6 },
-  { l: 69,  t: 77, w: 11, d: 0.6, r: -6 },
-  { l: 35,  t: -6, w: 10, d: 0.5, r: 2 },
-  { l: 54,  t: -7, w: 10, d: 0.5, r: -2 },
+  { l: 1.5, t: 10, w: 17, d: 1.0, r: -5, sm: true },
+  { l: 81,  t: 11, w: 17, d: 1.0, r: 5,  sm: true },
+  { l: -1,  t: 38, w: 16, d: 1.4, r: 3,  sm: true },
+  { l: 84,  t: 40, w: 16, d: 1.4, r: -3, sm: true },
+  { l: 0.5, t: 68, w: 19, d: 1.1, r: -3, sm: true },
+  { l: 80,  t: 70, w: 19, d: 1.1, r: 4,  sm: true },
+  { l: 21,  t: 6,  w: 12, d: 0.7, r: 4 },
+  { l: 66,  t: 7,  w: 12, d: 0.7, r: -4 },
+  { l: 19,  t: 76, w: 11, d: 0.6, r: 6 },
+  { l: 69,  t: 78, w: 11, d: 0.6, r: -6 },
+  { l: 35,  t: 4,  w: 10, d: 0.5, r: 2 },
+  { l: 54,  t: 4.5,w: 10, d: 0.5, r: -2 },
+  { l: 11,  t: 52, w: 11, d: 1.2, r: -6 },
+  { l: 78,  t: 54, w: 11, d: 1.2, r: 6 },
+  { l: 31,  t: 87, w: 10, d: 0.8, r: 3 },
+  { l: 59,  t: 88, w: 10, d: 0.8, r: -3 },
 ];
+const MAX_PHOTOS = SLOTS.length;
 
-function PhotoWall({ photos }) {
+function PhotoWall({ photos, count }) {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const onMove = (e) => {
@@ -572,9 +703,9 @@ function PhotoWall({ photos }) {
     return () => window.removeEventListener("pointermove", onMove);
   }, []);
 
-  if (!photos || !photos.length) return null;
-  const list = SLOTS.map((s, i) => ({ slot: s, src: photos[i % photos.length], i }))
-                    .slice(0, Math.max(4, Math.min(SLOTS.length, photos.length * 2)));
+  const want = Math.max(0, Math.min(MAX_PHOTOS, count == null ? 12 : count));
+  if (!photos || !photos.length || want === 0) return null;
+  const list = SLOTS.slice(0, want).map((s, i) => ({ slot: s, src: photos[i % photos.length], i }));
 
   return (
     <div className="fixed inset-0 z-[3] pointer-events-none overflow-hidden">
@@ -605,7 +736,7 @@ function PhotoWall({ photos }) {
 /* ========================================================================
    6. 封面頁：單人遊戲 / 多人競技
    ====================================================================== */
-function CoverScreen({ cover, totals, bgm, onPickMode }) {
+function CoverScreen({ cover, totals, bgm, photoCount, onPickMode, onOpenSettings }) {
   const hero = cover && cover.hero;
   // 封面期間鎖住整頁捲動，確保單螢幕
   useEffect(() => {
@@ -616,9 +747,12 @@ function CoverScreen({ cover, totals, bgm, onPickMode }) {
   return (
     <div className="cover-root">
       <AnimatedBackdrop cover={cover} />
-      <PhotoWall photos={cover && cover.photos} />
+      <PhotoWall photos={cover && cover.photos} count={photoCount} />
 
-      <div className="fixed top-3 right-3 z-40"><BgmButton bgm={bgm} /></div>
+      <div className="fixed top-3 right-3 z-40 flex items-center gap-2">
+        <BgmButton bgm={bgm} />
+        <GearButton onClick={onOpenSettings} />
+      </div>
 
       {/* 所有內容都在這一層垂直置中，間距由視窗高度自動分配 */}
       <div className="cover-stack z-10">
@@ -671,9 +805,6 @@ function CoverScreen({ cover, totals, bgm, onPickMode }) {
           ))}
         </div>
 
-        <div className="cover-hint text-slate-500" style={{ marginTop: "clamp(2px, 1vh, 10px)" }}>
-          素材放進 <code className="text-slate-400">D:\kpop</code> 各關資料夾後執行「更新題庫.bat」即可自動出題
-        </div>
       </div>
     </div>
   );
@@ -702,7 +833,7 @@ const MODE_META = {
             tabs: [{ id: "team", label: "隊伍設定", emoji: "🏆" }, { id: "stage", label: "關卡選擇", emoji: "🎯" }, { id: "set", label: "遊戲設定", emoji: "⚙️" }] },
 };
 
-function MenuScreen({ mode, config, setConfig, pools, dataError, bgm, onBack, onStart }) {
+function MenuScreen({ mode, config, setConfig, pools, groupTotal, dataError, bgm, onBack, onStart, onOpenSettings }) {
   const mm = MODE_META[mode];
   const [tab, setTab] = useState(mm.tabs[0].id);
   useEffect(() => { setTab(mm.tabs[0].id); }, [mode]);
@@ -736,6 +867,7 @@ function MenuScreen({ mode, config, setConfig, pools, dataError, bgm, onBack, on
               </div>
             </div>
             <BgmButton bgm={bgm} />
+            <GearButton onClick={onOpenSettings} />
           </div>
         </div>
 
@@ -855,20 +987,29 @@ function MenuScreen({ mode, config, setConfig, pools, dataError, bgm, onBack, on
                           onChange={v => set({ flashSec: v })}
                           format={v => v.toFixed(1) + "s"} />
 
-                  {/* 選項數量：四關的「第一步：選團體」都用這個數字 */}
-                  <div>
-                    <div className="text-sm text-slate-300 mb-1">團體選項數量（四關共用）</div>
-                    <div className="flex items-center gap-2">
-                      {[2, 3, 4, 5, 6].map(n => (
+                  {/* 團體選項數量：四關的「第一步：選團體」都用這個數字 */}
+                  <div className="sm:col-span-2">
+                    <Slider label="團體選項數量（四關共用）" min="2" max="24" step="1" value={config.optionCount}
+                            onChange={v => set({ optionCount: v })}
+                            format={v => v + " 個"} />
+                    <div className="flex items-center gap-2 mt-2 flex-wrap">
+                      {[4, 8, 12, 16].map(n => (
                         <button key={n} onClick={() => { SFX.click(); set({ optionCount: n }); }}
-                          className={cx("w-10 h-9 rounded-lg text-sm border transition",
+                          className={cx("px-3 py-1 rounded-lg text-xs border transition",
                             config.optionCount === n ? "bg-cyan-500 border-cyan-400 text-white"
                                                      : "bg-white/5 border-white/10 hover:bg-white/10 text-slate-300")}>{n}</button>
                       ))}
-                      <span className="text-xs text-slate-500 ml-1">個團體</span>
+                      <button onClick={() => { SFX.click(); set({ optionCount: 24 }); }}
+                        className={cx("px-3 py-1 rounded-lg text-xs border transition",
+                          config.optionCount >= 24 ? "bg-cyan-500 border-cyan-400 text-white"
+                                                   : "bg-white/5 border-white/10 hover:bg-white/10 text-slate-300")}>全部</button>
+                      <span className="text-[11px] text-slate-500 ml-1">
+                        題庫共 {groupTotal} 個團體{config.optionCount >= groupTotal ? "，目前設定會全部出現" : ""}
+                      </span>
                     </div>
                     <div className="text-[11px] text-slate-500 mt-1.5">
-                      四關都是兩段式作答：先選團體，再從該團的成員／歌曲裡選。這裡設定的是第一步要出現幾個團體。
+                      四關都是兩段式作答：先選團體，再從該團的成員／歌曲裡選。這裡設定的是第一步要出現幾個團體
+                      （設得比題庫團數多時就是全部都出）。
                     </div>
                   </div>
 
@@ -884,10 +1025,6 @@ function MenuScreen({ mode, config, setConfig, pools, dataError, bgm, onBack, on
                           onChange={v => set({ maskLevel: v })}
                           format={v => Math.round(v * 100) + "%"} />
 
-                  <Slider label="背景音樂音量（封面／主選單）" min="0" max="1" step="0.05" value={config.bgmVol}
-                          onChange={v => set({ bgmVol: v })}
-                          format={v => Math.round(v * 100) + "%"} />
-
                   <Slider label="答對／答錯音效音量" min="0" max="1" step="0.05" value={config.sfxVol}
                           onChange={v => set({ sfxVol: v })}
                           format={v => config.sfx ? Math.round(v * 100) + "%" : "已關閉"} />
@@ -900,7 +1037,9 @@ function MenuScreen({ mode, config, setConfig, pools, dataError, bgm, onBack, on
                   </div>
                 </div>
                 <p className="mt-5 text-xs text-slate-500">
-                  💡 進入挑戰時背景音樂會自動停止，避免和題目音訊打架；需要的話可在遊戲中用右上角按鈕手動開啟。
+                  💡 進入挑戰時背景音樂會自動停止，避免和題目音訊打架；需要的話可在遊戲中用右上角按鈕手動開啟。<br />
+                  🎵 背景音樂的<b className="text-slate-400">音量與換曲</b>、封面<b className="text-slate-400">背景卡片數量</b>，
+                  都移到右上角的 <b className="text-slate-400">⚙️ 設定</b> 了（單人／多人共用一份）。
                 </p>
               </Card>
             )}
@@ -1096,7 +1235,8 @@ function StepBadge({ n, text, done }) {
 
 function GroupGrid({ groups, correctGroup, revealed, badGroups, onPick }) {
   return (
-    <div className="w-full max-w-3xl mx-auto grid gap-2.5 grid-cols-2 sm:grid-cols-3">
+    <div className={cx("w-full mx-auto grid gap-2 sm:gap-2.5 grid-cols-2 sm:grid-cols-3",
+                       groups.length > 6 ? "max-w-4xl lg:grid-cols-4" : "max-w-3xl")}>
       {groups.map((g, i) => {
         const bad = badGroups.indexOf(g) >= 0;
         const isCorrect = g === correctGroup;
@@ -1106,7 +1246,7 @@ function GroupGrid({ groups, correctGroup, revealed, badGroups, onPick }) {
         else if (bad) cls = "bg-rose-900/30 border-rose-500/40 text-rose-300/60 line-through";
         return (
           <button key={i} disabled={revealed || bad} onClick={() => onPick(g)}
-            className={cx("px-3 py-3.5 rounded-2xl border font-bold text-center transition-all active:scale-[.97] disabled:cursor-default break-words", cls)}>
+            className={cx("px-2.5 py-3 rounded-2xl border font-bold text-center text-sm sm:text-base leading-tight transition-all active:scale-[.97] disabled:cursor-default break-words", cls)}>
             {g}
             {revealed && isCorrect && " ✅"}
             {!revealed && bad && " ❌"}
@@ -1988,18 +2128,18 @@ const DEFAULT_CFG = {
     teams: ["我"],
     timer: 30,            // 單人預設每題 30 秒
     flashSec: 1.0,
-    optionCount: 4,       // 單人預設 4 個選項
+    optionCount: 12,      // 第一步要出現幾個團體
     maskMode: "silhouette", maskLevel: 0.7,
-    bgmVol: 0.42, sfx: true, sfxVol: 0.85, mixLevels: false,
+    sfx: true, sfxVol: 0.85, mixLevels: false,
   },
   multi: {
     levels: JSON.parse(JSON.stringify(BASE_LEVELS)),
     teams: ["隊伍 1", "隊伍 2"],
     timer: 15,
     flashSec: 1.0,
-    optionCount: 4,
+    optionCount: 12,
     maskMode: "silhouette", maskLevel: 0.7,
-    bgmVol: 0.42, sfx: true, sfxVol: 0.85, mixLevels: false,
+    sfx: true, sfxVol: 0.85, mixLevels: false,
   },
 };
 
@@ -2010,6 +2150,17 @@ function App() {
   const [deck, setDeck] = useState([]);
   const [states, setStates] = useState([]);     // 每題作答狀態
   const [scores, setScores] = useState([0, 0]);
+  const [showSettings, setShowSettings] = useState(false);
+
+  // 全域設定（不分模式）：BGM 音量／曲目、封面背景卡片數量
+  const TRACKS = useMemo(() => (DATA && DATA.bgm ? DATA.bgm : []), []);
+  const [gcfg, setGcfg] = useState(() => ({
+    bgmVol: 0.42,
+    photoCount: 12,
+    bgmTrack: (DATA && DATA.bgm && DATA.bgm[0]) || "",
+    trackName: trackLabel((DATA && DATA.bgm && DATA.bgm[0]) || ""),
+    custom: false,
+  }));
 
   const config = cfgAll[mode];
   const setConfig = useCallback((updater) => {
@@ -2050,8 +2201,17 @@ function App() {
     return null;
   }, [pools]);
 
-  const bgm = useBgm(DATA && DATA.bgm ? DATA.bgm : []);
-  useEffect(() => { bgm.setBaseVolume(config.bgmVol); }, [config.bgmVol]);
+  // 四關「第一步」可選的團體總數，設定畫面拿來顯示上限
+  const groupTotal = useMemo(() => {
+    const s2 = {};
+    Object.keys(rosters.members).forEach(k => { s2[k] = 1; });
+    Object.keys(rosters.songs).forEach(k => { s2[k] = 1; });
+    (l4groups || []).forEach(g => { s2[g.name] = 1; });
+    return Object.keys(s2).length;
+  }, [rosters, l4groups]);
+
+  const bgm = useBgm(gcfg.bgmTrack);
+  useEffect(() => { bgm.setBaseVolume(gcfg.bgmVol); }, [gcfg.bgmVol]);
   useEffect(() => { SFX.setEnabled(config.sfx); }, [config.sfx]);
   useEffect(() => { SFX.setVolume(config.sfxVol); }, [config.sfxVol]);
 
@@ -2087,17 +2247,29 @@ function App() {
   const goCover = () => { bgm.resetDuck(); bgm.wake(); setScreen("cover"); };
   const finish  = () => { bgm.resetDuck(); bgm.wake(); setScreen("result"); };
 
+  const settings = showSettings && (
+    <GlobalSettingsModal g={gcfg} setG={setGcfg} tracks={TRACKS} maxPhotos={MAX_PHOTOS}
+                         onClose={() => setShowSettings(false)} />
+  );
+  const openSettings = () => setShowSettings(true);
+
+  let screenEl;
   if (screen === "cover")
-    return <CoverScreen cover={cover} totals={totals} bgm={bgm} onPickMode={pickMode} />;
-  if (screen === "menu")
-    return <MenuScreen mode={mode} config={config} setConfig={setConfig} pools={pools} dataError={dataError}
-             bgm={bgm} onBack={goCover} onStart={startChallenge} />;
-  if (screen === "quiz")
-    return <QuizScreen mode={mode} deck={deck} config={config} scores={scores} setScores={setScores}
-             states={states} patchState={patchState}
-             bgm={bgm} onMenu={goMenu} onFinish={finish} />;
-  return <ResultScreen mode={mode} config={config} deck={deck} states={states} scores={scores} bgm={bgm}
-           onMenu={goMenu} onCover={goCover} onAgain={startChallenge} />;
+    screenEl = <CoverScreen cover={cover} totals={totals} bgm={bgm} photoCount={gcfg.photoCount}
+                            onPickMode={pickMode} onOpenSettings={openSettings} />;
+  else if (screen === "menu")
+    screenEl = <MenuScreen mode={mode} config={config} setConfig={setConfig} pools={pools}
+                           groupTotal={groupTotal} dataError={dataError} bgm={bgm}
+                           onBack={goCover} onStart={startChallenge} onOpenSettings={openSettings} />;
+  else if (screen === "quiz")
+    screenEl = <QuizScreen mode={mode} deck={deck} config={config} scores={scores} setScores={setScores}
+                           states={states} patchState={patchState}
+                           bgm={bgm} onMenu={goMenu} onFinish={finish} />;
+  else
+    screenEl = <ResultScreen mode={mode} config={config} deck={deck} states={states} scores={scores} bgm={bgm}
+                             onMenu={goMenu} onCover={goCover} onAgain={startChallenge} />;
+
+  return <>{screenEl}{settings}</>;
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);

@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-17 22:16:35
+   產生時間：2026-08-17 23:17:01
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-17T22:16:35",
+    "generatedAt":  "2026-08-17T23:17:01",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -38,21 +38,21 @@ window.QUIZ_DATA =
                                   "questions":  [
                                                     {
                                                         "id":  "L1-001",
-                                                        "group":  "AESPA",
+                                                        "group":  "aespa",
                                                         "name":  "Karina",
-                                                        "image":  "第一關_偶像快看快答/AESPA_Karina.png"
+                                                        "image":  "第一關_偶像快看快答/aespa_Karina.png"
                                                     },
                                                     {
                                                         "id":  "L1-002",
-                                                        "group":  "AESPA",
+                                                        "group":  "aespa",
                                                         "name":  "Ningning",
-                                                        "image":  "第一關_偶像快看快答/AESPA_Ningning.jpg"
+                                                        "image":  "第一關_偶像快看快答/aespa_Ningning.jpg"
                                                     },
                                                     {
                                                         "id":  "L1-003",
-                                                        "group":  "AESPA",
+                                                        "group":  "aespa",
                                                         "name":  "Winter",
-                                                        "image":  "第一關_偶像快看快答/AESPA_Winter.jpg"
+                                                        "image":  "第一關_偶像快看快答/aespa_Winter.jpg"
                                                     },
                                                     {
                                                         "id":  "L1-004",

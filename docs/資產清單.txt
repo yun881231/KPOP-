@@ -1,6 +1,6 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-17 22:19:23
+2026-08-17 23:19:40
 assetBase = assets
 
 本地檔案（
@@ -19,9 +19,9 @@ assetBase = assets
   assets/cover/NMIXX.jpg
   assets/cover/qwer.jpg
   assets/cover/triples.jpg
-  assets/level1/AESPA_Karina.png
-  assets/level1/AESPA_Ningning.jpg
-  assets/level1/AESPA_Winter.jpg
+  assets/level1/aespa_Karina.png
+  assets/level1/aespa_Ningning.jpg
+  assets/level1/aespa_Winter.jpg
   assets/level1/BABYMONSTER_ASA.png
   assets/level1/BLACKPINK_JENNIE.jpg
   assets/level1/Girls_Generation_TAEYEON.jpg
