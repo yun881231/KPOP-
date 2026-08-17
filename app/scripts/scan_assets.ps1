@@ -160,85 +160,130 @@ if ($dirL3) {
 }
 
 # ---------- 第四關：看五官猜偶像 ----------
+# 規則：眼睛與嘴巴一定「同一團、不同成員」
 $l4 = New-Object System.Collections.ArrayList
+$l4groups = New-Object System.Collections.ArrayList
 if ($dirL4) {
   $qd = Find-Dir $QPAT $dirL4.FullName
   $ad = Find-Dir $APAT $dirL4.FullName
-  $eyeQ   = Get-Media (Find-Dir @("眼睛", "eye*")        $(if ($qd) { $qd.FullName })) $IMG
-  $mouQ   = Get-Media (Find-Dir @("嘴巴", "mouth*")      $(if ($qd) { $qd.FullName })) $IMG
-  $lsQ    = Get-Media (Find-Dir @("手燈", "手灯", "light*") $(if ($qd) { $qd.FullName })) $IMG
-  $eyeA   = Get-Media (Find-Dir @("眼睛", "eye*")        $(if ($ad) { $ad.FullName })) $IMG
-  $mouA   = Get-Media (Find-Dir @("嘴巴", "mouth*")      $(if ($ad) { $ad.FullName })) $IMG
+  $eyeQ = Get-Media (Find-Dir @("眼睛", "eye*")            $(if ($qd) { $qd.FullName })) $IMG
+  $mouQ = Get-Media (Find-Dir @("嘴巴", "mouth*")          $(if ($qd) { $qd.FullName })) $IMG
+  $lsQ  = Get-Media (Find-Dir @("手燈", "手灯", "light*")   $(if ($qd) { $qd.FullName })) $IMG
+  $eyeA = Get-Media (Find-Dir @("眼睛", "eye*")            $(if ($ad) { $ad.FullName })) $IMG
+  $mouA = Get-Media (Find-Dir @("嘴巴", "mouth*")          $(if ($ad) { $ad.FullName })) $IMG
 
   $eyeAMap = @{}; foreach ($f in $eyeA) { $eyeAMap[[System.IO.Path]::GetFileNameWithoutExtension($f.Name)] = $f }
   $mouAMap = @{}; foreach ($f in $mouA) { $mouAMap[[System.IO.Path]::GetFileNameWithoutExtension($f.Name)] = $f }
-  $lsMap   = @{}; foreach ($f in $lsQ)  { $lsMap[[System.IO.Path]::GetFileNameWithoutExtension($f.Name)]   = $f }
+  $lsMap   = @{}
+  foreach ($f in $lsQ) {
+    $lb = [System.IO.Path]::GetFileNameWithoutExtension($f.Name)
+    $lsMap[$lb] = Get-Rel $f.FullName
+  }
 
-  # 可選：在第四關資料夾放 配對.csv（每行「眼睛檔名,嘴巴檔名[,手燈檔名]」，不含副檔名）指定配對
+  # 依團名分組
+  $byGroup = [ordered]@{}
+  function Ensure-Group([string]$g) {
+    if (-not $byGroup.Contains($g)) {
+      $byGroup[$g] = [ordered]@{ name = $g; lightstick = $null
+                                 eyes = (New-Object System.Collections.ArrayList)
+                                 mouths = (New-Object System.Collections.ArrayList) }
+    }
+  }
+  foreach ($f in $eyeQ) {
+    $base = [System.IO.Path]::GetFileNameWithoutExtension($f.Name)
+    $p = Split-Name $base
+    if (-not $p.group -or -not $p.name) { [void]$warn.Add("第四關眼睛『$base』檔名不是「團名_成員」格式，已略過。"); continue }
+    Ensure-Group $p.group
+    $ansPath = $null
+    if ($eyeAMap.ContainsKey($base)) { $ansPath = Get-Rel $eyeAMap[$base].FullName }
+    [void]$byGroup[$p.group].eyes.Add([ordered]@{ name = $p.name; q = (Get-Rel $f.FullName); a = $ansPath })
+  }
+  foreach ($f in $mouQ) {
+    $base = [System.IO.Path]::GetFileNameWithoutExtension($f.Name)
+    $p = Split-Name $base
+    if (-not $p.group -or -not $p.name) { [void]$warn.Add("第四關嘴巴『$base』檔名不是「團名_成員」格式，已略過。"); continue }
+    Ensure-Group $p.group
+    $ansPath = $null
+    if ($mouAMap.ContainsKey($base)) { $ansPath = Get-Rel $mouAMap[$base].FullName }
+    [void]$byGroup[$p.group].mouths.Add([ordered]@{ name = $p.name; q = (Get-Rel $f.FullName); a = $ansPath })
+  }
+  foreach ($g in @($byGroup.Keys)) {
+    if ($lsMap.ContainsKey($g)) { $byGroup[$g].lightstick = $lsMap[$g] }
+    else { [void]$warn.Add("第四關團體『$g』沒有手燈圖（題目\手燈\$g.png），提示區會空白。") }
+  }
+
+  # 可選：配對.csv 指定固定配對（眼睛檔名,嘴巴檔名）
   $pairFile = $null
   foreach ($cand in @("配對.csv", "pairs.csv")) {
     $t = Join-Path $dirL4.FullName $cand
     if (Test-Path -LiteralPath $t) { $pairFile = $t; break }
   }
 
-  $pairs = New-Object System.Collections.ArrayList
+  $n = 0
+  function Add-L4([string]$g, $eye, $mouth) {
+    $script:n++
+    $item = [ordered]@{
+      id         = New-Id "L4" $script:n
+      group      = $g
+      lightstick = $byGroup[$g].lightstick
+      eyes       = [ordered]@{ group = $g; name = $eye.name;   q = $eye.q;   a = $eye.a }
+      mouth      = [ordered]@{ group = $g; name = $mouth.name; q = $mouth.q; a = $mouth.a }
+    }
+    [void]$l4.Add($item)
+  }
+
   if ($pairFile) {
     foreach ($line in (Get-Content -LiteralPath $pairFile -Encoding UTF8)) {
       $line = $line.Trim()
       if (-not $line -or $line.StartsWith("#")) { continue }
       $c = $line.Split(',')
-      $e = $eyeQ | Where-Object { [System.IO.Path]::GetFileNameWithoutExtension($_.Name) -eq $c[0].Trim() } | Select-Object -First 1
-      $m = $null
-      if ($c.Length -gt 1) { $m = $mouQ | Where-Object { [System.IO.Path]::GetFileNameWithoutExtension($_.Name) -eq $c[1].Trim() } | Select-Object -First 1 }
-      $l = $null
-      if ($c.Length -gt 2) { $l = $lsQ  | Where-Object { [System.IO.Path]::GetFileNameWithoutExtension($_.Name) -eq $c[2].Trim() } | Select-Object -First 1 }
-      if ($e -or $m) { [void]$pairs.Add(@($e, $m, $l)) }
+      if ($c.Length -lt 2) { continue }
+      $eb = $c[0].Trim(); $mb = $c[1].Trim()
+      $ep = Split-Name $eb; $mp = Split-Name $mb
+      if ($ep.group -ne $mp.group) { [void]$warn.Add("配對.csv 這行不是同一團，已略過： $line"); continue }
+      if ($ep.name -eq $mp.name)   { [void]$warn.Add("配對.csv 這行是同一個人，已略過： $line"); continue }
+      if (-not $byGroup.Contains($ep.group)) { continue }
+      $e = $byGroup[$ep.group].eyes   | Where-Object { $_.name -eq $ep.name } | Select-Object -First 1
+      $m = $byGroup[$mp.group].mouths | Where-Object { $_.name -eq $mp.name } | Select-Object -First 1
+      if ($e -and $m) { Add-L4 $ep.group $e $m }
     }
   } else {
-    $cnt = [Math]::Max($eyeQ.Count, $mouQ.Count)
-    for ($i = 0; $i -lt $cnt; $i++) {
-      $e = $null; $m = $null
-      if ($i -lt $eyeQ.Count) { $e = $eyeQ[$i] }
-      if ($i -lt $mouQ.Count) { $m = $mouQ[$i] }
-      [void]$pairs.Add(@($e, $m, $null))
+    foreach ($g in @($byGroup.Keys)) {
+      $E = @($byGroup[$g].eyes   | Sort-Object { $_.name })
+      $M = @($byGroup[$g].mouths | Sort-Object { $_.name })
+      if ($E.Count -eq 0 -or $M.Count -eq 0) {
+        [void]$warn.Add("第四關團體『$g』只有眼睛或只有嘴巴，無法出題。")
+        continue
+      }
+      $usedM = @{}
+      $made = 0
+      for ($i = 0; $i -lt $E.Count; $i++) {
+        $pick = -1
+        for ($k = 1; $k -le $M.Count; $k++) {
+          $j = ($i + $k) % $M.Count
+          if ($usedM.ContainsKey($j)) { continue }
+          if ($M[$j].name -eq $E[$i].name) { continue }   # 不能是同一個人
+          $pick = $j; break
+        }
+        if ($pick -lt 0) { continue }
+        $usedM[$pick] = $true
+        Add-L4 $g $E[$i] $M[$pick]
+        $made++
+      }
+      if ($made -eq 0) {
+        [void]$warn.Add("第四關團體『$g』的眼睛與嘴巴都是同一個人，湊不出「同團不同人」的題目。")
+      }
     }
   }
 
-  $n = 0
-  foreach ($pr in $pairs) {
-    $n++
-    $e = $pr[0]; $m = $pr[1]; $l = $pr[2]
-    $eBase = ""; $mBase = ""
-    if ($e) { $eBase = [System.IO.Path]::GetFileNameWithoutExtension($e.Name) }
-    if ($m) { $mBase = [System.IO.Path]::GetFileNameWithoutExtension($m.Name) }
-    $ep = Split-Name $eBase
-    $mp = Split-Name $mBase
-
-    if (-not $l) {
-      if ($ep.group -and $lsMap.ContainsKey($ep.group)) { $l = $lsMap[$ep.group] }
-      elseif ($mp.group -and $lsMap.ContainsKey($mp.group)) { $l = $lsMap[$mp.group] }
-      elseif ($lsQ.Count -gt 0) { $l = $lsQ[0] }
-    }
-
-    $item = [ordered]@{ id = New-Id "L4" $n; eyes = $null; mouth = $null; lightstick = $null }
-    if ($e) {
-      $a = $null
-      if ($eyeAMap.ContainsKey($eBase)) { $a = Get-Rel $eyeAMap[$eBase].FullName }
-      $item.eyes = [ordered]@{ group = $ep.group; name = $ep.name; q = (Get-Rel $e.FullName); a = $a }
-      if (-not $a) { [void]$warn.Add("第四關眼睛『$eBase』找不到答案原圖（答案\眼睛\$eBase.png）。") }
-    }
-    if ($m) {
-      $a = $null
-      if ($mouAMap.ContainsKey($mBase)) { $a = Get-Rel $mouAMap[$mBase].FullName }
-      $item.mouth = [ordered]@{ group = $mp.group; name = $mp.name; q = (Get-Rel $m.FullName); a = $a }
-      if (-not $a) { [void]$warn.Add("第四關嘴巴『$mBase』找不到答案原圖（答案\嘴巴\$mBase.png）。") }
-    }
-    if ($l) {
-      $lp = Split-Name([System.IO.Path]::GetFileNameWithoutExtension($l.Name))
-      $item.lightstick = [ordered]@{ group = $lp.group; image = (Get-Rel $l.FullName) }
-      if (-not $lp.group) { $item.lightstick.group = $lp.name }
-    }
-    [void]$l4.Add($item)
+  # 給前端做拖拉選項用的名冊
+  foreach ($g in @($byGroup.Keys)) {
+    [void]$l4groups.Add([ordered]@{
+      name       = $g
+      lightstick = $byGroup[$g].lightstick
+      eyes       = @($byGroup[$g].eyes   | ForEach-Object { $_.name })
+      mouths     = @($byGroup[$g].mouths | ForEach-Object { $_.name })
+    })
   }
 }
 
@@ -310,7 +355,7 @@ $payload = [ordered]@{
     level1 = [ordered]@{ id = "level1"; title = "偶像快看快答";   questions = @($l1) }
     level2 = [ordered]@{ id = "level2"; title = "聽前奏猜歌";     questions = @($l2) }
     level3 = [ordered]@{ id = "level3"; title = "看舞蹈猜歌";     questions = @($l3) }
-    level4 = [ordered]@{ id = "level4"; title = "看五官猜偶像";   questions = @($l4) }
+    level4 = [ordered]@{ id = "level4"; title = "看五官猜偶像";   groups = @($l4groups); questions = @($l4) }
   }
 }
 
@@ -336,7 +381,7 @@ Write-Host "掃描完成！" -ForegroundColor Green
 Write-Host ("  第一關 偶像快看快答 : {0} 題" -f $l1.Count)
 Write-Host ("  第二關 聽前奏猜歌   : {0} 題" -f $l2.Count)
 Write-Host ("  第三關 看舞蹈猜歌   : {0} 題" -f $l3.Count)
-Write-Host ("  第四關 看五官猜偶像 : {0} 題" -f $l4.Count)
+Write-Host ("  第四關 看五官猜偶像 : {0} 題（{1} 個團體，眼睛與嘴巴同團不同人）" -f $l4.Count, $l4groups.Count)
 Write-Host ("  背景音樂            : {0} 首" -f $bgm.Count)
 if ($coverFallback) {
   Write-Host ("  封面照片牆          : {0} 張（借用第一關照片，建議在「封面」資料夾放專屬圖）" -f $coverPhotos.Count)

@@ -261,6 +261,22 @@ foreach ($q in $data.levels.level3.questions) {
   if ($q.question) { $q.question = Add-Asset $q.question -Silent }   # 題目影片一定要無聲
   if ($q.answer)   { $q.answer   = Add-Asset $q.answer }
 }
+# 手燈欄位有兩種格式：新版是字串路徑，舊版是 @{ image = "…" }，兩種都要搬
+$lsCache = @{}
+function Add-Lightstick($v) {
+  if (-not $v) { return $v }
+  if ($v -is [string]) {
+    if ($lsCache.ContainsKey($v)) { return $lsCache[$v] }
+    $n = Add-Asset $v
+    $lsCache[$v] = $n
+    return $n
+  }
+  if ($v.image) {
+    if ($lsCache.ContainsKey($v.image)) { $v.image = $lsCache[$v.image] }
+    else { $o = $v.image; $v.image = Add-Asset $v.image; $lsCache[$o] = $v.image }
+  }
+  return $v
+}
 foreach ($q in $data.levels.level4.questions) {
   foreach ($part in @("eyes", "mouth")) {
     if ($q.$part) {
@@ -268,7 +284,13 @@ foreach ($q in $data.levels.level4.questions) {
       if ($q.$part.a) { $q.$part.a = Add-Asset $q.$part.a }
     }
   }
-  if ($q.lightstick -and $q.lightstick.image) { $q.lightstick.image = Add-Asset $q.lightstick.image }
+  if ($q.lightstick) { $q.lightstick = Add-Lightstick $q.lightstick }
+}
+# 第四關拖拉用的團體名冊（新版掃描器才有）
+if ($data.levels.level4.groups) {
+  foreach ($g in $data.levels.level4.groups) {
+    if ($g.lightstick) { $g.lightstick = Add-Lightstick $g.lightstick }
+  }
 }
 
 $data.assetBase = "assets"
@@ -373,9 +395,16 @@ if ($data.cover) {
 foreach ($q in $data.levels.level1.questions) { Note $q.image }
 foreach ($q in $data.levels.level2.questions) { Note $q.clip; Note $q.answer }
 foreach ($q in $data.levels.level3.questions) { Note $q.question; Note $q.answer }
+function Note-Lightstick($v) {
+  if (-not $v) { return }
+  if ($v -is [string]) { Note $v } elseif ($v.image) { Note $v.image }
+}
 foreach ($q in $data.levels.level4.questions) {
   foreach ($part in @("eyes","mouth")) { if ($q.$part) { Note $q.$part.q; Note $q.$part.a } }
-  if ($q.lightstick) { Note $q.lightstick.image }
+  Note-Lightstick $q.lightstick
+}
+if ($data.levels.level4.groups) {
+  foreach ($g in $data.levels.level4.groups) { Note-Lightstick $g.lightstick }
 }
 
 $badPath = New-Object System.Collections.ArrayList

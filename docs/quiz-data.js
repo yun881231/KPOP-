@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-17 00:01:57 */
+   產生時間：2026-08-17 22:19:11 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-16T23:59:32",
+    "generatedAt":  "2026-08-17T22:16:35",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -640,28 +640,339 @@ window.QUIZ_DATA =
                    "level4":  {
                                   "id":  "level4",
                                   "title":  "看五官猜偶像",
+                                  "groups":  [
+                                                 {
+                                                     "name":  "aespa",
+                                                     "lightstick":  "level4/q/light/AESPA.png",
+                                                     "eyes":  [
+                                                                  "Giselle",
+                                                                  "Karina",
+                                                                  "Ningning",
+                                                                  "Winter"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Giselle",
+                                                                    "Karina",
+                                                                    "Ningning",
+                                                                    "Winter"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "BABYMONSTER",
+                                                     "lightstick":  "level4/q/light/BABYMONSTER.png",
+                                                     "eyes":  [
+                                                                  "Ahyeon",
+                                                                  "ASA",
+                                                                  "CHIQUITA",
+                                                                  "Pharita",
+                                                                  "Rami",
+                                                                  "Rora",
+                                                                  "Ruka"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Ahyeon",
+                                                                    "ASA",
+                                                                    "CHIQUITA",
+                                                                    "Pharita",
+                                                                    "Rami",
+                                                                    "Rora",
+                                                                    "Ruka"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "BLACKPINK",
+                                                     "lightstick":  "level4/q/light/BLACKPINK.png",
+                                                     "eyes":  [
+                                                                  "Jisoo"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Lisa"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "Hearts2Hearts",
+                                                     "lightstick":  "level4/q/light/Hearts2Hearts.png",
+                                                     "eyes":  [
+                                                                  "IAN"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "JIWOO"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "i-dle",
+                                                     "lightstick":  "level4/q/light/i-dle.png",
+                                                     "eyes":  [
+                                                                  "Minnie",
+                                                                  "Miyeon",
+                                                                  "Shuhua",
+                                                                  "Soyeon",
+                                                                  "Yuqi"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Minnie",
+                                                                    "Miyeon",
+                                                                    "Shuhua",
+                                                                    "Soyeon",
+                                                                    "Yuqi"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "ILLIT",
+                                                     "lightstick":  "level4/q/light/ILLIT.png",
+                                                     "eyes":  [
+                                                                  "Iroha",
+                                                                  "Minju",
+                                                                  "Moka",
+                                                                  "Wonhee",
+                                                                  "Yunah"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Iroha",
+                                                                    "Minju",
+                                                                    "Moka",
+                                                                    "Wonhee",
+                                                                    "Yunah"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "ITZY",
+                                                     "lightstick":  "level4/q/light/ITZY.jpg",
+                                                     "eyes":  [
+                                                                  "Ryujin",
+                                                                  "YUNA"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Chaeryeong",
+                                                                    "Lia"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "IVE",
+                                                     "lightstick":  "level4/q/light/IVE.png",
+                                                     "eyes":  [
+                                                                  "Gaeul",
+                                                                  "Leeseo",
+                                                                  "Liz",
+                                                                  "Rei",
+                                                                  "Wonyoung",
+                                                                  "Yujin"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Gaeul",
+                                                                    "Leeseo",
+                                                                    "Liz",
+                                                                    "Rei",
+                                                                    "Wonyoung",
+                                                                    "Yujin"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "LE SSERAFIM",
+                                                     "lightstick":  "level4/q/light/LE_SSERAFIM.png",
+                                                     "eyes":  [
+                                                                  "Chaewon",
+                                                                  "Eunchae",
+                                                                  "Kazuha",
+                                                                  "Sakura",
+                                                                  "Yunjin"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Chaewon",
+                                                                    "Eunchae",
+                                                                    "Kazuha",
+                                                                    "Sakura",
+                                                                    "Yunjin"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "NewJeans",
+                                                     "lightstick":  "level4/q/light/NewJeans.png",
+                                                     "eyes":  [
+                                                                  "Minji"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Hyein"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "NMIXX",
+                                                     "lightstick":  "level4/q/light/NMIXX.png",
+                                                     "eyes":  [
+                                                                  "Bae",
+                                                                  "Haewon",
+                                                                  "Jiwoo",
+                                                                  "Kyujin",
+                                                                  "Lily",
+                                                                  "Sullyoon"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Bae",
+                                                                    "Haewon",
+                                                                    "Jiwoo",
+                                                                    "Kyujin",
+                                                                    "Lily",
+                                                                    "Sullyoon"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "QWER",
+                                                     "lightstick":  "level4/q/light/QWER.png",
+                                                     "eyes":  [
+                                                                  "Chodan"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Hina"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "Red Velvet",
+                                                     "lightstick":  "level4/q/light/Red_Velvet.png",
+                                                     "eyes":  [
+                                                                  "Irene"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "Wendy"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "tripleS",
+                                                     "lightstick":  "level4/q/light/tripleS.png",
+                                                     "eyes":  [
+                                                                  "S1 SeoYeon",
+                                                                  "S13 Nien",
+                                                                  "S15 Xinyu",
+                                                                  "S17 Lynn",
+                                                                  "S19 HaYeon",
+                                                                  "S2 HyeRin",
+                                                                  "S20 ShiOn",
+                                                                  "S21 ChaeWon",
+                                                                  "S24 JiYeon",
+                                                                  "S3 JiWoo",
+                                                                  "S4 ChaeYeon",
+                                                                  "S5 YooYeon",
+                                                                  "S6 SooMin",
+                                                                  "S7 NaKyoung",
+                                                                  "S8 YuBin"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "S1 SeoYeon",
+                                                                    "S13 Nien",
+                                                                    "S15 Xinyu",
+                                                                    "S17 Lynn",
+                                                                    "S19 HaYeon",
+                                                                    "S2 HyeRin",
+                                                                    "S20 ShiOn",
+                                                                    "S21 ChaeWon",
+                                                                    "S24 JiYeon",
+                                                                    "S3 JiWoo",
+                                                                    "S4 ChaeYeon",
+                                                                    "S5 YooYeon",
+                                                                    "S6 SooMin",
+                                                                    "S7 NaKyoung",
+                                                                    "S8 YuBin"
+                                                                ]
+                                                 },
+                                                 {
+                                                     "name":  "TWICE",
+                                                     "lightstick":  "level4/q/light/TWICE.png",
+                                                     "eyes":  [
+                                                                  "CHAEYOUNG",
+                                                                  "DAHYUN",
+                                                                  "JEONGYEON",
+                                                                  "JIHYO",
+                                                                  "MINA",
+                                                                  "MOMO",
+                                                                  "NAYEON",
+                                                                  "SANA",
+                                                                  "TZUYU"
+                                                              ],
+                                                     "mouths":  [
+                                                                    "CHAEYOUNG",
+                                                                    "DAHYUN",
+                                                                    "JEONGYEON",
+                                                                    "JIHYO",
+                                                                    "MINA",
+                                                                    "MOMO",
+                                                                    "NAYEON",
+                                                                    "SANA",
+                                                                    "TZUYU"
+                                                                ]
+                                                 }
+                                             ],
                                   "questions":  [
                                                     {
                                                         "id":  "L4-001",
+                                                        "group":  "aespa",
+                                                        "lightstick":  "level4/q/light/AESPA.png",
                                                         "eyes":  {
-                                                                     "group":  "AESPA",
-                                                                     "name":  "KARINA",
-                                                                     "q":  "level4/q/eye/AESPA_KARINA.png",
-                                                                     "a":  "level4/a/eye/AESPA_KARINA.png"
+                                                                     "group":  "aespa",
+                                                                     "name":  "Giselle",
+                                                                     "q":  "level4/q/eye/aespa_Giselle.jpg",
+                                                                     "a":  "level4/a/eye/aespa_Giselle.jpg"
                                                                  },
                                                         "mouth":  {
-                                                                      "group":  "AESPA",
-                                                                      "name":  "Winter",
-                                                                      "q":  "level4/q/mouth/AESPA_Winter.png",
-                                                                      "a":  "level4/a/mouth/AESPA_Winter.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "AESPA",
-                                                                           "image":  "level4/q/light/AESPA.png"
-                                                                       }
+                                                                      "group":  "aespa",
+                                                                      "name":  "Karina",
+                                                                      "q":  "level4/q/mouth/aespa_Karina.jpg",
+                                                                      "a":  "level4/a/mouth/aespa_Karina.jpg"
+                                                                  }
                                                     },
                                                     {
                                                         "id":  "L4-002",
+                                                        "group":  "aespa",
+                                                        "lightstick":  "level4/q/light/AESPA.png",
+                                                        "eyes":  {
+                                                                     "group":  "aespa",
+                                                                     "name":  "Karina",
+                                                                     "q":  "level4/q/eye/aespa_Karina.jpg",
+                                                                     "a":  "level4/a/eye/aespa_Karina.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "aespa",
+                                                                      "name":  "Ningning",
+                                                                      "q":  "level4/q/mouth/aespa_Ningning.jpg",
+                                                                      "a":  "level4/a/mouth/aespa_Ningning.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-003",
+                                                        "group":  "aespa",
+                                                        "lightstick":  "level4/q/light/AESPA.png",
+                                                        "eyes":  {
+                                                                     "group":  "aespa",
+                                                                     "name":  "Ningning",
+                                                                     "q":  "level4/q/eye/aespa_Ningning.jpg",
+                                                                     "a":  "level4/a/eye/aespa_Ningning.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "aespa",
+                                                                      "name":  "Winter",
+                                                                      "q":  "level4/q/mouth/aespa_Winter.jpg",
+                                                                      "a":  "level4/a/mouth/aespa_Winter.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-004",
+                                                        "group":  "aespa",
+                                                        "lightstick":  "level4/q/light/AESPA.png",
+                                                        "eyes":  {
+                                                                     "group":  "aespa",
+                                                                     "name":  "Winter",
+                                                                     "q":  "level4/q/eye/aespa_Winter.jpg",
+                                                                     "a":  "level4/a/eye/aespa_Winter.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "aespa",
+                                                                      "name":  "Giselle",
+                                                                      "q":  "level4/q/mouth/aespa_Giselle.jpg",
+                                                                      "a":  "level4/a/mouth/aespa_Giselle.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-005",
+                                                        "group":  "BABYMONSTER",
+                                                        "lightstick":  "level4/q/light/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
                                                                      "name":  "Ahyeon",
@@ -670,17 +981,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "Ahyeon",
-                                                                      "q":  "level4/q/mouth/BABYMONSTER_Ahyeon.jpg",
-                                                                      "a":  "level4/a/mouth/BABYMONSTER_Ahyeon.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "BABYMONSTER",
-                                                                           "image":  "level4/q/light/BABYMONSTER.png"
-                                                                       }
+                                                                      "name":  "ASA",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_ASA.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_ASA.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-003",
+                                                        "id":  "L4-006",
+                                                        "group":  "BABYMONSTER",
+                                                        "lightstick":  "level4/q/light/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
                                                                      "name":  "ASA",
@@ -689,17 +998,32 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "ASA",
-                                                                      "q":  "level4/q/mouth/BABYMONSTER_ASA.jpg",
-                                                                      "a":  "level4/a/mouth/BABYMONSTER_ASA.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "BABYMONSTER",
-                                                                           "image":  "level4/q/light/BABYMONSTER.png"
-                                                                       }
+                                                                      "name":  "CHIQUITA",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_CHIQUITA.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_CHIQUITA.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-004",
+                                                        "id":  "L4-007",
+                                                        "group":  "BABYMONSTER",
+                                                        "lightstick":  "level4/q/light/BABYMONSTER.png",
+                                                        "eyes":  {
+                                                                     "group":  "BABYMONSTER",
+                                                                     "name":  "CHIQUITA",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_CHIQUITA.jpg",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_CHIQUITA.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "BABYMONSTER",
+                                                                      "name":  "Pharita",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Pharita.png",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Pharita.png"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-008",
+                                                        "group":  "BABYMONSTER",
+                                                        "lightstick":  "level4/q/light/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
                                                                      "name":  "Pharita",
@@ -708,17 +1032,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "Pharita",
-                                                                      "q":  "level4/q/mouth/BABYMONSTER_Pharita.png",
-                                                                      "a":  "level4/a/mouth/BABYMONSTER_Pharita.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "BABYMONSTER",
-                                                                           "image":  "level4/q/light/BABYMONSTER.png"
-                                                                       }
+                                                                      "name":  "Rami",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Rami.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Rami.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-005",
+                                                        "id":  "L4-009",
+                                                        "group":  "BABYMONSTER",
+                                                        "lightstick":  "level4/q/light/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
                                                                      "name":  "Rami",
@@ -727,17 +1049,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "Rami",
-                                                                      "q":  "level4/q/mouth/BABYMONSTER_Rami.jpg",
-                                                                      "a":  "level4/a/mouth/BABYMONSTER_Rami.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "BABYMONSTER",
-                                                                           "image":  "level4/q/light/BABYMONSTER.png"
-                                                                       }
+                                                                      "name":  "Rora",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Rora.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Rora.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-006",
+                                                        "id":  "L4-010",
+                                                        "group":  "BABYMONSTER",
+                                                        "lightstick":  "level4/q/light/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
                                                                      "name":  "Rora",
@@ -746,17 +1066,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "Rora",
-                                                                      "q":  "level4/q/mouth/BABYMONSTER_Rora.jpg",
-                                                                      "a":  "level4/a/mouth/BABYMONSTER_Rora.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "BABYMONSTER",
-                                                                           "image":  "level4/q/light/BABYMONSTER.png"
-                                                                       }
+                                                                      "name":  "Ruka",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Ruka.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Ruka.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-007",
+                                                        "id":  "L4-011",
+                                                        "group":  "BABYMONSTER",
+                                                        "lightstick":  "level4/q/light/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
                                                                      "name":  "Ruka",
@@ -765,17 +1083,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "Ruka",
-                                                                      "q":  "level4/q/mouth/BABYMONSTER_Ruka.jpg",
-                                                                      "a":  "level4/a/mouth/BABYMONSTER_Ruka.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "BABYMONSTER",
-                                                                           "image":  "level4/q/light/BABYMONSTER.png"
-                                                                       }
+                                                                      "name":  "Ahyeon",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Ahyeon.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Ahyeon.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-008",
+                                                        "id":  "L4-012",
+                                                        "group":  "BLACKPINK",
+                                                        "lightstick":  "level4/q/light/BLACKPINK.png",
                                                         "eyes":  {
                                                                      "group":  "BLACKPINK",
                                                                      "name":  "Jisoo",
@@ -787,14 +1103,12 @@ window.QUIZ_DATA =
                                                                       "name":  "Lisa",
                                                                       "q":  "level4/q/mouth/BLACKPINK_Lisa.png",
                                                                       "a":  "level4/a/mouth/BLACKPINK_Lisa.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "BLACKPINK",
-                                                                           "image":  "level4/q/light/BLACKPINK.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-009",
+                                                        "id":  "L4-013",
+                                                        "group":  "Hearts2Hearts",
+                                                        "lightstick":  "level4/q/light/Hearts2Hearts.png",
                                                         "eyes":  {
                                                                      "group":  "Hearts2Hearts",
                                                                      "name":  "IAN",
@@ -806,14 +1120,63 @@ window.QUIZ_DATA =
                                                                       "name":  "JIWOO",
                                                                       "q":  "level4/q/mouth/Hearts2Hearts_JIWOO.png",
                                                                       "a":  "level4/a/mouth/Hearts2Hearts_JIWOO.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "Hearts2Hearts",
-                                                                           "image":  "level4/q/light/Hearts2Hearts.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-010",
+                                                        "id":  "L4-014",
+                                                        "group":  "i-dle",
+                                                        "lightstick":  "level4/q/light/i-dle.png",
+                                                        "eyes":  {
+                                                                     "group":  "i-dle",
+                                                                     "name":  "Minnie",
+                                                                     "q":  "level4/q/eye/i-dle_Minnie.jpg",
+                                                                     "a":  "level4/a/eye/i-dle_Minnie.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "i-dle",
+                                                                      "name":  "Miyeon",
+                                                                      "q":  "level4/q/mouth/i-dle_Miyeon.jpg",
+                                                                      "a":  "level4/a/mouth/i-dle_Miyeon.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-015",
+                                                        "group":  "i-dle",
+                                                        "lightstick":  "level4/q/light/i-dle.png",
+                                                        "eyes":  {
+                                                                     "group":  "i-dle",
+                                                                     "name":  "Miyeon",
+                                                                     "q":  "level4/q/eye/i-dle_Miyeon.jpg",
+                                                                     "a":  "level4/a/eye/i-dle_Miyeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "i-dle",
+                                                                      "name":  "Shuhua",
+                                                                      "q":  "level4/q/mouth/i-dle_Shuhua.jpg",
+                                                                      "a":  "level4/a/mouth/i-dle_Shuhua.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-016",
+                                                        "group":  "i-dle",
+                                                        "lightstick":  "level4/q/light/i-dle.png",
+                                                        "eyes":  {
+                                                                     "group":  "i-dle",
+                                                                     "name":  "Shuhua",
+                                                                     "q":  "level4/q/eye/i-dle_Shuhua.jpg",
+                                                                     "a":  "level4/a/eye/i-dle_Shuhua.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "i-dle",
+                                                                      "name":  "Soyeon",
+                                                                      "q":  "level4/q/mouth/i-dle_Soyeon.jpg",
+                                                                      "a":  "level4/a/mouth/i-dle_Soyeon.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-017",
+                                                        "group":  "i-dle",
+                                                        "lightstick":  "level4/q/light/i-dle.png",
                                                         "eyes":  {
                                                                      "group":  "i-dle",
                                                                      "name":  "Soyeon",
@@ -825,14 +1188,80 @@ window.QUIZ_DATA =
                                                                       "name":  "Yuqi",
                                                                       "q":  "level4/q/mouth/i-dle_Yuqi.png",
                                                                       "a":  "level4/a/mouth/i-dle_Yuqi.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "i-dle",
-                                                                           "image":  "level4/q/light/i-dle.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-011",
+                                                        "id":  "L4-018",
+                                                        "group":  "i-dle",
+                                                        "lightstick":  "level4/q/light/i-dle.png",
+                                                        "eyes":  {
+                                                                     "group":  "i-dle",
+                                                                     "name":  "Yuqi",
+                                                                     "q":  "level4/q/eye/i-dle_Yuqi.jpg",
+                                                                     "a":  "level4/a/eye/i-dle_Yuqi.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "i-dle",
+                                                                      "name":  "Minnie",
+                                                                      "q":  "level4/q/mouth/i-dle_Minnie.jpg",
+                                                                      "a":  "level4/a/mouth/i-dle_Minnie.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-019",
+                                                        "group":  "ILLIT",
+                                                        "lightstick":  "level4/q/light/ILLIT.png",
+                                                        "eyes":  {
+                                                                     "group":  "ILLIT",
+                                                                     "name":  "Iroha",
+                                                                     "q":  "level4/q/eye/ILLIT_Iroha.jpg",
+                                                                     "a":  "level4/a/eye/ILLIT_Iroha.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "ILLIT",
+                                                                      "name":  "Minju",
+                                                                      "q":  "level4/q/mouth/ILLIT_Minju.png",
+                                                                      "a":  "level4/a/mouth/ILLIT_Minju.png"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-020",
+                                                        "group":  "ILLIT",
+                                                        "lightstick":  "level4/q/light/ILLIT.png",
+                                                        "eyes":  {
+                                                                     "group":  "ILLIT",
+                                                                     "name":  "Minju",
+                                                                     "q":  "level4/q/eye/ILLIT_Minju.jpg",
+                                                                     "a":  "level4/a/eye/ILLIT_Minju.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "ILLIT",
+                                                                      "name":  "Moka",
+                                                                      "q":  "level4/q/mouth/ILLIT_Moka.jpg",
+                                                                      "a":  "level4/a/mouth/ILLIT_Moka.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-021",
+                                                        "group":  "ILLIT",
+                                                        "lightstick":  "level4/q/light/ILLIT.png",
+                                                        "eyes":  {
+                                                                     "group":  "ILLIT",
+                                                                     "name":  "Moka",
+                                                                     "q":  "level4/q/eye/ILLIT_Moka.jpg",
+                                                                     "a":  "level4/a/eye/ILLIT_Moka.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "ILLIT",
+                                                                      "name":  "Wonhee",
+                                                                      "q":  "level4/q/mouth/ILLIT_Wonhee.jpg",
+                                                                      "a":  "level4/a/mouth/ILLIT_Wonhee.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-022",
+                                                        "group":  "ILLIT",
+                                                        "lightstick":  "level4/q/light/ILLIT.png",
                                                         "eyes":  {
                                                                      "group":  "ILLIT",
                                                                      "name":  "Wonhee",
@@ -841,17 +1270,32 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "ILLIT",
-                                                                      "name":  "Minju",
-                                                                      "q":  "level4/q/mouth/ILLIT_Minju.png",
-                                                                      "a":  "level4/a/mouth/ILLIT_Minju.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "ILLIT",
-                                                                           "image":  "level4/q/light/ILLIT.png"
-                                                                       }
+                                                                      "name":  "Yunah",
+                                                                      "q":  "level4/q/mouth/ILLIT_Yunah.jpg",
+                                                                      "a":  "level4/a/mouth/ILLIT_Yunah.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-012",
+                                                        "id":  "L4-023",
+                                                        "group":  "ILLIT",
+                                                        "lightstick":  "level4/q/light/ILLIT.png",
+                                                        "eyes":  {
+                                                                     "group":  "ILLIT",
+                                                                     "name":  "Yunah",
+                                                                     "q":  "level4/q/eye/ILLIT_Yunah.jpg",
+                                                                     "a":  "level4/a/eye/ILLIT_Yunah.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "ILLIT",
+                                                                      "name":  "Iroha",
+                                                                      "q":  "level4/q/mouth/ILLIT_Iroha.jpg",
+                                                                      "a":  "level4/a/mouth/ILLIT_Iroha.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-024",
+                                                        "group":  "ITZY",
+                                                        "lightstick":  "level4/q/light/ITZY.jpg",
                                                         "eyes":  {
                                                                      "group":  "ITZY",
                                                                      "name":  "Ryujin",
@@ -860,17 +1304,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "ITZY",
-                                                                      "name":  "Chaeryeong",
-                                                                      "q":  "level4/q/mouth/ITZY_Chaeryeong.jpg",
-                                                                      "a":  "level4/a/mouth/ITZY_Chaeryeong.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "ITZY",
-                                                                           "image":  "level4/q/light/ITZY.jpg"
-                                                                       }
+                                                                      "name":  "Lia",
+                                                                      "q":  "level4/q/mouth/ITZY_Lia.jpg",
+                                                                      "a":  "level4/a/mouth/ITZY_Lia.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-013",
+                                                        "id":  "L4-025",
+                                                        "group":  "ITZY",
+                                                        "lightstick":  "level4/q/light/ITZY.jpg",
                                                         "eyes":  {
                                                                      "group":  "ITZY",
                                                                      "name":  "YUNA",
@@ -879,17 +1321,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "ITZY",
-                                                                      "name":  "Lia",
-                                                                      "q":  "level4/q/mouth/ITZY_Lia.jpg",
-                                                                      "a":  "level4/a/mouth/ITZY_Lia.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "ITZY",
-                                                                           "image":  "level4/q/light/ITZY.jpg"
-                                                                       }
+                                                                      "name":  "Chaeryeong",
+                                                                      "q":  "level4/q/mouth/ITZY_Chaeryeong.jpg",
+                                                                      "a":  "level4/a/mouth/ITZY_Chaeryeong.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-014",
+                                                        "id":  "L4-026",
+                                                        "group":  "IVE",
+                                                        "lightstick":  "level4/q/light/IVE.png",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Gaeul",
@@ -898,17 +1338,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "IVE",
-                                                                      "name":  "Gaeul",
-                                                                      "q":  "level4/q/mouth/IVE_Gaeul.jpg",
-                                                                      "a":  "level4/a/mouth/IVE_Gaeul.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "IVE",
-                                                                           "image":  "level4/q/light/IVE.png"
-                                                                       }
+                                                                      "name":  "Leeseo",
+                                                                      "q":  "level4/q/mouth/IVE_Leeseo.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Leeseo.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-015",
+                                                        "id":  "L4-027",
+                                                        "group":  "IVE",
+                                                        "lightstick":  "level4/q/light/IVE.png",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Leeseo",
@@ -917,17 +1355,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "IVE",
-                                                                      "name":  "Leeseo",
-                                                                      "q":  "level4/q/mouth/IVE_Leeseo.jpg",
-                                                                      "a":  "level4/a/mouth/IVE_Leeseo.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "IVE",
-                                                                           "image":  "level4/q/light/IVE.png"
-                                                                       }
+                                                                      "name":  "Liz",
+                                                                      "q":  "level4/q/mouth/IVE_Liz.png",
+                                                                      "a":  "level4/a/mouth/IVE_Liz.png"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-016",
+                                                        "id":  "L4-028",
+                                                        "group":  "IVE",
+                                                        "lightstick":  "level4/q/light/IVE.png",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Liz",
@@ -936,17 +1372,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "IVE",
-                                                                      "name":  "Liz",
-                                                                      "q":  "level4/q/mouth/IVE_Liz.png",
-                                                                      "a":  "level4/a/mouth/IVE_Liz.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "IVE",
-                                                                           "image":  "level4/q/light/IVE.png"
-                                                                       }
+                                                                      "name":  "Rei",
+                                                                      "q":  "level4/q/mouth/IVE_Rei.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Rei.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-017",
+                                                        "id":  "L4-029",
+                                                        "group":  "IVE",
+                                                        "lightstick":  "level4/q/light/IVE.png",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Rei",
@@ -955,17 +1389,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "IVE",
-                                                                      "name":  "Rei",
-                                                                      "q":  "level4/q/mouth/IVE_Rei.jpg",
-                                                                      "a":  null
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "IVE",
-                                                                           "image":  "level4/q/light/IVE.png"
-                                                                       }
+                                                                      "name":  "Wonyoung",
+                                                                      "q":  "level4/q/mouth/IVE_Wonyoung.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Wonyoung.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-018",
+                                                        "id":  "L4-030",
+                                                        "group":  "IVE",
+                                                        "lightstick":  "level4/q/light/IVE.png",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Wonyoung",
@@ -974,17 +1406,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "IVE",
-                                                                      "name":  "Wonyoung",
-                                                                      "q":  "level4/q/mouth/IVE_Wonyoung.jpg",
-                                                                      "a":  "level4/a/mouth/IVE_Wonyoung.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "IVE",
-                                                                           "image":  "level4/q/light/IVE.png"
-                                                                       }
+                                                                      "name":  "Yujin",
+                                                                      "q":  "level4/q/mouth/IVE_Yujin.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Yujin.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-019",
+                                                        "id":  "L4-031",
+                                                        "group":  "IVE",
+                                                        "lightstick":  "level4/q/light/IVE.png",
                                                         "eyes":  {
                                                                      "group":  "IVE",
                                                                      "name":  "Yujin",
@@ -993,17 +1423,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "IVE",
-                                                                      "name":  "Yujin",
-                                                                      "q":  "level4/q/mouth/IVE_Yujin.jpg",
-                                                                      "a":  "level4/a/mouth/IVE_Yujin.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "IVE",
-                                                                           "image":  "level4/q/light/IVE.png"
-                                                                       }
+                                                                      "name":  "Gaeul",
+                                                                      "q":  "level4/q/mouth/IVE_Gaeul.jpg",
+                                                                      "a":  "level4/a/mouth/IVE_Gaeul.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-020",
+                                                        "id":  "L4-032",
+                                                        "group":  "LE SSERAFIM",
+                                                        "lightstick":  "level4/q/light/LE_SSERAFIM.png",
                                                         "eyes":  {
                                                                      "group":  "LE SSERAFIM",
                                                                      "name":  "Chaewon",
@@ -1012,17 +1440,83 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "LE SSERAFIM",
+                                                                      "name":  "Eunchae",
+                                                                      "q":  "level4/q/mouth/LE_SSERAFIM_Eunchae.jpg",
+                                                                      "a":  "level4/a/mouth/LE_SSERAFIM_Eunchae.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-033",
+                                                        "group":  "LE SSERAFIM",
+                                                        "lightstick":  "level4/q/light/LE_SSERAFIM.png",
+                                                        "eyes":  {
+                                                                     "group":  "LE SSERAFIM",
+                                                                     "name":  "Eunchae",
+                                                                     "q":  "level4/q/eye/LE_SSERAFIM_Eunchae.jpg",
+                                                                     "a":  "level4/a/eye/LE_SSERAFIM_Eunchae.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "LE SSERAFIM",
+                                                                      "name":  "Kazuha",
+                                                                      "q":  "level4/q/mouth/LE_SSERAFIM_Kazuha.jpg",
+                                                                      "a":  "level4/a/mouth/LE_SSERAFIM_Kazuha.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-034",
+                                                        "group":  "LE SSERAFIM",
+                                                        "lightstick":  "level4/q/light/LE_SSERAFIM.png",
+                                                        "eyes":  {
+                                                                     "group":  "LE SSERAFIM",
+                                                                     "name":  "Kazuha",
+                                                                     "q":  "level4/q/eye/LE_SSERAFIM_Kazuha.jpg",
+                                                                     "a":  "level4/a/eye/LE_SSERAFIM_Kazuha.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "LE SSERAFIM",
                                                                       "name":  "Sakura",
                                                                       "q":  "level4/q/mouth/LE_SSERAFIM_Sakura.png",
                                                                       "a":  "level4/a/mouth/LE_SSERAFIM_Sakura.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "LE SSERAFIM",
-                                                                           "image":  "level4/q/light/LE_SSERAFIM.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-021",
+                                                        "id":  "L4-035",
+                                                        "group":  "LE SSERAFIM",
+                                                        "lightstick":  "level4/q/light/LE_SSERAFIM.png",
+                                                        "eyes":  {
+                                                                     "group":  "LE SSERAFIM",
+                                                                     "name":  "Sakura",
+                                                                     "q":  "level4/q/eye/LE_SSERAFIM_Sakura.jpg",
+                                                                     "a":  "level4/a/eye/LE_SSERAFIM_Sakura.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "LE SSERAFIM",
+                                                                      "name":  "Yunjin",
+                                                                      "q":  "level4/q/mouth/LE_SSERAFIM_Yunjin.jpg",
+                                                                      "a":  "level4/a/mouth/LE_SSERAFIM_Yunjin.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-036",
+                                                        "group":  "LE SSERAFIM",
+                                                        "lightstick":  "level4/q/light/LE_SSERAFIM.png",
+                                                        "eyes":  {
+                                                                     "group":  "LE SSERAFIM",
+                                                                     "name":  "Yunjin",
+                                                                     "q":  "level4/q/eye/LE_SSERAFIM_Yunjin.jpg",
+                                                                     "a":  "level4/a/eye/LE_SSERAFIM_Yunjin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "LE SSERAFIM",
+                                                                      "name":  "Chaewon",
+                                                                      "q":  "level4/q/mouth/LE_SSERAFIM_Chaewon.jpg",
+                                                                      "a":  "level4/a/mouth/LE_SSERAFIM_Chaewon.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-037",
+                                                        "group":  "NewJeans",
+                                                        "lightstick":  "level4/q/light/NewJeans.png",
                                                         "eyes":  {
                                                                      "group":  "NewJeans",
                                                                      "name":  "Minji",
@@ -1034,14 +1528,46 @@ window.QUIZ_DATA =
                                                                       "name":  "Hyein",
                                                                       "q":  "level4/q/mouth/NewJeans_Hyein.png",
                                                                       "a":  "level4/a/mouth/NewJeans_Hyein.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "NewJeans",
-                                                                           "image":  "level4/q/light/NewJeans.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-022",
+                                                        "id":  "L4-038",
+                                                        "group":  "NMIXX",
+                                                        "lightstick":  "level4/q/light/NMIXX.png",
+                                                        "eyes":  {
+                                                                     "group":  "NMIXX",
+                                                                     "name":  "Bae",
+                                                                     "q":  "level4/q/eye/NMIXX_Bae.jpg",
+                                                                     "a":  "level4/a/eye/NMIXX_Bae.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "NMIXX",
+                                                                      "name":  "Haewon",
+                                                                      "q":  "level4/q/mouth/NMIXX_Haewon.jpg",
+                                                                      "a":  "level4/a/mouth/NMIXX_Haewon.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-039",
+                                                        "group":  "NMIXX",
+                                                        "lightstick":  "level4/q/light/NMIXX.png",
+                                                        "eyes":  {
+                                                                     "group":  "NMIXX",
+                                                                     "name":  "Haewon",
+                                                                     "q":  "level4/q/eye/NMIXX_Haewon.jpg",
+                                                                     "a":  "level4/a/eye/NMIXX_Haewon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "NMIXX",
+                                                                      "name":  "Jiwoo",
+                                                                      "q":  "level4/q/mouth/NMIXX_Jiwoo.jpg",
+                                                                      "a":  "level4/a/mouth/NMIXX_Jiwoo.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-040",
+                                                        "group":  "NMIXX",
+                                                        "lightstick":  "level4/q/light/NMIXX.png",
                                                         "eyes":  {
                                                                      "group":  "NMIXX",
                                                                      "name":  "Jiwoo",
@@ -1050,17 +1576,66 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "NMIXX",
+                                                                      "name":  "Kyujin",
+                                                                      "q":  "level4/q/mouth/NMIXX_Kyujin.jpg",
+                                                                      "a":  "level4/a/mouth/NMIXX_Kyujin.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-041",
+                                                        "group":  "NMIXX",
+                                                        "lightstick":  "level4/q/light/NMIXX.png",
+                                                        "eyes":  {
+                                                                     "group":  "NMIXX",
+                                                                     "name":  "Kyujin",
+                                                                     "q":  "level4/q/eye/NMIXX_Kyujin.jpg",
+                                                                     "a":  "level4/a/eye/NMIXX_Kyujin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "NMIXX",
                                                                       "name":  "Lily",
                                                                       "q":  "level4/q/mouth/NMIXX_Lily.png",
                                                                       "a":  "level4/a/mouth/NMIXX_Lily.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "NMIXX",
-                                                                           "image":  "level4/q/light/NMIXX.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-023",
+                                                        "id":  "L4-042",
+                                                        "group":  "NMIXX",
+                                                        "lightstick":  "level4/q/light/NMIXX.png",
+                                                        "eyes":  {
+                                                                     "group":  "NMIXX",
+                                                                     "name":  "Lily",
+                                                                     "q":  "level4/q/eye/NMIXX_Lily.jpg",
+                                                                     "a":  "level4/a/eye/NMIXX_Lily.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "NMIXX",
+                                                                      "name":  "Sullyoon",
+                                                                      "q":  "level4/q/mouth/NMIXX_Sullyoon.jpg",
+                                                                      "a":  "level4/a/mouth/NMIXX_Sullyoon.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-043",
+                                                        "group":  "NMIXX",
+                                                        "lightstick":  "level4/q/light/NMIXX.png",
+                                                        "eyes":  {
+                                                                     "group":  "NMIXX",
+                                                                     "name":  "Sullyoon",
+                                                                     "q":  "level4/q/eye/NMIXX_Sullyoon.jpg",
+                                                                     "a":  "level4/a/eye/NMIXX_Sullyoon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "NMIXX",
+                                                                      "name":  "Bae",
+                                                                      "q":  "level4/q/mouth/NMIXX_Bae.jpg",
+                                                                      "a":  "level4/a/mouth/NMIXX_Bae.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-044",
+                                                        "group":  "QWER",
+                                                        "lightstick":  "level4/q/light/QWER.png",
                                                         "eyes":  {
                                                                      "group":  "QWER",
                                                                      "name":  "Chodan",
@@ -1072,14 +1647,12 @@ window.QUIZ_DATA =
                                                                       "name":  "Hina",
                                                                       "q":  "level4/q/mouth/QWER_Hina.png",
                                                                       "a":  "level4/a/mouth/QWER_Hina.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "QWER",
-                                                                           "image":  "level4/q/light/QWER.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-024",
+                                                        "id":  "L4-045",
+                                                        "group":  "Red Velvet",
+                                                        "lightstick":  "level4/q/light/Red_Velvet.png",
                                                         "eyes":  {
                                                                      "group":  "Red Velvet",
                                                                      "name":  "Irene",
@@ -1091,204 +1664,267 @@ window.QUIZ_DATA =
                                                                       "name":  "Wendy",
                                                                       "q":  "level4/q/mouth/Red_Velvet_Wendy.png",
                                                                       "a":  "level4/a/mouth/Red_Velvet_Wendy.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "Red Velvet",
-                                                                           "image":  "level4/q/light/Red_Velvet.png"
-                                                                       }
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-025",
+                                                        "id":  "L4-046",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Chaewon",
-                                                                     "q":  "level4/q/eye/tripleS_Chaewon.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Chaewon.jpg"
+                                                                     "name":  "S1 SeoYeon",
+                                                                     "q":  "level4/q/eye/tripleS_S1_SeoYeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S1_SeoYeon.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Chaewon",
-                                                                      "q":  "level4/q/mouth/tripleS_Chaewon.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Chaewon.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S13 Nien",
+                                                                      "q":  "level4/q/mouth/tripleS_S13_Nien.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S13_Nien.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-026",
+                                                        "id":  "L4-047",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Chaeyeon",
-                                                                     "q":  "level4/q/eye/tripleS_Chaeyeon.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Chaeyeon.jpg"
+                                                                     "name":  "S13 Nien",
+                                                                     "q":  "level4/q/eye/tripleS_S13_Nien.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S13_Nien.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Chaeyeon",
-                                                                      "q":  "level4/q/mouth/tripleS_Chaeyeon.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Chaeyeon.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S15 Xinyu",
+                                                                      "q":  "level4/q/mouth/tripleS_S15_Xinyu.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S15_Xinyu.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-027",
+                                                        "id":  "L4-048",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Hayeon",
-                                                                     "q":  "level4/q/eye/tripleS_Hayeon.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Hayeon.jpg"
+                                                                     "name":  "S15 Xinyu",
+                                                                     "q":  "level4/q/eye/tripleS_S15_Xinyu.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S15_Xinyu.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Hayeon",
-                                                                      "q":  "level4/q/mouth/tripleS_Hayeon.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Hayeon.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S17 Lynn",
+                                                                      "q":  "level4/q/mouth/tripleS_S17_Lynn.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S17_Lynn.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-028",
+                                                        "id":  "L4-049",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Hyerin",
-                                                                     "q":  "level4/q/eye/tripleS_Hyerin.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Hyerin.jpg"
+                                                                     "name":  "S17 Lynn",
+                                                                     "q":  "level4/q/eye/tripleS_S17_Lynn.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S17_Lynn.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Hyerin",
-                                                                      "q":  "level4/q/mouth/tripleS_Hyerin.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Hyerin.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S19 HaYeon",
+                                                                      "q":  "level4/q/mouth/tripleS_S19_HaYeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S19_HaYeon.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-029",
+                                                        "id":  "L4-050",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Jiwoo",
-                                                                     "q":  "level4/q/eye/tripleS_Jiwoo.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Jiwoo.jpg"
+                                                                     "name":  "S19 HaYeon",
+                                                                     "q":  "level4/q/eye/tripleS_S19_HaYeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S19_HaYeon.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Jiwoo",
-                                                                      "q":  "level4/q/mouth/tripleS_Jiwoo.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Jiwoo.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S2 HyeRin",
+                                                                      "q":  "level4/q/mouth/tripleS_S2_HyeRin.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S2_HyeRin.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-030",
+                                                        "id":  "L4-051",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Lynn",
-                                                                     "q":  "level4/q/eye/tripleS_Lynn.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Lynn.jpg"
+                                                                     "name":  "S2 HyeRin",
+                                                                     "q":  "level4/q/eye/tripleS_S2_HyeRin.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S2_HyeRin.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Lynn",
-                                                                      "q":  "level4/q/mouth/tripleS_Lynn.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Lynn.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S20 ShiOn",
+                                                                      "q":  "level4/q/mouth/tripleS_S20_ShiOn.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S20_ShiOn.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-031",
+                                                        "id":  "L4-052",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Nien",
-                                                                     "q":  "level4/q/eye/tripleS_Nien.png",
-                                                                     "a":  "level4/a/eye/tripleS_Nien.jpg"
+                                                                     "name":  "S20 ShiOn",
+                                                                     "q":  "level4/q/eye/tripleS_S20_ShiOn.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S20_ShiOn.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Soomin",
-                                                                      "q":  "level4/q/mouth/tripleS_Soomin.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Soomin.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S21 ChaeWon",
+                                                                      "q":  "level4/q/mouth/tripleS_S21_ChaeWon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S21_ChaeWon.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-032",
+                                                        "id":  "L4-053",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Soomin",
-                                                                     "q":  "level4/q/eye/tripleS_Soomin.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Soomin.jpg"
+                                                                     "name":  "S21 ChaeWon",
+                                                                     "q":  "level4/q/eye/tripleS_S21_ChaeWon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S21_ChaeWon.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Xinyu",
-                                                                      "q":  "level4/q/mouth/tripleS_Xinyu.png",
-                                                                      "a":  "level4/a/mouth/tripleS_Xinyu.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S24 JiYeon",
+                                                                      "q":  "level4/q/mouth/tripleS_S24_JiYeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S24_JiYeon.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-033",
+                                                        "id":  "L4-054",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Yooyeon",
-                                                                     "q":  "level4/q/eye/tripleS_Yooyeon.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Yooyeon.jpg"
+                                                                     "name":  "S24 JiYeon",
+                                                                     "q":  "level4/q/eye/tripleS_S24_JiYeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S24_JiYeon.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Yooyeon",
-                                                                      "q":  "level4/q/mouth/tripleS_Yooyeon.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Yooyeon.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S3 JiWoo",
+                                                                      "q":  "level4/q/mouth/tripleS_S3_JiWoo.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S3_JiWoo.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-034",
+                                                        "id":  "L4-055",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
                                                         "eyes":  {
                                                                      "group":  "tripleS",
-                                                                     "name":  "Yubin",
-                                                                     "q":  "level4/q/eye/tripleS_Yubin.jpg",
-                                                                     "a":  "level4/a/eye/tripleS_Yubin.jpg"
+                                                                     "name":  "S3 JiWoo",
+                                                                     "q":  "level4/q/eye/tripleS_S3_JiWoo.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S3_JiWoo.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "tripleS",
-                                                                      "name":  "Yubin",
-                                                                      "q":  "level4/q/mouth/tripleS_Yubin.jpg",
-                                                                      "a":  "level4/a/mouth/tripleS_Yubin.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "tripleS",
-                                                                           "image":  "level4/q/light/tripleS.png"
-                                                                       }
+                                                                      "name":  "S4 ChaeYeon",
+                                                                      "q":  "level4/q/mouth/tripleS_S4_ChaeYeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S4_ChaeYeon.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-035",
+                                                        "id":  "L4-056",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "S4 ChaeYeon",
+                                                                     "q":  "level4/q/eye/tripleS_S4_ChaeYeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S4_ChaeYeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "S5 YooYeon",
+                                                                      "q":  "level4/q/mouth/tripleS_S5_YooYeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S5_YooYeon.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-057",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "S5 YooYeon",
+                                                                     "q":  "level4/q/eye/tripleS_S5_YooYeon.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S5_YooYeon.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "S6 SooMin",
+                                                                      "q":  "level4/q/mouth/tripleS_S6_SooMin.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S6_SooMin.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-058",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "S6 SooMin",
+                                                                     "q":  "level4/q/eye/tripleS_S6_SooMin.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S6_SooMin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "S7 NaKyoung",
+                                                                      "q":  "level4/q/mouth/tripleS_S7_NaKyoung.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S7_NaKyoung.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-059",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "S7 NaKyoung",
+                                                                     "q":  "level4/q/eye/tripleS_S7_NaKyoung.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S7_NaKyoung.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "S8 YuBin",
+                                                                      "q":  "level4/q/mouth/tripleS_S8_YuBin.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S8_YuBin.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-060",
+                                                        "group":  "tripleS",
+                                                        "lightstick":  "level4/q/light/tripleS.png",
+                                                        "eyes":  {
+                                                                     "group":  "tripleS",
+                                                                     "name":  "S8 YuBin",
+                                                                     "q":  "level4/q/eye/tripleS_S8_YuBin.jpg",
+                                                                     "a":  "level4/a/eye/tripleS_S8_YuBin.jpg"
+                                                                 },
+                                                        "mouth":  {
+                                                                      "group":  "tripleS",
+                                                                      "name":  "S1 SeoYeon",
+                                                                      "q":  "level4/q/mouth/tripleS_S1_SeoYeon.jpg",
+                                                                      "a":  "level4/a/mouth/tripleS_S1_SeoYeon.jpg"
+                                                                  }
+                                                    },
+                                                    {
+                                                        "id":  "L4-061",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "CHAEYOUNG",
@@ -1297,17 +1933,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "CHAEYOUNG",
-                                                                      "q":  "level4/q/mouth/TWICE_CHAEYOUNG.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_CHAEYOUNG.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "DAHYUN",
+                                                                      "q":  "level4/q/mouth/TWICE_DAHYUN.png",
+                                                                      "a":  "level4/a/mouth/TWICE_DAHYUN.png"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-036",
+                                                        "id":  "L4-062",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "DAHYUN",
@@ -1316,17 +1950,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "DAHYUN",
-                                                                      "q":  "level4/q/mouth/TWICE_DAHYUN.png",
-                                                                      "a":  "level4/a/mouth/TWICE_DAHYUN.png"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "JEONGYEON",
+                                                                      "q":  "level4/q/mouth/TWICE_JEONGYEON.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_JEONGYEON.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-037",
+                                                        "id":  "L4-063",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JEONGYEON",
@@ -1335,17 +1967,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "JEONGYEON",
-                                                                      "q":  "level4/q/mouth/TWICE_JEONGYEON.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_JEONGYEON.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "JIHYO",
+                                                                      "q":  "level4/q/mouth/TWICE_JIHYO.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_JIHYO.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-038",
+                                                        "id":  "L4-064",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "JIHYO",
@@ -1354,17 +1984,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "JIHYO",
-                                                                      "q":  "level4/q/mouth/TWICE_JIHYO.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_JIHYO.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "MINA",
+                                                                      "q":  "level4/q/mouth/TWICE_MINA.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_MINA.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-039",
+                                                        "id":  "L4-065",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MINA",
@@ -1373,17 +2001,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "MINA",
-                                                                      "q":  "level4/q/mouth/TWICE_MINA.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_MINA.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "MOMO",
+                                                                      "q":  "level4/q/mouth/TWICE_MOMO.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_MOMO.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-040",
+                                                        "id":  "L4-066",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "MOMO",
@@ -1392,17 +2018,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "MOMO",
-                                                                      "q":  "level4/q/mouth/TWICE_MOMO.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_MOMO.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "NAYEON",
+                                                                      "q":  "level4/q/mouth/TWICE_NAYEON.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_NAYEON.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-041",
+                                                        "id":  "L4-067",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "NAYEON",
@@ -1411,17 +2035,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "NAYEON",
-                                                                      "q":  "level4/q/mouth/TWICE_NAYEON.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_NAYEON.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "SANA",
+                                                                      "q":  "level4/q/mouth/TWICE_SANA.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_SANA.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-042",
+                                                        "id":  "L4-068",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "SANA",
@@ -1430,17 +2052,15 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "SANA",
-                                                                      "q":  "level4/q/mouth/TWICE_SANA.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_SANA.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "TZUYU",
+                                                                      "q":  "level4/q/mouth/TWICE_TZUYU.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_TZUYU.jpg"
+                                                                  }
                                                     },
                                                     {
-                                                        "id":  "L4-043",
+                                                        "id":  "L4-069",
+                                                        "group":  "TWICE",
+                                                        "lightstick":  "level4/q/light/TWICE.png",
                                                         "eyes":  {
                                                                      "group":  "TWICE",
                                                                      "name":  "TZUYU",
@@ -1449,14 +2069,10 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "TWICE",
-                                                                      "name":  "TZUYU",
-                                                                      "q":  "level4/q/mouth/TWICE_TZUYU.jpg",
-                                                                      "a":  "level4/a/mouth/TWICE_TZUYU.jpg"
-                                                                  },
-                                                        "lightstick":  {
-                                                                           "group":  "TWICE",
-                                                                           "image":  "level4/q/light/TWICE.png"
-                                                                       }
+                                                                      "name":  "CHAEYOUNG",
+                                                                      "q":  "level4/q/mouth/TWICE_CHAEYOUNG.jpg",
+                                                                      "a":  "level4/a/mouth/TWICE_CHAEYOUNG.jpg"
+                                                                  }
                                                     }
                                                 ]
                               }
