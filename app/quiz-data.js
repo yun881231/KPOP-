@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-19 19:14:29
+   產生時間：2026-08-20 07:10:23
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-19T19:14:29",
+    "generatedAt":  "2026-08-20T07:10:23",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -18,7 +18,7 @@ window.QUIZ_DATA =
                   "photos":  [
                                  "封面/aespa.avif",
                                  "封面/BABYMONSTER.jpg",
-                                 "封面/Fromis9.jpg",
+                                 "封面/fromis9.jpg",
                                  "封面/Hearts2hearts.jpg",
                                  "封面/i-dle.avif",
                                  "封面/ITZY.jpg",
@@ -186,10 +186,10 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L2-003",
-                                                        "group":  "Formis9",
+                                                        "group":  "fromis9",
                                                         "title":  "DM",
-                                                        "clip":  "第二關_聽前奏猜歌/題目/Formis9_DM.mp3",
-                                                        "answer":  "第二關_聽前奏猜歌/答案/Formis9_DM.mp4",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/fromis9_DM.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/fromis9_DM.mp4",
                                                         "introSeconds":  12
                                                     },
                                                     {
@@ -384,6 +384,46 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L3-006",
+                                                        "group":  "Apink",
+                                                        "title":  "LUV",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Apink_LUV.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Apink_LUV.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-007",
+                                                        "group":  "Apink",
+                                                        "title":  "Mr. Chu",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Apink_Mr. Chu.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Apink_Mr. Chu.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-008",
+                                                        "group":  "Apink",
+                                                        "title":  "NoNoNo",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Apink_NoNoNo.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Apink_NoNoNo.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-009",
+                                                        "group":  "Apink",
+                                                        "title":  "Only One",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Apink_Only One.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Apink_Only One.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-010",
+                                                        "group":  "Apink",
+                                                        "title":  "Remember",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Apink_Remember.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Apink_Remember.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-011",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "CHOOM",
                                                         "question":  "第三關_看舞蹈猜歌/題目/BABYMONSTER_CHOOM.mp4",
@@ -391,7 +431,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-007",
+                                                        "id":  "L3-012",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "DRIP",
                                                         "question":  "第三關_看舞蹈猜歌/題目/BABYMONSTER_DRIP.mp4",
@@ -399,7 +439,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-008",
+                                                        "id":  "L3-013",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "HOT SAUCE",
                                                         "question":  "第三關_看舞蹈猜歌/題目/BABYMONSTER_HOT SAUCE.mp4",
@@ -407,7 +447,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-009",
+                                                        "id":  "L3-014",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "PSYCHO",
                                                         "question":  "第三關_看舞蹈猜歌/題目/BABYMONSTER_PSYCHO.mp4",
@@ -415,7 +455,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-010",
+                                                        "id":  "L3-015",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "WE GO UP",
                                                         "question":  "第三關_看舞蹈猜歌/題目/BABYMONSTER_WE GO UP.mp4",
@@ -423,7 +463,95 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-011",
+                                                        "id":  "L3-016",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Ddu-Du Ddu-Du",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/BLACKPINK_Ddu-Du Ddu-Du.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/BLACKPINK_Ddu-Du Ddu-Du.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-017",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "How You Like That",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/BLACKPINK_How You Like That.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/BLACKPINK_How You Like That.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-018",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Lovesick Girls",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/BLACKPINK_Lovesick Girls.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/BLACKPINK_Lovesick Girls.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-019",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Pink Venom",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/BLACKPINK_Pink Venom.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/BLACKPINK_Pink Venom.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-020",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Shut Down",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/BLACKPINK_Shut Down.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/BLACKPINK_Shut Down.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-021",
+                                                        "group":  "fromis9",
+                                                        "title":  "Vitamin ME",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/fromis9_Vitamin ME.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/fromis9_Vitamin ME.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-022",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "Hoot",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Girls\u0027 Generation_Hoot.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Girls\u0027 Generation_Hoot.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-023",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "I got a boy",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Girls\u0027 Generation_I got a boy.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Girls\u0027 Generation_I got a boy.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-024",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "Mr. Taxi",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Girls\u0027 Generation_Mr. Taxi.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Girls\u0027 Generation_Mr. Taxi.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-025",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "Oh",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Girls\u0027 Generation_Oh.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Girls\u0027 Generation_Oh.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-026",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "The boys",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Girls\u0027 Generation_The boys.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Girls\u0027 Generation_The boys.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-027",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "FOCUS",
                                                         "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_FOCUS.mp4",
@@ -431,7 +559,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-012",
+                                                        "id":  "L3-028",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "Lemon Tang",
                                                         "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_Lemon Tang.mp4",
@@ -439,7 +567,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-013",
+                                                        "id":  "L3-029",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "RUDE!",
                                                         "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_RUDE!.mp4",
@@ -447,7 +575,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-014",
+                                                        "id":  "L3-030",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "Style",
                                                         "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_Style.mp4",
@@ -455,7 +583,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-015",
+                                                        "id":  "L3-031",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "The Chase",
                                                         "question":  "第三關_看舞蹈猜歌/題目/Hearts2Hearts_The Chase.mp4",
@@ -463,7 +591,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-016",
+                                                        "id":  "L3-032",
                                                         "group":  "i-dle",
                                                         "title":  "Gimme Dat Love",
                                                         "question":  "第三關_看舞蹈猜歌/題目/i-dle_Gimme Dat Love.mp4",
@@ -471,7 +599,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-017",
+                                                        "id":  "L3-033",
                                                         "group":  "i-dle",
                                                         "title":  "Good Thing",
                                                         "question":  "第三關_看舞蹈猜歌/題目/i-dle_Good Thing.mp4",
@@ -479,7 +607,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-018",
+                                                        "id":  "L3-034",
                                                         "group":  "i-dle",
                                                         "title":  "Mono",
                                                         "question":  "第三關_看舞蹈猜歌/題目/i-dle_Mono.mp4",
@@ -487,7 +615,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-019",
+                                                        "id":  "L3-035",
                                                         "group":  "i-dle",
                                                         "title":  "Queencard",
                                                         "question":  "第三關_看舞蹈猜歌/題目/i-dle_Queencard.mp4",
@@ -495,7 +623,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-020",
+                                                        "id":  "L3-036",
                                                         "group":  "i-dle",
                                                         "title":  "Tomboy",
                                                         "question":  "第三關_看舞蹈猜歌/題目/i-dle_Tomboy.mp4",
@@ -503,7 +631,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-021",
+                                                        "id":  "L3-037",
                                                         "group":  "ILLIT ",
                                                         "title":  "Do the Dance",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ILLIT _Do the Dance.mp4",
@@ -511,7 +639,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-022",
+                                                        "id":  "L3-038",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish (My Love)",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ILLIT_Cherish (My Love).mp4",
@@ -519,7 +647,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-023",
+                                                        "id":  "L3-039",
                                                         "group":  "ILLIT",
                                                         "title":  "It’s Me",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ILLIT_It’s Me.mp4",
@@ -527,7 +655,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-024",
+                                                        "id":  "L3-040",
                                                         "group":  "ILLIT",
                                                         "title":  "jellyous",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ILLIT_jellyous.mp4",
@@ -535,7 +663,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-025",
+                                                        "id":  "L3-041",
                                                         "group":  "ILLIT",
                                                         "title":  "Magnetic",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ILLIT_Magnetic.mp4",
@@ -543,7 +671,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-026",
+                                                        "id":  "L3-042",
                                                         "group":  "ITZY",
                                                         "title":  "Imaginary Friend",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_Imaginary Friend.mp4",
@@ -551,7 +679,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-027",
+                                                        "id":  "L3-043",
                                                         "group":  "ITZY",
                                                         "title":  "LOCO",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_LOCO.mp4",
@@ -559,7 +687,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-028",
+                                                        "id":  "L3-044",
                                                         "group":  "ITZY",
                                                         "title":  "Mafia In the morning",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_Mafia In the morning.mp4",
@@ -567,7 +695,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-029",
+                                                        "id":  "L3-045",
                                                         "group":  "ITZY",
                                                         "title":  "SNEAKERS",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_SNEAKERS.mp4",
@@ -575,7 +703,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-030",
+                                                        "id":  "L3-046",
                                                         "group":  "ITZY",
                                                         "title":  "THAT’S A NO NO",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_THAT’S A NO NO.mp4",
@@ -583,7 +711,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-031",
+                                                        "id":  "L3-047",
                                                         "group":  "IVE",
                                                         "title":  "After LIKE",
                                                         "question":  "第三關_看舞蹈猜歌/題目/IVE_After LIKE.mp4",
@@ -591,7 +719,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-032",
+                                                        "id":  "L3-048",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "question":  "第三關_看舞蹈猜歌/題目/IVE_ATTITUDE.mp4",
@@ -599,7 +727,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-033",
+                                                        "id":  "L3-049",
                                                         "group":  "IVE",
                                                         "title":  "BANG BANG",
                                                         "question":  "第三關_看舞蹈猜歌/題目/IVE_BANG BANG.mp4",
@@ -607,7 +735,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-034",
+                                                        "id":  "L3-050",
                                                         "group":  "IVE",
                                                         "title":  "I AM",
                                                         "question":  "第三關_看舞蹈猜歌/題目/IVE_I AM.mp4",
@@ -615,7 +743,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-035",
+                                                        "id":  "L3-051",
                                                         "group":  "IVE",
                                                         "title":  "LOVE DIVE",
                                                         "question":  "第三關_看舞蹈猜歌/題目/IVE_LOVE DIVE.mp4",
@@ -623,7 +751,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-036",
+                                                        "id":  "L3-052",
                                                         "group":  "KiiiKiii",
                                                         "title":  "404 (New Era)",
                                                         "question":  "第三關_看舞蹈猜歌/題目/KiiiKiii_404 (New Era).mp4",
@@ -631,7 +759,15 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-037",
+                                                        "id":  "L3-053",
+                                                        "group":  "KiiiKiii",
+                                                        "title":  "I DO ME",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/KiiiKiii_I DO ME.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/KiiiKiii_I DO ME.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-054",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "BOOMPALA",
                                                         "question":  "第三關_看舞蹈猜歌/題目/LE SSERAFIM_BOOMPALA.mp4",
@@ -639,7 +775,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-038",
+                                                        "id":  "L3-055",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "CELEBRATION",
                                                         "question":  "第三關_看舞蹈猜歌/題目/LE SSERAFIM_CELEBRATION.mp4",
@@ -647,7 +783,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-039",
+                                                        "id":  "L3-056",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "Come Over",
                                                         "question":  "第三關_看舞蹈猜歌/題目/LE SSERAFIM_Come Over.mp4",
@@ -655,7 +791,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-040",
+                                                        "id":  "L3-057",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "HOT",
                                                         "question":  "第三關_看舞蹈猜歌/題目/LE SSERAFIM_HOT.mp4",
@@ -663,7 +799,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-041",
+                                                        "id":  "L3-058",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "SPAGHETTI",
                                                         "question":  "第三關_看舞蹈猜歌/題目/LE SSERAFIM_SPAGHETTI.mp4",
@@ -671,7 +807,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-042",
+                                                        "id":  "L3-059",
                                                         "group":  "NewJeans",
                                                         "title":  "Attention",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NewJeans_Attention.mp4",
@@ -679,7 +815,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-043",
+                                                        "id":  "L3-060",
                                                         "group":  "NewJeans",
                                                         "title":  "Ditto",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NewJeans_Ditto.mp4",
@@ -687,7 +823,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-044",
+                                                        "id":  "L3-061",
                                                         "group":  "NewJeans",
                                                         "title":  "ETA",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NewJeans_ETA.mp4",
@@ -695,7 +831,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-045",
+                                                        "id":  "L3-062",
                                                         "group":  "NewJeans",
                                                         "title":  "How Sweet",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NewJeans_How Sweet.mp4",
@@ -703,7 +839,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-046",
+                                                        "id":  "L3-063",
                                                         "group":  "NewJeans",
                                                         "title":  "Hype Boy",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NewJeans_Hype Boy.mp4",
@@ -711,7 +847,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-047",
+                                                        "id":  "L3-064",
                                                         "group":  "NMIXX",
                                                         "title":  "Blue Valentine",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NMIXX_Blue Valentine.mp4",
@@ -719,7 +855,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-048",
+                                                        "id":  "L3-065",
                                                         "group":  "NMIXX",
                                                         "title":  "Heavy Serenade",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NMIXX_Heavy Serenade.mp4",
@@ -727,7 +863,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-049",
+                                                        "id":  "L3-066",
                                                         "group":  "NMIXX",
                                                         "title":  "KNOW ABOUT ME",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NMIXX_KNOW ABOUT ME.mp4",
@@ -735,7 +871,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-050",
+                                                        "id":  "L3-067",
                                                         "group":  "NMIXX",
                                                         "title":  "Love Me Like This",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NMIXX_Love Me Like This.mp4",
@@ -743,7 +879,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-051",
+                                                        "id":  "L3-068",
                                                         "group":  "NMIXX",
                                                         "title":  "See that",
                                                         "question":  "第三關_看舞蹈猜歌/題目/NMIXX_See that.mp4",
@@ -751,7 +887,47 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-052",
+                                                        "id":  "L3-069",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Dumb Dumb",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Red Velvet_Dumb Dumb.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Red Velvet_Dumb Dumb.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-070",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Feel My Rhythm",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Red Velvet_Feel My Rhythm.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Red Velvet_Feel My Rhythm.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-071",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "PEEK-A-BOO",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Red Velvet_PEEK-A-BOO.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Red Velvet_PEEK-A-BOO.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-072",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Psycho",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Red Velvet_Psycho.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Red Velvet_Psycho.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-073",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Red Flavor",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/Red Velvet_Red Flavor.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/Red Velvet_Red Flavor.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-074",
                                                         "group":  "RESCENE",
                                                         "title":  "LOVE ATTACK",
                                                         "question":  "第三關_看舞蹈猜歌/題目/RESCENE_LOVE ATTACK.mp4",
@@ -759,7 +935,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-053",
+                                                        "id":  "L3-075",
                                                         "group":  "tripleS",
                                                         "title":  "Fly Up",
                                                         "question":  "第三關_看舞蹈猜歌/題目/tripleS_Fly Up.mp4",
@@ -767,7 +943,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-054",
+                                                        "id":  "L3-076",
                                                         "group":  "tripleS",
                                                         "title":  "Generation",
                                                         "question":  "第三關_看舞蹈猜歌/題目/tripleS_Generation.mp4",
@@ -775,7 +951,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-055",
+                                                        "id":  "L3-077",
                                                         "group":  "tripleS",
                                                         "title":  "Just Do It",
                                                         "question":  "第三關_看舞蹈猜歌/題目/tripleS_Just Do It.mp4",
@@ -783,7 +959,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-056",
+                                                        "id":  "L3-078",
                                                         "group":  "tripleS",
                                                         "title":  "LOVElution",
                                                         "question":  "第三關_看舞蹈猜歌/題目/tripleS_LOVElution.mp4",
@@ -791,11 +967,51 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-057",
+                                                        "id":  "L3-079",
                                                         "group":  "tripleS",
                                                         "title":  "Rising",
                                                         "question":  "第三關_看舞蹈猜歌/題目/tripleS_Rising.mp4",
                                                         "answer":  "第三關_看舞蹈猜歌/答案/tripleS_Rising.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-080",
+                                                        "group":  "TWICE",
+                                                        "title":  "MOONLIGHT SUNRISE",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/TWICE_MOONLIGHT SUNRISE.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/TWICE_MOONLIGHT SUNRISE.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-081",
+                                                        "group":  "TWICE",
+                                                        "title":  "ONE SPARK",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/TWICE_ONE SPARK.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/TWICE_ONE SPARK.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-082",
+                                                        "group":  "TWICE",
+                                                        "title":  "SET ME FREE",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/TWICE_SET ME FREE.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/TWICE_SET ME FREE.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-083",
+                                                        "group":  "TWICE",
+                                                        "title":  "Strategy",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/TWICE_Strategy.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/TWICE_Strategy.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-084",
+                                                        "group":  "TWICE",
+                                                        "title":  "THIS IS FOR",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/TWICE_THIS IS FOR.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/TWICE_THIS IS FOR.mp4",
                                                         "autoMask":  false
                                                     }
                                                 ]

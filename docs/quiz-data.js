@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-19 19:17:59 */
+   產生時間：2026-08-20 07:15:21 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-19T19:14:29",
+    "generatedAt":  "2026-08-20T07:10:23",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -15,7 +15,7 @@ window.QUIZ_DATA =
                   "photos":  [
                                  "cover/aespa.jpg",
                                  "cover/BABYMONSTER.jpg",
-                                 "cover/Fromis9.jpg",
+                                 "cover/fromis9.jpg",
                                  "cover/Hearts2hearts.jpg",
                                  "cover/i-dle.jpg",
                                  "cover/ITZY.jpg",
@@ -183,10 +183,10 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L2-003",
-                                                        "group":  "Formis9",
+                                                        "group":  "fromis9",
                                                         "title":  "DM",
-                                                        "clip":  "level2/q/Formis9_DM.mp3",
-                                                        "answer":  "level2/a/Formis9_DM.mp4",
+                                                        "clip":  "level2/q/fromis9_DM.mp3",
+                                                        "answer":  "level2/a/fromis9_DM.mp4",
                                                         "introSeconds":  12
                                                     },
                                                     {
@@ -381,6 +381,46 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L3-006",
+                                                        "group":  "Apink",
+                                                        "title":  "LUV",
+                                                        "question":  "level3/q/Apink_LUV.mp4",
+                                                        "answer":  "level3/a/Apink_LUV.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-007",
+                                                        "group":  "Apink",
+                                                        "title":  "Mr. Chu",
+                                                        "question":  "level3/q/Apink_Mr._Chu.mp4",
+                                                        "answer":  "level3/a/Apink_Mr._Chu.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-008",
+                                                        "group":  "Apink",
+                                                        "title":  "NoNoNo",
+                                                        "question":  "level3/q/Apink_NoNoNo.mp4",
+                                                        "answer":  "level3/a/Apink_NoNoNo.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-009",
+                                                        "group":  "Apink",
+                                                        "title":  "Only One",
+                                                        "question":  "level3/q/Apink_Only_One.mp4",
+                                                        "answer":  "level3/a/Apink_Only_One.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-010",
+                                                        "group":  "Apink",
+                                                        "title":  "Remember",
+                                                        "question":  "level3/q/Apink_Remember.mp4",
+                                                        "answer":  "level3/a/Apink_Remember.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-011",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "CHOOM",
                                                         "question":  "level3/q/BABYMONSTER_CHOOM.mp4",
@@ -388,7 +428,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-007",
+                                                        "id":  "L3-012",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "DRIP",
                                                         "question":  "level3/q/BABYMONSTER_DRIP.mp4",
@@ -396,7 +436,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-008",
+                                                        "id":  "L3-013",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "HOT SAUCE",
                                                         "question":  "level3/q/BABYMONSTER_HOT_SAUCE.mp4",
@@ -404,7 +444,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-009",
+                                                        "id":  "L3-014",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "PSYCHO",
                                                         "question":  "level3/q/BABYMONSTER_PSYCHO.mp4",
@@ -412,7 +452,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-010",
+                                                        "id":  "L3-015",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "WE GO UP",
                                                         "question":  "level3/q/BABYMONSTER_WE_GO_UP.mp4",
@@ -420,7 +460,95 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-011",
+                                                        "id":  "L3-016",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Ddu-Du Ddu-Du",
+                                                        "question":  "level3/q/BLACKPINK_Ddu-Du_Ddu-Du.mp4",
+                                                        "answer":  "level3/a/BLACKPINK_Ddu-Du_Ddu-Du.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-017",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "How You Like That",
+                                                        "question":  "level3/q/BLACKPINK_How_You_Like_That.mp4",
+                                                        "answer":  "level3/a/BLACKPINK_How_You_Like_That.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-018",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Lovesick Girls",
+                                                        "question":  "level3/q/BLACKPINK_Lovesick_Girls.mp4",
+                                                        "answer":  "level3/a/BLACKPINK_Lovesick_Girls.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-019",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Pink Venom",
+                                                        "question":  "level3/q/BLACKPINK_Pink_Venom.mp4",
+                                                        "answer":  "level3/a/BLACKPINK_Pink_Venom.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-020",
+                                                        "group":  "BLACKPINK",
+                                                        "title":  "Shut Down",
+                                                        "question":  "level3/q/BLACKPINK_Shut_Down.mp4",
+                                                        "answer":  "level3/a/BLACKPINK_Shut_Down.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-021",
+                                                        "group":  "fromis9",
+                                                        "title":  "Vitamin ME",
+                                                        "question":  "level3/q/fromis9_Vitamin_ME.mp4",
+                                                        "answer":  "level3/a/fromis9_Vitamin_ME.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-022",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "Hoot",
+                                                        "question":  "level3/q/Girls_Generation_Hoot.mp4",
+                                                        "answer":  "level3/a/Girls_Generation_Hoot.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-023",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "I got a boy",
+                                                        "question":  "level3/q/Girls_Generation_I_got_a_boy.mp4",
+                                                        "answer":  "level3/a/Girls_Generation_I_got_a_boy.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-024",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "Mr. Taxi",
+                                                        "question":  "level3/q/Girls_Generation_Mr._Taxi.mp4",
+                                                        "answer":  "level3/a/Girls_Generation_Mr._Taxi.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-025",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "Oh",
+                                                        "question":  "level3/q/Girls_Generation_Oh.mp4",
+                                                        "answer":  "level3/a/Girls_Generation_Oh.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-026",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "title":  "The boys",
+                                                        "question":  "level3/q/Girls_Generation_The_boys.mp4",
+                                                        "answer":  "level3/a/Girls_Generation_The_boys.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-027",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "FOCUS",
                                                         "question":  "level3/q/Hearts2Hearts_FOCUS.mp4",
@@ -428,7 +556,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-012",
+                                                        "id":  "L3-028",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "Lemon Tang",
                                                         "question":  "level3/q/Hearts2Hearts_Lemon_Tang.mp4",
@@ -436,7 +564,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-013",
+                                                        "id":  "L3-029",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "RUDE!",
                                                         "question":  "level3/q/Hearts2Hearts_RUDE.mp4",
@@ -444,7 +572,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-014",
+                                                        "id":  "L3-030",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "Style",
                                                         "question":  "level3/q/Hearts2Hearts_Style.mp4",
@@ -452,7 +580,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-015",
+                                                        "id":  "L3-031",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "The Chase",
                                                         "question":  "level3/q/Hearts2Hearts_The_Chase.mp4",
@@ -460,7 +588,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-016",
+                                                        "id":  "L3-032",
                                                         "group":  "i-dle",
                                                         "title":  "Gimme Dat Love",
                                                         "question":  "level3/q/i-dle_Gimme_Dat_Love.mp4",
@@ -468,7 +596,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-017",
+                                                        "id":  "L3-033",
                                                         "group":  "i-dle",
                                                         "title":  "Good Thing",
                                                         "question":  "level3/q/i-dle_Good_Thing.mp4",
@@ -476,7 +604,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-018",
+                                                        "id":  "L3-034",
                                                         "group":  "i-dle",
                                                         "title":  "Mono",
                                                         "question":  "level3/q/i-dle_Mono.mp4",
@@ -484,7 +612,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-019",
+                                                        "id":  "L3-035",
                                                         "group":  "i-dle",
                                                         "title":  "Queencard",
                                                         "question":  "level3/q/i-dle_Queencard.mp4",
@@ -492,7 +620,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-020",
+                                                        "id":  "L3-036",
                                                         "group":  "i-dle",
                                                         "title":  "Tomboy",
                                                         "question":  "level3/q/i-dle_Tomboy.mp4",
@@ -500,7 +628,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-021",
+                                                        "id":  "L3-037",
                                                         "group":  "ILLIT ",
                                                         "title":  "Do the Dance",
                                                         "question":  "level3/q/ILLIT_Do_the_Dance.mp4",
@@ -508,7 +636,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-022",
+                                                        "id":  "L3-038",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish (My Love)",
                                                         "question":  "level3/q/ILLIT_Cherish_My_Love.mp4",
@@ -516,7 +644,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-023",
+                                                        "id":  "L3-039",
                                                         "group":  "ILLIT",
                                                         "title":  "It’s Me",
                                                         "question":  "level3/q/ILLIT_It_s_Me.mp4",
@@ -524,7 +652,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-024",
+                                                        "id":  "L3-040",
                                                         "group":  "ILLIT",
                                                         "title":  "jellyous",
                                                         "question":  "level3/q/ILLIT_jellyous.mp4",
@@ -532,7 +660,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-025",
+                                                        "id":  "L3-041",
                                                         "group":  "ILLIT",
                                                         "title":  "Magnetic",
                                                         "question":  "level3/q/ILLIT_Magnetic.mp4",
@@ -540,7 +668,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-026",
+                                                        "id":  "L3-042",
                                                         "group":  "ITZY",
                                                         "title":  "Imaginary Friend",
                                                         "question":  "level3/q/ITZY_Imaginary_Friend.mp4",
@@ -548,7 +676,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-027",
+                                                        "id":  "L3-043",
                                                         "group":  "ITZY",
                                                         "title":  "LOCO",
                                                         "question":  "level3/q/ITZY_LOCO.mp4",
@@ -556,7 +684,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-028",
+                                                        "id":  "L3-044",
                                                         "group":  "ITZY",
                                                         "title":  "Mafia In the morning",
                                                         "question":  "level3/q/ITZY_Mafia_In_the_morning.mp4",
@@ -564,7 +692,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-029",
+                                                        "id":  "L3-045",
                                                         "group":  "ITZY",
                                                         "title":  "SNEAKERS",
                                                         "question":  "level3/q/ITZY_SNEAKERS.mp4",
@@ -572,7 +700,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-030",
+                                                        "id":  "L3-046",
                                                         "group":  "ITZY",
                                                         "title":  "THAT’S A NO NO",
                                                         "question":  "level3/q/ITZY_THAT_S_A_NO_NO.mp4",
@@ -580,7 +708,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-031",
+                                                        "id":  "L3-047",
                                                         "group":  "IVE",
                                                         "title":  "After LIKE",
                                                         "question":  "level3/q/IVE_After_LIKE.mp4",
@@ -588,7 +716,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-032",
+                                                        "id":  "L3-048",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "question":  "level3/q/IVE_ATTITUDE.mp4",
@@ -596,7 +724,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-033",
+                                                        "id":  "L3-049",
                                                         "group":  "IVE",
                                                         "title":  "BANG BANG",
                                                         "question":  "level3/q/IVE_BANG_BANG.mp4",
@@ -604,7 +732,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-034",
+                                                        "id":  "L3-050",
                                                         "group":  "IVE",
                                                         "title":  "I AM",
                                                         "question":  "level3/q/IVE_I_AM.mp4",
@@ -612,7 +740,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-035",
+                                                        "id":  "L3-051",
                                                         "group":  "IVE",
                                                         "title":  "LOVE DIVE",
                                                         "question":  "level3/q/IVE_LOVE_DIVE.mp4",
@@ -620,7 +748,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-036",
+                                                        "id":  "L3-052",
                                                         "group":  "KiiiKiii",
                                                         "title":  "404 (New Era)",
                                                         "question":  "level3/q/KiiiKiii_404_New_Era.mp4",
@@ -628,7 +756,15 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-037",
+                                                        "id":  "L3-053",
+                                                        "group":  "KiiiKiii",
+                                                        "title":  "I DO ME",
+                                                        "question":  "level3/q/KiiiKiii_I_DO_ME.mp4",
+                                                        "answer":  "level3/a/KiiiKiii_I_DO_ME.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-054",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "BOOMPALA",
                                                         "question":  "level3/q/LE_SSERAFIM_BOOMPALA.mp4",
@@ -636,7 +772,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-038",
+                                                        "id":  "L3-055",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "CELEBRATION",
                                                         "question":  "level3/q/LE_SSERAFIM_CELEBRATION.mp4",
@@ -644,7 +780,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-039",
+                                                        "id":  "L3-056",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "Come Over",
                                                         "question":  "level3/q/LE_SSERAFIM_Come_Over.mp4",
@@ -652,7 +788,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-040",
+                                                        "id":  "L3-057",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "HOT",
                                                         "question":  "level3/q/LE_SSERAFIM_HOT.mp4",
@@ -660,7 +796,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-041",
+                                                        "id":  "L3-058",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "SPAGHETTI",
                                                         "question":  "level3/q/LE_SSERAFIM_SPAGHETTI.mp4",
@@ -668,7 +804,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-042",
+                                                        "id":  "L3-059",
                                                         "group":  "NewJeans",
                                                         "title":  "Attention",
                                                         "question":  "level3/q/NewJeans_Attention.mp4",
@@ -676,7 +812,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-043",
+                                                        "id":  "L3-060",
                                                         "group":  "NewJeans",
                                                         "title":  "Ditto",
                                                         "question":  "level3/q/NewJeans_Ditto.mp4",
@@ -684,7 +820,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-044",
+                                                        "id":  "L3-061",
                                                         "group":  "NewJeans",
                                                         "title":  "ETA",
                                                         "question":  "level3/q/NewJeans_ETA.mp4",
@@ -692,7 +828,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-045",
+                                                        "id":  "L3-062",
                                                         "group":  "NewJeans",
                                                         "title":  "How Sweet",
                                                         "question":  "level3/q/NewJeans_How_Sweet.mp4",
@@ -700,7 +836,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-046",
+                                                        "id":  "L3-063",
                                                         "group":  "NewJeans",
                                                         "title":  "Hype Boy",
                                                         "question":  "level3/q/NewJeans_Hype_Boy.mp4",
@@ -708,7 +844,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-047",
+                                                        "id":  "L3-064",
                                                         "group":  "NMIXX",
                                                         "title":  "Blue Valentine",
                                                         "question":  "level3/q/NMIXX_Blue_Valentine.mp4",
@@ -716,7 +852,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-048",
+                                                        "id":  "L3-065",
                                                         "group":  "NMIXX",
                                                         "title":  "Heavy Serenade",
                                                         "question":  "level3/q/NMIXX_Heavy_Serenade.mp4",
@@ -724,7 +860,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-049",
+                                                        "id":  "L3-066",
                                                         "group":  "NMIXX",
                                                         "title":  "KNOW ABOUT ME",
                                                         "question":  "level3/q/NMIXX_KNOW_ABOUT_ME.mp4",
@@ -732,7 +868,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-050",
+                                                        "id":  "L3-067",
                                                         "group":  "NMIXX",
                                                         "title":  "Love Me Like This",
                                                         "question":  "level3/q/NMIXX_Love_Me_Like_This.mp4",
@@ -740,7 +876,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-051",
+                                                        "id":  "L3-068",
                                                         "group":  "NMIXX",
                                                         "title":  "See that",
                                                         "question":  "level3/q/NMIXX_See_that.mp4",
@@ -748,7 +884,47 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-052",
+                                                        "id":  "L3-069",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Dumb Dumb",
+                                                        "question":  "level3/q/Red_Velvet_Dumb_Dumb.mp4",
+                                                        "answer":  "level3/a/Red_Velvet_Dumb_Dumb.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-070",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Feel My Rhythm",
+                                                        "question":  "level3/q/Red_Velvet_Feel_My_Rhythm.mp4",
+                                                        "answer":  "level3/a/Red_Velvet_Feel_My_Rhythm.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-071",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "PEEK-A-BOO",
+                                                        "question":  "level3/q/Red_Velvet_PEEK-A-BOO.mp4",
+                                                        "answer":  "level3/a/Red_Velvet_PEEK-A-BOO.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-072",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Psycho",
+                                                        "question":  "level3/q/Red_Velvet_Psycho.mp4",
+                                                        "answer":  "level3/a/Red_Velvet_Psycho.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-073",
+                                                        "group":  "Red Velvet",
+                                                        "title":  "Red Flavor",
+                                                        "question":  "level3/q/Red_Velvet_Red_Flavor.mp4",
+                                                        "answer":  "level3/a/Red_Velvet_Red_Flavor.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-074",
                                                         "group":  "RESCENE",
                                                         "title":  "LOVE ATTACK",
                                                         "question":  "level3/q/RESCENE_LOVE_ATTACK.mp4",
@@ -756,7 +932,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-053",
+                                                        "id":  "L3-075",
                                                         "group":  "tripleS",
                                                         "title":  "Fly Up",
                                                         "question":  "level3/q/tripleS_Fly_Up.mp4",
@@ -764,7 +940,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-054",
+                                                        "id":  "L3-076",
                                                         "group":  "tripleS",
                                                         "title":  "Generation",
                                                         "question":  "level3/q/tripleS_Generation.mp4",
@@ -772,7 +948,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-055",
+                                                        "id":  "L3-077",
                                                         "group":  "tripleS",
                                                         "title":  "Just Do It",
                                                         "question":  "level3/q/tripleS_Just_Do_It.mp4",
@@ -780,7 +956,7 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-056",
+                                                        "id":  "L3-078",
                                                         "group":  "tripleS",
                                                         "title":  "LOVElution",
                                                         "question":  "level3/q/tripleS_LOVElution.mp4",
@@ -788,11 +964,51 @@ window.QUIZ_DATA =
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-057",
+                                                        "id":  "L3-079",
                                                         "group":  "tripleS",
                                                         "title":  "Rising",
                                                         "question":  "level3/q/tripleS_Rising.mp4",
                                                         "answer":  "level3/a/tripleS_Rising.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-080",
+                                                        "group":  "TWICE",
+                                                        "title":  "MOONLIGHT SUNRISE",
+                                                        "question":  "level3/q/TWICE_MOONLIGHT_SUNRISE.mp4",
+                                                        "answer":  "level3/a/TWICE_MOONLIGHT_SUNRISE.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-081",
+                                                        "group":  "TWICE",
+                                                        "title":  "ONE SPARK",
+                                                        "question":  "level3/q/TWICE_ONE_SPARK.mp4",
+                                                        "answer":  "level3/a/TWICE_ONE_SPARK.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-082",
+                                                        "group":  "TWICE",
+                                                        "title":  "SET ME FREE",
+                                                        "question":  "level3/q/TWICE_SET_ME_FREE.mp4",
+                                                        "answer":  "level3/a/TWICE_SET_ME_FREE.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-083",
+                                                        "group":  "TWICE",
+                                                        "title":  "Strategy",
+                                                        "question":  "level3/q/TWICE_Strategy.mp4",
+                                                        "answer":  "level3/a/TWICE_Strategy.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-084",
+                                                        "group":  "TWICE",
+                                                        "title":  "THIS IS FOR",
+                                                        "question":  "level3/q/TWICE_THIS_IS_FOR.mp4",
+                                                        "answer":  "level3/a/TWICE_THIS_IS_FOR.mp4",
                                                         "autoMask":  false
                                                     }
                                                 ]

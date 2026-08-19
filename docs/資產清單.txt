@@ -1,15 +1,15 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-19 19:18:14
+2026-08-20 07:15:37
 assetBase = assets
 
 本地檔案（
-561
+615
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/aespa.jpg
   assets/cover/BABYMONSTER.jpg
-  assets/cover/Fromis9.jpg
+  assets/cover/fromis9.jpg
   assets/cover/Hearts2hearts.jpg
   assets/cover/i-dle.jpg
   assets/cover/ITZY.jpg
@@ -42,7 +42,7 @@ assetBase = assets
   assets/level1/WJSN_Yeo_reum.jpg
   assets/level2/a/aespa_Spicy.mp4
   assets/level2/a/BABYMONSTER_WE_GO_UP.mp4
-  assets/level2/a/Formis9_DM.mp4
+  assets/level2/a/fromis9_DM.mp4
   assets/level2/a/GFRIEND_MAGO.mp4
   assets/level2/a/Hearts2hearts_FOUCUS.mp4
   assets/level2/a/i-dle_Fate.mp4
@@ -63,7 +63,7 @@ assetBase = assets
   assets/level2/a/TWICE_Heart_Shaker.mp4
   assets/level2/q/aespa_Spicy.mp3
   assets/level2/q/BABYMONSTER_WE_GO_UP.mp3
-  assets/level2/q/Formis9_DM.mp3
+  assets/level2/q/fromis9_DM.mp3
   assets/level2/q/GFRIEND_MAGO.mp3
   assets/level2/q/Hearts2hearts_FOUCUS.mp3
   assets/level2/q/i-dle_Fate.mp3
@@ -87,11 +87,27 @@ assetBase = assets
   assets/level3/a/aespa_LEMONADE.mp4
   assets/level3/a/aespa_Spicy.mp4
   assets/level3/a/aespa_Whiplash.mp4
+  assets/level3/a/Apink_LUV.mp4
+  assets/level3/a/Apink_Mr._Chu.mp4
+  assets/level3/a/Apink_NoNoNo.mp4
+  assets/level3/a/Apink_Only_One.mp4
+  assets/level3/a/Apink_Remember.mp4
   assets/level3/a/BABYMONSTER_CHOOM.mp4
   assets/level3/a/BABYMONSTER_DRIP.mp4
   assets/level3/a/BABYMONSTER_HOT_SAUCE.mp4
   assets/level3/a/BABYMONSTER_PSYCHO.mp4
   assets/level3/a/BABYMONSTER_WE_GO_UP.mp4
+  assets/level3/a/BLACKPINK_Ddu-Du_Ddu-Du.mp4
+  assets/level3/a/BLACKPINK_How_You_Like_That.mp4
+  assets/level3/a/BLACKPINK_Lovesick_Girls.mp4
+  assets/level3/a/BLACKPINK_Pink_Venom.mp4
+  assets/level3/a/BLACKPINK_Shut_Down.mp4
+  assets/level3/a/fromis9_Vitamin_ME.mp4
+  assets/level3/a/Girls_Generation_Hoot.mp4
+  assets/level3/a/Girls_Generation_I_got_a_boy.mp4
+  assets/level3/a/Girls_Generation_Mr._Taxi.mp4
+  assets/level3/a/Girls_Generation_Oh.mp4
+  assets/level3/a/Girls_Generation_The_boys.mp4
   assets/level3/a/Hearts2Hearts_FOCUS.mp4
   assets/level3/a/Hearts2Hearts_Lemon_Tang.mp4
   assets/level3/a/Hearts2Hearts_RUDE.mp4
@@ -118,6 +134,7 @@ assetBase = assets
   assets/level3/a/IVE_I_AM.mp4
   assets/level3/a/IVE_LOVE_DIVE.mp4
   assets/level3/a/KiiiKiii_404_New_Era.mp4
+  assets/level3/a/KiiiKiii_I_DO_ME.mp4
   assets/level3/a/LE_SSERAFIM_BOOMPALA.mp4
   assets/level3/a/LE_SSERAFIM_CELEBRATION.mp4
   assets/level3/a/LE_SSERAFIM_Come_Over.mp4
@@ -133,22 +150,48 @@ assetBase = assets
   assets/level3/a/NMIXX_KNOW_ABOUT_ME.mp4
   assets/level3/a/NMIXX_Love_Me_Like_This.mp4
   assets/level3/a/NMIXX_See_that.mp4
+  assets/level3/a/Red_Velvet_Dumb_Dumb.mp4
+  assets/level3/a/Red_Velvet_Feel_My_Rhythm.mp4
+  assets/level3/a/Red_Velvet_PEEK-A-BOO.mp4
+  assets/level3/a/Red_Velvet_Psycho.mp4
+  assets/level3/a/Red_Velvet_Red_Flavor.mp4
   assets/level3/a/RESCENE_LOVE_ATTACK.mp4
   assets/level3/a/tripleS_Fly_Up.mp4
   assets/level3/a/tripleS_Generation.mp4
   assets/level3/a/tripleS_Just_Do_It.mp4
   assets/level3/a/tripleS_LOVElution.mp4
   assets/level3/a/tripleS_Rising.mp4
+  assets/level3/a/TWICE_MOONLIGHT_SUNRISE.mp4
+  assets/level3/a/TWICE_ONE_SPARK.mp4
+  assets/level3/a/TWICE_SET_ME_FREE.mp4
+  assets/level3/a/TWICE_Strategy.mp4
+  assets/level3/a/TWICE_THIS_IS_FOR.mp4
   assets/level3/q/aespa_Dirty_Work.mp4
   assets/level3/q/aespa_DRAMA.mp4
   assets/level3/q/aespa_LEMONADE.mp4
   assets/level3/q/aespa_Spicy.mp4
   assets/level3/q/aespa_Whiplash.mp4
+  assets/level3/q/Apink_LUV.mp4
+  assets/level3/q/Apink_Mr._Chu.mp4
+  assets/level3/q/Apink_NoNoNo.mp4
+  assets/level3/q/Apink_Only_One.mp4
+  assets/level3/q/Apink_Remember.mp4
   assets/level3/q/BABYMONSTER_CHOOM.mp4
   assets/level3/q/BABYMONSTER_DRIP.mp4
   assets/level3/q/BABYMONSTER_HOT_SAUCE.mp4
   assets/level3/q/BABYMONSTER_PSYCHO.mp4
   assets/level3/q/BABYMONSTER_WE_GO_UP.mp4
+  assets/level3/q/BLACKPINK_Ddu-Du_Ddu-Du.mp4
+  assets/level3/q/BLACKPINK_How_You_Like_That.mp4
+  assets/level3/q/BLACKPINK_Lovesick_Girls.mp4
+  assets/level3/q/BLACKPINK_Pink_Venom.mp4
+  assets/level3/q/BLACKPINK_Shut_Down.mp4
+  assets/level3/q/fromis9_Vitamin_ME.mp4
+  assets/level3/q/Girls_Generation_Hoot.mp4
+  assets/level3/q/Girls_Generation_I_got_a_boy.mp4
+  assets/level3/q/Girls_Generation_Mr._Taxi.mp4
+  assets/level3/q/Girls_Generation_Oh.mp4
+  assets/level3/q/Girls_Generation_The_boys.mp4
   assets/level3/q/Hearts2Hearts_FOCUS.mp4
   assets/level3/q/Hearts2Hearts_Lemon_Tang.mp4
   assets/level3/q/Hearts2Hearts_RUDE.mp4
@@ -175,6 +218,7 @@ assetBase = assets
   assets/level3/q/IVE_I_AM.mp4
   assets/level3/q/IVE_LOVE_DIVE.mp4
   assets/level3/q/KiiiKiii_404_New_Era.mp4
+  assets/level3/q/KiiiKiii_I_DO_ME.mp4
   assets/level3/q/LE_SSERAFIM_BOOMPALA.mp4
   assets/level3/q/LE_SSERAFIM_CELEBRATION.mp4
   assets/level3/q/LE_SSERAFIM_Come_Over.mp4
@@ -190,12 +234,22 @@ assetBase = assets
   assets/level3/q/NMIXX_KNOW_ABOUT_ME.mp4
   assets/level3/q/NMIXX_Love_Me_Like_This.mp4
   assets/level3/q/NMIXX_See_that.mp4
+  assets/level3/q/Red_Velvet_Dumb_Dumb.mp4
+  assets/level3/q/Red_Velvet_Feel_My_Rhythm.mp4
+  assets/level3/q/Red_Velvet_PEEK-A-BOO.mp4
+  assets/level3/q/Red_Velvet_Psycho.mp4
+  assets/level3/q/Red_Velvet_Red_Flavor.mp4
   assets/level3/q/RESCENE_LOVE_ATTACK.mp4
   assets/level3/q/tripleS_Fly_Up.mp4
   assets/level3/q/tripleS_Generation.mp4
   assets/level3/q/tripleS_Just_Do_It.mp4
   assets/level3/q/tripleS_LOVElution.mp4
   assets/level3/q/tripleS_Rising.mp4
+  assets/level3/q/TWICE_MOONLIGHT_SUNRISE.mp4
+  assets/level3/q/TWICE_ONE_SPARK.mp4
+  assets/level3/q/TWICE_SET_ME_FREE.mp4
+  assets/level3/q/TWICE_Strategy.mp4
+  assets/level3/q/TWICE_THIS_IS_FOR.mp4
   assets/level4/a/eye/aespa_Giselle.jpg
   assets/level4/a/eye/aespa_Karina.jpg
   assets/level4/a/eye/aespa_Ningning.jpg
