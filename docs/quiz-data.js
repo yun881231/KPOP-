@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-19 18:17:34 */
+   產生時間：2026-08-19 19:02:53 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-19T18:14:10",
+    "generatedAt":  "2026-08-19T18:59:25",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -13,18 +13,18 @@ window.QUIZ_DATA =
                   "backgroundIsVideo":  false,
                   "hero":  null,
                   "photos":  [
-                                 "cover/AESPA.jpg",
-                                 "cover/babymonster.jpg",
+                                 "cover/aespa.jpg",
+                                 "cover/BABYMONSTER.jpg",
                                  "cover/Fromis9.jpg",
-                                 "cover/H2H.jpg",
-                                 "cover/I-DLE.jpg",
+                                 "cover/Hearts2hearts.jpg",
+                                 "cover/i-dle.jpg",
                                  "cover/ITZY.jpg",
                                  "cover/IVE.jpg",
-                                 "cover/lesserafim.jpg",
-                                 "cover/newjeans.jpg",
+                                 "cover/LE_SSERAFIM.jpg",
+                                 "cover/NewJeans.jpg",
                                  "cover/NMIXX.jpg",
-                                 "cover/qwer.jpg",
-                                 "cover/triples.jpg"
+                                 "cover/QWER.jpg",
+                                 "cover/tripleS.jpg"
                              ],
                   "usingFallback":  false
               },
@@ -138,8 +138,8 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L1-018",
                                                         "group":  "tripleS",
-                                                        "name":  "Kotone",
-                                                        "image":  "level1/tripleS_Kotone.png"
+                                                        "name":  "S11 Kotone",
+                                                        "image":  "level1/tripleS_S11_Kotone.png"
                                                     },
                                                     {
                                                         "id":  "L1-019",
@@ -558,25 +558,25 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L3-028",
                                                         "group":  "ITZY",
+                                                        "title":  "Mafia In the morning",
+                                                        "question":  "level3/q/ITZY_Mafia_In_the_morning.mp4",
+                                                        "answer":  "level3/a/ITZY_Mafia_In_the_morning.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-029",
+                                                        "group":  "ITZY",
                                                         "title":  "SNEAKERS",
                                                         "question":  "level3/q/ITZY_SNEAKERS.mp4",
                                                         "answer":  "level3/a/ITZY_SNEAKERS.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-029",
+                                                        "id":  "L3-030",
                                                         "group":  "ITZY",
                                                         "title":  "THAT’S A NO NO",
                                                         "question":  "level3/q/ITZY_THAT_S_A_NO_NO.mp4",
                                                         "answer":  "level3/a/ITZY_THAT_S_A_NO_NO.mp4",
-                                                        "autoMask":  false
-                                                    },
-                                                    {
-                                                        "id":  "L3-030",
-                                                        "group":  "ITZY",
-                                                        "title":  "마.피.아. In the morning",
-                                                        "question":  "level3/q/ITZY_._._._In_the_morning.mp4",
-                                                        "answer":  "level3/a/ITZY_._._._In_the_morning.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
@@ -803,7 +803,7 @@ window.QUIZ_DATA =
                                   "groups":  [
                                                  {
                                                      "name":  "aespa",
-                                                     "lightstick":  "level4/q/light/AESPA.png",
+                                                     "lightstick":  "level4/q/light/aespa.png",
                                                      "eyes":  [
                                                                   "Giselle",
                                                                   "Karina",
@@ -1104,7 +1104,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-001",
                                                         "group":  "aespa",
-                                                        "lightstick":  "level4/q/light/AESPA.png",
+                                                        "lightstick":  "level4/q/light/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Giselle",
@@ -1121,7 +1121,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-002",
                                                         "group":  "aespa",
-                                                        "lightstick":  "level4/q/light/AESPA.png",
+                                                        "lightstick":  "level4/q/light/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Karina",
@@ -1138,7 +1138,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-003",
                                                         "group":  "aespa",
-                                                        "lightstick":  "level4/q/light/AESPA.png",
+                                                        "lightstick":  "level4/q/light/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Ningning",
@@ -1155,7 +1155,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-004",
                                                         "group":  "aespa",
-                                                        "lightstick":  "level4/q/light/AESPA.png",
+                                                        "lightstick":  "level4/q/light/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Winter",

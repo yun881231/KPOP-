@@ -1,24 +1,24 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-19 18:17:48
+2026-08-19 19:03:08
 assetBase = assets
 
 本地檔案（
 561
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
-  assets/cover/AESPA.jpg
-  assets/cover/babymonster.jpg
+  assets/cover/aespa.jpg
+  assets/cover/BABYMONSTER.jpg
   assets/cover/Fromis9.jpg
-  assets/cover/H2H.jpg
-  assets/cover/I-DLE.jpg
+  assets/cover/Hearts2hearts.jpg
+  assets/cover/i-dle.jpg
   assets/cover/ITZY.jpg
   assets/cover/IVE.jpg
-  assets/cover/lesserafim.jpg
-  assets/cover/newjeans.jpg
+  assets/cover/LE_SSERAFIM.jpg
+  assets/cover/NewJeans.jpg
   assets/cover/NMIXX.jpg
-  assets/cover/qwer.jpg
-  assets/cover/triples.jpg
+  assets/cover/QWER.jpg
+  assets/cover/tripleS.jpg
   assets/level1/aespa_Karina.png
   assets/level1/aespa_Ningning.jpg
   assets/level1/aespa_Winter.jpg
@@ -36,7 +36,7 @@ assetBase = assets
   assets/level1/NewJeans_Haerin.jpg
   assets/level1/NMIXX_Bae.jpg
   assets/level1/NMIXX_Sullyoon.jpg
-  assets/level1/tripleS_Kotone.png
+  assets/level1/tripleS_S11_Kotone.png
   assets/level1/tripleS_S5_YooYeon.png
   assets/level1/TWICE_NAYEON.png
   assets/level1/WJSN_Yeo_reum.jpg
@@ -107,9 +107,9 @@ assetBase = assets
   assets/level3/a/ILLIT_It_s_Me.mp4
   assets/level3/a/ILLIT_jellyous.mp4
   assets/level3/a/ILLIT_Magnetic.mp4
-  assets/level3/a/ITZY_._._._In_the_morning.mp4
   assets/level3/a/ITZY_Imaginary_Friend.mp4
   assets/level3/a/ITZY_LOCO.mp4
+  assets/level3/a/ITZY_Mafia_In_the_morning.mp4
   assets/level3/a/ITZY_SNEAKERS.mp4
   assets/level3/a/ITZY_THAT_S_A_NO_NO.mp4
   assets/level3/a/IVE_After_LIKE.mp4
@@ -164,9 +164,9 @@ assetBase = assets
   assets/level3/q/ILLIT_It_s_Me.mp4
   assets/level3/q/ILLIT_jellyous.mp4
   assets/level3/q/ILLIT_Magnetic.mp4
-  assets/level3/q/ITZY_._._._In_the_morning.mp4
   assets/level3/q/ITZY_Imaginary_Friend.mp4
   assets/level3/q/ITZY_LOCO.mp4
+  assets/level3/q/ITZY_Mafia_In_the_morning.mp4
   assets/level3/q/ITZY_SNEAKERS.mp4
   assets/level3/q/ITZY_THAT_S_A_NO_NO.mp4
   assets/level3/q/IVE_After_LIKE.mp4
@@ -463,7 +463,7 @@ assetBase = assets
   assets/level4/q/eye/TWICE_NAYEON.jpg
   assets/level4/q/eye/TWICE_SANA.png
   assets/level4/q/eye/TWICE_TZUYU.jpg
-  assets/level4/q/light/AESPA.png
+  assets/level4/q/light/aespa.png
   assets/level4/q/light/BABYMONSTER.png
   assets/level4/q/light/BLACKPINK.png
   assets/level4/q/light/Hearts2Hearts.png

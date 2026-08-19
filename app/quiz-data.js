@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-19 18:14:10
+   產生時間：2026-08-19 18:59:25
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-19T18:14:10",
+    "generatedAt":  "2026-08-19T18:59:25",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -16,18 +16,18 @@ window.QUIZ_DATA =
                   "backgroundIsVideo":  false,
                   "hero":  null,
                   "photos":  [
-                                 "封面/AESPA.avif",
-                                 "封面/babymonster.webp",
+                                 "封面/aespa.avif",
+                                 "封面/BABYMONSTER.jpg",
                                  "封面/Fromis9.jpg",
-                                 "封面/H2H.jpg",
-                                 "封面/I-DLE.avif",
-                                 "封面/ITZY.webp",
+                                 "封面/Hearts2hearts.jpg",
+                                 "封面/i-dle.avif",
+                                 "封面/ITZY.jpg",
                                  "封面/IVE.avif",
-                                 "封面/lesserafim.webp",
-                                 "封面/newjeans.jpg",
+                                 "封面/LE SSERAFIM.jpg",
+                                 "封面/NewJeans.jpg",
                                  "封面/NMIXX.jpg",
-                                 "封面/qwer.jpg",
-                                 "封面/triples.jpg"
+                                 "封面/QWER.jpg",
+                                 "封面/tripleS.jpg"
                              ],
                   "usingFallback":  false
               },
@@ -141,8 +141,8 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L1-018",
                                                         "group":  "tripleS",
-                                                        "name":  "Kotone",
-                                                        "image":  "第一關_偶像快看快答/tripleS_Kotone.png"
+                                                        "name":  "S11 Kotone",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S11 Kotone.png"
                                                     },
                                                     {
                                                         "id":  "L1-019",
@@ -561,25 +561,25 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L3-028",
                                                         "group":  "ITZY",
+                                                        "title":  "Mafia In the morning",
+                                                        "question":  "第三關_看舞蹈猜歌/題目/ITZY_Mafia In the morning.mp4",
+                                                        "answer":  "第三關_看舞蹈猜歌/答案/ITZY_Mafia In the morning.mp4",
+                                                        "autoMask":  false
+                                                    },
+                                                    {
+                                                        "id":  "L3-029",
+                                                        "group":  "ITZY",
                                                         "title":  "SNEAKERS",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_SNEAKERS.mp4",
                                                         "answer":  "第三關_看舞蹈猜歌/答案/ITZY_SNEAKERS.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
-                                                        "id":  "L3-029",
+                                                        "id":  "L3-030",
                                                         "group":  "ITZY",
                                                         "title":  "THAT’S A NO NO",
                                                         "question":  "第三關_看舞蹈猜歌/題目/ITZY_THAT’S A NO NO.mp4",
                                                         "answer":  "第三關_看舞蹈猜歌/答案/ITZY_THAT’S A NO NO.mp4",
-                                                        "autoMask":  false
-                                                    },
-                                                    {
-                                                        "id":  "L3-030",
-                                                        "group":  "ITZY",
-                                                        "title":  "마.피.아. In the morning",
-                                                        "question":  "第三關_看舞蹈猜歌/題目/ITZY_마.피.아. In the morning.mp4",
-                                                        "answer":  "第三關_看舞蹈猜歌/答案/ITZY_마.피.아. In the morning.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
@@ -806,7 +806,7 @@ window.QUIZ_DATA =
                                   "groups":  [
                                                  {
                                                      "name":  "aespa",
-                                                     "lightstick":  "第四關_看五官猜偶像/題目/手燈/AESPA.png",
+                                                     "lightstick":  "第四關_看五官猜偶像/題目/手燈/aespa.png",
                                                      "eyes":  [
                                                                   "Giselle",
                                                                   "Karina",
@@ -1107,7 +1107,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-001",
                                                         "group":  "aespa",
-                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/AESPA.png",
+                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Giselle",
@@ -1124,7 +1124,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-002",
                                                         "group":  "aespa",
-                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/AESPA.png",
+                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Karina",
@@ -1141,7 +1141,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-003",
                                                         "group":  "aespa",
-                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/AESPA.png",
+                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Ningning",
@@ -1158,7 +1158,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L4-004",
                                                         "group":  "aespa",
-                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/AESPA.png",
+                                                        "lightstick":  "第四關_看五官猜偶像/題目/手燈/aespa.png",
                                                         "eyes":  {
                                                                      "group":  "aespa",
                                                                      "name":  "Winter",
