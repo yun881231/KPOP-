@@ -1786,7 +1786,6 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
   const [idx, setIdx] = useState(0);
   const [left, setLeft] = useState(config.timer);
   const [running, setRunning] = useState(config.timer > 0);
-  const autoRef = useRef(null);
   const q = deck[idx];
   const st = states[idx] || {};
   const revealed = !!st.revealed;
@@ -1796,7 +1795,6 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
     setLeft(config.timer);
     setRunning(config.timer > 0 && !revealed);
     bgm.resetDuck();
-    return () => { if (autoRef.current) clearTimeout(autoRef.current); };
   }, [idx]);
 
   useEffect(() => {
@@ -1807,7 +1805,6 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
   }, [left, running, revealed, config.timer]);
 
   const next = () => {
-    if (autoRef.current) clearTimeout(autoRef.current);
     if (idx + 1 >= deck.length) { SFX.finish(); onFinish(); } else setIdx(i => i + 1);
   };
   const prev = () => setIdx(i => Math.max(0, i - 1));
@@ -1816,9 +1813,8 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
   const revealNow = () => { patchState(idx, { revealed: true }); setRunning(false); SFX.reveal(); };
 
   const two = q.__two;
-  // 第一關看完照片就沒有東西要播了 → 單人答完自動進下一題
-  const autoAdvance = single && (q.__level === "level1" || q.__level === "level4");
-  const scheduleNext = () => { autoRef.current = setTimeout(() => next(), 2200); };
+  /* 答對之後一律「停在原地」等人按「下一題 →」，不做任何自動跳轉。
+     單人要看清楚答案、多人要留時間給主持人加分，兩邊都不該被搶走節奏。 */
 
   // ── 兩段式：第一步 選團體 ──────────────────────────────────
   const selectGroup = (g) => { if (revealed) return; SFX.click(); patchState(idx, { sel: g, hint: null }); };
@@ -1835,7 +1831,6 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
       SFX.correct();
       patchState(idx, { revealed: true, picked: label, ok: true, hint: null });
       setRunning(false);
-      if (autoAdvance) scheduleNext();
       return;
     }
     SFX.wrong();
@@ -1868,7 +1863,6 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
     if (ok) {
       patchState(idx, { revealed: true, ok: true, slots: info.slots, hint: null });
       setRunning(false);
-      if (autoAdvance) scheduleNext();
       return;
     }
     if (single) {
@@ -1970,7 +1964,9 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
               st.ok ? "bg-emerald-500/20 border-emerald-400/50 text-emerald-200"
                     : "bg-rose-600/20 border-rose-400/50 text-rose-200")}>
               {st.ok ? "🎉 完全正確！" : "😵 答錯了，正確答案已公布"}
-              {st.ok && autoAdvance && <span className="block text-xs font-medium opacity-80 mt-1">即將自動進入下一題…</span>}
+              <span className="block text-xs font-medium opacity-80 mt-1">
+                看完答案後按下面的「{idx + 1 >= deck.length ? "看結果 🏁" : "下一題 →"}」繼續
+              </span>
             </div>
           )}
           {!revealed && !single && (st.attempts || 0) > 0 && q.__level !== "level4" && (
@@ -1986,7 +1982,10 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
               ? <Btn size="lg" tone="ghost" onClick={revealNow}>
                   {single ? "放棄，看答案" : "主持人公布答案"}
                 </Btn>
-              : <Btn size="lg" tone="cyan" onClick={next}>{idx + 1 >= deck.length ? "看結果 🏁" : "下一題 →"}</Btn>}
+              : <Btn size="lg" tone={st.ok ? "good" : "cyan"} onClick={next}
+                     className={st.ok ? "flash-ring" : ""}>
+                  {idx + 1 >= deck.length ? "看結果 🏁" : "下一題 →"}
+                </Btn>}
             <Btn tone="ghost" size="sm" onClick={next} disabled={!single && !revealed}>跳過 →</Btn>
           </div>
         </div>
@@ -2135,7 +2134,7 @@ const DEFAULT_CFG = {
   multi: {
     levels: JSON.parse(JSON.stringify(BASE_LEVELS)),
     teams: ["隊伍 1", "隊伍 2"],
-    timer: 15,
+    timer: 0,             // 多人預設不計時（主持人自己控節奏）
     flashSec: 1.0,
     optionCount: 12,
     maskMode: "silhouette", maskLevel: 0.7,

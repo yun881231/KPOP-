@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-17 23:19:40
+2026-08-19 18:17:48
 assetBase = assets
 
 本地檔案（
-441
+561
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/AESPA.jpg
@@ -23,29 +23,29 @@ assetBase = assets
   assets/level1/aespa_Ningning.jpg
   assets/level1/aespa_Winter.jpg
   assets/level1/BABYMONSTER_ASA.png
-  assets/level1/BLACKPINK_JENNIE.jpg
+  assets/level1/BLACKPINK_Jennie.jpg
   assets/level1/Girls_Generation_TAEYEON.jpg
   assets/level1/Hearts2Hearts_IAN.png
   assets/level1/ILLIT_Wonhee.png
   assets/level1/ITZY_YUNA.jpg
   assets/level1/IVE_Gaeul.jpg
   assets/level1/IVE_Liz.jpg
-  assets/level1/IVE_WonYoung.png
-  assets/level1/LE_SSERAFIM_ChaeWon.jpg
+  assets/level1/IVE_Wonyoung.png
+  assets/level1/LE_SSERAFIM_Chaewon.jpg
   assets/level1/LE_SSERAFIM_Sakura.png
   assets/level1/NewJeans_Haerin.jpg
   assets/level1/NMIXX_Bae.jpg
   assets/level1/NMIXX_Sullyoon.jpg
   assets/level1/tripleS_Kotone.png
-  assets/level1/tripleS_YooYeon.png
-  assets/level1/TWICE_Nayeon.png
+  assets/level1/tripleS_S5_YooYeon.png
+  assets/level1/TWICE_NAYEON.png
   assets/level1/WJSN_Yeo_reum.jpg
-  assets/level2/a/AESPA_Spicy.mp4
+  assets/level2/a/aespa_Spicy.mp4
   assets/level2/a/BABYMONSTER_WE_GO_UP.mp4
   assets/level2/a/Formis9_DM.mp4
   assets/level2/a/GFRIEND_MAGO.mp4
   assets/level2/a/Hearts2hearts_FOUCUS.mp4
-  assets/level2/a/I-DLE_Fate.mp4
+  assets/level2/a/i-dle_Fate.mp4
   assets/level2/a/ILLIT_Cherish_My_Love.mp4
   assets/level2/a/ITZY_CAKE.mp4
   assets/level2/a/IVE_After_LIKE.mp4
@@ -59,14 +59,14 @@ assetBase = assets
   assets/level2/a/OH_MY_GIRL_Dun_Dun_Dance.mp4
   assets/level2/a/QWER_T.B.H.mp4
   assets/level2/a/Red_Velvet_Cosmic.mp4
-  assets/level2/a/TripleS_Girls_Never_Die.mp4
+  assets/level2/a/tripleS_Girls_Never_Die.mp4
   assets/level2/a/TWICE_Heart_Shaker.mp4
-  assets/level2/q/AESPA_Spicy.mp3
+  assets/level2/q/aespa_Spicy.mp3
   assets/level2/q/BABYMONSTER_WE_GO_UP.mp3
   assets/level2/q/Formis9_DM.mp3
   assets/level2/q/GFRIEND_MAGO.mp3
   assets/level2/q/Hearts2hearts_FOUCUS.mp3
-  assets/level2/q/I-DLE_Fate.mp3
+  assets/level2/q/i-dle_Fate.mp3
   assets/level2/q/ILLIT_Cherish_My_Love.mp3
   assets/level2/q/ITZY_CAKE.mp3
   assets/level2/q/IVE_After_LIKE.mp3
@@ -80,80 +80,120 @@ assetBase = assets
   assets/level2/q/OH_MY_GIRL_Dun_Dun_Dance.mp3
   assets/level2/q/QWER_T.B.H.mp3
   assets/level2/q/Red_Velvet_Cosmic.mp3
-  assets/level2/q/TripleS_Girls_Never_Die.mp3
+  assets/level2/q/tripleS_Girls_Never_Die.mp3
   assets/level2/q/TWICE_Heart_Shaker.mp3
   assets/level3/a/aespa_Dirty_Work.mp4
   assets/level3/a/aespa_DRAMA.mp4
   assets/level3/a/aespa_LEMONADE.mp4
+  assets/level3/a/aespa_Spicy.mp4
   assets/level3/a/aespa_Whiplash.mp4
   assets/level3/a/BABYMONSTER_CHOOM.mp4
   assets/level3/a/BABYMONSTER_DRIP.mp4
   assets/level3/a/BABYMONSTER_HOT_SAUCE.mp4
+  assets/level3/a/BABYMONSTER_PSYCHO.mp4
+  assets/level3/a/BABYMONSTER_WE_GO_UP.mp4
+  assets/level3/a/Hearts2Hearts_FOCUS.mp4
   assets/level3/a/Hearts2Hearts_Lemon_Tang.mp4
   assets/level3/a/Hearts2Hearts_RUDE.mp4
   assets/level3/a/Hearts2Hearts_Style.mp4
+  assets/level3/a/Hearts2Hearts_The_Chase.mp4
   assets/level3/a/i-dle_Gimme_Dat_Love.mp4
+  assets/level3/a/i-dle_Good_Thing.mp4
   assets/level3/a/i-dle_Mono.mp4
+  assets/level3/a/i-dle_Queencard.mp4
   assets/level3/a/i-dle_Tomboy.mp4
+  assets/level3/a/ILLIT_Cherish_My_Love.mp4
+  assets/level3/a/ILLIT_Do_the_Dance.mp4
   assets/level3/a/ILLIT_It_s_Me.mp4
   assets/level3/a/ILLIT_jellyous.mp4
   assets/level3/a/ILLIT_Magnetic.mp4
+  assets/level3/a/ITZY_._._._In_the_morning.mp4
   assets/level3/a/ITZY_Imaginary_Friend.mp4
+  assets/level3/a/ITZY_LOCO.mp4
+  assets/level3/a/ITZY_SNEAKERS.mp4
   assets/level3/a/ITZY_THAT_S_A_NO_NO.mp4
-  assets/level3/a/IVE_ATTIUDE.mp4
+  assets/level3/a/IVE_After_LIKE.mp4
+  assets/level3/a/IVE_ATTITUDE.mp4
   assets/level3/a/IVE_BANG_BANG.mp4
   assets/level3/a/IVE_I_AM.mp4
   assets/level3/a/IVE_LOVE_DIVE.mp4
   assets/level3/a/KiiiKiii_404_New_Era.mp4
   assets/level3/a/LE_SSERAFIM_BOOMPALA.mp4
   assets/level3/a/LE_SSERAFIM_CELEBRATION.mp4
+  assets/level3/a/LE_SSERAFIM_Come_Over.mp4
+  assets/level3/a/LE_SSERAFIM_HOT.mp4
   assets/level3/a/LE_SSERAFIM_SPAGHETTI.mp4
   assets/level3/a/NewJeans_Attention.mp4
   assets/level3/a/NewJeans_Ditto.mp4
   assets/level3/a/NewJeans_ETA.mp4
   assets/level3/a/NewJeans_How_Sweet.mp4
+  assets/level3/a/NewJeans_Hype_Boy.mp4
   assets/level3/a/NMIXX_Blue_Valentine.mp4
   assets/level3/a/NMIXX_Heavy_Serenade.mp4
   assets/level3/a/NMIXX_KNOW_ABOUT_ME.mp4
+  assets/level3/a/NMIXX_Love_Me_Like_This.mp4
+  assets/level3/a/NMIXX_See_that.mp4
   assets/level3/a/RESCENE_LOVE_ATTACK.mp4
   assets/level3/a/tripleS_Fly_Up.mp4
+  assets/level3/a/tripleS_Generation.mp4
+  assets/level3/a/tripleS_Just_Do_It.mp4
   assets/level3/a/tripleS_LOVElution.mp4
   assets/level3/a/tripleS_Rising.mp4
   assets/level3/q/aespa_Dirty_Work.mp4
   assets/level3/q/aespa_DRAMA.mp4
   assets/level3/q/aespa_LEMONADE.mp4
+  assets/level3/q/aespa_Spicy.mp4
   assets/level3/q/aespa_Whiplash.mp4
   assets/level3/q/BABYMONSTER_CHOOM.mp4
   assets/level3/q/BABYMONSTER_DRIP.mp4
   assets/level3/q/BABYMONSTER_HOT_SAUCE.mp4
+  assets/level3/q/BABYMONSTER_PSYCHO.mp4
+  assets/level3/q/BABYMONSTER_WE_GO_UP.mp4
+  assets/level3/q/Hearts2Hearts_FOCUS.mp4
   assets/level3/q/Hearts2Hearts_Lemon_Tang.mp4
   assets/level3/q/Hearts2Hearts_RUDE.mp4
   assets/level3/q/Hearts2Hearts_Style.mp4
+  assets/level3/q/Hearts2Hearts_The_Chase.mp4
   assets/level3/q/i-dle_Gimme_Dat_Love.mp4
+  assets/level3/q/i-dle_Good_Thing.mp4
   assets/level3/q/i-dle_Mono.mp4
+  assets/level3/q/i-dle_Queencard.mp4
   assets/level3/q/i-dle_Tomboy.mp4
+  assets/level3/q/ILLIT_Cherish_My_Love.mp4
+  assets/level3/q/ILLIT_Do_the_Dance.mp4
   assets/level3/q/ILLIT_It_s_Me.mp4
   assets/level3/q/ILLIT_jellyous.mp4
   assets/level3/q/ILLIT_Magnetic.mp4
+  assets/level3/q/ITZY_._._._In_the_morning.mp4
   assets/level3/q/ITZY_Imaginary_Friend.mp4
+  assets/level3/q/ITZY_LOCO.mp4
+  assets/level3/q/ITZY_SNEAKERS.mp4
   assets/level3/q/ITZY_THAT_S_A_NO_NO.mp4
-  assets/level3/q/IVE_ATTIUDE.mp4
+  assets/level3/q/IVE_After_LIKE.mp4
+  assets/level3/q/IVE_ATTITUDE.mp4
   assets/level3/q/IVE_BANG_BANG.mp4
   assets/level3/q/IVE_I_AM.mp4
   assets/level3/q/IVE_LOVE_DIVE.mp4
   assets/level3/q/KiiiKiii_404_New_Era.mp4
   assets/level3/q/LE_SSERAFIM_BOOMPALA.mp4
   assets/level3/q/LE_SSERAFIM_CELEBRATION.mp4
+  assets/level3/q/LE_SSERAFIM_Come_Over.mp4
+  assets/level3/q/LE_SSERAFIM_HOT.mp4
   assets/level3/q/LE_SSERAFIM_SPAGHETTI.mp4
   assets/level3/q/NewJeans_Attention.mp4
   assets/level3/q/NewJeans_Ditto.mp4
   assets/level3/q/NewJeans_ETA.mp4
   assets/level3/q/NewJeans_How_Sweet.mp4
+  assets/level3/q/NewJeans_Hype_Boy.mp4
   assets/level3/q/NMIXX_Blue_Valentine.mp4
   assets/level3/q/NMIXX_Heavy_Serenade.mp4
   assets/level3/q/NMIXX_KNOW_ABOUT_ME.mp4
+  assets/level3/q/NMIXX_Love_Me_Like_This.mp4
+  assets/level3/q/NMIXX_See_that.mp4
   assets/level3/q/RESCENE_LOVE_ATTACK.mp4
   assets/level3/q/tripleS_Fly_Up.mp4
+  assets/level3/q/tripleS_Generation.mp4
+  assets/level3/q/tripleS_Just_Do_It.mp4
   assets/level3/q/tripleS_LOVElution.mp4
   assets/level3/q/tripleS_Rising.mp4
   assets/level4/a/eye/aespa_Giselle.jpg
@@ -167,8 +207,18 @@ assetBase = assets
   assets/level4/a/eye/BABYMONSTER_Rami.png
   assets/level4/a/eye/BABYMONSTER_Rora.jpg
   assets/level4/a/eye/BABYMONSTER_Ruka.jpg
+  assets/level4/a/eye/BLACKPINK_Jennie.jpg
   assets/level4/a/eye/BLACKPINK_Jisoo.png
+  assets/level4/a/eye/BLACKPINK_Lisa.jpg
+  assets/level4/a/eye/BLACKPINK_Rose.jpg
+  assets/level4/a/eye/Hearts2Hearts_A-NA.jpg
+  assets/level4/a/eye/Hearts2Hearts_CARMEN.jpg
   assets/level4/a/eye/Hearts2Hearts_IAN.png
+  assets/level4/a/eye/Hearts2Hearts_JIWOO.jpg
+  assets/level4/a/eye/Hearts2Hearts_JUUN.jpg
+  assets/level4/a/eye/Hearts2Hearts_STELLA.jpg
+  assets/level4/a/eye/Hearts2Hearts_YE-ON.jpg
+  assets/level4/a/eye/Hearts2Hearts_YUHA.jpg
   assets/level4/a/eye/i-dle_Minnie.jpg
   assets/level4/a/eye/i-dle_Miyeon.jpg
   assets/level4/a/eye/i-dle_Shuhua.jpg
@@ -179,7 +229,10 @@ assetBase = assets
   assets/level4/a/eye/ILLIT_Moka.jpg
   assets/level4/a/eye/ILLIT_Wonhee.png
   assets/level4/a/eye/ILLIT_Yunah.jpg
+  assets/level4/a/eye/ITZY_Chaeryeong.jpg
+  assets/level4/a/eye/ITZY_Lia.jpg
   assets/level4/a/eye/ITZY_Ryujin.jpg
+  assets/level4/a/eye/ITZY_Yeji.jpg
   assets/level4/a/eye/ITZY_YUNA.jpg
   assets/level4/a/eye/IVE_Gaeul.png
   assets/level4/a/eye/IVE_Leeseo.jpg
@@ -192,6 +245,10 @@ assetBase = assets
   assets/level4/a/eye/LE_SSERAFIM_Kazuha.jpg
   assets/level4/a/eye/LE_SSERAFIM_Sakura.jpg
   assets/level4/a/eye/LE_SSERAFIM_Yunjin.jpg
+  assets/level4/a/eye/NewJeans_Danielle.jpg
+  assets/level4/a/eye/NewJeans_Haerin.jpg
+  assets/level4/a/eye/NewJeans_Hanni.jpg
+  assets/level4/a/eye/NewJeans_Hyein.jpg
   assets/level4/a/eye/NewJeans_Minji.png
   assets/level4/a/eye/NMIXX_Bae.jpg
   assets/level4/a/eye/NMIXX_Haewon.jpg
@@ -200,6 +257,9 @@ assetBase = assets
   assets/level4/a/eye/NMIXX_Lily.jpg
   assets/level4/a/eye/NMIXX_Sullyoon.jpg
   assets/level4/a/eye/QWER_Chodan.png
+  assets/level4/a/eye/QWER_Hina.jpg
+  assets/level4/a/eye/QWER_Magenta.jpg
+  assets/level4/a/eye/QWER_Siyeon.jpg
   assets/level4/a/eye/Red_Velvet_Irene.jpg
   assets/level4/a/eye/tripleS_S1_SeoYeon.jpg
   assets/level4/a/eye/tripleS_S13_Nien.jpg
@@ -236,8 +296,18 @@ assetBase = assets
   assets/level4/a/mouth/BABYMONSTER_Rami.jpg
   assets/level4/a/mouth/BABYMONSTER_Rora.jpg
   assets/level4/a/mouth/BABYMONSTER_Ruka.jpg
+  assets/level4/a/mouth/BLACKPINK_Jennie.jpg
+  assets/level4/a/mouth/BLACKPINK_Jisoo.jpg
   assets/level4/a/mouth/BLACKPINK_Lisa.jpg
+  assets/level4/a/mouth/BLACKPINK_Rose.jpg
+  assets/level4/a/mouth/Hearts2Hearts_A-NA.jpg
+  assets/level4/a/mouth/Hearts2Hearts_CARMEN.jpg
+  assets/level4/a/mouth/Hearts2Hearts_IAN.jpg
   assets/level4/a/mouth/Hearts2Hearts_JIWOO.png
+  assets/level4/a/mouth/Hearts2Hearts_JUUN.jpg
+  assets/level4/a/mouth/Hearts2Hearts_STELLA.jpg
+  assets/level4/a/mouth/Hearts2Hearts_YE-ON.jpg
+  assets/level4/a/mouth/Hearts2Hearts_YUHA.jpg
   assets/level4/a/mouth/i-dle_Minnie.jpg
   assets/level4/a/mouth/i-dle_Miyeon.jpg
   assets/level4/a/mouth/i-dle_Shuhua.jpg
@@ -250,6 +320,9 @@ assetBase = assets
   assets/level4/a/mouth/ILLIT_Yunah.jpg
   assets/level4/a/mouth/ITZY_Chaeryeong.jpg
   assets/level4/a/mouth/ITZY_Lia.jpg
+  assets/level4/a/mouth/ITZY_Ryujin.jpg
+  assets/level4/a/mouth/ITZY_Yeji.jpg
+  assets/level4/a/mouth/ITZY_Yuna.jpg
   assets/level4/a/mouth/IVE_Gaeul.jpg
   assets/level4/a/mouth/IVE_Leeseo.jpg
   assets/level4/a/mouth/IVE_Liz.png
@@ -261,14 +334,21 @@ assetBase = assets
   assets/level4/a/mouth/LE_SSERAFIM_Kazuha.jpg
   assets/level4/a/mouth/LE_SSERAFIM_Sakura.png
   assets/level4/a/mouth/LE_SSERAFIM_Yunjin.jpg
+  assets/level4/a/mouth/NewJeans_Danielle.jpg
+  assets/level4/a/mouth/NewJeans_Haerin.jpg
+  assets/level4/a/mouth/NewJeans_Hanni.jpg
   assets/level4/a/mouth/NewJeans_Hyein.jpg
+  assets/level4/a/mouth/NewJeans_Minji.jpg
   assets/level4/a/mouth/NMIXX_Bae.jpg
   assets/level4/a/mouth/NMIXX_Haewon.jpg
   assets/level4/a/mouth/NMIXX_Jiwoo.jpg
   assets/level4/a/mouth/NMIXX_Kyujin.jpg
   assets/level4/a/mouth/NMIXX_Lily.png
   assets/level4/a/mouth/NMIXX_Sullyoon.jpg
+  assets/level4/a/mouth/QWER_Condan.jpg
   assets/level4/a/mouth/QWER_Hina.jpg
+  assets/level4/a/mouth/QWER_Magenta.jpg
+  assets/level4/a/mouth/QWER_Siyeon.jpg
   assets/level4/a/mouth/Red_Velvet_Wendy.png
   assets/level4/a/mouth/tripleS_S1_SeoYeon.jpg
   assets/level4/a/mouth/tripleS_S13_Nien.jpg
@@ -305,8 +385,18 @@ assetBase = assets
   assets/level4/q/eye/BABYMONSTER_Rami.png
   assets/level4/q/eye/BABYMONSTER_Rora.jpg
   assets/level4/q/eye/BABYMONSTER_Ruka.jpg
+  assets/level4/q/eye/BLACKPINK_Jennie.jpg
   assets/level4/q/eye/BLACKPINK_Jisoo.png
+  assets/level4/q/eye/BLACKPINK_Lisa.jpg
+  assets/level4/q/eye/BLACKPINK_Rose.jpg
+  assets/level4/q/eye/Hearts2Hearts_A-NA.jpg
+  assets/level4/q/eye/Hearts2Hearts_CARMEN.jpg
   assets/level4/q/eye/Hearts2Hearts_IAN.png
+  assets/level4/q/eye/Hearts2Hearts_JIWOO.jpg
+  assets/level4/q/eye/Hearts2Hearts_JUUN.jpg
+  assets/level4/q/eye/Hearts2Hearts_STELLA.jpg
+  assets/level4/q/eye/Hearts2Hearts_YE-ON.jpg
+  assets/level4/q/eye/Hearts2Hearts_YUHA.jpg
   assets/level4/q/eye/i-dle_Minnie.jpg
   assets/level4/q/eye/i-dle_Miyeon.jpg
   assets/level4/q/eye/i-dle_Shuhua.jpg
@@ -317,7 +407,10 @@ assetBase = assets
   assets/level4/q/eye/ILLIT_Moka.jpg
   assets/level4/q/eye/ILLIT_Wonhee.png
   assets/level4/q/eye/ILLIT_Yunah.jpg
+  assets/level4/q/eye/ITZY_Chaeryeong.jpg
+  assets/level4/q/eye/ITZY_Lia.jpg
   assets/level4/q/eye/ITZY_Ryujin.jpg
+  assets/level4/q/eye/ITZY_Yeji.jpg
   assets/level4/q/eye/ITZY_YUNA.jpg
   assets/level4/q/eye/IVE_Gaeul.png
   assets/level4/q/eye/IVE_Leeseo.jpg
@@ -330,6 +423,10 @@ assetBase = assets
   assets/level4/q/eye/LE_SSERAFIM_Kazuha.jpg
   assets/level4/q/eye/LE_SSERAFIM_Sakura.jpg
   assets/level4/q/eye/LE_SSERAFIM_Yunjin.jpg
+  assets/level4/q/eye/NewJeans_Danielle.jpg
+  assets/level4/q/eye/NewJeans_Haerin.jpg
+  assets/level4/q/eye/NewJeans_Hanni.jpg
+  assets/level4/q/eye/NewJeans_Hyein.jpg
   assets/level4/q/eye/NewJeans_Minji.png
   assets/level4/q/eye/NMIXX_Bae.jpg
   assets/level4/q/eye/NMIXX_Haewon.jpg
@@ -338,6 +435,9 @@ assetBase = assets
   assets/level4/q/eye/NMIXX_Lily.jpg
   assets/level4/q/eye/NMIXX_Sullyoon.jpg
   assets/level4/q/eye/QWER_Chodan.png
+  assets/level4/q/eye/QWER_Hina.jpg
+  assets/level4/q/eye/QWER_Magenta.jpg
+  assets/level4/q/eye/QWER_Siyeon.jpg
   assets/level4/q/eye/Red_Velvet_Irene.png
   assets/level4/q/eye/tripleS_S1_SeoYeon.jpg
   assets/level4/q/eye/tripleS_S13_Nien.jpg
@@ -389,8 +489,18 @@ assetBase = assets
   assets/level4/q/mouth/BABYMONSTER_Rami.jpg
   assets/level4/q/mouth/BABYMONSTER_Rora.jpg
   assets/level4/q/mouth/BABYMONSTER_Ruka.jpg
+  assets/level4/q/mouth/BLACKPINK_Jennie.jpg
+  assets/level4/q/mouth/BLACKPINK_Jisoo.jpg
   assets/level4/q/mouth/BLACKPINK_Lisa.png
+  assets/level4/q/mouth/BLACKPINK_Rose.jpg
+  assets/level4/q/mouth/Hearts2Hearts_A-NA.jpg
+  assets/level4/q/mouth/Hearts2Hearts_CARMEN.jpg
+  assets/level4/q/mouth/Hearts2Hearts_IAN.jpg
   assets/level4/q/mouth/Hearts2Hearts_JIWOO.png
+  assets/level4/q/mouth/Hearts2Hearts_JUUN.jpg
+  assets/level4/q/mouth/Hearts2Hearts_STELLA.jpg
+  assets/level4/q/mouth/Hearts2Hearts_YE-ON.jpg
+  assets/level4/q/mouth/Hearts2Hearts_YUHA.jpg
   assets/level4/q/mouth/i-dle_Minnie.jpg
   assets/level4/q/mouth/i-dle_Miyeon.jpg
   assets/level4/q/mouth/i-dle_Shuhua.jpg
@@ -403,6 +513,9 @@ assetBase = assets
   assets/level4/q/mouth/ILLIT_Yunah.jpg
   assets/level4/q/mouth/ITZY_Chaeryeong.jpg
   assets/level4/q/mouth/ITZY_Lia.jpg
+  assets/level4/q/mouth/ITZY_Ryujin.jpg
+  assets/level4/q/mouth/ITZY_Yeji.jpg
+  assets/level4/q/mouth/ITZY_Yuna.jpg
   assets/level4/q/mouth/IVE_Gaeul.jpg
   assets/level4/q/mouth/IVE_Leeseo.jpg
   assets/level4/q/mouth/IVE_Liz.png
@@ -414,14 +527,21 @@ assetBase = assets
   assets/level4/q/mouth/LE_SSERAFIM_Kazuha.jpg
   assets/level4/q/mouth/LE_SSERAFIM_Sakura.png
   assets/level4/q/mouth/LE_SSERAFIM_Yunjin.jpg
-  assets/level4/q/mouth/NewJeans_Hyein.png
+  assets/level4/q/mouth/NewJeans_Danielle.jpg
+  assets/level4/q/mouth/NewJeans_Haerin.png
+  assets/level4/q/mouth/NewJeans_Hanni.jpg
+  assets/level4/q/mouth/NewJeans_Hyein.jpg
+  assets/level4/q/mouth/NewJeans_Minji.jpg
   assets/level4/q/mouth/NMIXX_Bae.jpg
   assets/level4/q/mouth/NMIXX_Haewon.jpg
   assets/level4/q/mouth/NMIXX_Jiwoo.jpg
   assets/level4/q/mouth/NMIXX_Kyujin.jpg
   assets/level4/q/mouth/NMIXX_Lily.png
   assets/level4/q/mouth/NMIXX_Sullyoon.jpg
+  assets/level4/q/mouth/QWER_Condan.jpg
   assets/level4/q/mouth/QWER_Hina.png
+  assets/level4/q/mouth/QWER_Magenta.jpg
+  assets/level4/q/mouth/QWER_Siyeon.jpg
   assets/level4/q/mouth/Red_Velvet_Wendy.png
   assets/level4/q/mouth/tripleS_S1_SeoYeon.jpg
   assets/level4/q/mouth/tripleS_S13_Nien.jpg
