@@ -108,14 +108,32 @@ if ($Mode -eq "force") {
   Write-Host ""
   Write-Host "用本機版本覆蓋 GitHub…" -ForegroundColor Cyan
   G fetch origin | Out-Null
-  $p = GS push --force-with-lease origin "HEAD:refs/heads/main"
-  if ($p.Code -eq 0) {
+
+  # --force-with-lease 比較安全，但它需要本機有 refs/remotes/origin/main 當「租約」，
+  # 有些設定（例如 clone 時沒有抓 refspec）根本沒有這支 ref，這時它會直接拒絕。
+  # 使用者已經明確說要用本機蓋掉遠端，所以第一次失敗就退回單純的 --force。
+  $ok = $false
+  $hasRef = ((G rev-parse --verify --quiet "refs/remotes/origin/main").Code -eq 0)
+  if ($hasRef) {
+    $ok = ((GS push --force-with-lease origin "HEAD:refs/heads/main").Code -eq 0)
+    if (-not $ok) {
+      Write-Host ""
+      Write-Host "  安全模式被擋下來了，改用強制覆蓋…" -ForegroundColor Yellow
+    }
+  } else {
+    Write-Host "  （本機沒有 origin/main 的追蹤紀錄，直接強制覆蓋）" -ForegroundColor DarkGray
+  }
+  if (-not $ok) { $ok = ((GS push --force origin "HEAD:refs/heads/main").Code -eq 0) }
+
+  if ($ok) {
     Set-Upstream $git $Root "main"
     Write-Host ""
     Write-Host "  ✔ 完成，GitHub 上已經是你本機這份了" -ForegroundColor Green
     Write-Host ("  " + ($remote -replace '\.git$', '') + "/commits") -ForegroundColor Cyan
   } else {
+    Write-Host ""
     Write-Host "  覆蓋失敗，請把畫面截圖給我看。" -ForegroundColor Red
+    Write-Host "  常見原因：GitHub 帳號沒登入、或該分支開了保護規則。" -ForegroundColor DarkGray
   }
 }
 elseif ($Mode -eq "rebase") {
