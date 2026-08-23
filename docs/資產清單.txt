@@ -1,6 +1,6 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-23 15:14:05
+2026-08-23 15:27:11
 assetBase = assets
 
 本地檔案（
@@ -94,7 +94,7 @@ assetBase = assets
   assets/level2/a/BABYMONSTER_WE_GO_UP.mp4
   assets/level2/a/fromis9_DM.mp4
   assets/level2/a/GFRIEND_MAGO.mp4
-  assets/level2/a/Hearts2Hearts_FOUCUS.mp4
+  assets/level2/a/Hearts2Hearts_FOCUS.mp4
   assets/level2/a/i-dle_Fate.mp4
   assets/level2/a/ILLIT_Cherish_My_Love.mp4
   assets/level2/a/ITZY_CAKE.mp4
@@ -115,7 +115,7 @@ assetBase = assets
   assets/level2/q/BABYMONSTER_WE_GO_UP.mp3
   assets/level2/q/fromis9_DM.mp3
   assets/level2/q/GFRIEND_MAGO.mp3
-  assets/level2/q/Hearts2Hearts_FOUCUS.mp3
+  assets/level2/q/Hearts2Hearts_FOCUS.mp3
   assets/level2/q/i-dle_Fate.mp3
   assets/level2/q/ILLIT_Cherish_My_Love.mp3
   assets/level2/q/ITZY_CAKE.mp3

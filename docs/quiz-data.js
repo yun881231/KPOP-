@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-23 15:13:48 */
+   產生時間：2026-08-23 15:26:53 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-23T15:08:31",
+    "generatedAt":  "2026-08-23T15:21:33",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -500,9 +500,9 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L2-005",
                                                         "group":  "Hearts2Hearts",
-                                                        "title":  "FOUCUS",
-                                                        "clip":  "level2/q/Hearts2Hearts_FOUCUS.mp3",
-                                                        "answer":  "level2/a/Hearts2Hearts_FOUCUS.mp4",
+                                                        "title":  "FOCUS",
+                                                        "clip":  "level2/q/Hearts2Hearts_FOCUS.mp3",
+                                                        "answer":  "level2/a/Hearts2Hearts_FOCUS.mp4",
                                                         "introSeconds":  12
                                                     },
                                                     {

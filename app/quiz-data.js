@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-23 15:08:31
+   產生時間：2026-08-23 15:21:33
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-23T15:08:31",
+    "generatedAt":  "2026-08-23T15:21:33",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -503,9 +503,9 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L2-005",
                                                         "group":  "Hearts2Hearts",
-                                                        "title":  "FOUCUS",
-                                                        "clip":  "第二關_聽前奏猜歌/題目/Hearts2Hearts_FOUCUS.mp3",
-                                                        "answer":  "第二關_聽前奏猜歌/答案/Hearts2Hearts_FOUCUS.mp4",
+                                                        "title":  "FOCUS",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/Hearts2Hearts_FOCUS.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/Hearts2Hearts_FOCUS.mp4",
                                                         "introSeconds":  12
                                                     },
                                                     {
