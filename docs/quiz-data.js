@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-23 14:13:02 */
+   產生時間：2026-08-23 14:51:39 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-23T14:07:59",
+    "generatedAt":  "2026-08-23T14:46:01",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -516,7 +516,7 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L2-007",
                                                         "group":  "ILLIT",
-                                                        "title":  "Cherish(My Love)",
+                                                        "title":  "Cherish (My Love)",
                                                         "clip":  "level2/q/ILLIT_Cherish_My_Love.mp3",
                                                         "answer":  "level2/a/ILLIT_Cherish_My_Love.mp4",
                                                         "introSeconds":  12
