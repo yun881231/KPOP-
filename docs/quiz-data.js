@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-20 18:09:31 */
+   產生時間：2026-08-23 13:09:20 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-20T18:04:34",
+    "generatedAt":  "2026-08-23T13:04:09",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -36,125 +36,425 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L1-001",
                                                         "group":  "aespa",
+                                                        "name":  "Giselle",
+                                                        "image":  "level1/aespa_Giselle.png"
+                                                    },
+                                                    {
+                                                        "id":  "L1-002",
+                                                        "group":  "aespa",
                                                         "name":  "Karina",
                                                         "image":  "level1/aespa_Karina.png"
                                                     },
                                                     {
-                                                        "id":  "L1-002",
+                                                        "id":  "L1-003",
                                                         "group":  "aespa",
                                                         "name":  "Ningning",
                                                         "image":  "level1/aespa_Ningning.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-003",
+                                                        "id":  "L1-004",
                                                         "group":  "aespa",
                                                         "name":  "Winter",
                                                         "image":  "level1/aespa_Winter.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-004",
+                                                        "id":  "L1-005",
+                                                        "group":  "BABYMONSTER",
+                                                        "name":  "Ahyeon",
+                                                        "image":  "level1/BABYMONSTER_Ahyeon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-006",
                                                         "group":  "BABYMONSTER",
                                                         "name":  "ASA",
                                                         "image":  "level1/BABYMONSTER_ASA.png"
                                                     },
                                                     {
-                                                        "id":  "L1-005",
+                                                        "id":  "L1-007",
+                                                        "group":  "BABYMONSTER",
+                                                        "name":  "Chiquita",
+                                                        "image":  "level1/BABYMONSTER_Chiquita.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-008",
+                                                        "group":  "BABYMONSTER",
+                                                        "name":  "Pharita",
+                                                        "image":  "level1/BABYMONSTER_Pharita.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-009",
+                                                        "group":  "BABYMONSTER",
+                                                        "name":  "Rami",
+                                                        "image":  "level1/BABYMONSTER_Rami.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-010",
+                                                        "group":  "BABYMONSTER",
+                                                        "name":  "Rora",
+                                                        "image":  "level1/BABYMONSTER_Rora.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-011",
+                                                        "group":  "BABYMONSTER",
+                                                        "name":  "Ruka",
+                                                        "image":  "level1/BABYMONSTER_Ruka.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-012",
                                                         "group":  "BLACKPINK",
                                                         "name":  "Jennie",
                                                         "image":  "level1/BLACKPINK_Jennie.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-006",
+                                                        "id":  "L1-013",
+                                                        "group":  "BLACKPINK",
+                                                        "name":  "Jisoo",
+                                                        "image":  "level1/BLACKPINK_Jisoo.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-014",
+                                                        "group":  "BLACKPINK",
+                                                        "name":  "Lisa",
+                                                        "image":  "level1/BLACKPINK_Lisa.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-015",
+                                                        "group":  "BLACKPINK",
+                                                        "name":  "Rosé",
+                                                        "image":  "level1/BLACKPINK_Ros.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-016",
                                                         "group":  "Girls\u0027 Generation",
                                                         "name":  "TAEYEON",
                                                         "image":  "level1/Girls_Generation_TAEYEON.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-007",
+                                                        "id":  "L1-017",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "A-NA",
+                                                        "image":  "level1/Hearts2Hearts_A-NA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-018",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "CARMEN",
+                                                        "image":  "level1/Hearts2Hearts_CARMEN.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-019",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "IAN",
                                                         "image":  "level1/Hearts2Hearts_IAN.png"
                                                     },
                                                     {
-                                                        "id":  "L1-008",
+                                                        "id":  "L1-020",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "JIWOO",
+                                                        "image":  "level1/Hearts2Hearts_JIWOO.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-021",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "JUUN",
+                                                        "image":  "level1/Hearts2Hearts_JUUN.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-022",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "STELLA",
+                                                        "image":  "level1/Hearts2Hearts_STELLA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-023",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "YE-ON",
+                                                        "image":  "level1/Hearts2Hearts_YE-ON.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-024",
+                                                        "group":  "Hearts2Hearts",
+                                                        "name":  "YUHA",
+                                                        "image":  "level1/Hearts2Hearts_YUHA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-025",
+                                                        "group":  "ILLIT",
+                                                        "name":  "Iroha",
+                                                        "image":  "level1/ILLIT_Iroha.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-026",
+                                                        "group":  "ILLIT",
+                                                        "name":  "Minju",
+                                                        "image":  "level1/ILLIT_Minju.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-027",
+                                                        "group":  "ILLIT",
+                                                        "name":  "Moka",
+                                                        "image":  "level1/ILLIT_Moka.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-028",
                                                         "group":  "ILLIT",
                                                         "name":  "Wonhee",
                                                         "image":  "level1/ILLIT_Wonhee.png"
                                                     },
                                                     {
-                                                        "id":  "L1-009",
+                                                        "id":  "L1-029",
+                                                        "group":  "ILLIT",
+                                                        "name":  "Yunah",
+                                                        "image":  "level1/ILLIT_Yunah.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-030",
+                                                        "group":  "ITZY",
+                                                        "name":  "Chaeryeong",
+                                                        "image":  "level1/ITZY_Chaeryeong.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-031",
+                                                        "group":  "ITZY",
+                                                        "name":  "Lia",
+                                                        "image":  "level1/ITZY_Lia.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-032",
+                                                        "group":  "ITZY",
+                                                        "name":  "Ryujin",
+                                                        "image":  "level1/ITZY_Ryujin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-033",
+                                                        "group":  "ITZY",
+                                                        "name":  "Yeji",
+                                                        "image":  "level1/ITZY_Yeji.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-034",
                                                         "group":  "ITZY",
                                                         "name":  "YUNA",
                                                         "image":  "level1/ITZY_YUNA.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-010",
+                                                        "id":  "L1-035",
                                                         "group":  "IVE",
                                                         "name":  "Gaeul",
                                                         "image":  "level1/IVE_Gaeul.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-011",
+                                                        "id":  "L1-036",
+                                                        "group":  "IVE",
+                                                        "name":  "Leeseo",
+                                                        "image":  "level1/IVE_Leeseo.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-037",
                                                         "group":  "IVE",
                                                         "name":  "Liz",
                                                         "image":  "level1/IVE_Liz.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-012",
+                                                        "id":  "L1-038",
+                                                        "group":  "IVE",
+                                                        "name":  "Rei",
+                                                        "image":  "level1/IVE_Rei.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-039",
                                                         "group":  "IVE",
                                                         "name":  "Wonyoung",
                                                         "image":  "level1/IVE_Wonyoung.png"
                                                     },
                                                     {
-                                                        "id":  "L1-013",
+                                                        "id":  "L1-040",
+                                                        "group":  "IVE",
+                                                        "name":  "Yujin",
+                                                        "image":  "level1/IVE_Yujin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-041",
                                                         "group":  "LE SSERAFIM",
                                                         "name":  "Chaewon",
                                                         "image":  "level1/LE_SSERAFIM_Chaewon.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-014",
+                                                        "id":  "L1-042",
+                                                        "group":  "LE SSERAFIM",
+                                                        "name":  "Eunchae",
+                                                        "image":  "level1/LE_SSERAFIM_Eunchae.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-043",
+                                                        "group":  "LE SSERAFIM",
+                                                        "name":  "Kazuha",
+                                                        "image":  "level1/LE_SSERAFIM_Kazuha.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-044",
                                                         "group":  "LE SSERAFIM",
                                                         "name":  "Sakura",
                                                         "image":  "level1/LE_SSERAFIM_Sakura.png"
                                                     },
                                                     {
-                                                        "id":  "L1-015",
+                                                        "id":  "L1-045",
+                                                        "group":  "LE SSERAFIM",
+                                                        "name":  "Yunjin",
+                                                        "image":  "level1/LE_SSERAFIM_Yunjin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-046",
+                                                        "group":  "NewJeans",
+                                                        "name":  "Danielle",
+                                                        "image":  "level1/NewJeans_Danielle.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-047",
                                                         "group":  "NewJeans",
                                                         "name":  "Haerin",
                                                         "image":  "level1/NewJeans_Haerin.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-016",
+                                                        "id":  "L1-048",
+                                                        "group":  "NewJeans",
+                                                        "name":  "Hanni",
+                                                        "image":  "level1/NewJeans_Hanni.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-049",
+                                                        "group":  "NewJeans",
+                                                        "name":  "Hyein",
+                                                        "image":  "level1/NewJeans_Hyein.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-050",
+                                                        "group":  "NewJeans",
+                                                        "name":  "Minji",
+                                                        "image":  "level1/NewJeans_Minji.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-051",
                                                         "group":  "NMIXX",
                                                         "name":  "Bae",
                                                         "image":  "level1/NMIXX_Bae.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-017",
+                                                        "id":  "L1-052",
+                                                        "group":  "NMIXX",
+                                                        "name":  "Haewon",
+                                                        "image":  "level1/NMIXX_Haewon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-053",
+                                                        "group":  "NMIXX",
+                                                        "name":  "Jiwoo",
+                                                        "image":  "level1/NMIXX_Jiwoo.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-054",
+                                                        "group":  "NMIXX",
+                                                        "name":  "Kyujin",
+                                                        "image":  "level1/NMIXX_Kyujin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-055",
+                                                        "group":  "NMIXX",
+                                                        "name":  "Lily",
+                                                        "image":  "level1/NMIXX_Lily.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-056",
                                                         "group":  "NMIXX",
                                                         "name":  "Sullyoon",
                                                         "image":  "level1/NMIXX_Sullyoon.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-018",
+                                                        "id":  "L1-057",
                                                         "group":  "tripleS",
-                                                        "name":  "S11 Kotone",
-                                                        "image":  "level1/tripleS_S11_Kotone.png"
+                                                        "name":  "S10 DaHyun",
+                                                        "image":  "level1/tripleS_S10_DaHyun.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-019",
+                                                        "id":  "L1-058",
+                                                        "group":  "tripleS",
+                                                        "name":  "S11 Kotone",
+                                                        "image":  "level1/tripleS_S11_Kotone.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-059",
+                                                        "group":  "tripleS",
+                                                        "name":  "S12 YeonJi",
+                                                        "image":  "level1/tripleS_S12_YeonJi.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-060",
                                                         "group":  "tripleS",
                                                         "name":  "S5 YooYeon",
                                                         "image":  "level1/tripleS_S5_YooYeon.png"
                                                     },
                                                     {
-                                                        "id":  "L1-020",
+                                                        "id":  "L1-061",
+                                                        "group":  "tripleS",
+                                                        "name":  "S9 Kaede",
+                                                        "image":  "level1/tripleS_S9_Kaede.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-062",
+                                                        "group":  "TWICE",
+                                                        "name":  "CHAEYOUNG",
+                                                        "image":  "level1/TWICE_CHAEYOUNG.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-063",
+                                                        "group":  "TWICE",
+                                                        "name":  "DAHYUN",
+                                                        "image":  "level1/TWICE_DAHYUN.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-064",
+                                                        "group":  "TWICE",
+                                                        "name":  "JEONGYEON",
+                                                        "image":  "level1/TWICE_JEONGYEON.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-065",
+                                                        "group":  "TWICE",
+                                                        "name":  "JIHYO",
+                                                        "image":  "level1/TWICE_JIHYO.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-066",
+                                                        "group":  "TWICE",
+                                                        "name":  "MINA",
+                                                        "image":  "level1/TWICE_MINA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-067",
+                                                        "group":  "TWICE",
+                                                        "name":  "MOMO",
+                                                        "image":  "level1/TWICE_MOMO.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-068",
                                                         "group":  "TWICE",
                                                         "name":  "NAYEON",
                                                         "image":  "level1/TWICE_NAYEON.png"
                                                     },
                                                     {
-                                                        "id":  "L1-021",
+                                                        "id":  "L1-069",
+                                                        "group":  "TWICE",
+                                                        "name":  "SANA",
+                                                        "image":  "level1/TWICE_SANA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-070",
+                                                        "group":  "TWICE",
+                                                        "name":  "TZUYU",
+                                                        "image":  "level1/TWICE_TZUYU.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-071",
                                                         "group":  "WJSN",
                                                         "name":  "Yeo reum",
                                                         "image":  "level1/WJSN_Yeo_reum.jpg"

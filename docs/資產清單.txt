@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-20 18:09:46
+2026-08-23 13:09:38
 assetBase = assets
 
 本地檔案（
-615
+665
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/aespa.jpg
@@ -19,26 +19,76 @@ assetBase = assets
   assets/cover/NMIXX.jpg
   assets/cover/QWER.jpg
   assets/cover/tripleS.jpg
+  assets/level1/aespa_Giselle.png
   assets/level1/aespa_Karina.png
   assets/level1/aespa_Ningning.jpg
   assets/level1/aespa_Winter.jpg
+  assets/level1/BABYMONSTER_Ahyeon.jpg
   assets/level1/BABYMONSTER_ASA.png
+  assets/level1/BABYMONSTER_Chiquita.jpg
+  assets/level1/BABYMONSTER_Pharita.jpg
+  assets/level1/BABYMONSTER_Rami.jpg
+  assets/level1/BABYMONSTER_Rora.jpg
+  assets/level1/BABYMONSTER_Ruka.jpg
   assets/level1/BLACKPINK_Jennie.jpg
+  assets/level1/BLACKPINK_Jisoo.jpg
+  assets/level1/BLACKPINK_Lisa.jpg
+  assets/level1/BLACKPINK_Ros.jpg
   assets/level1/Girls_Generation_TAEYEON.jpg
+  assets/level1/Hearts2Hearts_A-NA.jpg
+  assets/level1/Hearts2Hearts_CARMEN.jpg
   assets/level1/Hearts2Hearts_IAN.png
+  assets/level1/Hearts2Hearts_JIWOO.jpg
+  assets/level1/Hearts2Hearts_JUUN.jpg
+  assets/level1/Hearts2Hearts_STELLA.jpg
+  assets/level1/Hearts2Hearts_YE-ON.jpg
+  assets/level1/Hearts2Hearts_YUHA.jpg
+  assets/level1/ILLIT_Iroha.jpg
+  assets/level1/ILLIT_Minju.jpg
+  assets/level1/ILLIT_Moka.jpg
   assets/level1/ILLIT_Wonhee.png
+  assets/level1/ILLIT_Yunah.jpg
+  assets/level1/ITZY_Chaeryeong.jpg
+  assets/level1/ITZY_Lia.jpg
+  assets/level1/ITZY_Ryujin.jpg
+  assets/level1/ITZY_Yeji.jpg
   assets/level1/ITZY_YUNA.jpg
   assets/level1/IVE_Gaeul.jpg
+  assets/level1/IVE_Leeseo.jpg
   assets/level1/IVE_Liz.jpg
+  assets/level1/IVE_Rei.jpg
   assets/level1/IVE_Wonyoung.png
+  assets/level1/IVE_Yujin.jpg
   assets/level1/LE_SSERAFIM_Chaewon.jpg
+  assets/level1/LE_SSERAFIM_Eunchae.jpg
+  assets/level1/LE_SSERAFIM_Kazuha.jpg
   assets/level1/LE_SSERAFIM_Sakura.png
+  assets/level1/LE_SSERAFIM_Yunjin.jpg
+  assets/level1/NewJeans_Danielle.jpg
   assets/level1/NewJeans_Haerin.jpg
+  assets/level1/NewJeans_Hanni.jpg
+  assets/level1/NewJeans_Hyein.jpg
+  assets/level1/NewJeans_Minji.jpg
   assets/level1/NMIXX_Bae.jpg
+  assets/level1/NMIXX_Haewon.jpg
+  assets/level1/NMIXX_Jiwoo.jpg
+  assets/level1/NMIXX_Kyujin.jpg
+  assets/level1/NMIXX_Lily.jpg
   assets/level1/NMIXX_Sullyoon.jpg
-  assets/level1/tripleS_S11_Kotone.png
+  assets/level1/tripleS_S10_DaHyun.jpg
+  assets/level1/tripleS_S11_Kotone.jpg
+  assets/level1/tripleS_S12_YeonJi.jpg
   assets/level1/tripleS_S5_YooYeon.png
+  assets/level1/tripleS_S9_Kaede.jpg
+  assets/level1/TWICE_CHAEYOUNG.jpg
+  assets/level1/TWICE_DAHYUN.jpg
+  assets/level1/TWICE_JEONGYEON.jpg
+  assets/level1/TWICE_JIHYO.jpg
+  assets/level1/TWICE_MINA.jpg
+  assets/level1/TWICE_MOMO.jpg
   assets/level1/TWICE_NAYEON.png
+  assets/level1/TWICE_SANA.jpg
+  assets/level1/TWICE_TZUYU.jpg
   assets/level1/WJSN_Yeo_reum.jpg
   assets/level2/a/aespa_Spicy.mp4
   assets/level2/a/BABYMONSTER_WE_GO_UP.mp4
