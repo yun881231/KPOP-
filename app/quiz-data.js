@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-08-23 15:31:43
+   產生時間：2026-08-23 21:01:26
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-23T15:31:43",
+    "generatedAt":  "2026-08-23T21:01:26",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -128,336 +128,600 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L1-016",
-                                                        "group":  "Girls\u0027 Generation",
-                                                        "name":  "TAEYEON",
-                                                        "image":  "第一關_偶像快看快答/Girls\u0027 Generation_TAEYEON.jpg"
+                                                        "group":  "EXID",
+                                                        "name":  "Hani",
+                                                        "image":  "第一關_偶像快看快答/EXID_Hani.jpg"
                                                     },
                                                     {
                                                         "id":  "L1-017",
+                                                        "group":  "EXID",
+                                                        "name":  "Jeonghwa",
+                                                        "image":  "第一關_偶像快看快答/EXID_Jeonghwa.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-018",
+                                                        "group":  "EXID",
+                                                        "name":  "Solji",
+                                                        "image":  "第一關_偶像快看快答/EXID_Solji.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-019",
+                                                        "group":  "GFRIEND",
+                                                        "name":  "Eunha",
+                                                        "image":  "第一關_偶像快看快答/GFRIEND_Eunha.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-020",
+                                                        "group":  "GFRIEND",
+                                                        "name":  "SinB",
+                                                        "image":  "第一關_偶像快看快答/GFRIEND_SinB.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-021",
+                                                        "group":  "GFRIEND",
+                                                        "name":  "Yerin",
+                                                        "image":  "第一關_偶像快看快答/GFRIEND_Yerin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-022",
+                                                        "group":  "GFRIEND",
+                                                        "name":  "Yuju",
+                                                        "image":  "第一關_偶像快看快答/GFRIEND_Yuju.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-023",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "name":  "Jessica",
+                                                        "image":  "第一關_偶像快看快答/Girls\u0027 Generation_Jessica.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-024",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "name":  "Sooyoung",
+                                                        "image":  "第一關_偶像快看快答/Girls\u0027 Generation_Sooyoung.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-025",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "name":  "Taeyeon",
+                                                        "image":  "第一關_偶像快看快答/Girls\u0027 Generation_Taeyeon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-026",
+                                                        "group":  "Girls\u0027 Generation",
+                                                        "name":  "Yoona",
+                                                        "image":  "第一關_偶像快看快答/Girls\u0027 Generation_Yoona.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-027",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "A-NA",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_A-NA.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-018",
+                                                        "id":  "L1-028",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "CARMEN",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_CARMEN.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-019",
+                                                        "id":  "L1-029",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "IAN",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_IAN.png"
                                                     },
                                                     {
-                                                        "id":  "L1-020",
+                                                        "id":  "L1-030",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "JIWOO",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_JIWOO.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-021",
+                                                        "id":  "L1-031",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "JUUN",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_JUUN.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-022",
+                                                        "id":  "L1-032",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "STELLA",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_STELLA.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-023",
+                                                        "id":  "L1-033",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "YE-ON",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_YE-ON.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-024",
+                                                        "id":  "L1-034",
                                                         "group":  "Hearts2Hearts",
                                                         "name":  "YUHA",
                                                         "image":  "第一關_偶像快看快答/Hearts2Hearts_YUHA.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-025",
+                                                        "id":  "L1-035",
+                                                        "group":  "i-dle",
+                                                        "name":  "Minnie",
+                                                        "image":  "第一關_偶像快看快答/i-dle_Minnie.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-036",
+                                                        "group":  "i-dle",
+                                                        "name":  "Miyeon",
+                                                        "image":  "第一關_偶像快看快答/i-dle_Miyeon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-037",
+                                                        "group":  "i-dle",
+                                                        "name":  "Shuhua",
+                                                        "image":  "第一關_偶像快看快答/i-dle_Shuhua.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-038",
+                                                        "group":  "i-dle",
+                                                        "name":  "Soyeon",
+                                                        "image":  "第一關_偶像快看快答/i-dle_Soyeon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-039",
+                                                        "group":  "i-dle",
+                                                        "name":  "Yuqi",
+                                                        "image":  "第一關_偶像快看快答/i-dle_Yuqi.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-040",
                                                         "group":  "ILLIT",
                                                         "name":  "Iroha",
                                                         "image":  "第一關_偶像快看快答/ILLIT_Iroha.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-026",
+                                                        "id":  "L1-041",
                                                         "group":  "ILLIT",
                                                         "name":  "Minju",
                                                         "image":  "第一關_偶像快看快答/ILLIT_Minju.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-027",
+                                                        "id":  "L1-042",
                                                         "group":  "ILLIT",
                                                         "name":  "Moka",
                                                         "image":  "第一關_偶像快看快答/ILLIT_Moka.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-028",
+                                                        "id":  "L1-043",
                                                         "group":  "ILLIT",
                                                         "name":  "Wonhee",
                                                         "image":  "第一關_偶像快看快答/ILLIT_Wonhee.png"
                                                     },
                                                     {
-                                                        "id":  "L1-029",
+                                                        "id":  "L1-044",
                                                         "group":  "ILLIT",
                                                         "name":  "Yunah",
                                                         "image":  "第一關_偶像快看快答/ILLIT_Yunah.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-030",
+                                                        "id":  "L1-045",
                                                         "group":  "ITZY",
                                                         "name":  "Chaeryeong",
                                                         "image":  "第一關_偶像快看快答/ITZY_Chaeryeong.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-031",
+                                                        "id":  "L1-046",
                                                         "group":  "ITZY",
                                                         "name":  "Lia",
                                                         "image":  "第一關_偶像快看快答/ITZY_Lia.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-032",
+                                                        "id":  "L1-047",
                                                         "group":  "ITZY",
                                                         "name":  "Ryujin",
                                                         "image":  "第一關_偶像快看快答/ITZY_Ryujin.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-033",
+                                                        "id":  "L1-048",
                                                         "group":  "ITZY",
                                                         "name":  "Yeji",
                                                         "image":  "第一關_偶像快看快答/ITZY_Yeji.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-034",
+                                                        "id":  "L1-049",
                                                         "group":  "ITZY",
                                                         "name":  "YUNA",
                                                         "image":  "第一關_偶像快看快答/ITZY_YUNA.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-035",
+                                                        "id":  "L1-050",
                                                         "group":  "IVE",
                                                         "name":  "Gaeul",
                                                         "image":  "第一關_偶像快看快答/IVE_Gaeul.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-036",
+                                                        "id":  "L1-051",
                                                         "group":  "IVE",
                                                         "name":  "Leeseo",
                                                         "image":  "第一關_偶像快看快答/IVE_Leeseo.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-037",
+                                                        "id":  "L1-052",
                                                         "group":  "IVE",
                                                         "name":  "Liz",
                                                         "image":  "第一關_偶像快看快答/IVE_Liz.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-038",
+                                                        "id":  "L1-053",
                                                         "group":  "IVE",
                                                         "name":  "Rei",
                                                         "image":  "第一關_偶像快看快答/IVE_Rei.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-039",
+                                                        "id":  "L1-054",
                                                         "group":  "IVE",
                                                         "name":  "Wonyoung",
                                                         "image":  "第一關_偶像快看快答/IVE_Wonyoung.png"
                                                     },
                                                     {
-                                                        "id":  "L1-040",
+                                                        "id":  "L1-055",
                                                         "group":  "IVE",
                                                         "name":  "Yujin",
                                                         "image":  "第一關_偶像快看快答/IVE_Yujin.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-041",
+                                                        "id":  "L1-056",
+                                                        "group":  "KiiiKiii",
+                                                        "name":  "Haum",
+                                                        "image":  "第一關_偶像快看快答/KiiiKiii_Haum.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-057",
+                                                        "group":  "KiiiKiii",
+                                                        "name":  "Jiyu",
+                                                        "image":  "第一關_偶像快看快答/KiiiKiii_Jiyu.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-058",
+                                                        "group":  "KiiiKiii",
+                                                        "name":  "Kya",
+                                                        "image":  "第一關_偶像快看快答/KiiiKiii_Kya.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-059",
+                                                        "group":  "KiiiKiii",
+                                                        "name":  "Leesol",
+                                                        "image":  "第一關_偶像快看快答/KiiiKiii_Leesol.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-060",
+                                                        "group":  "KiiiKiii",
+                                                        "name":  "Sui",
+                                                        "image":  "第一關_偶像快看快答/KiiiKiii_Sui.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-061",
                                                         "group":  "LE SSERAFIM",
                                                         "name":  "Chaewon",
                                                         "image":  "第一關_偶像快看快答/LE SSERAFIM_Chaewon.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-042",
+                                                        "id":  "L1-062",
                                                         "group":  "LE SSERAFIM",
                                                         "name":  "Eunchae",
                                                         "image":  "第一關_偶像快看快答/LE SSERAFIM_Eunchae.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-043",
+                                                        "id":  "L1-063",
                                                         "group":  "LE SSERAFIM",
                                                         "name":  "Kazuha",
                                                         "image":  "第一關_偶像快看快答/LE SSERAFIM_Kazuha.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-044",
+                                                        "id":  "L1-064",
                                                         "group":  "LE SSERAFIM",
                                                         "name":  "Sakura",
                                                         "image":  "第一關_偶像快看快答/LE SSERAFIM_Sakura.png"
                                                     },
                                                     {
-                                                        "id":  "L1-045",
+                                                        "id":  "L1-065",
                                                         "group":  "LE SSERAFIM",
                                                         "name":  "Yunjin",
                                                         "image":  "第一關_偶像快看快答/LE SSERAFIM_Yunjin.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-046",
+                                                        "id":  "L1-066",
+                                                        "group":  "MAMAMOO",
+                                                        "name":  "Hwa Sa",
+                                                        "image":  "第一關_偶像快看快答/MAMAMOO_Hwa Sa.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-067",
+                                                        "group":  "MAMAMOO",
+                                                        "name":  "Moon Byul",
+                                                        "image":  "第一關_偶像快看快答/MAMAMOO_Moon Byul.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-068",
+                                                        "group":  "MAMAMOO",
+                                                        "name":  "Solar",
+                                                        "image":  "第一關_偶像快看快答/MAMAMOO_Solar.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-069",
+                                                        "group":  "MAMAMOO",
+                                                        "name":  "Whee In",
+                                                        "image":  "第一關_偶像快看快答/MAMAMOO_Whee In.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-070",
                                                         "group":  "NewJeans",
                                                         "name":  "Danielle",
                                                         "image":  "第一關_偶像快看快答/NewJeans_Danielle.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-047",
+                                                        "id":  "L1-071",
                                                         "group":  "NewJeans",
                                                         "name":  "Haerin",
                                                         "image":  "第一關_偶像快看快答/NewJeans_Haerin.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-048",
+                                                        "id":  "L1-072",
                                                         "group":  "NewJeans",
                                                         "name":  "Hanni",
                                                         "image":  "第一關_偶像快看快答/NewJeans_Hanni.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-049",
+                                                        "id":  "L1-073",
                                                         "group":  "NewJeans",
                                                         "name":  "Hyein",
                                                         "image":  "第一關_偶像快看快答/NewJeans_Hyein.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-050",
+                                                        "id":  "L1-074",
                                                         "group":  "NewJeans",
                                                         "name":  "Minji",
                                                         "image":  "第一關_偶像快看快答/NewJeans_Minji.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-051",
+                                                        "id":  "L1-075",
                                                         "group":  "NMIXX",
                                                         "name":  "Bae",
                                                         "image":  "第一關_偶像快看快答/NMIXX_Bae.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-052",
+                                                        "id":  "L1-076",
                                                         "group":  "NMIXX",
                                                         "name":  "Haewon",
                                                         "image":  "第一關_偶像快看快答/NMIXX_Haewon.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-053",
+                                                        "id":  "L1-077",
                                                         "group":  "NMIXX",
                                                         "name":  "Jiwoo",
                                                         "image":  "第一關_偶像快看快答/NMIXX_Jiwoo.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-054",
+                                                        "id":  "L1-078",
                                                         "group":  "NMIXX",
                                                         "name":  "Kyujin",
                                                         "image":  "第一關_偶像快看快答/NMIXX_Kyujin.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-055",
+                                                        "id":  "L1-079",
                                                         "group":  "NMIXX",
                                                         "name":  "Lily",
                                                         "image":  "第一關_偶像快看快答/NMIXX_Lily.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-056",
+                                                        "id":  "L1-080",
                                                         "group":  "NMIXX",
                                                         "name":  "Sullyoon",
                                                         "image":  "第一關_偶像快看快答/NMIXX_Sullyoon.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-057",
+                                                        "id":  "L1-081",
+                                                        "group":  "QWER",
+                                                        "name":  "Chodan",
+                                                        "image":  "第一關_偶像快看快答/QWER_Chodan.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-082",
+                                                        "group":  "QWER",
+                                                        "name":  "Hina",
+                                                        "image":  "第一關_偶像快看快答/QWER_Hina.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-083",
+                                                        "group":  "QWER",
+                                                        "name":  "Magenta",
+                                                        "image":  "第一關_偶像快看快答/QWER_Magenta.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-084",
+                                                        "group":  "QWER",
+                                                        "name":  "Siyeon",
+                                                        "image":  "第一關_偶像快看快答/QWER_Siyeon.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-085",
+                                                        "group":  "SOLO",
+                                                        "name":  "CHUNG HA",
+                                                        "image":  "第一關_偶像快看快答/SOLO_CHUNG HA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-086",
+                                                        "group":  "SOLO",
+                                                        "name":  "Chuu",
+                                                        "image":  "第一關_偶像快看快答/SOLO_Chuu.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-087",
+                                                        "group":  "SOLO",
+                                                        "name":  "HyunA",
+                                                        "image":  "第一關_偶像快看快答/SOLO_HyunA.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-088",
+                                                        "group":  "SOLO",
+                                                        "name":  "IU",
+                                                        "image":  "第一關_偶像快看快答/SOLO_IU.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-089",
+                                                        "group":  "SOLO",
+                                                        "name":  "Jo Yu-Ri",
+                                                        "image":  "第一關_偶像快看快答/SOLO_Jo Yu-Ri.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-090",
+                                                        "group":  "SOLO",
+                                                        "name":  "Kwon Eun-Bi",
+                                                        "image":  "第一關_偶像快看快答/SOLO_Kwon Eun-Bi.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-091",
+                                                        "group":  "SOLO",
+                                                        "name":  "Sunmi",
+                                                        "image":  "第一關_偶像快看快答/SOLO_Sunmi.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-092",
+                                                        "group":  "SOLO",
+                                                        "name":  "Suzy",
+                                                        "image":  "第一關_偶像快看快答/SOLO_Suzy.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-093",
+                                                        "group":  "SOLO",
+                                                        "name":  "Yena",
+                                                        "image":  "第一關_偶像快看快答/SOLO_Yena.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-094",
                                                         "group":  "tripleS",
                                                         "name":  "S10 DaHyun",
                                                         "image":  "第一關_偶像快看快答/tripleS_S10 DaHyun.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-058",
+                                                        "id":  "L1-095",
                                                         "group":  "tripleS",
                                                         "name":  "S11 Kotone",
                                                         "image":  "第一關_偶像快看快答/tripleS_S11 Kotone.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-059",
+                                                        "id":  "L1-096",
                                                         "group":  "tripleS",
                                                         "name":  "S12 YeonJi",
                                                         "image":  "第一關_偶像快看快答/tripleS_S12 YeonJi.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-060",
+                                                        "id":  "L1-097",
+                                                        "group":  "tripleS",
+                                                        "name":  "S13 Nien",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S13 Nien.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-098",
+                                                        "group":  "tripleS",
+                                                        "name":  "S14 SoHyun",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S14 SoHyun.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-099",
+                                                        "group":  "tripleS",
+                                                        "name":  "S16 Mayu",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S16 Mayu.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-100",
+                                                        "group":  "tripleS",
+                                                        "name":  "S17 Lynn",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S17 Lynn.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-101",
+                                                        "group":  "tripleS",
+                                                        "name":  "S18 JooBin",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S18 JooBin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-102",
+                                                        "group":  "tripleS",
+                                                        "name":  "S22 Sullin",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S22 Sullin.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-103",
+                                                        "group":  "tripleS",
+                                                        "name":  "S23 SeoAh",
+                                                        "image":  "第一關_偶像快看快答/tripleS_S23 SeoAh.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "L1-104",
                                                         "group":  "tripleS",
                                                         "name":  "S5 YooYeon",
                                                         "image":  "第一關_偶像快看快答/tripleS_S5 YooYeon.png"
                                                     },
                                                     {
-                                                        "id":  "L1-061",
+                                                        "id":  "L1-105",
                                                         "group":  "tripleS",
                                                         "name":  "S9 Kaede",
                                                         "image":  "第一關_偶像快看快答/tripleS_S9 Kaede.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-062",
+                                                        "id":  "L1-106",
                                                         "group":  "TWICE",
                                                         "name":  "CHAEYOUNG",
                                                         "image":  "第一關_偶像快看快答/TWICE_CHAEYOUNG.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-063",
+                                                        "id":  "L1-107",
                                                         "group":  "TWICE",
                                                         "name":  "DAHYUN",
                                                         "image":  "第一關_偶像快看快答/TWICE_DAHYUN.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-064",
+                                                        "id":  "L1-108",
                                                         "group":  "TWICE",
                                                         "name":  "JEONGYEON",
                                                         "image":  "第一關_偶像快看快答/TWICE_JEONGYEON.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-065",
+                                                        "id":  "L1-109",
                                                         "group":  "TWICE",
                                                         "name":  "JIHYO",
                                                         "image":  "第一關_偶像快看快答/TWICE_JIHYO.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-066",
+                                                        "id":  "L1-110",
                                                         "group":  "TWICE",
                                                         "name":  "MINA",
                                                         "image":  "第一關_偶像快看快答/TWICE_MINA.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-067",
+                                                        "id":  "L1-111",
                                                         "group":  "TWICE",
                                                         "name":  "MOMO",
                                                         "image":  "第一關_偶像快看快答/TWICE_MOMO.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-068",
+                                                        "id":  "L1-112",
                                                         "group":  "TWICE",
                                                         "name":  "NAYEON",
                                                         "image":  "第一關_偶像快看快答/TWICE_NAYEON.png"
                                                     },
                                                     {
-                                                        "id":  "L1-069",
+                                                        "id":  "L1-113",
                                                         "group":  "TWICE",
                                                         "name":  "SANA",
                                                         "image":  "第一關_偶像快看快答/TWICE_SANA.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-070",
+                                                        "id":  "L1-114",
                                                         "group":  "TWICE",
                                                         "name":  "TZUYU",
                                                         "image":  "第一關_偶像快看快答/TWICE_TZUYU.jpg"
                                                     },
                                                     {
-                                                        "id":  "L1-071",
+                                                        "id":  "L1-115",
                                                         "group":  "WJSN",
                                                         "name":  "Yeo reum",
                                                         "image":  "第一關_偶像快看快答/WJSN_Yeo reum.jpg"
@@ -3132,6 +3396,100 @@ window.QUIZ_DATA =
                                                                       "q":  "第四關_看五官猜偶像/題目/嘴巴/TWICE_CHAEYOUNG.jpg",
                                                                       "a":  "第四關_看五官猜偶像/答案/嘴巴/TWICE_CHAEYOUNG.jpg"
                                                                   }
+                                                    }
+                                                ]
+                              },
+                   "level5":  {
+                                  "id":  "level5",
+                                  "title":  "看MV片段猜歌",
+                                  "questions":  [
+                                                    {
+                                                        "id":  "L5-001",
+                                                        "group":  "aespa",
+                                                        "title":  "Spicy",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/aespa_Spicy.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/aespa_Spicy.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/aespa_Spicy.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/aespa_Spicy.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-002",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "WE GO UP",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/BABYMONSTER_WE GO UP.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/BABYMONSTER_WE GO UP.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/BABYMONSTER_WE GO UP.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/BABYMONSTER_WE GO UP.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-003",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "FOCUS",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/Hearts2Hearts_FOCUS.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/Hearts2Hearts_FOCUS.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/Hearts2Hearts_FOCUS.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/Hearts2Hearts_FOCUS.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-004",
+                                                        "group":  "i-dle",
+                                                        "title":  "Fate",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/i-dle_Fate.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/i-dle_Fate.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/i-dle_Fate.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/i-dle_Fate.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-005",
+                                                        "group":  "ILLIT",
+                                                        "title":  "Cherish (My Love)",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ILLIT_Cherish (My Love).jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ILLIT_Cherish (My Love).jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ILLIT_Cherish (My Love).jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ILLIT_Cherish (My Love).mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-006",
+                                                        "group":  "ITZY",
+                                                        "title":  "CAKE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ITZY_CAKE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ITZY_CAKE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ITZY_CAKE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ITZY_CAKE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-007",
+                                                        "group":  "IVE",
+                                                        "title":  "After LIKE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IVE_After LIKE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IVE_After LIKE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IVE_After LIKE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IVE_After LIKE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-008",
+                                                        "group":  "IVE",
+                                                        "title":  "ATTITUDE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IVE_ATTITUDE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IVE_ATTITUDE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IVE_ATTITUDE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IVE_ATTITUDE.mp4"
                                                     }
                                                 ]
                               }

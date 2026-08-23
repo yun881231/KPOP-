@@ -73,6 +73,7 @@ $dirL1  = Find-Dir @("第一關*", "level1*", "*快看快答*")     $root
 $dirL2  = Find-Dir @("第二關*", "level2*", "*前奏*")         $root
 $dirL3  = Find-Dir @("第三關*", "level3*", "*舞蹈*")         $root
 $dirL4  = Find-Dir @("第四關*", "level4*", "*五官*")         $root
+$dirL5  = Find-Dir @("第五關*", "level5*", "*MV片段*")       $root
 $dirBgm = Find-Dir @("介面音樂*", "bgm*", "*背景音樂*")       $root
 $dirCover = Find-Dir @("封面*", "cover*", "*主視覺*")          $root
 
@@ -287,6 +288,62 @@ if ($dirL4) {
   }
 }
 
+# ---------- 第五關：看MV片段猜歌 ----------
+# 題目\片段1\團體_歌名.jpg、題目\片段2\…、題目\片段3\…（同名檔案 = 同一題）
+# 答案\團體_歌名.mp4（可省略，省略時公布答案只顯示歌名）
+$l5 = New-Object System.Collections.ArrayList
+if ($dirL5) {
+  $qd = Find-Dir $QPAT $dirL5.FullName
+  $ad = Find-Dir $APAT $dirL5.FullName
+
+  # 三個片段資料夾，中英數字寫法都吃
+  $shotDirs = @()
+  foreach ($n in 1, 2, 3) {
+    $d = Find-Dir @("片段$n", "片段 $n", "shot$n", "clip$n", "$n") $(if ($qd) { $qd.FullName })
+    $shotDirs += , $d
+  }
+
+  # 每一題用「主檔名」當 key，把三個片段兜起來
+  $byKey = [ordered]@{}
+  for ($i = 0; $i -lt 3; $i++) {
+    foreach ($f in (Get-Media $shotDirs[$i] $IMG)) {
+      $k = [System.IO.Path]::GetFileNameWithoutExtension($f.Name)
+      if (-not $byKey.Contains($k)) { $byKey[$k] = @($null, $null, $null) }
+      $arr = $byKey[$k]; $arr[$i] = (Get-Rel $f.FullName); $byKey[$k] = $arr
+    }
+  }
+  # 沒有分片段資料夾時的退路：直接掃 題目\ 底下的圖，一張圖當一題
+  if ($byKey.Count -eq 0) {
+    foreach ($f in (Get-Media $qd $IMG)) {
+      $k = [System.IO.Path]::GetFileNameWithoutExtension($f.Name)
+      if (-not $byKey.Contains($k)) { $byKey[$k] = @((Get-Rel $f.FullName), $null, $null) }
+    }
+  }
+
+  $ansMap = @{}
+  foreach ($f in (Get-Media $ad ($VID + $AUD))) { $ansMap[[System.IO.Path]::GetFileNameWithoutExtension($f.Name)] = $f }
+
+  $n = 0
+  foreach ($k in @($byKey.Keys)) {
+    $shots = @($byKey[$k] | Where-Object { $_ })      # 只留真的存在的片段，保持 1→2→3 的順序
+    if ($shots.Count -eq 0) { continue }
+    $n++
+    $p = Split-Name $k
+    if (-not $p.group) { [void]$warn.Add("第五關『$k』檔名不是「團名_歌名」格式，團體會是空的。") }
+    if ($shots.Count -lt 3) { [void]$warn.Add("第五關『$k』只有 $($shots.Count) 張片段圖（建議三張：片段1／片段2／片段3）。") }
+    $item = [ordered]@{
+      id     = New-Id "L5" $n
+      group  = $p.group
+      title  = $p.name
+      shots  = @($shots)
+      answer = $null
+    }
+    if ($ansMap.ContainsKey($k)) { $item.answer = Get-Rel $ansMap[$k].FullName }
+    else { [void]$warn.Add("第五關『$k』沒有答案影片，公布答案時只會顯示歌名。") }
+    [void]$l5.Add($item)
+  }
+}
+
 # ---------- 封面素材 ----------
 # 檔名含「背景 / background」→ 全螢幕動態背景（圖片或影片）
 # 檔名含「主視覺 / hero / cover」→ 中央主視覺卡片
@@ -356,6 +413,7 @@ $payload = [ordered]@{
     level2 = [ordered]@{ id = "level2"; title = "聽前奏猜歌";     questions = @($l2) }
     level3 = [ordered]@{ id = "level3"; title = "看舞蹈猜歌";     questions = @($l3) }
     level4 = [ordered]@{ id = "level4"; title = "看五官猜偶像";   groups = @($l4groups); questions = @($l4) }
+    level5 = [ordered]@{ id = "level5"; title = "看MV片段猜歌"; questions = @($l5) }
   }
 }
 
@@ -382,6 +440,7 @@ Write-Host ("  第一關 偶像快看快答 : {0} 題" -f $l1.Count)
 Write-Host ("  第二關 聽前奏猜歌   : {0} 題" -f $l2.Count)
 Write-Host ("  第三關 看舞蹈猜歌   : {0} 題" -f $l3.Count)
 Write-Host ("  第四關 看五官猜偶像 : {0} 題（{1} 個團體，眼睛與嘴巴同團不同人）" -f $l4.Count, $l4groups.Count)
+Write-Host ("  第五關 看MV片段猜歌 : {0} 題" -f $l5.Count)
 Write-Host ("  背景音樂            : {0} 首" -f $bgm.Count)
 if ($coverFallback) {
   Write-Host ("  封面照片牆          : {0} 張（借用第一關照片，建議在「封面」資料夾放專屬圖）" -f $coverPhotos.Count)

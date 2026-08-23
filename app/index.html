@@ -141,6 +141,17 @@
   .scroll-thin::-webkit-scrollbar{ width:8px; height:8px }
   .scroll-thin::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.16); border-radius:8px }
 
+  /* 柔邊矩形圖片：只給最大寬高、寬高都 auto → 原比例完整顯示，永不裁切 */
+  .soft-img {
+    display: block;
+    max-width: 100%; max-height: 100%;
+    width: auto; height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    -webkit-mask-image: radial-gradient(122% 122% at 50% 50%, #000 88%, rgba(0,0,0,0) 100%);
+            mask-image: radial-gradient(122% 122% at 50% 50%, #000 88%, rgba(0,0,0,0) 100%);
+  }
+
   /* ---------- 第四關：拖拉互動 ---------- */
   /* touch-action:none 讓手機拖曳時不會變成捲動頁面；
      所有拖曳都用 Pointer Events，滑鼠／觸控／觸控筆同一套程式碼。
@@ -271,7 +282,8 @@ function shuffle(a) {
 function pickN(arr, n) { return (!n || n >= arr.length) ? shuffle(arr) : shuffle(arr).slice(0, n); }
 function cx(...a) { return a.filter(Boolean).join(" "); }
 function uniq(a) { const s = {}, o = []; a.forEach(v => { if (v && !s[v]) { s[v] = 1; o.push(v); } }); return o; }
-const CN = ["一", "二", "三", "四"];
+const CN = ["一", "二", "三", "四", "五"];
+const LEVEL_KEYS = ["level1", "level2", "level3", "level4", "level5"];
 
 /* ========================================================================
    1. 音效（Web Audio 合成）— 可調音量
@@ -818,6 +830,7 @@ const LEVEL_META = [
   { id: "level2", n: 2, title: "聽前奏猜歌",   emoji: "🎧", hint: "聽前奏搶答",   accent: "from-fuchsia-400 to-purple-400" },
   { id: "level3", n: 3, title: "看舞蹈猜歌",   emoji: "🕺", hint: "黑影舞蹈猜曲", accent: "from-indigo-400 to-blue-400" },
   { id: "level4", n: 4, title: "看五官猜偶像", emoji: "👀", hint: "拖拉：團名＋眼睛＋嘴巴", accent: "from-cyan-400 to-teal-400" },
+  { id: "level5", n: 5, title: "看MV片段猜歌", emoji: "🎬", hint: "三張截圖逐步解鎖", accent: "from-emerald-400 to-lime-400" },
 ];
 const MASK_MODES = [
   { id: "silhouette", label: "全黑剪影", desc: "極限對比壓黑，人物變剪影" },
@@ -1133,6 +1146,7 @@ function buildRosters(pools, l4groups) {
   pools.level1.forEach(q => add(mem, q.group, q.name));
   pools.level2.forEach(q => add(song, q.group, q.title));
   pools.level3.forEach(q => add(song, q.group, q.title));
+  pools.level5.forEach(q => add(song, q.group, q.title));
   (l4groups || []).forEach(g => {
     (g.eyes || []).forEach(n => add(mem, g.name, n));
     (g.mouths || []).forEach(n => add(mem, g.name, n));
@@ -1166,7 +1180,7 @@ function attachTwo(q, cfg, rosters, l4groups) {
                             correctGroup: q.group, correctItem: q.name } };
   }
 
-  if (q.__level === "level2" || q.__level === "level3") {
+  if (q.__level === "level2" || q.__level === "level3" || q.__level === "level5") {
     const groups = buildGroupChoices(q.group, Object.keys(rosters.songs), n);
     const items = {};
     groups.forEach(g => {
@@ -1485,6 +1499,88 @@ function Level3Stage({ q, revealed, maskMode, maskLevel, duck, unduck }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+/* ========================================================================
+   11.5 第五關：看MV片段猜歌（三張截圖，逐步解鎖、已解鎖的不收回）
+   ====================================================================== */
+function Level5Stage({ q, revealed, duck, unduck }) {
+  // open = 已經解鎖到第幾張（1 起算）。只會往上加，永遠不會把前面的收回去。
+  const [open, setOpen] = useState(1);
+  const duckedRef = useRef(false);
+  const doDuck = () => { if (!duckedRef.current) { duckedRef.current = true; duck(); } };
+  const doUnduck = () => { if (duckedRef.current) { duckedRef.current = false; unduck(); } };
+  useEffect(() => () => doUnduck(), []);
+  useEffect(() => { doUnduck(); setOpen(1); }, [q.id]);
+
+  const shots = (q.shots && q.shots.length) ? q.shots : [];
+  const total = shots.length || 3;
+
+  // 解鎖第 i 張時把前面的一起打開（就算直接點第 3 張也不會跳號）
+  const unlock = (i) => { SFX.click(); setOpen(o => Math.max(o, i + 1)); };
+
+  if (revealed) {
+    return (
+      <div className="w-full flex flex-col items-center gap-4 pop">
+        {q.answer
+          ? <video src={assetUrl(q.answer)} controls autoPlay className="w-full max-h-[46vh] rounded-2xl bg-black"
+                   onPlay={doDuck} onPause={doUnduck} onEnded={doUnduck} />
+          : (
+            <div className="w-full grid gap-3 grid-cols-3">
+              {shots.map((src, i) => (
+                <div key={i} className="rounded-2xl bg-black/50 border border-white/10 h-[22vh] flex items-center justify-center p-1.5">
+                  <img className="soft-img" src={assetUrl(src)} alt="" onError={onImgError} />
+                </div>
+              ))}
+            </div>
+          )}
+        <div className="text-center">
+          <div className="text-sm text-emerald-300 font-semibold">{q.group}</div>
+          <div className="text-3xl sm:text-4xl font-black text-white mt-1">{q.title}</div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full">
+      <div className="grid gap-3 grid-cols-3">
+        {[0, 1, 2].map(i => {
+          const src = shots[i];
+          const shown = i < open;
+          return (
+            <div key={i}>
+              <div className={cx("text-xs font-bold mb-1.5 flex items-center gap-1",
+                                 shown ? "text-emerald-300" : "text-slate-500")}>
+                <span>{shown ? "🎬" : "🔒"}</span>片段 {i + 1}
+              </div>
+              <div className={cx("rounded-2xl border h-[24vh] sm:h-[30vh] flex items-center justify-center p-1.5 transition-all",
+                shown ? "bg-black/50 border-white/10" : "bg-black/30 border-white/15 border-dashed")}>
+                {!src
+                  ? <span className="text-slate-600 text-xs text-center px-2">（沒有這張片段）</span>
+                  : shown
+                    ? <img className="soft-img pop" src={assetUrl(src)} alt="" onError={onImgError} />
+                    : (
+                      <button onClick={() => unlock(i)}
+                        className="w-full h-full grid place-items-center rounded-xl hover:bg-white/5 transition group">
+                        <div className="text-center px-2">
+                          <div className="text-3xl sm:text-4xl mb-2 opacity-60 group-hover:opacity-100 transition">🔓</div>
+                          <div className="text-xs sm:text-sm font-bold text-slate-300">公布片段 {i + 1}</div>
+                          <div className="text-[10px] text-slate-500 mt-1">前面的片段會留著</div>
+                        </div>
+                      </button>
+                    )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <p className="text-center text-[11px] text-slate-500 mt-3">
+        目前看到 <b className="text-emerald-300">{Math.min(open, total)} / {total}</b> 張片段 ·
+        看得越少猜對越厲害，看不出來就再解鎖下一張
+      </p>
     </div>
   );
 }
@@ -1948,6 +2044,7 @@ function QuizScreen({ mode, deck, config, scores, setScores, states, patchState,
               <Level4Stage q={q} two={two} mode={mode} revealed={revealed} st={st}
                            onJudge={judgeL4} onSelectGroup={selectGroup} onBackGroup={backGroup} />
             )}
+            {q.__level === "level5" && <Level5Stage q={q} revealed={revealed} duck={bgm.duck} unduck={bgm.unduck} />}
           </div>
 
           {/* 第一～三關：兩段式作答（先選團體 → 再選成員／歌曲） */}
@@ -2120,12 +2217,13 @@ function ResultScreen({ mode, config, deck, states, scores, bgm, onMenu, onCover
 const BASE_LEVELS = {
   level1: { on: true, count: 5 }, level2: { on: true, count: 5 },
   level3: { on: true, count: 5 }, level4: { on: true, count: 5 },
+  level5: { on: true, count: 5 },
 };
 const DEFAULT_CFG = {
   single: {
     levels: JSON.parse(JSON.stringify(BASE_LEVELS)),
     teams: ["我"],
-    timer: 30,            // 單人預設每題 30 秒
+    timer: 0,             // 單人預設也不計時
     flashSec: 1.0,
     optionCount: 12,      // 第一步要出現幾個團體
     maskMode: "silhouette", maskLevel: 0.7,
@@ -2171,9 +2269,10 @@ function App() {
   }, [mode]);
 
   const pools = useMemo(() => {
-    const out = { level1: [], level2: [], level3: [], level4: [] };
+    const out = {};
+    LEVEL_KEYS.forEach(k => { out[k] = []; });
     if (!DATA || !DATA.levels) return out;
-    Object.keys(out).forEach(k => {
+    LEVEL_KEYS.forEach(k => {
       const lv = DATA.levels[k];
       out[k] = (lv && lv.questions ? lv.questions : []).map(q => ({ ...q, __level: k }));
     });
@@ -2220,7 +2319,7 @@ function App() {
 
   const buildDeck = () => {
     let d = [];
-    ["level1", "level2", "level3", "level4"].forEach(k => {
+    LEVEL_KEYS.forEach(k => {
       const lv = config.levels[k];
       if (!lv.on) return;
       d = d.concat(pickN(pools[k], lv.count));

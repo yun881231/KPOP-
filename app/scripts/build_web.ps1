@@ -89,6 +89,7 @@ $SEGMAP = @{
   "題目" = "q"; "题目" = "q"; "答案" = "a"
   "眼睛" = "eye"; "嘴巴" = "mouth"; "手燈" = "light"; "手灯" = "light"
   "介面音樂" = "bgm"; "封面" = "cover"; "原始MV" = "raw"
+  "片段1" = "shot1"; "片段2" = "shot2"; "片段3" = "shot3"
 }
 function Convert-Seg([string]$seg, [bool]$isFile) {
   if ($SEGMAP.ContainsKey($seg)) { return $SEGMAP[$seg] }
@@ -96,6 +97,7 @@ function Convert-Seg([string]$seg, [bool]$isFile) {
   if ($seg -like "第二關*" -or $seg -like "level2*") { return "level2" }
   if ($seg -like "第三關*" -or $seg -like "level3*") { return "level3" }
   if ($seg -like "第四關*" -or $seg -like "level4*") { return "level4" }
+  if ($seg -like "第五關*" -or $seg -like "level5*") { return "level5" }
   if ($isFile) {
     $ext  = [System.IO.Path]::GetExtension($seg).ToLower()
     $base = [System.IO.Path]::GetFileNameWithoutExtension($seg)
@@ -292,6 +294,13 @@ if ($data.levels.level4.groups) {
     if ($g.lightstick) { $g.lightstick = Add-Lightstick $g.lightstick }
   }
 }
+# 第五關：三張片段截圖 + 答案影片
+if ($data.levels.level5) {
+  foreach ($q in $data.levels.level5.questions) {
+    if ($q.shots) { $q.shots = @($q.shots | ForEach-Object { Add-Asset $_ } | Where-Object { $_ }) }
+    if ($q.answer) { $q.answer = Add-Asset $q.answer }
+  }
+}
 
 $data.assetBase = "assets"
 $data.root = "(web)"
@@ -405,6 +414,12 @@ foreach ($q in $data.levels.level4.questions) {
 }
 if ($data.levels.level4.groups) {
   foreach ($g in $data.levels.level4.groups) { Note-Lightstick $g.lightstick }
+}
+if ($data.levels.level5) {
+  foreach ($q in $data.levels.level5.questions) {
+    foreach ($x in $q.shots) { Note $x }
+    Note $q.answer
+  }
 }
 
 $badPath = New-Object System.Collections.ArrayList

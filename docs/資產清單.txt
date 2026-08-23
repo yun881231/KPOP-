@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-23 15:27:11
+2026-08-23 21:08:12
 assetBase = assets
 
 本地檔案（
-665
+741
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/aespa.jpg
@@ -34,7 +34,17 @@ assetBase = assets
   assets/level1/BLACKPINK_Jisoo.jpg
   assets/level1/BLACKPINK_Lisa.jpg
   assets/level1/BLACKPINK_Rose.jpg
-  assets/level1/Girls_Generation_TAEYEON.jpg
+  assets/level1/EXID_Hani.jpg
+  assets/level1/EXID_Jeonghwa.jpg
+  assets/level1/EXID_Solji.jpg
+  assets/level1/GFRIEND_Eunha.jpg
+  assets/level1/GFRIEND_SinB.jpg
+  assets/level1/GFRIEND_Yerin.jpg
+  assets/level1/GFRIEND_Yuju.jpg
+  assets/level1/Girls_Generation_Jessica.jpg
+  assets/level1/Girls_Generation_Sooyoung.jpg
+  assets/level1/Girls_Generation_Taeyeon.jpg
+  assets/level1/Girls_Generation_Yoona.jpg
   assets/level1/Hearts2Hearts_A-NA.jpg
   assets/level1/Hearts2Hearts_CARMEN.jpg
   assets/level1/Hearts2Hearts_IAN.png
@@ -43,6 +53,11 @@ assetBase = assets
   assets/level1/Hearts2Hearts_STELLA.jpg
   assets/level1/Hearts2Hearts_YE-ON.jpg
   assets/level1/Hearts2Hearts_YUHA.jpg
+  assets/level1/i-dle_Minnie.jpg
+  assets/level1/i-dle_Miyeon.jpg
+  assets/level1/i-dle_Shuhua.jpg
+  assets/level1/i-dle_Soyeon.jpg
+  assets/level1/i-dle_Yuqi.jpg
   assets/level1/ILLIT_Iroha.jpg
   assets/level1/ILLIT_Minju.jpg
   assets/level1/ILLIT_Moka.jpg
@@ -59,11 +74,20 @@ assetBase = assets
   assets/level1/IVE_Rei.jpg
   assets/level1/IVE_Wonyoung.png
   assets/level1/IVE_Yujin.jpg
+  assets/level1/KiiiKiii_Haum.jpg
+  assets/level1/KiiiKiii_Jiyu.jpg
+  assets/level1/KiiiKiii_Kya.jpg
+  assets/level1/KiiiKiii_Leesol.jpg
+  assets/level1/KiiiKiii_Sui.jpg
   assets/level1/LE_SSERAFIM_Chaewon.jpg
   assets/level1/LE_SSERAFIM_Eunchae.jpg
   assets/level1/LE_SSERAFIM_Kazuha.jpg
   assets/level1/LE_SSERAFIM_Sakura.png
   assets/level1/LE_SSERAFIM_Yunjin.jpg
+  assets/level1/MAMAMOO_Hwa_Sa.jpg
+  assets/level1/MAMAMOO_Moon_Byul.jpg
+  assets/level1/MAMAMOO_Solar.jpg
+  assets/level1/MAMAMOO_Whee_In.jpg
   assets/level1/NewJeans_Danielle.jpg
   assets/level1/NewJeans_Haerin.jpg
   assets/level1/NewJeans_Hanni.jpg
@@ -75,9 +99,29 @@ assetBase = assets
   assets/level1/NMIXX_Kyujin.jpg
   assets/level1/NMIXX_Lily.jpg
   assets/level1/NMIXX_Sullyoon.jpg
+  assets/level1/QWER_Chodan.jpg
+  assets/level1/QWER_Hina.jpg
+  assets/level1/QWER_Magenta.jpg
+  assets/level1/QWER_Siyeon.jpg
+  assets/level1/SOLO_CHUNG_HA.jpg
+  assets/level1/SOLO_Chuu.jpg
+  assets/level1/SOLO_HyunA.jpg
+  assets/level1/SOLO_IU.jpg
+  assets/level1/SOLO_Jo_Yu-Ri.jpg
+  assets/level1/SOLO_Kwon_Eun-Bi.jpg
+  assets/level1/SOLO_Sunmi.jpg
+  assets/level1/SOLO_Suzy.jpg
+  assets/level1/SOLO_Yena.jpg
   assets/level1/tripleS_S10_DaHyun.jpg
   assets/level1/tripleS_S11_Kotone.jpg
   assets/level1/tripleS_S12_YeonJi.jpg
+  assets/level1/tripleS_S13_Nien.jpg
+  assets/level1/tripleS_S14_SoHyun.jpg
+  assets/level1/tripleS_S16_Mayu.jpg
+  assets/level1/tripleS_S17_Lynn.jpg
+  assets/level1/tripleS_S18_JooBin.jpg
+  assets/level1/tripleS_S22_Sullin.jpg
+  assets/level1/tripleS_S23_SeoAh.jpg
   assets/level1/tripleS_S5_YooYeon.png
   assets/level1/tripleS_S9_Kaede.jpg
   assets/level1/TWICE_CHAEYOUNG.jpg
@@ -671,3 +715,35 @@ assetBase = assets
   assets/level4/q/mouth/TWICE_NAYEON.jpg
   assets/level4/q/mouth/TWICE_SANA.jpg
   assets/level4/q/mouth/TWICE_TZUYU.jpg
+  assets/level5/a/aespa_Spicy.mp4
+  assets/level5/a/BABYMONSTER_WE_GO_UP.mp4
+  assets/level5/a/Hearts2Hearts_FOCUS.mp4
+  assets/level5/a/i-dle_Fate.mp4
+  assets/level5/a/ILLIT_Cherish_My_Love.mp4
+  assets/level5/a/ITZY_CAKE.mp4
+  assets/level5/a/IVE_After_LIKE.mp4
+  assets/level5/a/IVE_ATTITUDE.mp4
+  assets/level5/q/shot1/aespa_Spicy.jpg
+  assets/level5/q/shot1/BABYMONSTER_WE_GO_UP.jpg
+  assets/level5/q/shot1/Hearts2Hearts_FOCUS.jpg
+  assets/level5/q/shot1/i-dle_Fate.jpg
+  assets/level5/q/shot1/ILLIT_Cherish_My_Love.jpg
+  assets/level5/q/shot1/ITZY_CAKE.jpg
+  assets/level5/q/shot1/IVE_After_LIKE.jpg
+  assets/level5/q/shot1/IVE_ATTITUDE.jpg
+  assets/level5/q/shot2/aespa_Spicy.jpg
+  assets/level5/q/shot2/BABYMONSTER_WE_GO_UP.jpg
+  assets/level5/q/shot2/Hearts2Hearts_FOCUS.jpg
+  assets/level5/q/shot2/i-dle_Fate.jpg
+  assets/level5/q/shot2/ILLIT_Cherish_My_Love.jpg
+  assets/level5/q/shot2/ITZY_CAKE.jpg
+  assets/level5/q/shot2/IVE_After_LIKE.jpg
+  assets/level5/q/shot2/IVE_ATTITUDE.jpg
+  assets/level5/q/shot3/aespa_Spicy.jpg
+  assets/level5/q/shot3/BABYMONSTER_WE_GO_UP.jpg
+  assets/level5/q/shot3/Hearts2Hearts_FOCUS.jpg
+  assets/level5/q/shot3/i-dle_Fate.jpg
+  assets/level5/q/shot3/ILLIT_Cherish_My_Love.jpg
+  assets/level5/q/shot3/ITZY_CAKE.jpg
+  assets/level5/q/shot3/IVE_After_LIKE.jpg
+  assets/level5/q/shot3/IVE_ATTITUDE.jpg
