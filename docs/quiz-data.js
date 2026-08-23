@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-08-23 13:09:20 */
+   產生時間：2026-08-23 13:51:08 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-08-23T13:04:09",
+    "generatedAt":  "2026-08-23T13:45:57",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -120,8 +120,8 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L1-015",
                                                         "group":  "BLACKPINK",
-                                                        "name":  "Rosé",
-                                                        "image":  "level1/BLACKPINK_Ros.jpg"
+                                                        "name":  "Rose",
+                                                        "image":  "level1/BLACKPINK_Rose.jpg"
                                                     },
                                                     {
                                                         "id":  "L1-016",

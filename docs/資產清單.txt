@@ -1,6 +1,6 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-08-23 13:09:38
+2026-08-23 13:51:26
 assetBase = assets
 
 本地檔案（
@@ -33,7 +33,7 @@ assetBase = assets
   assets/level1/BLACKPINK_Jennie.jpg
   assets/level1/BLACKPINK_Jisoo.jpg
   assets/level1/BLACKPINK_Lisa.jpg
-  assets/level1/BLACKPINK_Ros.jpg
+  assets/level1/BLACKPINK_Rose.jpg
   assets/level1/Girls_Generation_TAEYEON.jpg
   assets/level1/Hearts2Hearts_A-NA.jpg
   assets/level1/Hearts2Hearts_CARMEN.jpg
