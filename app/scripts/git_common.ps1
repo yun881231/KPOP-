@@ -177,3 +177,42 @@ function Invoke-SmartPush {
   Write-Host "  2. 到 GitHub 網頁看看遠端多了什麼，決定要保留哪一邊後再告訴我。" -ForegroundColor Yellow
   return $false
 }
+
+# 素材指紋：把所有原始素材的「檔名清單 + 檔案數 + 總大小 + 最新修改時間」
+# 壓成一串字。刻意不是只看「最新修改時間」——
+# 刪掉一張封面或把 BGM 改名的時候，剩下的檔案時間都沒變，
+# 只看時間會誤判成「沒更新」，docs 裡的舊圖舊音樂就永遠推不掉。
+function Get-AssetFingerprint([string]$RepoRoot) {
+  $dirs = @("封面", "介面音樂")
+  Get-ChildItem -LiteralPath $RepoRoot -Directory -ErrorAction SilentlyContinue |
+    Where-Object { $_.Name -like "第*關*" } | ForEach-Object { $dirs += $_.Name }
+
+  $count = 0; $bytes = [int64]0; $newest = [int64]0
+  $names = New-Object System.Collections.ArrayList
+  foreach ($d in $dirs) {
+    $full = Join-Path $RepoRoot $d
+    if (-not (Test-Path -LiteralPath $full)) { continue }
+    foreach ($f in (Get-ChildItem -LiteralPath $full -File -Recurse -ErrorAction SilentlyContinue)) {
+      $count++
+      $bytes += $f.Length
+      $t = $f.LastWriteTimeUtc.Ticks
+      if ($t -gt $newest) { $newest = $t }
+      [void]$names.Add(($f.FullName.Substring($RepoRoot.Length) -replace '\\', '/'))
+    }
+  }
+  $joined = (($names | Sort-Object) -join "|")
+  $md5 = [System.Security.Cryptography.MD5]::Create()
+  $hash = [System.BitConverter]::ToString($md5.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($joined))).Replace("-", "")
+  return ("v1-{0}-{1}-{2}-{3}" -f $count, $bytes, $newest, $hash)
+}
+
+# docs 是不是已經對應到目前的素材？
+function Get-AssetStampPath([string]$RepoRoot) { return (Join-Path $RepoRoot "docs\.assets-stamp") }
+function Test-WebBuildFresh([string]$RepoRoot) {
+  $stamp = Get-AssetStampPath $RepoRoot
+  if (-not (Test-Path -LiteralPath (Join-Path $RepoRoot "docs\quiz-data.js"))) { return $false }
+  if (-not (Test-Path -LiteralPath $stamp)) { return $false }
+  $old = (Get-Content -LiteralPath $stamp -Raw -ErrorAction SilentlyContinue)
+  if (-not $old) { return $false }
+  return ($old.Trim() -eq (Get-AssetFingerprint $RepoRoot))
+}

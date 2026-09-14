@@ -75,6 +75,10 @@ if (-not $ffmpeg) {
 $scan = Join-Path $scriptDir "scan_assets.ps1"
 if (Test-Path -LiteralPath $scan) { & $scan | Out-Null }
 
+# 借用 git_common 裡的素材指紋函式（它只定義函式，不會有副作用）
+$commonPs1 = Join-Path $scriptDir "git_common.ps1"
+if (Test-Path -LiteralPath $commonPs1) { . $commonPs1 }
+
 $jsonPath = Join-Path $appDir "quiz-data.json"
 if (-not (Test-Path -LiteralPath $jsonPath)) { throw "找不到 $jsonPath，請先執行「更新題庫.bat」。" }
 $data = Get-Content -LiteralPath $jsonPath -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -306,6 +310,40 @@ $data.assetBase = "assets"
 $data.root = "(web)"
 
 # ---------------------------------------------------------------------
+# 清掉 docs\assets 裡「這一次沒有產生」的孤兒檔
+#
+#   為什麼要做：docs\assets 整個都是自動產生的。
+#   以前只會覆蓋同名檔，所以你把封面照片換掉／刪掉／改名之後，
+#   舊的那張還是會留在 docs\assets\cover\ 裡，被 Git 一起推上 GitHub，
+#   GitHub Pages 也就繼續拿得到那張舊圖 —— 封面和背景音樂「沒更新」就是這樣來的。
+#   這裡改成：只要不在這次的 $used 清單裡，一律刪掉，
+#   讓 docs\assets 永遠等於目前題庫的內容。
+# ---------------------------------------------------------------------
+if (Test-Path -LiteralPath $assetsDir) {
+  $prefixLen = $assetsDir.TrimEnd('\').Length + 1
+  $orphans = @()
+  foreach ($f in (Get-ChildItem -LiteralPath $assetsDir -File -Recurse -ErrorAction SilentlyContinue)) {
+    $rel = $f.FullName.Substring($prefixLen) -replace '\\', '/'
+    if (-not $used.ContainsKey($rel)) { $orphans += $f }
+  }
+  if ($orphans.Count -gt 0) {
+    Write-Host ""
+    Write-Host ("清掉 {0} 個過期素材（已經不在題庫裡的舊檔）…" -f $orphans.Count) -ForegroundColor Yellow
+    foreach ($f in $orphans) {
+      $rel = $f.FullName.Substring($prefixLen) -replace '\\', '/'
+      Write-Host ("   - " + $rel) -ForegroundColor DarkGray
+      Remove-Item -LiteralPath $f.FullName -Force -ErrorAction SilentlyContinue
+    }
+    # 順手把空掉的資料夾也收掉
+    for ($i = 0; $i -lt 4; $i++) {
+      Get-ChildItem -LiteralPath $assetsDir -Directory -Recurse -ErrorAction SilentlyContinue |
+        Where-Object { -not (Get-ChildItem -LiteralPath $_.FullName -Force -ErrorAction SilentlyContinue) } |
+        ForEach-Object { Remove-Item -LiteralPath $_.FullName -Force -Recurse -ErrorAction SilentlyContinue }
+    }
+  }
+}
+
+# ---------------------------------------------------------------------
 # 產生 docs\
 # ---------------------------------------------------------------------
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
@@ -387,6 +425,15 @@ $deployTxt = @"
    注意版權與隱私，不要放不能公開的東西。
 "@
 [System.IO.File]::WriteAllText((Join-Path $outDir "部署說明.txt"), ($deployTxt -replace "`r?`n", "`r`n"), $utf8NoBom)
+
+# 記下這次打包時的素材指紋。存檔時會拿它跟現在的素材比對，
+# 一不一樣就知道 docs 是不是已經過期（封面換了、BGM 改名了…）。
+if (Get-Command Get-AssetFingerprint -ErrorAction SilentlyContinue) {
+  try {
+    [System.IO.File]::WriteAllText((Join-Path $outDir ".assets-stamp"),
+      (Get-AssetFingerprint $Root), (New-Object System.Text.UTF8Encoding($false)))
+  } catch {}
+}
 
 # ---------------------------------------------------------------------
 # 健檢：把題庫裡每一個路徑都實際比對一次，確認檔案真的在 docs 裡面

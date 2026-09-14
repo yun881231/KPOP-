@@ -8,7 +8,9 @@ param(
   [string]$Message,
   [ValidateSet("auto", "force", "rebase")]
   [string]$Mode = "auto",   # auto=自動判斷 / force=用本機覆蓋遠端 / rebase=把遠端接進來
-  [switch]$Yes              # 不要問，直接執行
+  [switch]$Yes,             # 不要問，直接執行
+  [switch]$BuildWeb,        # 推之前先重建網頁版 docs（封面圖／背景音樂會一起更新）
+  [switch]$NoBuild          # 不要問也不要重建，直接用現有的 docs
 )
 
 # ── Windows PowerShell 5.1 的地雷 ──────────────────────────────────
@@ -60,8 +62,47 @@ if (-not (Test-Path -LiteralPath (Join-Path $Root ".git"))) {
 function G  { Invoke-Git $git $Root $args }
 function GS { Invoke-Git $git $Root $args -Show }
 
+# ── 推之前先把網頁版 docs 重建好 ────────────────────────────────────
+#   docs\assets 底下的封面圖(cover)與背景音樂(bgm)都是「建立網頁版」產生的。
+#   只改 D:\kpop\封面\ 或 介面音樂\ 而沒有重建 docs 的話，
+#   推上 GitHub 的還是舊的那一份，GitHub Pages 自然看起來「沒更新」。
+#   所以這裡會自己判斷素材有沒有比 docs 新，有的話預設幫你重建。
+$docsDir  = Join-Path $Root "docs"
+$buildPs1 = Join-Path $scriptDir "build_web.ps1"
+
+$doBuild = $false
+if ($BuildWeb) { $doBuild = $true }
+elseif (-not $NoBuild -and (Test-Path -LiteralPath $buildPs1)) {
+  $fresh = Test-WebBuildFresh $Root        # 比對素材指紋，換圖／刪圖／改名都算數
+  if (-not (Test-Path -LiteralPath $docsDir)) {
+    Write-Host ""
+    Write-Host "還沒有網頁版 docs。" -ForegroundColor Yellow
+  } elseif (-not $fresh) {
+    Write-Host ""
+    Write-Host "偵測到素材跟網頁版對不起來 —— 封面圖／背景音樂可能還是舊的一份。" -ForegroundColor Yellow
+  }
+  if ($Yes) {
+    $doBuild = (-not $fresh)
+  } else {
+    Write-Host ""
+    $def = $(if ($fresh) { "N" } else { "Y" })
+    $ans = Read-Host ("要先重建網頁版 docs 嗎？封面圖與背景音樂會一起更新（Y/N，直接 Enter = " + $def + "）")
+    if (-not $ans) { $ans = $def }
+    $doBuild = ($ans -match '^[Yy]')
+  }
+}
+if ($doBuild) {
+  Write-Host ""
+  Write-Host "重建網頁版 docs…" -ForegroundColor Cyan
+  & $buildPs1
+  Write-Host ""
+}
+
 # --- 有什麼變更 ---
 G add -A | Out-Null
+# docs 一律強制納入版控。就算之後有人在 .gitignore 加了 cover/ 或 bgm/
+# 這種沒鎖根目錄的規則，也不會再把 docs\assets\cover、docs\assets\bgm 吃掉。
+if (Test-Path -LiteralPath $docsDir) { G add -f -- "docs" | Out-Null }
 $changes = @((G diff --cached --name-status).Text -split "`n" | Where-Object { $_ })
 if ($changes.Count -eq 0) {
   Write-Host ""
@@ -80,6 +121,18 @@ foreach ($line in ($changes | Select-Object -First 40)) {
   Write-Host ("   [" + $tag + "] " + $parts[1])
 }
 if ($changes.Count -gt 40) { Write-Host ("   …其餘 " + ($changes.Count - 40) + " 個") -ForegroundColor DarkGray }
+
+# 讓你一眼看到網頁版的封面圖與背景音樂到底有沒有被帶上去
+$covN = @($changes | Where-Object { $_ -match 'docs/assets/cover/' }).Count
+$bgmN = @($changes | Where-Object { $_ -match 'docs/assets/bgm/' }).Count
+$trkCov = @((G ls-files -- "docs/assets/cover").Text -split "`n" | Where-Object { $_ }).Count
+$trkBgm = @((G ls-files -- "docs/assets/bgm").Text -split "`n" | Where-Object { $_ }).Count
+Write-Host ""
+Write-Host ("  網頁版封面圖 docs/assets/cover ： 這次異動 {0} 個，版控中共 {1} 個" -f $covN, $trkCov) -ForegroundColor Cyan
+Write-Host ("  網頁版背景音樂 docs/assets/bgm ： 這次異動 {0} 個，版控中共 {1} 個" -f $bgmN, $trkBgm) -ForegroundColor Cyan
+if ($trkCov -eq 0) {
+  Write-Host "  ⚠ 版控裡一張封面圖都沒有 —— 執行一次「建立網頁版.bat」再存檔。" -ForegroundColor Yellow
+}
 
 # --- commit 訊息 ---
 Write-Host ""
