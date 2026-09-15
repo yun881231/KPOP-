@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-09-14 21:50:41
+2026-09-15 23:13:55
 assetBase = assets
 
 本地檔案（
-826
+833
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/aespa.jpg
@@ -147,6 +147,8 @@ assetBase = assets
   assets/level2/a/fromis9_DM.mp4
   assets/level2/a/GFRIEND_LOVE_WHISPER.mp4
   assets/level2/a/GFRIEND_MAGO.mp4
+  assets/level2/a/GFRIEND_Me_gustas_tu.mp4
+  assets/level2/a/GFRIEND_Rough.mp4
   assets/level2/a/GFRIEND_Season_of_Memories.mp4
   assets/level2/a/Hearts2Hearts_FOCUS.mp4
   assets/level2/a/i-dle_Fate.mp4
@@ -186,7 +188,9 @@ assetBase = assets
   assets/level2/a/OH_MY_GIRL_Dun_Dun_Dance.mp4
   assets/level2/a/QWER_T.B.H.mp4
   assets/level2/a/Red_Velvet_Cosmic.mp4
+  assets/level2/a/tripleS_Christmas_Alone.mp4
   assets/level2/a/tripleS_Girls_Never_Die.mp4
+  assets/level2/a/tripleS_Invincible.mp4
   assets/level2/a/TWICE_Heart_Shaker.mp4
   assets/level2/a/TWICE_KNOCK_KNOCK.mp4
   assets/level2/a/TWICE_LIKEY.mp4
@@ -205,6 +209,8 @@ assetBase = assets
   assets/level2/q/fromis9_DM.mp3
   assets/level2/q/GFRIEND_LOVE_WHISPER.mp3
   assets/level2/q/GFRIEND_MAGO.mp3
+  assets/level2/q/GFRIEND_Me_gustas_tu.mp3
+  assets/level2/q/GFRIEND_Rough.mp3
   assets/level2/q/GFRIEND_Season_of_Memories.mp3
   assets/level2/q/Hearts2Hearts_FOCUS.mp3
   assets/level2/q/i-dle_Fate.mp3
@@ -244,7 +250,9 @@ assetBase = assets
   assets/level2/q/OH_MY_GIRL_Dun_Dun_Dance.mp3
   assets/level2/q/QWER_T.B.H.mp3
   assets/level2/q/Red_Velvet_Cosmic.mp3
+  assets/level2/q/tripleS_Christmas_Alone.mp3
   assets/level2/q/tripleS_Girls_Never_Die.mp3
+  assets/level2/q/tripleS_Invincible.mp3
   assets/level2/q/TWICE_Heart_Shaker.mp3
   assets/level2/q/TWICE_KNOCK_KNOCK.mp3
   assets/level2/q/TWICE_LIKEY.mp3
@@ -567,7 +575,6 @@ assetBase = assets
   assets/level4/a/mouth/NMIXX_Kyujin.jpg
   assets/level4/a/mouth/NMIXX_Lily.png
   assets/level4/a/mouth/NMIXX_Sullyoon.jpg
-  assets/level4/a/mouth/QWER_Condan.jpg
   assets/level4/a/mouth/QWER_Hina.jpg
   assets/level4/a/mouth/QWER_Magenta.jpg
   assets/level4/a/mouth/QWER_Siyeon.jpg
@@ -760,7 +767,7 @@ assetBase = assets
   assets/level4/q/mouth/NMIXX_Kyujin.jpg
   assets/level4/q/mouth/NMIXX_Lily.png
   assets/level4/q/mouth/NMIXX_Sullyoon.jpg
-  assets/level4/q/mouth/QWER_Condan.jpg
+  assets/level4/q/mouth/QWER_Chodan.jpg
   assets/level4/q/mouth/QWER_Hina.png
   assets/level4/q/mouth/QWER_Magenta.jpg
   assets/level4/q/mouth/QWER_Siyeon.jpg

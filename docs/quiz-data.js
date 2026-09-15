@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-09-14 21:50:19 */
+   產生時間：2026-09-15 23:13:37 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-09-14T21:43:34",
+    "generatedAt":  "2026-09-15T23:07:55",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -836,13 +836,29 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L2-014",
                                                         "group":  "GFRIEND",
+                                                        "title":  "Me gustas tu",
+                                                        "clip":  "level2/q/GFRIEND_Me_gustas_tu.mp3",
+                                                        "answer":  "level2/a/GFRIEND_Me_gustas_tu.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-015",
+                                                        "group":  "GFRIEND",
+                                                        "title":  "Rough",
+                                                        "clip":  "level2/q/GFRIEND_Rough.mp3",
+                                                        "answer":  "level2/a/GFRIEND_Rough.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-016",
+                                                        "group":  "GFRIEND",
                                                         "title":  "Season of Memories",
                                                         "clip":  "level2/q/GFRIEND_Season_of_Memories.mp3",
                                                         "answer":  "level2/a/GFRIEND_Season_of_Memories.mp4",
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-015",
+                                                        "id":  "L2-017",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "FOCUS",
                                                         "clip":  "level2/q/Hearts2Hearts_FOCUS.mp3",
@@ -850,7 +866,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-016",
+                                                        "id":  "L2-018",
                                                         "group":  "i-dle",
                                                         "title":  "Fate",
                                                         "clip":  "level2/q/i-dle_Fate.mp3",
@@ -858,7 +874,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-017",
+                                                        "id":  "L2-019",
                                                         "group":  "i-dle",
                                                         "title":  "Klaxon",
                                                         "clip":  "level2/q/i-dle_Klaxon.mp3",
@@ -866,7 +882,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-018",
+                                                        "id":  "L2-020",
                                                         "group":  "i-dle",
                                                         "title":  "Mono",
                                                         "clip":  "level2/q/i-dle_Mono.mp3",
@@ -874,7 +890,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-019",
+                                                        "id":  "L2-021",
                                                         "group":  "i-dle",
                                                         "title":  "Queencard",
                                                         "clip":  "level2/q/i-dle_Queencard.mp3",
@@ -882,7 +898,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-020",
+                                                        "id":  "L2-022",
                                                         "group":  "i-dle",
                                                         "title":  "Wife",
                                                         "clip":  "level2/q/i-dle_Wife.mp3",
@@ -890,7 +906,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-021",
+                                                        "id":  "L2-023",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish (My Love)",
                                                         "clip":  "level2/q/ILLIT_Cherish_My_Love.mp3",
@@ -898,7 +914,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-022",
+                                                        "id":  "L2-024",
                                                         "group":  "ILLIT",
                                                         "title":  "Do the Dance",
                                                         "clip":  "level2/q/ILLIT_Do_the_Dance.mp3",
@@ -906,7 +922,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-023",
+                                                        "id":  "L2-025",
                                                         "group":  "ILLIT",
                                                         "title":  "jellyous",
                                                         "clip":  "level2/q/ILLIT_jellyous.mp3",
@@ -914,7 +930,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-024",
+                                                        "id":  "L2-026",
                                                         "group":  "ILLIT",
                                                         "title":  "Lucky Girl Syndrome",
                                                         "clip":  "level2/q/ILLIT_Lucky_Girl_Syndrome.mp3",
@@ -922,7 +938,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-025",
+                                                        "id":  "L2-027",
                                                         "group":  "ILLIT",
                                                         "title":  "NOT CUTE ANYMORE",
                                                         "clip":  "level2/q/ILLIT_NOT_CUTE_ANYMORE.mp3",
@@ -930,7 +946,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-026",
+                                                        "id":  "L2-028",
                                                         "group":  "ITZY",
                                                         "title":  "BORN TO BE",
                                                         "clip":  "level2/q/ITZY_BORN_TO_BE.mp3",
@@ -938,7 +954,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-027",
+                                                        "id":  "L2-029",
                                                         "group":  "ITZY",
                                                         "title":  "CAKE",
                                                         "clip":  "level2/q/ITZY_CAKE.mp3",
@@ -946,7 +962,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-028",
+                                                        "id":  "L2-030",
                                                         "group":  "ITZY",
                                                         "title":  "Motto",
                                                         "clip":  "level2/q/ITZY_Motto.mp3",
@@ -954,7 +970,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-029",
+                                                        "id":  "L2-031",
                                                         "group":  "ITZY",
                                                         "title":  "None of My Business",
                                                         "clip":  "level2/q/ITZY_None_of_My_Business.mp3",
@@ -962,7 +978,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-030",
+                                                        "id":  "L2-032",
                                                         "group":  "ITZY",
                                                         "title":  "RINGO",
                                                         "clip":  "level2/q/ITZY_RINGO.mp3",
@@ -970,7 +986,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-031",
+                                                        "id":  "L2-033",
                                                         "group":  "ITZY",
                                                         "title":  "UNTOUCHABLE",
                                                         "clip":  "level2/q/ITZY_UNTOUCHABLE.mp3",
@@ -978,7 +994,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-032",
+                                                        "id":  "L2-034",
                                                         "group":  "IVE",
                                                         "title":  "After LIKE",
                                                         "clip":  "level2/q/IVE_After_LIKE.mp3",
@@ -986,7 +1002,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-033",
+                                                        "id":  "L2-035",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "clip":  "level2/q/IVE_ATTITUDE.mp3",
@@ -994,7 +1010,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-034",
+                                                        "id":  "L2-036",
                                                         "group":  "IVE",
                                                         "title":  "BLACKHOLE",
                                                         "clip":  "level2/q/IVE_BLACKHOLE.mp3",
@@ -1002,7 +1018,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-035",
+                                                        "id":  "L2-037",
                                                         "group":  "IVE",
                                                         "title":  "ELEVEN",
                                                         "clip":  "level2/q/IVE_ELEVEN.mp3",
@@ -1010,7 +1026,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-036",
+                                                        "id":  "L2-038",
                                                         "group":  "IVE",
                                                         "title":  "Off The Record",
                                                         "clip":  "level2/q/IVE_Off_The_Record.mp3",
@@ -1018,7 +1034,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-037",
+                                                        "id":  "L2-039",
                                                         "group":  "IZONE",
                                                         "title":  "Panorama",
                                                         "clip":  "level2/q/IZONE_Panorama.mp3",
@@ -1026,7 +1042,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-038",
+                                                        "id":  "L2-040",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "DIFFERENT",
                                                         "clip":  "level2/q/LE_SSERAFIM_DIFFERENT.mp3",
@@ -1034,7 +1050,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-039",
+                                                        "id":  "L2-041",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "EASY",
                                                         "clip":  "level2/q/LE_SSERAFIM_EASY.mp3",
@@ -1042,7 +1058,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-040",
+                                                        "id":  "L2-042",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "HOT",
                                                         "clip":  "level2/q/LE_SSERAFIM_HOT.mp3",
@@ -1050,7 +1066,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-041",
+                                                        "id":  "L2-043",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "Perfect Night",
                                                         "clip":  "level2/q/LE_SSERAFIM_Perfect_Night.mp3",
@@ -1058,7 +1074,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-042",
+                                                        "id":  "L2-044",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "SPAGHETTI",
                                                         "clip":  "level2/q/LE_SSERAFIM_SPAGHETTI.mp3",
@@ -1066,7 +1082,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-043",
+                                                        "id":  "L2-045",
                                                         "group":  "NewJeans",
                                                         "title":  "ETA",
                                                         "clip":  "level2/q/NewJeans_ETA.mp3",
@@ -1074,7 +1090,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-044",
+                                                        "id":  "L2-046",
                                                         "group":  "NewJeans",
                                                         "title":  "Super Shy",
                                                         "clip":  "level2/q/NewJeans_Super_Shy.mp3",
@@ -1082,7 +1098,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-045",
+                                                        "id":  "L2-047",
                                                         "group":  "NMIXX",
                                                         "title":  "DICE",
                                                         "clip":  "level2/q/NMIXX_DICE.mp3",
@@ -1090,7 +1106,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-046",
+                                                        "id":  "L2-048",
                                                         "group":  "NMIXX",
                                                         "title":  "Heavy Serenade",
                                                         "clip":  "level2/q/NMIXX_Heavy_Serenade.mp3",
@@ -1098,7 +1114,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-047",
+                                                        "id":  "L2-049",
                                                         "group":  "NMIXX",
                                                         "title":  "O.O",
                                                         "clip":  "level2/q/NMIXX_O.O.mp3",
@@ -1106,7 +1122,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-048",
+                                                        "id":  "L2-050",
                                                         "group":  "NMIXX",
                                                         "title":  "See that",
                                                         "clip":  "level2/q/NMIXX_See_that.mp3",
@@ -1114,7 +1130,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-049",
+                                                        "id":  "L2-051",
                                                         "group":  "NMIXX",
                                                         "title":  "Sonar (Breaker)",
                                                         "clip":  "level2/q/NMIXX_Sonar_Breaker.mp3",
@@ -1122,7 +1138,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-050",
+                                                        "id":  "L2-052",
                                                         "group":  "OH MY GIRL",
                                                         "title":  "Dun Dun Dance",
                                                         "clip":  "level2/q/OH_MY_GIRL_Dun_Dun_Dance.mp3",
@@ -1130,7 +1146,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-051",
+                                                        "id":  "L2-053",
                                                         "group":  "QWER",
                                                         "title":  "T.B.H",
                                                         "clip":  "level2/q/QWER_T.B.H.mp3",
@@ -1138,7 +1154,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-052",
+                                                        "id":  "L2-054",
                                                         "group":  "Red Velvet",
                                                         "title":  "Cosmic",
                                                         "clip":  "level2/q/Red_Velvet_Cosmic.mp3",
@@ -1146,7 +1162,15 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-053",
+                                                        "id":  "L2-055",
+                                                        "group":  "tripleS",
+                                                        "title":  "Christmas Alone",
+                                                        "clip":  "level2/q/tripleS_Christmas_Alone.mp3",
+                                                        "answer":  "level2/a/tripleS_Christmas_Alone.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-056",
                                                         "group":  "tripleS",
                                                         "title":  "Girls Never Die",
                                                         "clip":  "level2/q/tripleS_Girls_Never_Die.mp3",
@@ -1154,7 +1178,15 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-054",
+                                                        "id":  "L2-057",
+                                                        "group":  "tripleS",
+                                                        "title":  "Invincible",
+                                                        "clip":  "level2/q/tripleS_Invincible.mp3",
+                                                        "answer":  "level2/a/tripleS_Invincible.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-058",
                                                         "group":  "TWICE",
                                                         "title":  "Heart Shaker",
                                                         "clip":  "level2/q/TWICE_Heart_Shaker.mp3",
@@ -1162,7 +1194,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-055",
+                                                        "id":  "L2-059",
                                                         "group":  "TWICE",
                                                         "title":  "KNOCK KNOCK",
                                                         "clip":  "level2/q/TWICE_KNOCK_KNOCK.mp3",
@@ -1170,7 +1202,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-056",
+                                                        "id":  "L2-060",
                                                         "group":  "TWICE",
                                                         "title":  "LIKEY",
                                                         "clip":  "level2/q/TWICE_LIKEY.mp3",
@@ -1178,7 +1210,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-057",
+                                                        "id":  "L2-061",
                                                         "group":  "TWICE",
                                                         "title":  "TT",
                                                         "clip":  "level2/q/TWICE_TT.mp3",
@@ -1186,7 +1218,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-058",
+                                                        "id":  "L2-062",
                                                         "group":  "TWICE",
                                                         "title":  "What is Love",
                                                         "clip":  "level2/q/TWICE_What_is_Love.mp3",
@@ -1489,18 +1521,18 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L3-037",
-                                                        "group":  "ILLIT ",
-                                                        "title":  "Do the Dance",
-                                                        "question":  "level3/q/ILLIT_Do_the_Dance.mp4",
-                                                        "answer":  "level3/a/ILLIT_Do_the_Dance.mp4",
+                                                        "group":  "ILLIT",
+                                                        "title":  "Cherish (My Love)",
+                                                        "question":  "level3/q/ILLIT_Cherish_My_Love.mp4",
+                                                        "answer":  "level3/a/ILLIT_Cherish_My_Love.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
                                                         "id":  "L3-038",
                                                         "group":  "ILLIT",
-                                                        "title":  "Cherish (My Love)",
-                                                        "question":  "level3/q/ILLIT_Cherish_My_Love.mp4",
-                                                        "answer":  "level3/a/ILLIT_Cherish_My_Love.mp4",
+                                                        "title":  "Do the Dance",
+                                                        "question":  "level3/q/ILLIT_Do_the_Dance.mp4",
+                                                        "answer":  "level3/a/ILLIT_Do_the_Dance.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
@@ -2095,7 +2127,7 @@ window.QUIZ_DATA =
                                                                   "Siyeon"
                                                               ],
                                                      "mouths":  [
-                                                                    "Condan",
+                                                                    "Chodan",
                                                                     "Hina",
                                                                     "Magenta",
                                                                     "Siyeon"
@@ -3260,9 +3292,9 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "QWER",
-                                                                      "name":  "Condan",
-                                                                      "q":  "level4/q/mouth/QWER_Condan.jpg",
-                                                                      "a":  "level4/a/mouth/QWER_Condan.jpg"
+                                                                      "name":  "Chodan",
+                                                                      "q":  "level4/q/mouth/QWER_Chodan.jpg",
+                                                                      "a":  null
                                                                   }
                                                     },
                                                     {
