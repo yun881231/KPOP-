@@ -103,6 +103,14 @@ G add -A | Out-Null
 # docs 一律強制納入版控。就算之後有人在 .gitignore 加了 cover/ 或 bgm/
 # 這種沒鎖根目錄的規則，也不會再把 docs\assets\cover、docs\assets\bgm 吃掉。
 if (Test-Path -LiteralPath $docsDir) { G add -f -- "docs" | Out-Null }
+
+# 修正「只有大小寫不同」的路徑（在 Windows 改檔名大小寫時 Git 看不見）
+$caseFixed = Repair-GitCase $git $Root @("docs", "app")
+if ($caseFixed.Count -gt 0) {
+  Write-Host ""
+  Write-Host "修正檔名大小寫（Windows 不分大小寫，Git 之前沒察覺）：" -ForegroundColor Yellow
+  foreach ($line in $caseFixed) { Write-Host ("   " + $line) -ForegroundColor Yellow }
+}
 $changes = @((G diff --cached --name-status).Text -split "`n" | Where-Object { $_ })
 if ($changes.Count -eq 0) {
   Write-Host ""

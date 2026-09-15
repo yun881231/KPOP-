@@ -216,3 +216,46 @@ function Test-WebBuildFresh([string]$RepoRoot) {
   if (-not $old) { return $false }
   return ($old.Trim() -eq (Get-AssetFingerprint $RepoRoot))
 }
+
+# ── Windows 的大小寫地雷 ────────────────────────────────────────────
+#  Windows 的檔案系統不分大小寫，Git 預設也跟著設 core.ignorecase=true。
+#  於是：檔案當初以 Fromis9.jpg 進版控，之後你在磁碟上改成 fromis9.jpg，
+#  Git 會認為「這是同一個路徑」→ 完全看不到有變更 → 索引裡永遠留著
+#  Fromis9.jpg，推上 GitHub（Linux，分大小寫）也就一直是大寫那一個。
+#
+#  後果不只是難看：quiz-data.js 指向 cover/fromis9.jpg，
+#  GitHub Pages 上卻只有 Fromis9.jpg → 404 → 那張封面變成「找不到圖片」。
+#
+#  這裡每次存檔都掃一次，把索引裡「只有大小寫不同」的路徑，
+#  用 git rm --cached 砍掉舊拼法、再 git add 真正的檔名，讓兩邊對齊。
+function Repair-GitCase([string]$GitExe, [string]$RepoRoot, [string[]]$Dirs) {
+  $root = (Resolve-Path -LiteralPath $RepoRoot).Path.TrimEnd('\')
+  $prefix = $root.Length + 1
+  $fixed = New-Object System.Collections.ArrayList
+
+  foreach ($d in $Dirs) {
+    $scanDir = Join-Path $root $d
+    if (-not (Test-Path -LiteralPath $scanDir)) { continue }
+
+    # 磁碟上的真實檔名（大小寫照抄）
+    $real = @{}
+    foreach ($f in (Get-ChildItem -LiteralPath $scanDir -File -Recurse -ErrorAction SilentlyContinue)) {
+      $rel = ($f.FullName.Substring($prefix) -replace '\\', '/')
+      $real[$rel.ToLowerInvariant()] = $rel
+    }
+
+    $tracked = @((Invoke-Git $GitExe $RepoRoot @("ls-files", "--", $d)).Text -split "`n" |
+                 ForEach-Object { $_.Trim() } | Where-Object { $_ })
+    foreach ($t in $tracked) {
+      $k = $t.ToLowerInvariant()
+      if (-not $real.ContainsKey($k)) { continue }   # 檔案真的被刪了 → 交給一般的 git add -A 處理
+      $r = $real[$k]
+      if ($r -cne $t) {                              # -cne = 區分大小寫的「不等於」
+        Invoke-Git $GitExe $RepoRoot @("rm", "--cached", "--quiet", "--", $t) | Out-Null
+        Invoke-Git $GitExe $RepoRoot @("add", "-f", "--", $r) | Out-Null
+        [void]$fixed.Add(($t + "  ->  " + $r))
+      }
+    }
+  }
+  return @($fixed)
+}
