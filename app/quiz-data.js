@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-09-15 23:23:04
+   產生時間：2026-09-20 12:47:50
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-09-15T23:23:04",
+    "generatedAt":  "2026-09-20T12:47:50",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -767,13 +767,29 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L2-005",
                                                         "group":  "aespa",
+                                                        "title":  "Rich Man",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/aespa_Rich Man.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/aespa_Rich Man.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-006",
+                                                        "group":  "aespa",
                                                         "title":  "Spicy",
                                                         "clip":  "第二關_聽前奏猜歌/題目/aespa_Spicy.mp3",
                                                         "answer":  "第二關_聽前奏猜歌/答案/aespa_Spicy.mp4",
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-006",
+                                                        "id":  "L2-007",
+                                                        "group":  "aespa",
+                                                        "title":  "Supernova",
+                                                        "clip":  "第二關_聽前奏猜歌/題目/aespa_Supernova.mp3",
+                                                        "answer":  "第二關_聽前奏猜歌/答案/aespa_Supernova.mp4",
+                                                        "introSeconds":  12
+                                                    },
+                                                    {
+                                                        "id":  "L2-008",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "CLIK CLAK",
                                                         "clip":  "第二關_聽前奏猜歌/題目/BABYMONSTER_CLIK CLAK.mp3",
@@ -781,7 +797,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-007",
+                                                        "id":  "L2-009",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "FOREVER",
                                                         "clip":  "第二關_聽前奏猜歌/題目/BABYMONSTER_FOREVER.mp3",
@@ -789,7 +805,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-008",
+                                                        "id":  "L2-010",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "HOT SAUCE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/BABYMONSTER_HOT SAUCE.mp3",
@@ -797,7 +813,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-009",
+                                                        "id":  "L2-011",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "I LIKE IT",
                                                         "clip":  "第二關_聽前奏猜歌/題目/BABYMONSTER_I LIKE IT.mp3",
@@ -805,7 +821,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-010",
+                                                        "id":  "L2-012",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "WE GO UP",
                                                         "clip":  "第二關_聽前奏猜歌/題目/BABYMONSTER_WE GO UP.mp3",
@@ -813,7 +829,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-011",
+                                                        "id":  "L2-013",
                                                         "group":  "fromis9",
                                                         "title":  "DM",
                                                         "clip":  "第二關_聽前奏猜歌/題目/fromis9_DM.mp3",
@@ -821,7 +837,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-012",
+                                                        "id":  "L2-014",
                                                         "group":  "GFRIEND",
                                                         "title":  "LOVE WHISPER",
                                                         "clip":  "第二關_聽前奏猜歌/題目/GFRIEND_LOVE WHISPER.mp3",
@@ -829,7 +845,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-013",
+                                                        "id":  "L2-015",
                                                         "group":  "GFRIEND",
                                                         "title":  "MAGO",
                                                         "clip":  "第二關_聽前奏猜歌/題目/GFRIEND_MAGO.mp3",
@@ -837,7 +853,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-014",
+                                                        "id":  "L2-016",
                                                         "group":  "GFRIEND",
                                                         "title":  "Me gustas tu",
                                                         "clip":  "第二關_聽前奏猜歌/題目/GFRIEND_Me gustas tu.mp3",
@@ -845,7 +861,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-015",
+                                                        "id":  "L2-017",
                                                         "group":  "GFRIEND",
                                                         "title":  "Rough",
                                                         "clip":  "第二關_聽前奏猜歌/題目/GFRIEND_Rough.mp3",
@@ -853,7 +869,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-016",
+                                                        "id":  "L2-018",
                                                         "group":  "GFRIEND",
                                                         "title":  "Season of Memories",
                                                         "clip":  "第二關_聽前奏猜歌/題目/GFRIEND_Season of Memories.mp3",
@@ -861,7 +877,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-017",
+                                                        "id":  "L2-019",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "FOCUS",
                                                         "clip":  "第二關_聽前奏猜歌/題目/Hearts2Hearts_FOCUS.mp3",
@@ -869,7 +885,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-018",
+                                                        "id":  "L2-020",
                                                         "group":  "i-dle",
                                                         "title":  "Fate",
                                                         "clip":  "第二關_聽前奏猜歌/題目/i-dle_Fate.mp3",
@@ -877,7 +893,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-019",
+                                                        "id":  "L2-021",
                                                         "group":  "i-dle",
                                                         "title":  "Klaxon",
                                                         "clip":  "第二關_聽前奏猜歌/題目/i-dle_Klaxon.mp3",
@@ -885,7 +901,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-020",
+                                                        "id":  "L2-022",
                                                         "group":  "i-dle",
                                                         "title":  "Mono",
                                                         "clip":  "第二關_聽前奏猜歌/題目/i-dle_Mono.mp3",
@@ -893,7 +909,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-021",
+                                                        "id":  "L2-023",
                                                         "group":  "i-dle",
                                                         "title":  "Queencard",
                                                         "clip":  "第二關_聽前奏猜歌/題目/i-dle_Queencard.mp3",
@@ -901,7 +917,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-022",
+                                                        "id":  "L2-024",
                                                         "group":  "i-dle",
                                                         "title":  "Wife",
                                                         "clip":  "第二關_聽前奏猜歌/題目/i-dle_Wife.mp3",
@@ -909,7 +925,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-023",
+                                                        "id":  "L2-025",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish (My Love)",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ILLIT_Cherish (My Love).mp3",
@@ -917,7 +933,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-024",
+                                                        "id":  "L2-026",
                                                         "group":  "ILLIT",
                                                         "title":  "Do the Dance",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ILLIT_Do the Dance.mp3",
@@ -925,7 +941,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-025",
+                                                        "id":  "L2-027",
                                                         "group":  "ILLIT",
                                                         "title":  "jellyous",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ILLIT_jellyous.mp3",
@@ -933,7 +949,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-026",
+                                                        "id":  "L2-028",
                                                         "group":  "ILLIT",
                                                         "title":  "Lucky Girl Syndrome",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ILLIT_Lucky Girl Syndrome.mp3",
@@ -941,7 +957,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-027",
+                                                        "id":  "L2-029",
                                                         "group":  "ILLIT",
                                                         "title":  "NOT CUTE ANYMORE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ILLIT_NOT CUTE ANYMORE.mp3",
@@ -949,7 +965,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-028",
+                                                        "id":  "L2-030",
                                                         "group":  "ITZY",
                                                         "title":  "BORN TO BE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ITZY_BORN TO BE.mp3",
@@ -957,7 +973,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-029",
+                                                        "id":  "L2-031",
                                                         "group":  "ITZY",
                                                         "title":  "CAKE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ITZY_CAKE.mp3",
@@ -965,7 +981,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-030",
+                                                        "id":  "L2-032",
                                                         "group":  "ITZY",
                                                         "title":  "Motto",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ITZY_Motto.mp3",
@@ -973,7 +989,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-031",
+                                                        "id":  "L2-033",
                                                         "group":  "ITZY",
                                                         "title":  "None of My Business",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ITZY_None of My Business.mp3",
@@ -981,7 +997,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-032",
+                                                        "id":  "L2-034",
                                                         "group":  "ITZY",
                                                         "title":  "RINGO",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ITZY_RINGO.mp3",
@@ -989,7 +1005,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-033",
+                                                        "id":  "L2-035",
                                                         "group":  "ITZY",
                                                         "title":  "UNTOUCHABLE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/ITZY_UNTOUCHABLE.mp3",
@@ -997,7 +1013,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-034",
+                                                        "id":  "L2-036",
                                                         "group":  "IVE",
                                                         "title":  "After LIKE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/IVE_After LIKE.mp3",
@@ -1005,7 +1021,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-035",
+                                                        "id":  "L2-037",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/IVE_ATTITUDE.mp3",
@@ -1013,7 +1029,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-036",
+                                                        "id":  "L2-038",
                                                         "group":  "IVE",
                                                         "title":  "BLACKHOLE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/IVE_BLACKHOLE.mp3",
@@ -1021,7 +1037,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-037",
+                                                        "id":  "L2-039",
                                                         "group":  "IVE",
                                                         "title":  "ELEVEN",
                                                         "clip":  "第二關_聽前奏猜歌/題目/IVE_ELEVEN.mp3",
@@ -1029,7 +1045,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-038",
+                                                        "id":  "L2-040",
                                                         "group":  "IVE",
                                                         "title":  "Off The Record",
                                                         "clip":  "第二關_聽前奏猜歌/題目/IVE_Off The Record.mp3",
@@ -1037,7 +1053,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-039",
+                                                        "id":  "L2-041",
                                                         "group":  "IZONE",
                                                         "title":  "Panorama",
                                                         "clip":  "第二關_聽前奏猜歌/題目/IZONE_Panorama.mp3",
@@ -1045,7 +1061,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-040",
+                                                        "id":  "L2-042",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "DIFFERENT",
                                                         "clip":  "第二關_聽前奏猜歌/題目/LE SSERAFIM_DIFFERENT.mp3",
@@ -1053,7 +1069,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-041",
+                                                        "id":  "L2-043",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "EASY",
                                                         "clip":  "第二關_聽前奏猜歌/題目/LE SSERAFIM_EASY.mp3",
@@ -1061,7 +1077,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-042",
+                                                        "id":  "L2-044",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "HOT",
                                                         "clip":  "第二關_聽前奏猜歌/題目/LE SSERAFIM_HOT.mp3",
@@ -1069,7 +1085,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-043",
+                                                        "id":  "L2-045",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "Perfect Night",
                                                         "clip":  "第二關_聽前奏猜歌/題目/LE SSERAFIM_Perfect Night.mp3",
@@ -1077,7 +1093,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-044",
+                                                        "id":  "L2-046",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "SPAGHETTI",
                                                         "clip":  "第二關_聽前奏猜歌/題目/LE SSERAFIM_SPAGHETTI.mp3",
@@ -1085,7 +1101,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-045",
+                                                        "id":  "L2-047",
                                                         "group":  "NewJeans",
                                                         "title":  "ETA",
                                                         "clip":  "第二關_聽前奏猜歌/題目/NewJeans_ETA.mp3",
@@ -1093,7 +1109,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-046",
+                                                        "id":  "L2-048",
                                                         "group":  "NewJeans",
                                                         "title":  "Super Shy",
                                                         "clip":  "第二關_聽前奏猜歌/題目/NewJeans_Super Shy.mp3",
@@ -1101,7 +1117,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-047",
+                                                        "id":  "L2-049",
                                                         "group":  "NMIXX",
                                                         "title":  "DICE",
                                                         "clip":  "第二關_聽前奏猜歌/題目/NMIXX_DICE.mp3",
@@ -1109,7 +1125,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-048",
+                                                        "id":  "L2-050",
                                                         "group":  "NMIXX",
                                                         "title":  "Heavy Serenade",
                                                         "clip":  "第二關_聽前奏猜歌/題目/NMIXX_Heavy Serenade.mp3",
@@ -1117,7 +1133,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-049",
+                                                        "id":  "L2-051",
                                                         "group":  "NMIXX",
                                                         "title":  "O.O",
                                                         "clip":  "第二關_聽前奏猜歌/題目/NMIXX_O.O.mp3",
@@ -1125,7 +1141,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-050",
+                                                        "id":  "L2-052",
                                                         "group":  "NMIXX",
                                                         "title":  "See that",
                                                         "clip":  "第二關_聽前奏猜歌/題目/NMIXX_See that.mp3",
@@ -1133,7 +1149,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-051",
+                                                        "id":  "L2-053",
                                                         "group":  "NMIXX",
                                                         "title":  "Sonar (Breaker)",
                                                         "clip":  "第二關_聽前奏猜歌/題目/NMIXX_Sonar (Breaker).mp3",
@@ -1141,7 +1157,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-052",
+                                                        "id":  "L2-054",
                                                         "group":  "OH MY GIRL",
                                                         "title":  "Dun Dun Dance",
                                                         "clip":  "第二關_聽前奏猜歌/題目/OH MY GIRL_Dun Dun Dance.mp3",
@@ -1149,7 +1165,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-053",
+                                                        "id":  "L2-055",
                                                         "group":  "QWER",
                                                         "title":  "T.B.H",
                                                         "clip":  "第二關_聽前奏猜歌/題目/QWER_T.B.H.mp3",
@@ -1157,7 +1173,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-054",
+                                                        "id":  "L2-056",
                                                         "group":  "Red Velvet",
                                                         "title":  "Cosmic",
                                                         "clip":  "第二關_聽前奏猜歌/題目/Red Velvet_Cosmic.mp3",
@@ -1165,7 +1181,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-055",
+                                                        "id":  "L2-057",
                                                         "group":  "tripleS",
                                                         "title":  "Christmas Alone",
                                                         "clip":  "第二關_聽前奏猜歌/題目/tripleS_Christmas Alone.mp3",
@@ -1173,7 +1189,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-056",
+                                                        "id":  "L2-058",
                                                         "group":  "tripleS",
                                                         "title":  "Girls Never Die",
                                                         "clip":  "第二關_聽前奏猜歌/題目/tripleS_Girls Never Die.mp3",
@@ -1181,7 +1197,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-057",
+                                                        "id":  "L2-059",
                                                         "group":  "tripleS",
                                                         "title":  "Invincible",
                                                         "clip":  "第二關_聽前奏猜歌/題目/tripleS_Invincible.mp3",
@@ -1189,7 +1205,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-058",
+                                                        "id":  "L2-060",
                                                         "group":  "TWICE",
                                                         "title":  "Heart Shaker",
                                                         "clip":  "第二關_聽前奏猜歌/題目/TWICE_Heart Shaker.mp3",
@@ -1197,7 +1213,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-059",
+                                                        "id":  "L2-061",
                                                         "group":  "TWICE",
                                                         "title":  "KNOCK KNOCK",
                                                         "clip":  "第二關_聽前奏猜歌/題目/TWICE_KNOCK KNOCK.mp3",
@@ -1205,7 +1221,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-060",
+                                                        "id":  "L2-062",
                                                         "group":  "TWICE",
                                                         "title":  "LIKEY",
                                                         "clip":  "第二關_聽前奏猜歌/題目/TWICE_LIKEY.mp3",
@@ -1213,7 +1229,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-061",
+                                                        "id":  "L2-063",
                                                         "group":  "TWICE",
                                                         "title":  "TT",
                                                         "clip":  "第二關_聽前奏猜歌/題目/TWICE_TT.mp3",
@@ -1221,7 +1237,7 @@ window.QUIZ_DATA =
                                                         "introSeconds":  12
                                                     },
                                                     {
-                                                        "id":  "L2-062",
+                                                        "id":  "L2-064",
                                                         "group":  "TWICE",
                                                         "title":  "What is Love",
                                                         "clip":  "第二關_聽前奏猜歌/題目/TWICE_What is Love.mp3",
@@ -3756,16 +3772,27 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L5-003",
                                                         "group":  "aespa",
+                                                        "title":  "LEMONADE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/aespa_LEMONADE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/aespa_LEMONADE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/aespa_LEMONADE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/aespa_LEMONADE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-004",
+                                                        "group":  "aespa",
                                                         "title":  "Rich Man",
                                                         "shots":  [
                                                                       "第五關_看MV片段猜歌/題目/片段1/aespa_Rich Man.jpg",
                                                                       "第五關_看MV片段猜歌/題目/片段2/aespa_Rich Man.jpg",
                                                                       "第五關_看MV片段猜歌/題目/片段3/aespa_Rich Man.jpg"
                                                                   ],
-                                                        "answer":  null
+                                                        "answer":  "第五關_看MV片段猜歌/答案/aespa_Rich Man.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-004",
+                                                        "id":  "L5-005",
                                                         "group":  "aespa",
                                                         "title":  "Spicy",
                                                         "shots":  [
@@ -3776,7 +3803,62 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/aespa_Spicy.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-005",
+                                                        "id":  "L5-006",
+                                                        "group":  "aespa",
+                                                        "title":  "Supernova",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/aespa_Supernova.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/aespa_Supernova.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/aespa_Supernova.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/aespa_Supernova.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-007",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "CLIK CLAK",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/BABYMONSTER_CLIK CLAK.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/BABYMONSTER_CLIK CLAK.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/BABYMONSTER_CLIK CLAK.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/BABYMONSTER_CLIK CLAK.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-008",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "FOREVER",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/BABYMONSTER_FOREVER.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/BABYMONSTER_FOREVER.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/BABYMONSTER_FOREVER.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/BABYMONSTER_FOREVER.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-009",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "HOT SAUCE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/BABYMONSTER_HOT SAUCE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/BABYMONSTER_HOT SAUCE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/BABYMONSTER_HOT SAUCE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/BABYMONSTER_HOT SAUCE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-010",
+                                                        "group":  "BABYMONSTER",
+                                                        "title":  "I LIKE IT",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/BABYMONSTER_I LIKE IT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/BABYMONSTER_I LIKE IT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/BABYMONSTER_I LIKE IT.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/BABYMONSTER_I LIKE IT.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-011",
                                                         "group":  "BABYMONSTER",
                                                         "title":  "WE GO UP",
                                                         "shots":  [
@@ -3787,7 +3869,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/BABYMONSTER_WE GO UP.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-006",
+                                                        "id":  "L5-012",
                                                         "group":  "Hearts2Hearts",
                                                         "title":  "FOCUS",
                                                         "shots":  [
@@ -3798,7 +3880,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/Hearts2Hearts_FOCUS.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-007",
+                                                        "id":  "L5-013",
                                                         "group":  "i-dle",
                                                         "title":  "Fate",
                                                         "shots":  [
@@ -3809,7 +3891,40 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/i-dle_Fate.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-008",
+                                                        "id":  "L5-014",
+                                                        "group":  "i-dle",
+                                                        "title":  "Klaxon",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/i-dle_Klaxon.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/i-dle_Klaxon.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/i-dle_Klaxon.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/i-dle_Klaxon.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-015",
+                                                        "group":  "i-dle",
+                                                        "title":  "Mono",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/i-dle_Mono.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/i-dle_Mono.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/i-dle_Mono.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/i-dle_Mono.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-016",
+                                                        "group":  "i-dle",
+                                                        "title":  "Queencard",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/i-dle_Queencard.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/i-dle_Queencard.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/i-dle_Queencard.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/i-dle_Queencard.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-017",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish (My Love)",
                                                         "shots":  [
@@ -3820,7 +3935,51 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ILLIT_Cherish (My Love).mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-009",
+                                                        "id":  "L5-018",
+                                                        "group":  "ILLIT",
+                                                        "title":  "Do the Dance",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ILLIT_Do the Dance.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ILLIT_Do the Dance.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ILLIT_Do the Dance.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ILLIT_Do the Dance.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-019",
+                                                        "group":  "ILLIT",
+                                                        "title":  "jellyous",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ILLIT_jellyous.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ILLIT_jellyous.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ILLIT_jellyous.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ILLIT_jellyous.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-020",
+                                                        "group":  "ILLIT",
+                                                        "title":  "Lucky Girl Syndrome",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ILLIT_Lucky Girl Syndrome.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ILLIT_Lucky Girl Syndrome.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ILLIT_Lucky Girl Syndrome.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ILLIT_Lucky Girl Syndrome.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-021",
+                                                        "group":  "ILLIT",
+                                                        "title":  "NOT CUTE ANYMORE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ILLIT_NOT CUTE ANYMORE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ILLIT_NOT CUTE ANYMORE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ILLIT_NOT CUTE ANYMORE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ILLIT_NOT CUTE ANYMORE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-022",
                                                         "group":  "ITZY",
                                                         "title":  "CAKE",
                                                         "shots":  [
@@ -3831,7 +3990,51 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ITZY_CAKE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-010",
+                                                        "id":  "L5-023",
+                                                        "group":  "ITZY",
+                                                        "title":  "Motto",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ITZY_Motto.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ITZY_Motto.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ITZY_Motto.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ITZY_Motto.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-024",
+                                                        "group":  "ITZY",
+                                                        "title":  "None of My Business",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ITZY_None of My Business.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ITZY_None of My Business.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ITZY_None of My Business.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ITZY_None of My Business.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-025",
+                                                        "group":  "ITZY",
+                                                        "title":  "RINGO",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ITZY_RINGO.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ITZY_RINGO.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ITZY_RINGO.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ITZY_RINGO.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-026",
+                                                        "group":  "ITZY",
+                                                        "title":  "UNTOUCHABLE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/ITZY_UNTOUCHABLE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/ITZY_UNTOUCHABLE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/ITZY_UNTOUCHABLE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/ITZY_UNTOUCHABLE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-027",
                                                         "group":  "IVE",
                                                         "title":  "After LIKE",
                                                         "shots":  [
@@ -3842,7 +4045,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/IVE_After LIKE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-011",
+                                                        "id":  "L5-028",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "shots":  [
@@ -3851,6 +4054,248 @@ window.QUIZ_DATA =
                                                                       "第五關_看MV片段猜歌/題目/片段3/IVE_ATTITUDE.jpg"
                                                                   ],
                                                         "answer":  "第五關_看MV片段猜歌/答案/IVE_ATTITUDE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-029",
+                                                        "group":  "IVE",
+                                                        "title":  "BLACKHOLE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IVE_BLACKHOLE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IVE_BLACKHOLE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IVE_BLACKHOLE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IVE_BLACKHOLE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-030",
+                                                        "group":  "IVE",
+                                                        "title":  "ELEVEN",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IVE_ELEVEN.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IVE_ELEVEN.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IVE_ELEVEN.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IVE_ELEVEN.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-031",
+                                                        "group":  "IVE",
+                                                        "title":  "Off The Record",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IVE_Off The Record.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IVE_Off The Record.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IVE_Off The Record.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IVE_Off The Record.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-032",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "DIFFERENT",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/LE SSERAFIM_DIFFERENT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/LE SSERAFIM_DIFFERENT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/LE SSERAFIM_DIFFERENT.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_DIFFERENT.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-033",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "EASY",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/LE SSERAFIM_EASY.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/LE SSERAFIM_EASY.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/LE SSERAFIM_EASY.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_EASY.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-034",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "HOT",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/LE SSERAFIM_HOT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/LE SSERAFIM_HOT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/LE SSERAFIM_HOT.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_HOT.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-035",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "Perfect Night",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/LE SSERAFIM_Perfect Night.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/LE SSERAFIM_Perfect Night.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/LE SSERAFIM_Perfect Night.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_Perfect Night.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-036",
+                                                        "group":  "LE SSERAFIM",
+                                                        "title":  "SPAGHETTI",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/LE SSERAFIM_SPAGHETTI.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/LE SSERAFIM_SPAGHETTI.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/LE SSERAFIM_SPAGHETTI.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_SPAGHETTI.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-037",
+                                                        "group":  "NewJeans",
+                                                        "title":  "ETA",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/NewJeans_ETA.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/NewJeans_ETA.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/NewJeans_ETA.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/NewJeans_ETA.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-038",
+                                                        "group":  "NewJeans",
+                                                        "title":  "Super Shy",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/NewJeans_Super Shy.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/NewJeans_Super Shy.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/NewJeans_Super Shy.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/NewJeans_Super Shy.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-039",
+                                                        "group":  "NMIXX",
+                                                        "title":  "DICE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/NMIXX_DICE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/NMIXX_DICE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/NMIXX_DICE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/NMIXX_DICE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-040",
+                                                        "group":  "NMIXX",
+                                                        "title":  "Heavy Serenade",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/NMIXX_Heavy Serenade.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/NMIXX_Heavy Serenade.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/NMIXX_Heavy Serenade.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/NMIXX_Heavy Serenade.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-041",
+                                                        "group":  "NMIXX",
+                                                        "title":  "O.O",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/NMIXX_O.O.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/NMIXX_O.O.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/NMIXX_O.O.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/NMIXX_O.O.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-042",
+                                                        "group":  "NMIXX",
+                                                        "title":  "See that",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/NMIXX_See that.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/NMIXX_See that.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/NMIXX_See that.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/NMIXX_See that.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-043",
+                                                        "group":  "NMIXX",
+                                                        "title":  "Sonar (Breaker)",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/NMIXX_Sonar (Breaker).jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/NMIXX_Sonar (Breaker).jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/NMIXX_Sonar (Breaker).jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/NMIXX_Sonar (Breaker).mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-044",
+                                                        "group":  "QWER",
+                                                        "title":  "T.B.H",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/QWER_T.B.H.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/QWER_T.B.H.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/QWER_T.B.H.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/QWER_T.B.H.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-045",
+                                                        "group":  "tripleS",
+                                                        "title":  "Girls Never Die",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/tripleS_Girls Never Die.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/tripleS_Girls Never Die.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/tripleS_Girls Never Die.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/tripleS_Girls Never Die.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-046",
+                                                        "group":  "tripleS",
+                                                        "title":  "Invincible",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/tripleS_Invincible.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/tripleS_Invincible.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/tripleS_Invincible.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/tripleS_Invincible.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-047",
+                                                        "group":  "TWICE",
+                                                        "title":  "KNOCK KNOCK",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/TWICE_KNOCK KNOCK.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/TWICE_KNOCK KNOCK.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/TWICE_KNOCK KNOCK.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/TWICE_KNOCK KNOCK.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-048",
+                                                        "group":  "TWICE",
+                                                        "title":  "LIKEY",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/TWICE_LIKEY.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/TWICE_LIKEY.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/TWICE_LIKEY.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/TWICE_LIKEY.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-049",
+                                                        "group":  "TWICE",
+                                                        "title":  "TT",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/TWICE_TT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/TWICE_TT.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/TWICE_TT.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/TWICE_TT.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-050",
+                                                        "group":  "TWICE",
+                                                        "title":  "What is Love",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/TWICE_What is Love.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/TWICE_What is Love.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/TWICE_What is Love.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/TWICE_What is Love.mp4"
                                                     }
                                                 ]
                               }
