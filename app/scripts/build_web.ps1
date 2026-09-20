@@ -310,22 +310,77 @@ $data.assetBase = "assets"
 $data.root = "(web)"
 
 # ---------------------------------------------------------------------
-# 清掉 docs\assets 裡「這一次沒有產生」的孤兒檔
+# 整理 docs\assets：改掉大小寫不符的檔名、清掉過期的孤兒檔
 #
-#   為什麼要做：docs\assets 整個都是自動產生的。
-#   以前只會覆蓋同名檔，所以你把封面照片換掉／刪掉／改名之後，
-#   舊的那張還是會留在 docs\assets\cover\ 裡，被 Git 一起推上 GitHub，
-#   GitHub Pages 也就繼續拿得到那張舊圖 —— 封面和背景音樂「沒更新」就是這樣來的。
-#   這裡改成：只要不在這次的 $used 清單裡，一律刪掉，
-#   讓 docs\assets 永遠等於目前題庫的內容。
+#  A) 大小寫不符
+#     Windows 的檔案系統不分大小寫，Copy-Item 覆蓋舊檔時會「沿用磁碟上原本的檔名」。
+#     所以你把素材從 BABYMONSTER_CHIQUITA.jpg 改成 BABYMONSTER_Chiquita.jpg 之後，
+#     docs 裡那個檔還是叫 CHIQUITA —— 但 quiz-data.js 指的是 Chiquita，
+#     推到 GitHub（分大小寫）就變成 404，那張答案圖直接掛掉。
+#     這裡逐一比對磁碟上的真實檔名和這次該產生的檔名，只差大小寫就改名過來。
+#     （注意：不能用「刪掉」處理 —— 在 Windows 上它跟正確檔名是同一個檔，會把圖刪光。）
+#
+#  B) 孤兒檔
+#     docs\assets 整個都是自動產生的，這次沒用到的一律刪掉，
+#     免得換掉／刪掉的舊封面一直賴在裡面被推上 GitHub。
 # ---------------------------------------------------------------------
 if (Test-Path -LiteralPath $assetsDir) {
   $prefixLen = $assetsDir.TrimEnd('\').Length + 1
+
+  # 不分大小寫的查表：任何拼法 → 這次該用的正確拼法
+  $canon = @{}
+  foreach ($k in $used.Keys) { $canon[[string]$k] = [string]$k }
+  # 區分大小寫的集合：用來判斷「拼法是不是完全一樣」
+  $exact = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::Ordinal)
+  foreach ($k in $used.Keys) { [void]$exact.Add([string]$k) }
+
+  # 先把磁碟上實際有哪些檔案列出來（區分大小寫）
+  $files  = @(Get-ChildItem -LiteralPath $assetsDir -File -Recurse -ErrorAction SilentlyContinue)
+  $onDisk = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::Ordinal)
+  foreach ($f in $files) { [void]$onDisk.Add(($f.FullName.Substring($prefixLen) -replace '\\', '/')) }
+
+  $renamed = New-Object System.Collections.ArrayList
   $orphans = @()
-  foreach ($f in (Get-ChildItem -LiteralPath $assetsDir -File -Recurse -ErrorAction SilentlyContinue)) {
+  foreach ($f in $files) {
     $rel = $f.FullName.Substring($prefixLen) -replace '\\', '/'
-    if (-not $used.ContainsKey($rel)) { $orphans += $f }
+    if ($exact.Contains($rel)) { continue }              # 拼法正確，跳過
+
+    if ($canon.ContainsKey($rel)) {                      # 只差大小寫
+      $want = $canon[$rel]
+      if ($onDisk.Contains($want)) {
+        # 正確拼法的檔案已經另外存在（分大小寫的檔案系統才會這樣）→ 舊拼法直接當孤兒刪掉
+        $orphans += $f
+        continue
+      }
+      # Windows：同一個檔案只是名字大小寫不對 → 借暫時檔名繞一圈改回來
+      $wantLeaf = Split-Path -Leaf ($want -replace '/', '\')
+      $tmpLeaf  = "__case__" + [System.Guid]::NewGuid().ToString("N") + [System.IO.Path]::GetExtension($wantLeaf)
+      $tmpPath  = Join-Path $f.DirectoryName $tmpLeaf
+      $ok = $false
+      try {
+        Rename-Item -LiteralPath $f.FullName -NewName $tmpLeaf -Force -ErrorAction Stop
+        Rename-Item -LiteralPath $tmpPath -NewName $wantLeaf -Force -ErrorAction Stop
+        $ok = $true
+        [void]$renamed.Add($rel + "  ->  " + $want)
+      } catch {
+        Write-Host ("   ! 檔名大小寫改不動： " + $rel) -ForegroundColor Yellow
+      }
+      # 萬一中途失敗，暫時檔名不能留在 docs 裡
+      if ((-not $ok) -and (Test-Path -LiteralPath $tmpPath)) {
+        try { Rename-Item -LiteralPath $tmpPath -NewName (Split-Path -Leaf $f.FullName) -Force -ErrorAction Stop } catch {}
+      }
+      continue
+    }
+
+    $orphans += $f                                        # 真的沒用到了
   }
+
+  if ($renamed.Count -gt 0) {
+    Write-Host ""
+    Write-Host ("修正 {0} 個檔名大小寫（跟素材對齊）…" -f $renamed.Count) -ForegroundColor Yellow
+    foreach ($line in $renamed) { Write-Host ("   " + $line) -ForegroundColor Yellow }
+  }
+
   if ($orphans.Count -gt 0) {
     Write-Host ""
     Write-Host ("清掉 {0} 個過期素材（已經不在題庫裡的舊檔）…" -f $orphans.Count) -ForegroundColor Yellow
