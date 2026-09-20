@@ -1,5 +1,5 @@
 {
-    "generatedAt":  "2026-09-20T12:47:50",
+    "generatedAt":  "2026-09-20T12:57:43",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -1944,7 +1944,7 @@
                                                      "eyes":  [
                                                                   "Ahyeon",
                                                                   "ASA",
-                                                                  "CHIQUITA",
+                                                                  "Chiquita",
                                                                   "Pharita",
                                                                   "Rami",
                                                                   "Rora",
@@ -1953,7 +1953,7 @@
                                                      "mouths":  [
                                                                     "Ahyeon",
                                                                     "ASA",
-                                                                    "CHIQUITA",
+                                                                    "Chiquita",
                                                                     "Pharita",
                                                                     "Rami",
                                                                     "Rora",
@@ -2319,9 +2319,9 @@
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "CHIQUITA",
-                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/BABYMONSTER_CHIQUITA.jpg",
-                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/BABYMONSTER_CHIQUITA.jpg"
+                                                                      "name":  "Chiquita",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/BABYMONSTER_Chiquita.jpg",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/BABYMONSTER_Chiquita.jpg"
                                                                   }
                                                     },
                                                     {
@@ -2330,9 +2330,9 @@
                                                         "lightstick":  "第四關_看五官猜偶像/題目/手燈/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
-                                                                     "name":  "CHIQUITA",
-                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/BABYMONSTER_CHIQUITA.jpg",
-                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/BABYMONSTER_CHIQUITA.jpg"
+                                                                     "name":  "Chiquita",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/BABYMONSTER_Chiquita.jpg",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/BABYMONSTER_Chiquita.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",

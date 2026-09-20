@@ -1,6 +1,6 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-09-20 12:54:30
+2026-09-20 13:04:08
 assetBase = assets
 
 本地檔案（
@@ -436,7 +436,7 @@ assetBase = assets
   assets/level4/a/eye/aespa_Winter.jpg
   assets/level4/a/eye/BABYMONSTER_Ahyeon.jpg
   assets/level4/a/eye/BABYMONSTER_ASA.jpg
-  assets/level4/a/eye/BABYMONSTER_CHIQUITA.jpg
+  assets/level4/a/eye/BABYMONSTER_Chiquita.jpg
   assets/level4/a/eye/BABYMONSTER_Pharita.jpg
   assets/level4/a/eye/BABYMONSTER_Rami.png
   assets/level4/a/eye/BABYMONSTER_Rora.jpg
@@ -525,7 +525,7 @@ assetBase = assets
   assets/level4/a/mouth/aespa_Winter.jpg
   assets/level4/a/mouth/BABYMONSTER_Ahyeon.jpg
   assets/level4/a/mouth/BABYMONSTER_ASA.jpg
-  assets/level4/a/mouth/BABYMONSTER_CHIQUITA.jpg
+  assets/level4/a/mouth/BABYMONSTER_Chiquita.jpg
   assets/level4/a/mouth/BABYMONSTER_Pharita.png
   assets/level4/a/mouth/BABYMONSTER_Rami.jpg
   assets/level4/a/mouth/BABYMONSTER_Rora.jpg
@@ -613,7 +613,7 @@ assetBase = assets
   assets/level4/q/eye/aespa_Winter.jpg
   assets/level4/q/eye/BABYMONSTER_Ahyeon.jpg
   assets/level4/q/eye/BABYMONSTER_ASA.jpg
-  assets/level4/q/eye/BABYMONSTER_CHIQUITA.jpg
+  assets/level4/q/eye/BABYMONSTER_Chiquita.jpg
   assets/level4/q/eye/BABYMONSTER_Pharita.jpg
   assets/level4/q/eye/BABYMONSTER_Rami.png
   assets/level4/q/eye/BABYMONSTER_Rora.jpg
@@ -717,7 +717,7 @@ assetBase = assets
   assets/level4/q/mouth/aespa_Winter.jpg
   assets/level4/q/mouth/BABYMONSTER_Ahyeon.jpg
   assets/level4/q/mouth/BABYMONSTER_ASA.jpg
-  assets/level4/q/mouth/BABYMONSTER_CHIQUITA.jpg
+  assets/level4/q/mouth/BABYMONSTER_Chiquita.jpg
   assets/level4/q/mouth/BABYMONSTER_Pharita.png
   assets/level4/q/mouth/BABYMONSTER_Rami.jpg
   assets/level4/q/mouth/BABYMONSTER_Rora.jpg

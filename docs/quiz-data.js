@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-09-20 12:54:08 */
+   產生時間：2026-09-20 13:03:47 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-09-20T12:47:50",
+    "generatedAt":  "2026-09-20T12:57:43",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -1947,7 +1947,7 @@ window.QUIZ_DATA =
                                                      "eyes":  [
                                                                   "Ahyeon",
                                                                   "ASA",
-                                                                  "CHIQUITA",
+                                                                  "Chiquita",
                                                                   "Pharita",
                                                                   "Rami",
                                                                   "Rora",
@@ -1956,7 +1956,7 @@ window.QUIZ_DATA =
                                                      "mouths":  [
                                                                     "Ahyeon",
                                                                     "ASA",
-                                                                    "CHIQUITA",
+                                                                    "Chiquita",
                                                                     "Pharita",
                                                                     "Rami",
                                                                     "Rora",
@@ -2322,9 +2322,9 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "CHIQUITA",
-                                                                      "q":  "level4/q/mouth/BABYMONSTER_CHIQUITA.jpg",
-                                                                      "a":  "level4/a/mouth/BABYMONSTER_CHIQUITA.jpg"
+                                                                      "name":  "Chiquita",
+                                                                      "q":  "level4/q/mouth/BABYMONSTER_Chiquita.jpg",
+                                                                      "a":  "level4/a/mouth/BABYMONSTER_Chiquita.jpg"
                                                                   }
                                                     },
                                                     {
@@ -2333,9 +2333,9 @@ window.QUIZ_DATA =
                                                         "lightstick":  "level4/q/light/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
-                                                                     "name":  "CHIQUITA",
-                                                                     "q":  "level4/q/eye/BABYMONSTER_CHIQUITA.jpg",
-                                                                     "a":  "level4/a/eye/BABYMONSTER_CHIQUITA.jpg"
+                                                                     "name":  "Chiquita",
+                                                                     "q":  "level4/q/eye/BABYMONSTER_Chiquita.jpg",
+                                                                     "a":  "level4/a/eye/BABYMONSTER_Chiquita.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",

@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-09-20 12:47:50
+   產生時間：2026-09-20 12:57:43
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-09-20T12:47:50",
+    "generatedAt":  "2026-09-20T12:57:43",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -1950,7 +1950,7 @@ window.QUIZ_DATA =
                                                      "eyes":  [
                                                                   "Ahyeon",
                                                                   "ASA",
-                                                                  "CHIQUITA",
+                                                                  "Chiquita",
                                                                   "Pharita",
                                                                   "Rami",
                                                                   "Rora",
@@ -1959,7 +1959,7 @@ window.QUIZ_DATA =
                                                      "mouths":  [
                                                                     "Ahyeon",
                                                                     "ASA",
-                                                                    "CHIQUITA",
+                                                                    "Chiquita",
                                                                     "Pharita",
                                                                     "Rami",
                                                                     "Rora",
@@ -2325,9 +2325,9 @@ window.QUIZ_DATA =
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
-                                                                      "name":  "CHIQUITA",
-                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/BABYMONSTER_CHIQUITA.jpg",
-                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/BABYMONSTER_CHIQUITA.jpg"
+                                                                      "name":  "Chiquita",
+                                                                      "q":  "第四關_看五官猜偶像/題目/嘴巴/BABYMONSTER_Chiquita.jpg",
+                                                                      "a":  "第四關_看五官猜偶像/答案/嘴巴/BABYMONSTER_Chiquita.jpg"
                                                                   }
                                                     },
                                                     {
@@ -2336,9 +2336,9 @@ window.QUIZ_DATA =
                                                         "lightstick":  "第四關_看五官猜偶像/題目/手燈/BABYMONSTER.png",
                                                         "eyes":  {
                                                                      "group":  "BABYMONSTER",
-                                                                     "name":  "CHIQUITA",
-                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/BABYMONSTER_CHIQUITA.jpg",
-                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/BABYMONSTER_CHIQUITA.jpg"
+                                                                     "name":  "Chiquita",
+                                                                     "q":  "第四關_看五官猜偶像/題目/眼睛/BABYMONSTER_Chiquita.jpg",
+                                                                     "a":  "第四關_看五官猜偶像/答案/眼睛/BABYMONSTER_Chiquita.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "BABYMONSTER",
