@@ -10,7 +10,9 @@ param(
   [string]$Mode = "auto",   # auto=自動判斷 / force=用本機覆蓋遠端 / rebase=把遠端接進來
   [switch]$Yes,             # 不要問，直接執行
   [switch]$BuildWeb,        # 推之前先重建網頁版 docs（封面圖／背景音樂會一起更新）
-  [switch]$NoBuild          # 不要問也不要重建，直接用現有的 docs
+  [switch]$NoBuild,         # 不要問也不要重建，直接用現有的 docs
+  [switch]$Reindex,         # 砍掉整個索引重建 → 遠端的檔名（含大小寫）完全等於本機
+  [switch]$NoReindex        # 就算是 force 模式也不要重建索引
 )
 
 # ── Windows PowerShell 5.1 的地雷 ──────────────────────────────────
@@ -98,18 +100,59 @@ if ($doBuild) {
   Write-Host ""
 }
 
-# --- 有什麼變更 ---
+# --- 把檔案放進索引 ---
+#
+#  force（強制覆蓋）模式預設會「整個索引砍掉重建」：
+#    git rm -r --cached .   ← 只清索引，磁碟上的檔案一個都不會動
+#    git add -A             ← 再照磁碟上的真實檔名重新加回來
+#
+#  為什麼要這麼做：Windows 不分大小寫，Git 也預設 core.ignorecase=true，
+#  所以索引裡只要已經有 Fromis9.jpg，你之後 add 小寫的 fromis9.jpg，
+#  Git 會判定「同一個路徑」而沿用舊拼法 —— 光靠 add 永遠改不掉大小寫。
+#  把索引清空之後就沒有舊拼法可以沿用，每一個檔名（含大小寫）都會照磁碟重寫一次，
+#  推上去的 GitHub 就會跟本機一模一樣。
+$doReindex = $Reindex -or (($Mode -eq "force") -and (-not $NoReindex))
+
+$beforeFiles = @()
+if ($doReindex) {
+  $beforeFiles = @((G ls-files).Text -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+  Write-Host ""
+  Write-Host "重建索引中（檔名含大小寫全部照本機重寫，磁碟上的檔案不會被動到）…" -ForegroundColor Cyan
+  G rm -r --cached --quiet -- . | Out-Null
+}
+
 G add -A | Out-Null
 # docs 一律強制納入版控。就算之後有人在 .gitignore 加了 cover/ 或 bgm/
 # 這種沒鎖根目錄的規則，也不會再把 docs\assets\cover、docs\assets\bgm 吃掉。
 if (Test-Path -LiteralPath $docsDir) { G add -f -- "docs" | Out-Null }
 
-# 修正「只有大小寫不同」的路徑（在 Windows 改檔名大小寫時 Git 看不見）
-$caseFixed = Repair-GitCase $git $Root @("docs", "app")
-if ($caseFixed.Count -gt 0) {
-  Write-Host ""
-  Write-Host "修正檔名大小寫（Windows 不分大小寫，Git 之前沒察覺）：" -ForegroundColor Yellow
-  foreach ($line in $caseFixed) { Write-Host ("   " + $line) -ForegroundColor Yellow }
+if ($doReindex) {
+  # 比對重建前後，把「只有大小寫變了」的檔案列出來給你看
+  $afterFiles = @((G ls-files).Text -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+  $afterLower = @{}
+  foreach ($a in $afterFiles) { $afterLower[$a.ToLowerInvariant()] = $a }
+  $renamed = New-Object System.Collections.ArrayList
+  foreach ($b in $beforeFiles) {
+    $k = $b.ToLowerInvariant()
+    if ($afterLower.ContainsKey($k) -and ($afterLower[$k] -cne $b)) {
+      [void]$renamed.Add($b + "  ->  " + $afterLower[$k])
+    }
+  }
+  if ($renamed.Count -gt 0) {
+    Write-Host ""
+    Write-Host ("檔名大小寫已改成跟本機一致（{0} 個）：" -f $renamed.Count) -ForegroundColor Yellow
+    foreach ($line in $renamed) { Write-Host ("   " + $line) -ForegroundColor Yellow }
+  } else {
+    Write-Host "  索引重建完成，檔名大小寫本來就都一致。" -ForegroundColor DarkGray
+  }
+} else {
+  # 一般存檔：只修「只有大小寫不同」的路徑（在 Windows 改檔名大小寫時 Git 看不見）
+  $caseFixed = Repair-GitCase $git $Root @("docs", "app")
+  if ($caseFixed.Count -gt 0) {
+    Write-Host ""
+    Write-Host "修正檔名大小寫（Windows 不分大小寫，Git 之前沒察覺）：" -ForegroundColor Yellow
+    foreach ($line in $caseFixed) { Write-Host ("   " + $line) -ForegroundColor Yellow }
+  }
 }
 $changes = @((G diff --cached --name-status).Text -split "`n" | Where-Object { $_ })
 if ($changes.Count -eq 0) {
