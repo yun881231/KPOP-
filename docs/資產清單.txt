@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-09-20 14:32:49
+2026-09-20 22:51:40
 assetBase = assets
 
 本地檔案（
-994
+1056
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/aespa.jpg
@@ -135,9 +135,14 @@ assetBase = assets
   assets/level1/TWICE_TZUYU.jpg
   assets/level1/WJSN_Yeo_reum.jpg
   assets/level2/a/aespa_Armageddon.mp4
+  assets/level2/a/aespa_Better_Things.mp4
+  assets/level2/a/aespa_Black_Mamba.mp4
   assets/level2/a/aespa_Dirty_Work.mp4
+  assets/level2/a/aespa_Girls.mp4
   assets/level2/a/aespa_Illusion.mp4
   assets/level2/a/aespa_LEMONADE.mp4
+  assets/level2/a/aespa_Live_My_Life.mp4
+  assets/level2/a/aespa_Next_Level.mp4
   assets/level2/a/aespa_Rich_Man.mp4
   assets/level2/a/aespa_Spicy.mp4
   assets/level2/a/aespa_Supernova.mp4
@@ -147,12 +152,20 @@ assetBase = assets
   assets/level2/a/BABYMONSTER_I_LIKE_IT.mp4
   assets/level2/a/BABYMONSTER_WE_GO_UP.mp4
   assets/level2/a/fromis9_DM.mp4
+  assets/level2/a/fromis9_LIKE_YOU_BETTER.mp4
+  assets/level2/a/fromis9_Stay_This_Way.mp4
+  assets/level2/a/fromis9_Supersonic.mp4
+  assets/level2/a/fromis9_Vitamin_ME.mp4
   assets/level2/a/GFRIEND_LOVE_WHISPER.mp4
   assets/level2/a/GFRIEND_MAGO.mp4
   assets/level2/a/GFRIEND_Me_gustas_tu.mp4
   assets/level2/a/GFRIEND_Rough.mp4
   assets/level2/a/GFRIEND_Season_of_Memories.mp4
   assets/level2/a/Hearts2Hearts_FOCUS.mp4
+  assets/level2/a/Hearts2Hearts_Lemon_Tang.mp4
+  assets/level2/a/Hearts2Hearts_RUDE.mp4
+  assets/level2/a/Hearts2Hearts_STYLE.mp4
+  assets/level2/a/Hearts2Hearts_The_Chase.mp4
   assets/level2/a/i-dle_Fate.mp4
   assets/level2/a/i-dle_Klaxon.mp4
   assets/level2/a/i-dle_Mono.mp4
@@ -169,6 +182,11 @@ assetBase = assets
   assets/level2/a/ITZY_None_of_My_Business.mp4
   assets/level2/a/ITZY_RINGO.mp4
   assets/level2/a/ITZY_UNTOUCHABLE.mp4
+  assets/level2/a/IU_Blueming.mp4
+  assets/level2/a/IU_eight.mp4
+  assets/level2/a/IU_Good_Day.mp4
+  assets/level2/a/IU_LILAC.mp4
+  assets/level2/a/IU_Palette.mp4
   assets/level2/a/IVE_After_LIKE.mp4
   assets/level2/a/IVE_ATTITUDE.mp4
   assets/level2/a/IVE_BLACKHOLE.mp4
@@ -182,8 +200,11 @@ assetBase = assets
   assets/level2/a/LE_SSERAFIM_SPAGHETTI.mp4
   assets/level2/a/NewJeans_ETA.mp4
   assets/level2/a/NewJeans_Super_Shy.mp4
+  assets/level2/a/NMIXX_Blue_Valentine.mp4
   assets/level2/a/NMIXX_DICE.mp4
   assets/level2/a/NMIXX_Heavy_Serenade.mp4
+  assets/level2/a/NMIXX_KNOW_ABOUT_ME.mp4
+  assets/level2/a/NMIXX_Love_Me_Like_This.mp4
   assets/level2/a/NMIXX_O.O.mp4
   assets/level2/a/NMIXX_See_that.mp4
   assets/level2/a/NMIXX_Sonar_Breaker.mp4
@@ -199,9 +220,14 @@ assetBase = assets
   assets/level2/a/TWICE_TT.mp4
   assets/level2/a/TWICE_What_is_Love.mp4
   assets/level2/q/aespa_Armageddon.mp3
+  assets/level2/q/aespa_Better_Things.mp3
+  assets/level2/q/aespa_Black_Mamba.mp3
   assets/level2/q/aespa_Dirty_Work.mp3
+  assets/level2/q/aespa_Girls.mp3
   assets/level2/q/aespa_Illusion.mp3
   assets/level2/q/aespa_LEMONADE.mp3
+  assets/level2/q/aespa_Live_My_Life.mp3
+  assets/level2/q/aespa_Next_Level.mp3
   assets/level2/q/aespa_Rich_Man.mp3
   assets/level2/q/aespa_Spicy.mp3
   assets/level2/q/aespa_Supernova.mp3
@@ -211,12 +237,20 @@ assetBase = assets
   assets/level2/q/BABYMONSTER_I_LIKE_IT.mp3
   assets/level2/q/BABYMONSTER_WE_GO_UP.mp3
   assets/level2/q/fromis9_DM.mp3
+  assets/level2/q/fromis9_LIKE_YOU_BETTER.mp3
+  assets/level2/q/fromis9_Stay_This_Way.mp3
+  assets/level2/q/fromis9_Supersonic.mp3
+  assets/level2/q/fromis9_Vitamin_ME.mp3
   assets/level2/q/GFRIEND_LOVE_WHISPER.mp3
   assets/level2/q/GFRIEND_MAGO.mp3
   assets/level2/q/GFRIEND_Me_gustas_tu.mp3
   assets/level2/q/GFRIEND_Rough.mp3
   assets/level2/q/GFRIEND_Season_of_Memories.mp3
   assets/level2/q/Hearts2Hearts_FOCUS.mp3
+  assets/level2/q/Hearts2Hearts_Lemon_Tang.mp3
+  assets/level2/q/Hearts2Hearts_RUDE.mp3
+  assets/level2/q/Hearts2Hearts_STYLE.mp3
+  assets/level2/q/Hearts2Hearts_The_Chase.mp3
   assets/level2/q/i-dle_Fate.mp3
   assets/level2/q/i-dle_Klaxon.mp3
   assets/level2/q/i-dle_Mono.mp3
@@ -233,6 +267,11 @@ assetBase = assets
   assets/level2/q/ITZY_None_of_My_Business.mp3
   assets/level2/q/ITZY_RINGO.mp3
   assets/level2/q/ITZY_UNTOUCHABLE.mp3
+  assets/level2/q/IU_Blueming.mp3
+  assets/level2/q/IU_eight.mp3
+  assets/level2/q/IU_Good_Day.mp3
+  assets/level2/q/IU_LILAC.mp3
+  assets/level2/q/IU_Palette.mp3
   assets/level2/q/IVE_After_LIKE.mp3
   assets/level2/q/IVE_ATTITUDE.mp3
   assets/level2/q/IVE_BLACKHOLE.mp3
@@ -246,8 +285,11 @@ assetBase = assets
   assets/level2/q/LE_SSERAFIM_SPAGHETTI.mp3
   assets/level2/q/NewJeans_ETA.mp3
   assets/level2/q/NewJeans_Super_Shy.mp3
+  assets/level2/q/NMIXX_Blue_Valentine.mp3
   assets/level2/q/NMIXX_DICE.mp3
   assets/level2/q/NMIXX_Heavy_Serenade.mp3
+  assets/level2/q/NMIXX_KNOW_ABOUT_ME.mp3
+  assets/level2/q/NMIXX_Love_Me_Like_This.mp3
   assets/level2/q/NMIXX_O.O.mp3
   assets/level2/q/NMIXX_See_that.mp3
   assets/level2/q/NMIXX_Sonar_Breaker.mp3
@@ -801,8 +843,13 @@ assetBase = assets
   assets/level4/q/mouth/TWICE_SANA.jpg
   assets/level4/q/mouth/TWICE_TZUYU.jpg
   assets/level5/a/aespa_Armageddon.mp4
+  assets/level5/a/aespa_Better_Things.mp4
+  assets/level5/a/aespa_Black_Mamba.mp4
   assets/level5/a/aespa_Dirty_Work.mp4
+  assets/level5/a/aespa_Girls.mp4
   assets/level5/a/aespa_LEMONADE.mp4
+  assets/level5/a/aespa_Live_My_Life.mp4
+  assets/level5/a/aespa_Next_Level.mp4
   assets/level5/a/aespa_Rich_Man.mp4
   assets/level5/a/aespa_Spicy.mp4
   assets/level5/a/aespa_Supernova.mp4
@@ -851,8 +898,13 @@ assetBase = assets
   assets/level5/a/TWICE_TT.mp4
   assets/level5/a/TWICE_What_is_Love.mp4
   assets/level5/q/shot1/aespa_Armageddon.jpg
+  assets/level5/q/shot1/aespa_Better_Things.jpg
+  assets/level5/q/shot1/aespa_Black_Mamba.jpg
   assets/level5/q/shot1/aespa_Dirty_Work.jpg
+  assets/level5/q/shot1/aespa_Girls.jpg
   assets/level5/q/shot1/aespa_LEMONADE.jpg
+  assets/level5/q/shot1/aespa_Live_My_Life.jpg
+  assets/level5/q/shot1/aespa_Next_Level.jpg
   assets/level5/q/shot1/aespa_Rich_Man.jpg
   assets/level5/q/shot1/aespa_Spicy.jpg
   assets/level5/q/shot1/aespa_Supernova.jpg
@@ -901,8 +953,13 @@ assetBase = assets
   assets/level5/q/shot1/TWICE_TT.jpg
   assets/level5/q/shot1/TWICE_What_is_Love.jpg
   assets/level5/q/shot2/aespa_Armageddon.jpg
+  assets/level5/q/shot2/aespa_Better_Things.jpg
+  assets/level5/q/shot2/aespa_Black_Mamba.jpg
   assets/level5/q/shot2/aespa_Dirty_Work.jpg
+  assets/level5/q/shot2/aespa_Girls.jpg
   assets/level5/q/shot2/aespa_LEMONADE.jpg
+  assets/level5/q/shot2/aespa_Live_My_Life.jpg
+  assets/level5/q/shot2/aespa_Next_Level.jpg
   assets/level5/q/shot2/aespa_Rich_Man.jpg
   assets/level5/q/shot2/aespa_Spicy.jpg
   assets/level5/q/shot2/aespa_Supernova.jpg
@@ -951,8 +1008,13 @@ assetBase = assets
   assets/level5/q/shot2/TWICE_TT.jpg
   assets/level5/q/shot2/TWICE_What_is_Love.jpg
   assets/level5/q/shot3/aespa_Armageddon.jpg
+  assets/level5/q/shot3/aespa_Better_Things.jpg
+  assets/level5/q/shot3/aespa_Black_Mamba.jpg
   assets/level5/q/shot3/aespa_Dirty_Work.jpg
+  assets/level5/q/shot3/aespa_Girls.jpg
   assets/level5/q/shot3/aespa_LEMONADE.jpg
+  assets/level5/q/shot3/aespa_Live_My_Life.jpg
+  assets/level5/q/shot3/aespa_Next_Level.jpg
   assets/level5/q/shot3/aespa_Rich_Man.jpg
   assets/level5/q/shot3/aespa_Spicy.jpg
   assets/level5/q/shot3/aespa_Supernova.jpg
