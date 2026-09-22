@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-09-20 22:51:16 */
+   產生時間：2026-09-22 22:47:28 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-09-20T22:44:22",
+    "generatedAt":  "2026-09-22T22:41:02",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -4101,6 +4101,39 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L5-018",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "Lemon Tang",
+                                                        "shots":  [
+                                                                      "level5/q/shot1/Hearts2Hearts_Lemon_Tang.jpg",
+                                                                      "level5/q/shot2/Hearts2Hearts_Lemon_Tang.jpg",
+                                                                      "level5/q/shot3/Hearts2Hearts_Lemon_Tang.jpg"
+                                                                  ],
+                                                        "answer":  "level5/a/Hearts2Hearts_Lemon_Tang.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-019",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "RUDE!",
+                                                        "shots":  [
+                                                                      "level5/q/shot1/Hearts2Hearts_RUDE.jpg",
+                                                                      "level5/q/shot2/Hearts2Hearts_RUDE.jpg",
+                                                                      "level5/q/shot3/Hearts2Hearts_RUDE.jpg"
+                                                                  ],
+                                                        "answer":  "level5/a/Hearts2Hearts_RUDE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-020",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "STYLE",
+                                                        "shots":  [
+                                                                      "level5/q/shot1/Hearts2Hearts_STYLE.jpg",
+                                                                      "level5/q/shot2/Hearts2Hearts_STYLE.jpg",
+                                                                      "level5/q/shot3/Hearts2Hearts_STYLE.jpg"
+                                                                  ],
+                                                        "answer":  "level5/a/Hearts2Hearts_STYLE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-021",
                                                         "group":  "i-dle",
                                                         "title":  "Fate",
                                                         "shots":  [
@@ -4111,7 +4144,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/i-dle_Fate.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-019",
+                                                        "id":  "L5-022",
                                                         "group":  "i-dle",
                                                         "title":  "Klaxon",
                                                         "shots":  [
@@ -4122,7 +4155,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/i-dle_Klaxon.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-020",
+                                                        "id":  "L5-023",
                                                         "group":  "i-dle",
                                                         "title":  "Mono",
                                                         "shots":  [
@@ -4133,7 +4166,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/i-dle_Mono.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-021",
+                                                        "id":  "L5-024",
                                                         "group":  "i-dle",
                                                         "title":  "Queencard",
                                                         "shots":  [
@@ -4144,7 +4177,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/i-dle_Queencard.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-022",
+                                                        "id":  "L5-025",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish (My Love)",
                                                         "shots":  [
@@ -4155,7 +4188,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ILLIT_Cherish_My_Love.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-023",
+                                                        "id":  "L5-026",
                                                         "group":  "ILLIT",
                                                         "title":  "Do the Dance",
                                                         "shots":  [
@@ -4166,7 +4199,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ILLIT_Do_the_Dance.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-024",
+                                                        "id":  "L5-027",
                                                         "group":  "ILLIT",
                                                         "title":  "jellyous",
                                                         "shots":  [
@@ -4177,7 +4210,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ILLIT_jellyous.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-025",
+                                                        "id":  "L5-028",
                                                         "group":  "ILLIT",
                                                         "title":  "Lucky Girl Syndrome",
                                                         "shots":  [
@@ -4188,7 +4221,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ILLIT_Lucky_Girl_Syndrome.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-026",
+                                                        "id":  "L5-029",
                                                         "group":  "ILLIT",
                                                         "title":  "NOT CUTE ANYMORE",
                                                         "shots":  [
@@ -4199,7 +4232,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ILLIT_NOT_CUTE_ANYMORE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-027",
+                                                        "id":  "L5-030",
                                                         "group":  "ITZY",
                                                         "title":  "CAKE",
                                                         "shots":  [
@@ -4210,7 +4243,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ITZY_CAKE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-028",
+                                                        "id":  "L5-031",
                                                         "group":  "ITZY",
                                                         "title":  "Motto",
                                                         "shots":  [
@@ -4221,7 +4254,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ITZY_Motto.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-029",
+                                                        "id":  "L5-032",
                                                         "group":  "ITZY",
                                                         "title":  "None of My Business",
                                                         "shots":  [
@@ -4232,7 +4265,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ITZY_None_of_My_Business.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-030",
+                                                        "id":  "L5-033",
                                                         "group":  "ITZY",
                                                         "title":  "RINGO",
                                                         "shots":  [
@@ -4243,7 +4276,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ITZY_RINGO.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-031",
+                                                        "id":  "L5-034",
                                                         "group":  "ITZY",
                                                         "title":  "UNTOUCHABLE",
                                                         "shots":  [
@@ -4254,7 +4287,40 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/ITZY_UNTOUCHABLE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-032",
+                                                        "id":  "L5-035",
+                                                        "group":  "IU",
+                                                        "title":  "Blueming",
+                                                        "shots":  [
+                                                                      "level5/q/shot1/IU_Blueming.jpg",
+                                                                      "level5/q/shot2/IU_Blueming.jpg",
+                                                                      "level5/q/shot3/IU_Blueming.jpg"
+                                                                  ],
+                                                        "answer":  "level5/a/IU_Blueming.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-036",
+                                                        "group":  "IU",
+                                                        "title":  "eight",
+                                                        "shots":  [
+                                                                      "level5/q/shot1/IU_eight.jpg",
+                                                                      "level5/q/shot2/IU_eight.jpg",
+                                                                      "level5/q/shot3/IU_eight.jpg"
+                                                                  ],
+                                                        "answer":  "level5/a/IU_eight.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-037",
+                                                        "group":  "IU",
+                                                        "title":  "LILAC",
+                                                        "shots":  [
+                                                                      "level5/q/shot1/IU_LILAC.jpg",
+                                                                      "level5/q/shot2/IU_LILAC.jpg",
+                                                                      "level5/q/shot3/IU_LILAC.jpg"
+                                                                  ],
+                                                        "answer":  "level5/a/IU_LILAC.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-038",
                                                         "group":  "IVE",
                                                         "title":  "After LIKE",
                                                         "shots":  [
@@ -4265,7 +4331,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/IVE_After_LIKE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-033",
+                                                        "id":  "L5-039",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "shots":  [
@@ -4276,7 +4342,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/IVE_ATTITUDE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-034",
+                                                        "id":  "L5-040",
                                                         "group":  "IVE",
                                                         "title":  "BLACKHOLE",
                                                         "shots":  [
@@ -4287,7 +4353,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/IVE_BLACKHOLE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-035",
+                                                        "id":  "L5-041",
                                                         "group":  "IVE",
                                                         "title":  "ELEVEN",
                                                         "shots":  [
@@ -4298,7 +4364,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/IVE_ELEVEN.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-036",
+                                                        "id":  "L5-042",
                                                         "group":  "IVE",
                                                         "title":  "Off The Record",
                                                         "shots":  [
@@ -4309,7 +4375,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/IVE_Off_The_Record.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-037",
+                                                        "id":  "L5-043",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "DIFFERENT",
                                                         "shots":  [
@@ -4320,7 +4386,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/LE_SSERAFIM_DIFFERENT.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-038",
+                                                        "id":  "L5-044",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "EASY",
                                                         "shots":  [
@@ -4331,7 +4397,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/LE_SSERAFIM_EASY.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-039",
+                                                        "id":  "L5-045",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "HOT",
                                                         "shots":  [
@@ -4342,7 +4408,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/LE_SSERAFIM_HOT.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-040",
+                                                        "id":  "L5-046",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "Perfect Night",
                                                         "shots":  [
@@ -4353,7 +4419,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/LE_SSERAFIM_Perfect_Night.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-041",
+                                                        "id":  "L5-047",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "SPAGHETTI",
                                                         "shots":  [
@@ -4364,7 +4430,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/LE_SSERAFIM_SPAGHETTI.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-042",
+                                                        "id":  "L5-048",
                                                         "group":  "NewJeans",
                                                         "title":  "ETA",
                                                         "shots":  [
@@ -4375,7 +4441,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/NewJeans_ETA.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-043",
+                                                        "id":  "L5-049",
                                                         "group":  "NewJeans",
                                                         "title":  "Super Shy",
                                                         "shots":  [
@@ -4386,7 +4452,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/NewJeans_Super_Shy.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-044",
+                                                        "id":  "L5-050",
                                                         "group":  "NMIXX",
                                                         "title":  "DICE",
                                                         "shots":  [
@@ -4397,7 +4463,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/NMIXX_DICE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-045",
+                                                        "id":  "L5-051",
                                                         "group":  "NMIXX",
                                                         "title":  "Heavy Serenade",
                                                         "shots":  [
@@ -4408,7 +4474,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/NMIXX_Heavy_Serenade.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-046",
+                                                        "id":  "L5-052",
                                                         "group":  "NMIXX",
                                                         "title":  "O.O",
                                                         "shots":  [
@@ -4419,7 +4485,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/NMIXX_O.O.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-047",
+                                                        "id":  "L5-053",
                                                         "group":  "NMIXX",
                                                         "title":  "See that",
                                                         "shots":  [
@@ -4430,7 +4496,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/NMIXX_See_that.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-048",
+                                                        "id":  "L5-054",
                                                         "group":  "NMIXX",
                                                         "title":  "Sonar (Breaker)",
                                                         "shots":  [
@@ -4441,7 +4507,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/NMIXX_Sonar_Breaker.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-049",
+                                                        "id":  "L5-055",
                                                         "group":  "QWER",
                                                         "title":  "T.B.H",
                                                         "shots":  [
@@ -4452,7 +4518,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/QWER_T.B.H.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-050",
+                                                        "id":  "L5-056",
                                                         "group":  "tripleS",
                                                         "title":  "Girls Never Die",
                                                         "shots":  [
@@ -4463,7 +4529,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/tripleS_Girls_Never_Die.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-051",
+                                                        "id":  "L5-057",
                                                         "group":  "tripleS",
                                                         "title":  "Invincible",
                                                         "shots":  [
@@ -4474,7 +4540,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/tripleS_Invincible.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-052",
+                                                        "id":  "L5-058",
                                                         "group":  "TWICE",
                                                         "title":  "KNOCK KNOCK",
                                                         "shots":  [
@@ -4485,7 +4551,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/TWICE_KNOCK_KNOCK.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-053",
+                                                        "id":  "L5-059",
                                                         "group":  "TWICE",
                                                         "title":  "LIKEY",
                                                         "shots":  [
@@ -4496,7 +4562,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/TWICE_LIKEY.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-054",
+                                                        "id":  "L5-060",
                                                         "group":  "TWICE",
                                                         "title":  "TT",
                                                         "shots":  [
@@ -4507,7 +4573,7 @@ window.QUIZ_DATA =
                                                         "answer":  "level5/a/TWICE_TT.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-055",
+                                                        "id":  "L5-061",
                                                         "group":  "TWICE",
                                                         "title":  "What is Love",
                                                         "shots":  [

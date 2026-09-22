@@ -1,11 +1,11 @@
 /* ===================================================================
    KPOP之王巔峰賽 - 自動產生的題庫檔
    由 更新題庫.bat / scan_assets.ps1 產生，請勿手動覆寫（會被蓋掉）
-   產生時間：2026-09-20 22:44:22
+   產生時間：2026-09-22 22:41:02
    =================================================================== */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-09-20T22:44:22",
+    "generatedAt":  "2026-09-22T22:41:02",
     "root":  "D:\\kpop",
     "assetBase":  "..",
     "bgm":  [
@@ -4104,6 +4104,39 @@ window.QUIZ_DATA =
                                                     },
                                                     {
                                                         "id":  "L5-018",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "Lemon Tang",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/Hearts2Hearts_Lemon Tang.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/Hearts2Hearts_Lemon Tang.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/Hearts2Hearts_Lemon Tang.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/Hearts2Hearts_Lemon Tang.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-019",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "RUDE!",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/Hearts2Hearts_RUDE!.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/Hearts2Hearts_RUDE!.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/Hearts2Hearts_RUDE!.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/Hearts2Hearts_RUDE!.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-020",
+                                                        "group":  "Hearts2Hearts",
+                                                        "title":  "STYLE",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/Hearts2Hearts_STYLE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/Hearts2Hearts_STYLE.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/Hearts2Hearts_STYLE.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/Hearts2Hearts_STYLE.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-021",
                                                         "group":  "i-dle",
                                                         "title":  "Fate",
                                                         "shots":  [
@@ -4114,7 +4147,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/i-dle_Fate.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-019",
+                                                        "id":  "L5-022",
                                                         "group":  "i-dle",
                                                         "title":  "Klaxon",
                                                         "shots":  [
@@ -4125,7 +4158,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/i-dle_Klaxon.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-020",
+                                                        "id":  "L5-023",
                                                         "group":  "i-dle",
                                                         "title":  "Mono",
                                                         "shots":  [
@@ -4136,7 +4169,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/i-dle_Mono.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-021",
+                                                        "id":  "L5-024",
                                                         "group":  "i-dle",
                                                         "title":  "Queencard",
                                                         "shots":  [
@@ -4147,7 +4180,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/i-dle_Queencard.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-022",
+                                                        "id":  "L5-025",
                                                         "group":  "ILLIT",
                                                         "title":  "Cherish (My Love)",
                                                         "shots":  [
@@ -4158,7 +4191,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ILLIT_Cherish (My Love).mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-023",
+                                                        "id":  "L5-026",
                                                         "group":  "ILLIT",
                                                         "title":  "Do the Dance",
                                                         "shots":  [
@@ -4169,7 +4202,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ILLIT_Do the Dance.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-024",
+                                                        "id":  "L5-027",
                                                         "group":  "ILLIT",
                                                         "title":  "jellyous",
                                                         "shots":  [
@@ -4180,7 +4213,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ILLIT_jellyous.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-025",
+                                                        "id":  "L5-028",
                                                         "group":  "ILLIT",
                                                         "title":  "Lucky Girl Syndrome",
                                                         "shots":  [
@@ -4191,7 +4224,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ILLIT_Lucky Girl Syndrome.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-026",
+                                                        "id":  "L5-029",
                                                         "group":  "ILLIT",
                                                         "title":  "NOT CUTE ANYMORE",
                                                         "shots":  [
@@ -4202,7 +4235,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ILLIT_NOT CUTE ANYMORE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-027",
+                                                        "id":  "L5-030",
                                                         "group":  "ITZY",
                                                         "title":  "CAKE",
                                                         "shots":  [
@@ -4213,7 +4246,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ITZY_CAKE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-028",
+                                                        "id":  "L5-031",
                                                         "group":  "ITZY",
                                                         "title":  "Motto",
                                                         "shots":  [
@@ -4224,7 +4257,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ITZY_Motto.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-029",
+                                                        "id":  "L5-032",
                                                         "group":  "ITZY",
                                                         "title":  "None of My Business",
                                                         "shots":  [
@@ -4235,7 +4268,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ITZY_None of My Business.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-030",
+                                                        "id":  "L5-033",
                                                         "group":  "ITZY",
                                                         "title":  "RINGO",
                                                         "shots":  [
@@ -4246,7 +4279,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ITZY_RINGO.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-031",
+                                                        "id":  "L5-034",
                                                         "group":  "ITZY",
                                                         "title":  "UNTOUCHABLE",
                                                         "shots":  [
@@ -4257,7 +4290,40 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/ITZY_UNTOUCHABLE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-032",
+                                                        "id":  "L5-035",
+                                                        "group":  "IU",
+                                                        "title":  "Blueming",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IU_Blueming.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IU_Blueming.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IU_Blueming.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IU_Blueming.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-036",
+                                                        "group":  "IU",
+                                                        "title":  "eight",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IU_eight.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IU_eight.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IU_eight.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IU_eight.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-037",
+                                                        "group":  "IU",
+                                                        "title":  "LILAC",
+                                                        "shots":  [
+                                                                      "第五關_看MV片段猜歌/題目/片段1/IU_LILAC.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段2/IU_LILAC.jpg",
+                                                                      "第五關_看MV片段猜歌/題目/片段3/IU_LILAC.jpg"
+                                                                  ],
+                                                        "answer":  "第五關_看MV片段猜歌/答案/IU_LILAC.mp4"
+                                                    },
+                                                    {
+                                                        "id":  "L5-038",
                                                         "group":  "IVE",
                                                         "title":  "After LIKE",
                                                         "shots":  [
@@ -4268,7 +4334,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/IVE_After LIKE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-033",
+                                                        "id":  "L5-039",
                                                         "group":  "IVE",
                                                         "title":  "ATTITUDE",
                                                         "shots":  [
@@ -4279,7 +4345,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/IVE_ATTITUDE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-034",
+                                                        "id":  "L5-040",
                                                         "group":  "IVE",
                                                         "title":  "BLACKHOLE",
                                                         "shots":  [
@@ -4290,7 +4356,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/IVE_BLACKHOLE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-035",
+                                                        "id":  "L5-041",
                                                         "group":  "IVE",
                                                         "title":  "ELEVEN",
                                                         "shots":  [
@@ -4301,7 +4367,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/IVE_ELEVEN.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-036",
+                                                        "id":  "L5-042",
                                                         "group":  "IVE",
                                                         "title":  "Off The Record",
                                                         "shots":  [
@@ -4312,7 +4378,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/IVE_Off The Record.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-037",
+                                                        "id":  "L5-043",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "DIFFERENT",
                                                         "shots":  [
@@ -4323,7 +4389,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_DIFFERENT.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-038",
+                                                        "id":  "L5-044",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "EASY",
                                                         "shots":  [
@@ -4334,7 +4400,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_EASY.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-039",
+                                                        "id":  "L5-045",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "HOT",
                                                         "shots":  [
@@ -4345,7 +4411,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_HOT.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-040",
+                                                        "id":  "L5-046",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "Perfect Night",
                                                         "shots":  [
@@ -4356,7 +4422,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_Perfect Night.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-041",
+                                                        "id":  "L5-047",
                                                         "group":  "LE SSERAFIM",
                                                         "title":  "SPAGHETTI",
                                                         "shots":  [
@@ -4367,7 +4433,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/LE SSERAFIM_SPAGHETTI.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-042",
+                                                        "id":  "L5-048",
                                                         "group":  "NewJeans",
                                                         "title":  "ETA",
                                                         "shots":  [
@@ -4378,7 +4444,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/NewJeans_ETA.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-043",
+                                                        "id":  "L5-049",
                                                         "group":  "NewJeans",
                                                         "title":  "Super Shy",
                                                         "shots":  [
@@ -4389,7 +4455,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/NewJeans_Super Shy.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-044",
+                                                        "id":  "L5-050",
                                                         "group":  "NMIXX",
                                                         "title":  "DICE",
                                                         "shots":  [
@@ -4400,7 +4466,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/NMIXX_DICE.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-045",
+                                                        "id":  "L5-051",
                                                         "group":  "NMIXX",
                                                         "title":  "Heavy Serenade",
                                                         "shots":  [
@@ -4411,7 +4477,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/NMIXX_Heavy Serenade.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-046",
+                                                        "id":  "L5-052",
                                                         "group":  "NMIXX",
                                                         "title":  "O.O",
                                                         "shots":  [
@@ -4422,7 +4488,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/NMIXX_O.O.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-047",
+                                                        "id":  "L5-053",
                                                         "group":  "NMIXX",
                                                         "title":  "See that",
                                                         "shots":  [
@@ -4433,7 +4499,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/NMIXX_See that.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-048",
+                                                        "id":  "L5-054",
                                                         "group":  "NMIXX",
                                                         "title":  "Sonar (Breaker)",
                                                         "shots":  [
@@ -4444,7 +4510,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/NMIXX_Sonar (Breaker).mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-049",
+                                                        "id":  "L5-055",
                                                         "group":  "QWER",
                                                         "title":  "T.B.H",
                                                         "shots":  [
@@ -4455,7 +4521,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/QWER_T.B.H.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-050",
+                                                        "id":  "L5-056",
                                                         "group":  "tripleS",
                                                         "title":  "Girls Never Die",
                                                         "shots":  [
@@ -4466,7 +4532,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/tripleS_Girls Never Die.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-051",
+                                                        "id":  "L5-057",
                                                         "group":  "tripleS",
                                                         "title":  "Invincible",
                                                         "shots":  [
@@ -4477,7 +4543,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/tripleS_Invincible.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-052",
+                                                        "id":  "L5-058",
                                                         "group":  "TWICE",
                                                         "title":  "KNOCK KNOCK",
                                                         "shots":  [
@@ -4488,7 +4554,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/TWICE_KNOCK KNOCK.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-053",
+                                                        "id":  "L5-059",
                                                         "group":  "TWICE",
                                                         "title":  "LIKEY",
                                                         "shots":  [
@@ -4499,7 +4565,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/TWICE_LIKEY.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-054",
+                                                        "id":  "L5-060",
                                                         "group":  "TWICE",
                                                         "title":  "TT",
                                                         "shots":  [
@@ -4510,7 +4576,7 @@ window.QUIZ_DATA =
                                                         "answer":  "第五關_看MV片段猜歌/答案/TWICE_TT.mp4"
                                                     },
                                                     {
-                                                        "id":  "L5-055",
+                                                        "id":  "L5-061",
                                                         "group":  "TWICE",
                                                         "title":  "What is Love",
                                                         "shots":  [

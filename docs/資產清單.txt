@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-09-20 22:51:40
+2026-09-22 22:47:51
 assetBase = assets
 
 本地檔案（
-1056
+1080
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/aespa.jpg
@@ -859,6 +859,9 @@ assetBase = assets
   assets/level5/a/BABYMONSTER_I_LIKE_IT.mp4
   assets/level5/a/BABYMONSTER_WE_GO_UP.mp4
   assets/level5/a/Hearts2Hearts_FOCUS.mp4
+  assets/level5/a/Hearts2Hearts_Lemon_Tang.mp4
+  assets/level5/a/Hearts2Hearts_RUDE.mp4
+  assets/level5/a/Hearts2Hearts_STYLE.mp4
   assets/level5/a/i-dle_Fate.mp4
   assets/level5/a/i-dle_Klaxon.mp4
   assets/level5/a/i-dle_Mono.mp4
@@ -873,6 +876,9 @@ assetBase = assets
   assets/level5/a/ITZY_None_of_My_Business.mp4
   assets/level5/a/ITZY_RINGO.mp4
   assets/level5/a/ITZY_UNTOUCHABLE.mp4
+  assets/level5/a/IU_Blueming.mp4
+  assets/level5/a/IU_eight.mp4
+  assets/level5/a/IU_LILAC.mp4
   assets/level5/a/IVE_After_LIKE.mp4
   assets/level5/a/IVE_ATTITUDE.mp4
   assets/level5/a/IVE_BLACKHOLE.mp4
@@ -914,6 +920,9 @@ assetBase = assets
   assets/level5/q/shot1/BABYMONSTER_I_LIKE_IT.jpg
   assets/level5/q/shot1/BABYMONSTER_WE_GO_UP.jpg
   assets/level5/q/shot1/Hearts2Hearts_FOCUS.jpg
+  assets/level5/q/shot1/Hearts2Hearts_Lemon_Tang.jpg
+  assets/level5/q/shot1/Hearts2Hearts_RUDE.jpg
+  assets/level5/q/shot1/Hearts2Hearts_STYLE.jpg
   assets/level5/q/shot1/i-dle_Fate.jpg
   assets/level5/q/shot1/i-dle_Klaxon.jpg
   assets/level5/q/shot1/i-dle_Mono.jpg
@@ -928,6 +937,9 @@ assetBase = assets
   assets/level5/q/shot1/ITZY_None_of_My_Business.jpg
   assets/level5/q/shot1/ITZY_RINGO.jpg
   assets/level5/q/shot1/ITZY_UNTOUCHABLE.jpg
+  assets/level5/q/shot1/IU_Blueming.jpg
+  assets/level5/q/shot1/IU_eight.jpg
+  assets/level5/q/shot1/IU_LILAC.jpg
   assets/level5/q/shot1/IVE_After_LIKE.jpg
   assets/level5/q/shot1/IVE_ATTITUDE.jpg
   assets/level5/q/shot1/IVE_BLACKHOLE.jpg
@@ -969,6 +981,9 @@ assetBase = assets
   assets/level5/q/shot2/BABYMONSTER_I_LIKE_IT.jpg
   assets/level5/q/shot2/BABYMONSTER_WE_GO_UP.jpg
   assets/level5/q/shot2/Hearts2Hearts_FOCUS.jpg
+  assets/level5/q/shot2/Hearts2Hearts_Lemon_Tang.jpg
+  assets/level5/q/shot2/Hearts2Hearts_RUDE.jpg
+  assets/level5/q/shot2/Hearts2Hearts_STYLE.jpg
   assets/level5/q/shot2/i-dle_Fate.jpg
   assets/level5/q/shot2/i-dle_Klaxon.jpg
   assets/level5/q/shot2/i-dle_Mono.jpg
@@ -983,6 +998,9 @@ assetBase = assets
   assets/level5/q/shot2/ITZY_None_of_My_Business.jpg
   assets/level5/q/shot2/ITZY_RINGO.jpg
   assets/level5/q/shot2/ITZY_UNTOUCHABLE.jpg
+  assets/level5/q/shot2/IU_Blueming.jpg
+  assets/level5/q/shot2/IU_eight.jpg
+  assets/level5/q/shot2/IU_LILAC.jpg
   assets/level5/q/shot2/IVE_After_LIKE.jpg
   assets/level5/q/shot2/IVE_ATTITUDE.jpg
   assets/level5/q/shot2/IVE_BLACKHOLE.jpg
@@ -1024,6 +1042,9 @@ assetBase = assets
   assets/level5/q/shot3/BABYMONSTER_I_LIKE_IT.jpg
   assets/level5/q/shot3/BABYMONSTER_WE_GO_UP.jpg
   assets/level5/q/shot3/Hearts2Hearts_FOCUS.jpg
+  assets/level5/q/shot3/Hearts2Hearts_Lemon_Tang.jpg
+  assets/level5/q/shot3/Hearts2Hearts_RUDE.jpg
+  assets/level5/q/shot3/Hearts2Hearts_STYLE.jpg
   assets/level5/q/shot3/i-dle_Fate.jpg
   assets/level5/q/shot3/i-dle_Klaxon.jpg
   assets/level5/q/shot3/i-dle_Mono.jpg
@@ -1038,6 +1059,9 @@ assetBase = assets
   assets/level5/q/shot3/ITZY_None_of_My_Business.jpg
   assets/level5/q/shot3/ITZY_RINGO.jpg
   assets/level5/q/shot3/ITZY_UNTOUCHABLE.jpg
+  assets/level5/q/shot3/IU_Blueming.jpg
+  assets/level5/q/shot3/IU_eight.jpg
+  assets/level5/q/shot3/IU_LILAC.jpg
   assets/level5/q/shot3/IVE_After_LIKE.jpg
   assets/level5/q/shot3/IVE_ATTITUDE.jpg
   assets/level5/q/shot3/IVE_BLACKHOLE.jpg
