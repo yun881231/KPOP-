@@ -1,10 +1,10 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-10-02 18:26:27
+2026-10-03 00:12:49
 assetBase = assets
 
 本地檔案（
-1080
+1081
  個，全部已確認存在）：
   assets/bgm/IVE_HEYA.mp3
   assets/cover/aespa.jpg
@@ -621,6 +621,7 @@ assetBase = assets
   assets/level4/a/mouth/NMIXX_Kyujin.jpg
   assets/level4/a/mouth/NMIXX_Lily.png
   assets/level4/a/mouth/NMIXX_Sullyoon.jpg
+  assets/level4/a/mouth/QWER_Chodan.jpg
   assets/level4/a/mouth/QWER_Hina.jpg
   assets/level4/a/mouth/QWER_Magenta.jpg
   assets/level4/a/mouth/QWER_Siyeon.jpg

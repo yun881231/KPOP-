@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-10-02 18:26:04 */
+   產生時間：2026-10-03 00:12:25 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-10-02T18:19:20",
+    "generatedAt":  "2026-10-03T00:05:45",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -3478,7 +3478,7 @@ window.QUIZ_DATA =
                                                                       "group":  "QWER",
                                                                       "name":  "Chodan",
                                                                       "q":  "level4/q/mouth/QWER_Chodan.jpg",
-                                                                      "a":  null
+                                                                      "a":  "level4/a/mouth/QWER_Chodan.jpg"
                                                                   }
                                                     },
                                                     {
