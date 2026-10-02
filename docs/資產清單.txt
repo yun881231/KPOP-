@@ -1,6 +1,6 @@
 KPOP之王巔峰賽 — 網頁版資產清單
 產生時間：
-2026-09-22 22:47:51
+2026-10-02 18:26:27
 assetBase = assets
 
 本地檔案（
@@ -67,7 +67,7 @@ assetBase = assets
   assets/level1/ITZY_Lia.jpg
   assets/level1/ITZY_Ryujin.jpg
   assets/level1/ITZY_Yeji.jpg
-  assets/level1/ITZY_YUNA.jpg
+  assets/level1/ITZY_Yuna.jpg
   assets/level1/IVE_Gaeul.jpg
   assets/level1/IVE_Leeseo.jpg
   assets/level1/IVE_Liz.jpg
@@ -333,7 +333,7 @@ assetBase = assets
   assets/level3/a/Hearts2Hearts_FOCUS.mp4
   assets/level3/a/Hearts2Hearts_Lemon_Tang.mp4
   assets/level3/a/Hearts2Hearts_RUDE.mp4
-  assets/level3/a/Hearts2Hearts_Style.mp4
+  assets/level3/a/Hearts2Hearts_STYLE.mp4
   assets/level3/a/Hearts2Hearts_The_Chase.mp4
   assets/level3/a/i-dle_Gimme_Dat_Love.mp4
   assets/level3/a/i-dle_Good_Thing.mp4
@@ -417,7 +417,7 @@ assetBase = assets
   assets/level3/q/Hearts2Hearts_FOCUS.mp4
   assets/level3/q/Hearts2Hearts_Lemon_Tang.mp4
   assets/level3/q/Hearts2Hearts_RUDE.mp4
-  assets/level3/q/Hearts2Hearts_Style.mp4
+  assets/level3/q/Hearts2Hearts_STYLE.mp4
   assets/level3/q/Hearts2Hearts_The_Chase.mp4
   assets/level3/q/i-dle_Gimme_Dat_Love.mp4
   assets/level3/q/i-dle_Good_Thing.mp4
@@ -509,7 +509,7 @@ assetBase = assets
   assets/level4/a/eye/ITZY_Lia.jpg
   assets/level4/a/eye/ITZY_Ryujin.jpg
   assets/level4/a/eye/ITZY_Yeji.jpg
-  assets/level4/a/eye/ITZY_YUNA.jpg
+  assets/level4/a/eye/ITZY_Yuna.jpg
   assets/level4/a/eye/IVE_Gaeul.png
   assets/level4/a/eye/IVE_Leeseo.jpg
   assets/level4/a/eye/IVE_Liz.jpg
@@ -686,7 +686,7 @@ assetBase = assets
   assets/level4/q/eye/ITZY_Lia.jpg
   assets/level4/q/eye/ITZY_Ryujin.jpg
   assets/level4/q/eye/ITZY_Yeji.jpg
-  assets/level4/q/eye/ITZY_YUNA.jpg
+  assets/level4/q/eye/ITZY_Yuna.jpg
   assets/level4/q/eye/IVE_Gaeul.png
   assets/level4/q/eye/IVE_Leeseo.jpg
   assets/level4/q/eye/IVE_Liz.jpg

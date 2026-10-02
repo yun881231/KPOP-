@@ -1,8 +1,8 @@
 /* KPOP之王巔峰賽 — 網頁版題庫（由 建立網頁版.bat 自動產生，請勿手改）
-   產生時間：2026-09-22 22:47:28 */
+   產生時間：2026-10-02 18:26:04 */
 window.QUIZ_DATA =
 {
-    "generatedAt":  "2026-09-22T22:41:02",
+    "generatedAt":  "2026-10-02T18:19:20",
     "root":  "(web)",
     "assetBase":  "assets",
     "bgm":  [
@@ -324,8 +324,8 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L1-049",
                                                         "group":  "ITZY",
-                                                        "name":  "YUNA",
-                                                        "image":  "level1/ITZY_YUNA.jpg"
+                                                        "name":  "Yuna",
+                                                        "image":  "level1/ITZY_Yuna.jpg"
                                                     },
                                                     {
                                                         "id":  "L1-050",
@@ -1650,9 +1650,9 @@ window.QUIZ_DATA =
                                                     {
                                                         "id":  "L3-030",
                                                         "group":  "Hearts2Hearts",
-                                                        "title":  "Style",
-                                                        "question":  "level3/q/Hearts2Hearts_Style.mp4",
-                                                        "answer":  "level3/a/Hearts2Hearts_Style.mp4",
+                                                        "title":  "STYLE",
+                                                        "question":  "level3/q/Hearts2Hearts_STYLE.mp4",
+                                                        "answer":  "level3/a/Hearts2Hearts_STYLE.mp4",
                                                         "autoMask":  false
                                                     },
                                                     {
@@ -2215,7 +2215,7 @@ window.QUIZ_DATA =
                                                                   "Lia",
                                                                   "Ryujin",
                                                                   "Yeji",
-                                                                  "YUNA"
+                                                                  "Yuna"
                                                               ],
                                                      "mouths":  [
                                                                     "Chaeryeong",
@@ -3028,9 +3028,9 @@ window.QUIZ_DATA =
                                                         "lightstick":  "level4/q/light/ITZY.jpg",
                                                         "eyes":  {
                                                                      "group":  "ITZY",
-                                                                     "name":  "YUNA",
-                                                                     "q":  "level4/q/eye/ITZY_YUNA.jpg",
-                                                                     "a":  "level4/a/eye/ITZY_YUNA.jpg"
+                                                                     "name":  "Yuna",
+                                                                     "q":  "level4/q/eye/ITZY_Yuna.jpg",
+                                                                     "a":  "level4/a/eye/ITZY_Yuna.jpg"
                                                                  },
                                                         "mouth":  {
                                                                       "group":  "ITZY",
